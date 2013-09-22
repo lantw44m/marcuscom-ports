@@ -13,6 +13,7 @@ COMMENT=	Mouse accessibility enhancements for the GNOME desktop
 
 CONFLICTS=	mousetweaks-3.[0-9]*
 
+NO_STAGE=	yes
 USE_XORG=	x11 xfixes xcursor xtst
 USE_BZIP2=	yes
 USE_GNOME=	gnomeprefix gnomepanel intlhack

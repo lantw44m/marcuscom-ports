@@ -15,6 +15,7 @@ LIB_DEPENDS=	libgoa-1.0.so:${PORTSDIR}/net/gnome-online-accounts \
 		libfolks.so.25:${PORTSDIR}/net-im/folks \
 		libnotify.so:${PORTSDIR}/devel/libnotify
 
+NO_STAGE=	yes
 USE_XZ=		yes
 USE_GNOME=	intlhack gtk30 gnomedesktop3 evolutiondataserver3
 USES=		gettext gmake pathfix perl5 pkgconfig

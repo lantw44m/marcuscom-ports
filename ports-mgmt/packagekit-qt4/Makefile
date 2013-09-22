@@ -1,6 +1,6 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/ports-mgmt/packagekit-qt4/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	packagekit-qt4
 PORTVERSION=	0.8.8
@@ -14,6 +14,7 @@ COMMENT=	Qt4 bindings to packagekit
 BUILD_DEPENDS=	packagekit>=0.8.8:${PORTSDIR}/ports-mgmt/packagekit
 RUN_DEPENDS=	packagekit>=0.8.8:${PORTSDIR}/ports-mgmt/packagekit
 
+NO_STAGE=	yes
 USE_XZ=		yes
 USE_LDCONFIG=	yes
 USES=		cmake:outsource pkgconfig

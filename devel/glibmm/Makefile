@@ -14,6 +14,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	C++ interfaces for glib2
 
 USE_XZ=		yes
+NO_STAGE=	yes
 
 PLIST_SUB=	VERSION="2.4" API_VERSION="2.4"
 

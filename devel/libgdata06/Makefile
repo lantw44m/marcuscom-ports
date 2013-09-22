@@ -11,10 +11,11 @@ MASTER_SITES=	GNOME
 MAINTAINER=	kwm@FreeBSD.org
 COMMENT=	GLib based implimentation of the GData protocol
 
-LIB_DEPENDS=	soup-gnome-2.4:${PORTSDIR}/devel/libsoup-gnome
+LIB_DEPENDS=	libsoup-gnome-2.4.so:${PORTSDIR}/devel/libsoup-gnome
 
 CONFLICTS=	libgdata-0.10.*
 
+NO_STAGE=	yes
 LATEST_LINK=	libgdata06
 USE_BZIP2=	yes
 USE_LDCONFIG=	yes

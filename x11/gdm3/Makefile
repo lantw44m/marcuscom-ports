@@ -41,6 +41,7 @@ CONFLICTS=	gdm-2.[0-9]*
 USERS=		gdm
 GROUPS=		gdm
 
+NO_STAGE=	yes
 LATEST_LINK=	gdm3
 USE_XZ=		yes
 USE_LDCONFIG=	yes

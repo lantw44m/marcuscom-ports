@@ -18,6 +18,7 @@ BUILD_DEPENDS=	gsettings-desktop-schemas>=0:${PORTSDIR}/devel/gsettings-desktop-
 LIB_DEPENDS=	startup-notification-1:${PORTSDIR}/x11/startup-notification
 RUN_DEPENDS=	gsettings-desktop-schemas>=0:${PORTSDIR}/devel/gsettings-desktop-schemas
 
+NO_STAGE=	yes
 LATEST_LINK=	gnome-terminal3
 USES=		gettext gmake pathfix pkgconfig
 USE_XZ=		yes

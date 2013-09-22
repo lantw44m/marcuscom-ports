@@ -12,6 +12,7 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Common automake macros for GNOME 2 and GNOME 3
 
+NO_STAGE=	yes
 USE_XZ=		yes
 USES=		gmake pkgconfig
 GNU_CONFIGURE=	yes

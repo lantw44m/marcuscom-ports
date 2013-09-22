@@ -13,10 +13,11 @@ COMMENT=	Assistive Technology Service Provider Interface
 
 LICENSE=	LGPL21
 
-LIB_DEPENDS=	dbus-1:${PORTSDIR}/devel/dbus
+LIB_DEPENDS=	libdbus-1.so:${PORTSDIR}/devel/dbus
 
 PORTSCOUT=	limitw:1,even
 
+NO_STAGE=	yes
 USES=		gettext gmake pathfix pkgconfig
 USE_XZ=		yes
 USE_GNOME=	gnomehier glib20 intlhack introspection:build

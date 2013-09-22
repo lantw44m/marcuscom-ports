@@ -16,6 +16,7 @@ RUN_DEPENDS=	gsettings-desktop-schemas>=0.1.0:${PORTSDIR}/devel/gsettings-deskto
 
 CONFLICTS=	mousetweaks-2.[0-9]*
 
+NO_STAGE=	yes
 LATEST_LINK=	mousetweaks3
 USE_XZ=		yes
 USE_XORG=	x11 xfixes xcursor xtst

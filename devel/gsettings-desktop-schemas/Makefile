@@ -16,6 +16,7 @@ LICENSE=	LGPL21
 
 RUN_DEPENDS=	${LOCALBASE}/etc/fonts/conf.avail/31-cantarell.conf:${PORTSDIR}/x11-fonts/cantarell-fonts
 
+NO_STAGE=	yes
 USE_XZ=		yes
 USES=		gettext gmake pathfix perl5 pkgconfig
 USE_PERL5=	build

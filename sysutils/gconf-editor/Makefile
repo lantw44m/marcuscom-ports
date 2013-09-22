@@ -15,6 +15,7 @@ COMMENT=	A gconf database editor for the GNOME 2 environment
 
 CONFLICTS=	gconf-editor-3.[0-9]*
 
+NO_STAGE=	yes
 USE_BZIP2=	yes
 USES=		gettext gmake pathfix pkgconfig
 INSTALLS_OMF=	yes

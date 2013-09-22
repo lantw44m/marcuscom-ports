@@ -18,6 +18,7 @@ RUN_DEPENDS=	${LOCALBASE}/bin/gtar:${PORTSDIR}/archivers/gtar \
 
 CONFLICTS=	file-roller-3.[0-9]*
 
+NO_STAGE=	yes
 USE_LDCONFIG=	yes
 USE_BZIP2=	yes
 USES=		desktop-file-utils gettext gmake pathfix pkgconfig

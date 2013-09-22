@@ -23,6 +23,7 @@ LIB_DEPENDS=	dbus-glib-1:${PORTSDIR}/devel/dbus-glib
 
 USE_PYTHON=	yes
 
+NO_STAGE=	yes
 USE_LDCONFIG=	yes
 USES=		gmake
 GNU_CONFIGURE=	yes

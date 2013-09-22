@@ -11,8 +11,9 @@ PKGNAMESUFFIX=	3
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GTK+ Integration library for Clutter
 
-LIB_DEPENDS=	clutter-1.0:${PORTSDIR}/graphics/clutter
+LIB_DEPENDS=	libclutter-1.0.so:${PORTSDIR}/graphics/clutter
 
+NO_STAGE=	yes
 LATEST_LINK=	clutter-gtk3
 USE_XZ=		yes
 USES=		gettext gmake pathfix pkgconfig

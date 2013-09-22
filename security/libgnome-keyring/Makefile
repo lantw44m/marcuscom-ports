@@ -8,11 +8,12 @@ CATEGORIES=	security gnome
 MASTER_SITES=	GNOME
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	A program that keeps passwords and other secrets
+COMMENT=	Program that keeps passwords and other secrets
 
-LIB_DEPENDS=	dbus-1:${PORTSDIR}/devel/dbus \
-		gcrypt:${PORTSDIR}/security/libgcrypt
+LIB_DEPENDS=	libdbus-1.so:${PORTSDIR}/devel/dbus \
+		libgcrypt.so:${PORTSDIR}/security/libgcrypt
 
+NO_STAGE=	yes
 USE_XZ=		yes
 USE_GNOME=	glib20 gnomehier gnomeprefix intlhack \
 		introspection:build ltverhack

@@ -11,10 +11,11 @@ DIST_SUBDIR=	gnome3
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME 3 utility for making picutures of your screen
 
-LIB_DEPENDS=	canberra-gtk3:${PORTSDIR}/audio/libcanberra-gtk3
+LIB_DEPENDS=	libcanberra-gtk3.so:${PORTSDIR}/audio/libcanberra-gtk3
 
 CONFLICTS=	gnome-utils-2.[0-9]*
 
+NO_STAGE=	yes
 USE_XZ=		yes
 USES=		gettext gmake pathfix pkgconfig
 USE_GNOME=	gnomeprefix intlhack gtk30

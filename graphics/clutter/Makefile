@@ -13,9 +13,10 @@ COMMENT=	OpenGL based interactive canvas library
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-LIB_DEPENDS=	json-glib-1.0:${PORTSDIR}/devel/json-glib \
-		cogl:${PORTSDIR}/graphics/cogl
+LIB_DEPENDS=	libjson-glib-1.0.so:${PORTSDIR}/devel/json-glib \
+		libcogl.so:${PORTSDIR}/graphics/cogl
 
+NO_STAGE=	yes
 USES=		gettext gmake pathfix pkgconfig
 USE_XZ=		yes
 USE_AUTOTOOLS=	libtool

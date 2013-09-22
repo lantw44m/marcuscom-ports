@@ -1,6 +1,6 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/x11-toolkits/vte3/Makefile 18634 2013-07-26 10:42:35Z kwm $
 
 PORTNAME?=	vte
 PORTVERSION=	0.34.7
@@ -15,6 +15,7 @@ MAINTAINER?=	gnome@FreeBSD.org
 COMMENT?=	Terminal widget with improved accessibility and I18N support
 
 USE_XZ=		yes
+NO_STAGE=	yes
 
 .if !defined(REFERENCE_PORT)
 VTE3_SLAVE?=	no

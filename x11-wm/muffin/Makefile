@@ -12,10 +12,10 @@ COMMENT=	Compositing window manager forked from Mutter for use with Cinnamon
 BUILD_DEPENDS=	zenity>3.0.0:${PORTSDIR}/x11/zenity3 \
 		gnome-autogen.sh:${PORTSDIR}/devel/gnome-common \
 		gsettings-desktop-schemas>=3.4.0:${PORTSDIR}/devel/gsettings-desktop-schemas
-LIB_DEPENDS=	startup-notification-1:${PORTSDIR}/x11/startup-notification \
-		execinfo:${PORTSDIR}/devel/libexecinfo \
-		clutter-glx-1:${PORTSDIR}/graphics/clutter \
-		canberra-gtk3:${PORTSDIR}/audio/libcanberra-gtk3
+LIB_DEPENDS=	libstartup-notification-1.so:${PORTSDIR}/x11/startup-notification \
+		libexecinfo.so:${PORTSDIR}/devel/libexecinfo \
+		libclutter-glx-1.so:${PORTSDIR}/graphics/clutter \
+		libcanberra-gtk3.so:${PORTSDIR}/audio/libcanberra-gtk3
 RUN_DEPENDS=	zenity>=3.0.0:${PORTSDIR}/x11/zenity3
 
 USE_GITHUB=	yes
@@ -23,6 +23,7 @@ GH_ACCOUNT=	linuxmint
 GH_TAGNAME=	1.7.1
 GH_COMMIT=	4b36a9a
 
+NO_STAGE=	yes
 USE_XORG=	x11 xext xrandr xcomposite xcursor xinerama ice sm
 USE_PYTHON=	2.5+
 USES=		gettext gmake pathfix

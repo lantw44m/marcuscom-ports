@@ -12,6 +12,7 @@ COMMENT=	Programming language and compiler that converts Vala code into C code
 
 LICENSE=	LGPL21
 
+NO_STAGE=	yes
 USES=		bison gettext gmake pathfix pkgconfig
 USE_XZ=		yes
 USE_GNOME=	glib20 gnomeprefix libxslt
@@ -26,7 +27,7 @@ VALA_VER=	${PORTVERSION:R}
 PLIST_SUB=	VERSION=${VALA_VER}
 
 .if defined(VALA_SLAVE)
-LIB_DEPENDS+=	vala-${VALA_VER}.0:${PORTSDIR}/lang/vala
+LIB_DEPENDS+=	libvala-${VALA_VER}.so:${PORTSDIR}/lang/vala
 CONFIGURE_ARGS+=--enable-vapigen
 BUILD_DEPENDS+=	p5-XML-LibXML>=0:${PORTSDIR}/textproc/p5-XML-LibXML
 RUN_DEPENDS+=	p5-XML-LibXML>=0:${PORTSDIR}/textproc/p5-XML-LibXML

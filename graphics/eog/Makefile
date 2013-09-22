@@ -13,11 +13,12 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	The Eye Of Gnome image viewer
 
 BUILD_DEPENDS=	${LOCALBASE}/share/icons/gnome/index.theme:${PORTSDIR}/misc/gnome-icon-theme
-LIB_DEPENDS=	lcms:${PORTSDIR}/graphics/lcms
+LIB_DEPENDS=	liblcms.so:${PORTSDIR}/graphics/lcms
 RUN_DEPENDS=	${LOCALBASE}/share/icons/gnome/index.theme:${PORTSDIR}/misc/gnome-icon-theme
 
 CONFLICTS=	eog-3.[0-9]*
 
+NO_STAGE=	yes
 USE_BZIP2=	yes
 USE_GNOME=	gnomeprefix intlhack librsvg2 gconf2 gnomedesktop
 INSTALLS_ICONS=	yes
@@ -41,7 +42,7 @@ _WITH_EXIF=	no
 _WITH_EXEMPI=	no
 
 .if ${PORT_OPTIONS:MEXIF}
-LIB_DEPENDS+=	exif:${PORTSDIR}/graphics/libexif
+LIB_DEPENDS+=	libexif.so:${PORTSDIR}/graphics/libexif
 PLIST_SUB+=	EXIF=""
 _WITH_EXIF=	yes
 .else
@@ -50,7 +51,7 @@ PLIST_SUB+=	EXIF="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MEXEMPI}
-LIB_DEPENDS+=	exempi:${PORTSDIR}/textproc/exempi
+LIB_DEPENDS+=	libexempi.so:${PORTSDIR}/textproc/exempi
 _WITH_EXEMPI=	yes
 .else
 CONFIGURE_ARGS+=--without-xmp

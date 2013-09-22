@@ -7,15 +7,16 @@ CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	A port of Tomboy to C++, note taking application
+COMMENT=	C++ version of Tomboy, note taking application
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-LIB_DEPENDS=	pcre:${PORTSDIR}/devel/pcre \
-		boost_filesystem:${PORTSDIR}/devel/boost-libs \
-		uuid:${PORTSDIR}/misc/e2fsprogs-libuuid
+LIB_DEPENDS=	libpcre.so:${PORTSDIR}/devel/pcre \
+		libboost_filesystem.so:${PORTSDIR}/devel/boost-libs \
+		libuuid.so:${PORTSDIR}/misc/e2fsprogs-libuuid
 
+NO_STAGE=	yes
 USE_XZ=		yes
 USE_GNOME=	gnomeprefix gtk30 intltool libxml2 libxslt \
 		ltverhack gnomedocutils gtkmm30

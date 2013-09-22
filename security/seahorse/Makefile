@@ -22,6 +22,7 @@ LIB_DEPENDS=	gpgme:${PORTSDIR}/security/gpgme \
 
 CONFLICTS=	libcryptui-3.[0-9]* seahorse-3.[0-9]*
 
+NO_STAGE=	yes
 USE_XORG=	sm
 USE_LDCONFIG=	yes
 USE_BZIP2=	yes

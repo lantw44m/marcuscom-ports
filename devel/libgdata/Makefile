@@ -11,12 +11,13 @@ MAINTAINER=	kwm@FreeBSD.org
 COMMENT=	GLib based implimentation of the GData protocol
 
 BUILD_DEPENDS=	ca_root_nss>=0:${PORTSDIR}/security/ca_root_nss
-LIB_DEPENDS=	soup-gnome-2.4:${PORTSDIR}/devel/libsoup-gnome \
-		oauth:${PORTSDIR}/net/liboauth
+LIB_DEPENDS=	libsoup-gnome-2.4.so:${PORTSDIR}/devel/libsoup-gnome \
+		liboauth.so:${PORTSDIR}/net/liboauth
 RUN_DEPENDS=	ca_root_nss>=0:${PORTSDIR}/security/ca_root_nss
 
 CONFLICTS=	libgdata-0.6.*
 
+NO_STAGE=	yes
 USE_XZ=		yes
 USE_LDCONFIG=	yes
 USES=		gettext gmake pathfix pkgconfig

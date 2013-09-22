@@ -10,15 +10,16 @@ MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	A small but powerful text editor for GNOME 2 Desktop Environment
+COMMENT=	Small but powerful text editor for GNOME 2 Desktop Environment
 
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes
-LIB_DEPENDS=	enchant:${PORTSDIR}/textproc/enchant \
-		soup-2.4:${PORTSDIR}/devel/libsoup
+LIB_DEPENDS=	libenchant.so:${PORTSDIR}/textproc/enchant \
+		libsoup-2.4.so:${PORTSDIR}/devel/libsoup
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes
 
 CONFLICTS=	gedit-3.[0-9]*
 
+NO_STAGE=	yes
 USE_XORG=	sm
 USE_BZIP2=	yes
 USES=		desktop-file-utils gettext gmake pathfix

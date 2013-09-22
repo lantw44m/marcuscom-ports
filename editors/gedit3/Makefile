@@ -9,19 +9,20 @@ MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	A small but powerful text editor for GNOME 3 Desktop Environment
+COMMENT=	Small but powerful text editor for GNOME 3 Desktop Environment
 
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes \
 		${LOCALBASE}/libdata/pkgconfig/gsettings-desktop-schemas.pc:${PORTSDIR}/devel/gsettings-desktop-schemas \
 		itstool:${PORTSDIR}/textproc/itstool
-LIB_DEPENDS=	enchant:${PORTSDIR}/textproc/enchant \
-		peas-gtk-1.0:${PORTSDIR}/devel/libpeas \
-		soup-2.4:${PORTSDIR}/devel/libsoup
+LIB_DEPENDS=	libenchant.so:${PORTSDIR}/textproc/enchant \
+		libpeas-gtk-1.0.so:${PORTSDIR}/devel/libpeas \
+		libsoup-2.4.so:${PORTSDIR}/devel/libsoup
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes \
 		${LOCALBASE}/libdata/pkgconfig/gsettings-desktop-schemas.pc:${PORTSDIR}/devel/gsettings-desktop-schemas
 
 CONFLICTS=	gedit-2.[0-9]*
 
+NO_STAGE=	yes
 LATEST_LINK=	gedit3
 USE_XORG=	sm
 USE_XZ=		yes

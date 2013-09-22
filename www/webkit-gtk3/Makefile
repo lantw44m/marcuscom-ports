@@ -25,6 +25,7 @@ LIB_DEPENDS=	libenchant.so:${PORTSDIR}/textproc/enchant \
 
 LATEST_LINK=	${PORTNAME}${PKGNAMESUFFIX}
 
+NO_STAGE=	yes
 USE_XZ=		yes
 USE_GSTREAMER1=	yes
 USE_XORG=	xt xdamage xcomposite

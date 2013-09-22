@@ -16,6 +16,7 @@ LIB_DEPENDS=	xklavier:${PORTSDIR}/x11/libxklavier
 
 CONFLICTS=	libgnomekbd-3.[0-9]*
 
+NO_STAGE=	yes
 USE_BZIP2=	yes
 USE_GNOME=	gnomeprefix ltverhack gconf2
 USE_AUTOTOOLS=	libtool

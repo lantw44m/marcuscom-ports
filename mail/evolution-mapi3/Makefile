@@ -12,13 +12,14 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Evolution plugin to connect to Microsoft Exchange servers
 
 BUILD_DEPENDS=	evolution>=${EVO_VER}:${PORTSDIR}/mail/evolution3
-LIB_DEPENDS=	mapi:${PORTSDIR}/mail/libmapi
+LIB_DEPENDS=	libmapi.so:${PORTSDIR}/mail/libmapi
 RUN_DEPENDS=	evolution>=${EVO_VER}:${PORTSDIR}/mail/evolution3
 
 CONFLICTS=	evolution-mapi-2.[0-9]*
 
 BROKEN=		needs newer libmapi which needs samba4 update.
 
+NO_STAGE=	yes
 EVO_VER=	3.4.3
 LATEST_LINK=	evolution-mapi3
 USE_XZ=		yes

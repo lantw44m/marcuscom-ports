@@ -10,9 +10,10 @@ MASTER_SITES=	GNOME
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	C library aimed to provide a Gtk+ widget to display rasterized maps and markers
 
-LIB_DEPENDS=	clutter-gtk-1.0:${PORTSDIR}/graphics/clutter-gtk3 \
-		soup-gnome-2.4:${PORTSDIR}/devel/libsoup-gnome
+LIB_DEPENDS=	libclutter-gtk-1.0.so:${PORTSDIR}/graphics/clutter-gtk3 \
+		libsoup-gnome-2.4.so:${PORTSDIR}/devel/libsoup-gnome
 
+NO_STAGE=	yes
 USE_XZ=		yes
 USES=		gmake pathfix pkgconfig
 USE_GNOME=	gtk30 ltverhack gnomehier introspection:build

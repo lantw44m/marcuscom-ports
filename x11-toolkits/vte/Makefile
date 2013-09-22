@@ -13,6 +13,7 @@ MAINTAINER?=	gnome@FreeBSD.org
 COMMENT?=	Terminal widget with improved accessibility and I18N support
 
 USE_BZIP2=	yes
+NO_STAGE=	yes
 
 .if !defined(REFERENCE_PORT)
 

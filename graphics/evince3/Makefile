@@ -14,13 +14,14 @@ COMMENT=	GNOME 3 multi-format document viewer
 BUILD_DEPENDS=	${LOCALBASE}/share/icons/gnome/index.theme:${PORTSDIR}/misc/gnome-icon-theme \
 		itstool:${PORTSDIR}/textproc/itstool \
 		${LOCALBASE}/libdata/pkgconfig/gsettings-desktop-schemas.pc:${PORTSDIR}/devel/gsettings-desktop-schemas
-LIB_DEPENDS=	poppler-glib:${PORTSDIR}/graphics/poppler-glib \
-		spectre:${PORTSDIR}/print/libspectre
+LIB_DEPENDS=	libpoppler-glib.so:${PORTSDIR}/graphics/poppler-glib \
+		libspectre.so:${PORTSDIR}/print/libspectre
 RUN_DEPENDS=	${LOCALBASE}/share/icons/gnome/index.theme:${PORTSDIR}/misc/gnome-icon-theme \
 		${LOCALBASE}/libdata/pkgconfig/gsettings-desktop-schemas.pc:${PORTSDIR}/devel/gsettings-desktop-schemas
 
 CONFLICTS=	evince-2.[0-9]*
 
+NO_STAGE=	yes
 LATEST_LINK=	evince3
 USE_LDCONFIG=	yes
 USE_XZ=		yes
@@ -58,7 +59,7 @@ USE_TEX=	latex
 CONFIGURE_ARGS+=	--enable-dvi
 PLIST_SUB+=		DVI=""
 . if ${PORT_OPTIONS:MT1LIB}
-LIB_DEPENDS+=	t1:${PORTSDIR}/devel/t1lib
+LIB_DEPENDS+=	libt1.so:${PORTSDIR}/devel/t1lib
 CONFIGURE_ARGS+=	--enable-t1lib
 . else
 CONFIGURE_ARGS+=	--disable-t1lib
@@ -76,7 +77,7 @@ PLIST_SUB+=		NAUTILUS=""
 BUILD_DEPENDS+=	${LOCALBASE}/share/icons/gnome/index.theme:${PORTSDIR}/misc/gnome-icon-theme
 RUN_DEPENDS+=	${LOCALBASE}/share/icons/gnome/index.theme:${PORTSDIR}/misc/gnome-icon-theme
 .if ${PORT_OPTIONS:MKEYRING}
-LIB_DEPENDS+=	gnome-keyring:${PORTSDIR}/security/libgnome-keyring
+LIB_DEPENDS+=	libgnome-keyring.so:${PORTSDIR}/security/libgnome-keyring
 .else
 CONFIGURE_ARGS+=	--without-keyring
 .endif
@@ -93,7 +94,7 @@ PLIST_SUB+=		IMPRESS="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MDJVU}
-LIB_DEPENDS+=		djvulibre:${PORTSDIR}/graphics/djvulibre
+LIB_DEPENDS+=		libdjvulibre.so:${PORTSDIR}/graphics/djvulibre
 CONFIGURE_ARGS+=	--enable-djvu
 PLIST_SUB+=		DJVU=""
 .else

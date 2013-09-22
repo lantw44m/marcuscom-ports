@@ -11,8 +11,9 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Library to access the secret service API
 
 BUILD_DEPENDS=	docbook-xsl>=0:${PORTSDIR}/textproc/docbook-xsl
-LIB_DEPENDS=	gcrypt:${PORTSDIR}/security/libgcrypt
+LIB_DEPENDS=	libgcrypt.so:${PORTSDIR}/security/libgcrypt
 
+NO_STAGE=	yes
 USE_XZ=		yes
 USE_GNOME=	gnomehier glib20 libxslt:build intltool introspection:build
 USES=		gettext gmake pathfix pkgconfig

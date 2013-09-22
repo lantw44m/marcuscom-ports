@@ -15,6 +15,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 CONFLICTS=	clutter-1.6.[0-9]*
 
+NO_STAGE=	yes
 USES=		gettext gmake pathfix pkgconfig
 USE_XZ=		yes
 USE_AUTOTOOLS=	libtool

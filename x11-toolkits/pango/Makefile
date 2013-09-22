@@ -13,6 +13,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	An open-source framework for the layout and rendering of i18n text
 
 USE_XZ=		yes
+NO_STAGE=	yes
 
 .if !defined(REFERENCE_PORT)
 

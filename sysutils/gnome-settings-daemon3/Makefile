@@ -13,20 +13,21 @@ COMMENT=	GNOME 3 settings daemon
 
 BUILD_DEPENDS=	gnome-session>=2.91.0:${PORTSDIR}/x11/gnome-session3 \
 		${LOCALBASE}/libdata/pkgconfig/gsettings-desktop-schemas.pc:${PORTSDIR}/devel/gsettings-desktop-schemas
-LIB_DEPENDS=	canberra-gtk3:${PORTSDIR}/audio/libcanberra-gtk3 \
-		polkit-gobject-1:${PORTSDIR}/sysutils/polkit \
-		ibus-1.0:${PORTSDIR}/textproc/ibus \
-		dbus-1:${PORTSDIR}/devel/dbus \
-		colord:${PORTSDIR}/graphics/colord \
-		lcms2:${PORTSDIR}/graphics/lcms2 \
-		pulse:${PORTSDIR}/audio/pulseaudio \
-		gdbm:${PORTSDIR}/databases/gdbm \
-		notify:${PORTSDIR}/devel/libnotify
+LIB_DEPENDS=	libcanberra-gtk3.so:${PORTSDIR}/audio/libcanberra-gtk3 \
+		libpolkit-gobject-1.so:${PORTSDIR}/sysutils/polkit \
+		libibus-1.0.so:${PORTSDIR}/textproc/ibus \
+		libdbus-1.so:${PORTSDIR}/devel/dbus \
+		libcolord.so:${PORTSDIR}/graphics/colord \
+		liblcms2.so:${PORTSDIR}/graphics/lcms2 \
+		libpulse.so:${PORTSDIR}/audio/pulseaudio \
+		libgdbm.so:${PORTSDIR}/databases/gdbm \
+		libnotify.so:${PORTSDIR}/devel/libnotify
 RUN_DEPENDS=	gnome-session>=2.91.0:${PORTSDIR}/x11/gnome-session3 \
 		${LOCALBASE}/libdata/pkgconfig/gsettings-desktop-schemas.pc:${PORTSDIR}/devel/gsettings-desktop-schemas
 
 CONFLICTS=	gnome-settings-daemon-2.[0-9]*
 
+NO_STAGE=	yes
 LATEST_LINK=	gnome-settings-daemon3
 USE_XORG=	xxf86misc
 USE_XZ=		yes
@@ -63,7 +64,7 @@ MAN1=		gnome-settings-daemon.1
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MCUPS}
-LIB_DEPENDS+=	cups:${PORTSDIR}/print/cups-client
+LIB_DEPENDS+=	libcups.so:${PORTSDIR}/print/cups-client
 PLIST_SUB+=	CUPS=""
 .else
 PLIST_SUB+=	CUPS="@comment "
@@ -71,7 +72,7 @@ CONFIGURE_ARGS+=--disable-cups
 .endif
 
 .if ${PORT_OPTIONS:MSMARTCARD}
-LIB_DEPENDS+=	nss3:${PORTSDIR}/security/nss
+LIB_DEPENDS+=	libnss3.so:${PORTSDIR}/security/nss
 CONFIGURE_ARGS+=--enable-smartcard-support
 PLIST_SUB+=	SMARTCARD=""
 .else

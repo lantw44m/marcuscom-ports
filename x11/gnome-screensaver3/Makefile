@@ -20,6 +20,7 @@ RUN_DEPENDS=	pam_helper:${PORTSDIR}/security/pam_helper \
 
 CONFLICTS=	gnome-screensaver-2.[0-9]*
 
+NO_STAGE=	yes
 LATEST_LINK=	gnome-screensaver3
 USE_XZ=		yes
 USES=		gettext gmake pathfix pkgconfig

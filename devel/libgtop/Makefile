@@ -11,6 +11,7 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME 2 top library
 
+NO_STAGE=	yes
 USE_XZ=		yes
 USE_PERL5=	build
 USE_XORG=	xau

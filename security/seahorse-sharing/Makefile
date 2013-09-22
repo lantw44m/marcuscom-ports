@@ -12,12 +12,13 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Seahorse PGP public key sharing using DNS-SD and HKP.
 
 BUILD_DEPENDS=	gpg:${PORTSDIR}/security/gnupg
-LIB_DEPENDS=	gpgme:${PORTSDIR}/security/gpgme \
-		avahi-glib:${PORTSDIR}/net/avahi-app \
-		soup-2.4:${PORTSDIR}/devel/libsoup
+LIB_DEPENDS=	libgpgme.so:${PORTSDIR}/security/gpgme \
+		libavahi-glib.so:${PORTSDIR}/net/avahi-app \
+		libsoup-2.4.so:${PORTSDIR}/devel/libsoup
 RUN_DEPENDS=	gpg:${PORTSDIR}/security/gnupg \
 		seahorse>=3.2.1:${PORTSDIR}/security/seahorse3
 
+NO_STAGE=	yes
 USE_XZ=		yes
 USES=		gettext gmake pathfix pkgconfig
 USE_GNOME=	intlhack gnomeprefix

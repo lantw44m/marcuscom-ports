@@ -10,10 +10,11 @@ MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	A GNOME utility that provides network information statistics
+COMMENT=	GNOME utility that provides network information statistics
 
-LIB_DEPENDS=	gtop-2.0:${PORTSDIR}/devel/libgtop
+LIB_DEPENDS=	libgtop-2.0.so:${PORTSDIR}/devel/libgtop
 
+NO_STAGE=	yes
 CONFLICTS=	gnome-nettool-2.[0-9]*
 LATEST_LINK=	gnome-nettool3
 

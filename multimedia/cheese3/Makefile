@@ -14,15 +14,16 @@ BUILD_DEPENDS=	${LOCALBASE}/include/linux/videodev.h:${PORTSDIR}/multimedia/v4l_
 		${LOCALBASE}/libdata/pkgconfig/gnome-video-effects.pc:${PORTSDIR}/graphics/gnome-video-effects \
 		vala>=0.14.0:${PORTSDIR}/lang/vala \
 		itstool:${PORTSDIR}/textproc/itstool
-LIB_DEPENDS=	canberra-gtk3:${PORTSDIR}/audio/libcanberra-gtk3 \
-		hal:${PORTSDIR}/sysutils/hal \
-		gee.2:${PORTSDIR}/devel/libgee06 \
-		clutter-gtk-1.0:${PORTSDIR}/graphics/clutter-gtk3 \
-		clutter-gst-2.0:${PORTSDIR}/multimedia/clutter-gst
+LIB_DEPENDS=	libcanberra-gtk3.so:${PORTSDIR}/audio/libcanberra-gtk3 \
+		libhal.so:${PORTSDIR}/sysutils/hal \
+		libgee.so.2:${PORTSDIR}/devel/libgee06 \
+		libclutter-gtk-1.0.so:${PORTSDIR}/graphics/clutter-gtk3 \
+		libclutter-gst-2.0.so:${PORTSDIR}/multimedia/clutter-gst
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gnome-video-effects.pc:${PORTSDIR}/graphics/gnome-video-effects
 
 CONFLICTS=	cheese-2.[0-9]*
 
+NO_STAGE=	yes
 LATEST_LINK=	cheese3
 USE_XORG=	xxf86vm x11
 USE_XZ=		yes

@@ -12,14 +12,15 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	CD/DVD mastering tool for the GNOME desktop
 
 BUILD_DEPENDS=	itstool:${PORTSDIR}/textproc/itstool
-LIB_DEPENDS=	notify:${PORTSDIR}/devel/libnotify \
-		totem-plparser:${PORTSDIR}/multimedia/totem-pl-parser \
-		canberra-gtk3:${PORTSDIR}/audio/libcanberra-gtk3
+LIB_DEPENDS=	libnotify.so:${PORTSDIR}/devel/libnotify \
+		libtotem-plparser.so:${PORTSDIR}/multimedia/totem-pl-parser \
+		libcanberra-gtk3.so:${PORTSDIR}/audio/libcanberra-gtk3
 RUN_DEPENDS=	growisofs:${PORTSDIR}/sysutils/dvd+rw-tools \
 		cdrdao:${PORTSDIR}/sysutils/cdrdao
 
 CONFLICTS=	brasero-2.[0-9]*
 
+NO_STAGE=	yes
 LATEST_LINK=	brasero3
 USES=		desktop-file-utils gettext gmake pathfix pkgconfig \
 		shared-mime-info
@@ -58,8 +59,8 @@ CONFIGURE_ARGS+=--enable-nautilus=no
 .endif
 
 .if ${PORT_OPTIONS:MLIBBURNIA}
-LIB_DEPENDS+=	burn:${PORTSDIR}/devel/libburn \
-		isofs:${PORTSDIR}/devel/libisofs
+LIB_DEPENDS+=	libburn.so:${PORTSDIR}/devel/libburn \
+		libisofs.so:${PORTSDIR}/devel/libisofs
 CONFIGURE_ARGS+=--enable-libburnia
 PLIST_SUB+=	LIBBURNIA=""
 .else

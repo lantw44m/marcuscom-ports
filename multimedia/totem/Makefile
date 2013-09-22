@@ -10,18 +10,19 @@ MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
 
 MAINTAINER?=	gnome@FreeBSD.org
-COMMENT?=	A gstreamer-based video player for the GNOME 2 Desktop
+COMMENT?=	Gstreamer-based video player for the GNOME 2 Desktop
 
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes
-LIB_DEPENDS=	gdata.7:${PORTSDIR}/devel/libgdata06 \
-		unique-1.0:${PORTSDIR}/x11-toolkits/unique \
-		totem-plparser:${PORTSDIR}/multimedia/totem-pl-parser
+LIB_DEPENDS=	libgdata.so.7:${PORTSDIR}/devel/libgdata06 \
+		libunique-1.0.so:${PORTSDIR}/x11-toolkits/unique \
+		libtotem-plparser.so:${PORTSDIR}/multimedia/totem-pl-parser
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes \
 		${LOCALBASE}/libexec/gnome-settings-daemon:${PORTSDIR}/sysutils/gnome-settings-daemon \
 		${PYTHON_SITELIBDIR}/atom/__init__.py:${PORTSDIR}/devel/py-gdata
 
 CONFLICTS=	totem-3.[0-9]*
 
+NO_STAGE=	yes
 USE_PYTHON=	yes
 USE_BZIP2=	yes
 USES=		desktop-file-utils gettext gmake pathfix pkgconfig
@@ -68,7 +69,7 @@ PLIST_SUB+=	TRACKER="@comment "
 #.endif
 
 .if ${PORT_OPTIONS:MLIRC}
-LIB_DEPENDS+=	lirc_client.2:${PORTSDIR}/comms/lirc
+LIB_DEPENDS+=	liblirc_client.so:${PORTSDIR}/comms/lirc
 PLIST_SUB+=	LIRC=""
 TOTEM_PLUGINS:=	${TOTEM_PLUGINS} lirc
 .else
@@ -76,7 +77,7 @@ PLIST_SUB+=	LIRC="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MGALAGO}
-LIB_DEPENDS+=	galago.3:${PORTSDIR}/devel/libgalago
+LIB_DEPENDS+=	libgalago.so:${PORTSDIR}/devel/libgalago
 PLIST_SUB+=	GALAGO=""
 TOTEM_PLUGINS:=	${TOTEM_PLUGINS} galago
 .else

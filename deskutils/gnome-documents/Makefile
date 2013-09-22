@@ -11,18 +11,19 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Document manager application designed to work with GNOME 3
 
 BUILD_DEPENDS=	itstool:${PORTSDIR}/textproc/itstool
-LIB_DEPENDS=	dbus-glib-1:${PORTSDIR}/devel/dbus-glib \
-		clutter-1.0:${PORTSDIR}/graphics/clutter \
-		clutter-gtk-1.0:${PORTSDIR}/graphics/clutter-gtk3 \
-		evview3:${PORTSDIR}/graphics/evince3 \
-		gdata.13:${PORTSDIR}/devel/libgdata \
-		goa-1:${PORTSDIR}/net/gnome-online-accounts \
-		gjs:${PORTSDIR}/lang/gjs \
-		tracker-sparql-0.14:${PORTSDIR}/sysutils/tracker-client \
-		zapojit-0.0:${PORTSDIR}/net/libzapojit
+LIB_DEPENDS=	libdbus-glib-1.so:${PORTSDIR}/devel/dbus-glib \
+		libclutter-1.0.so:${PORTSDIR}/graphics/clutter \
+		libclutter-gtk-1.0.so:${PORTSDIR}/graphics/clutter-gtk3 \
+		libevview3.so:${PORTSDIR}/graphics/evince3 \
+		libgdata.so.13:${PORTSDIR}/devel/libgdata \
+		libgoa-1.so:${PORTSDIR}/net/gnome-online-accounts \
+		libgjs.so:${PORTSDIR}/lang/gjs \
+		libtracker-sparql-0.14.so:${PORTSDIR}/sysutils/tracker-client \
+		libzapojit-0.0.so:${PORTSDIR}/net/libzapojit
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/dbus-python.pc:${PORTSDIR}/devel/py-dbus \
 		${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss
 
+NO_STAGE=	yes
 USE_XZ=		yes
 USES=		gettext gmake pathfix pkgconfig
 USE_GNOME=	gnomedesktop3 gnomeprefix gtk30 intlhack libxml2

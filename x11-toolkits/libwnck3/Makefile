@@ -13,6 +13,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Library used for writing pagers and taskslists
 
 USE_XZ=		yes
+NO_STAGE=	yes
 
 .if !defined(REFERENCE_PORT)
 

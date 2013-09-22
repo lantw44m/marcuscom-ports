@@ -13,6 +13,7 @@ COMMENT=	Next evolution of the Gedit plugins engine
 
 BUILD_DEPENDS=	valac:${PORTSDIR}/lang/vala
 
+NO_STAGE=	yes
 USE_XZ=		yes
 USE_PYTHON=	2.5+
 USE_LDCONFIG=	yes
@@ -37,7 +38,7 @@ GJS_DESC=	JavaScript support based on spidermonkey
 
 .if ${PORT_OPTIONS:MSEED}
 CONFIGURE_ARGS+=--enable-seed=yes
-LIB_DEPENDS=	seed-gtk3:${PORTSDIR}/devel/seed3
+LIB_DEPENDS=	libseed-gtk3.so:${PORTSDIR}/devel/seed3
 PLIST_SUB+=	SEED=""
 .else
 CONFIGURE_ARGS+=--enable-seed=no
@@ -56,7 +57,7 @@ PLIST_SUB+=	PYTHONS="@comment "
 .if ${PORT_OPTIONS:MGJS}
 CONFIGURE_ARGS+=--enable-gjs
 BUILD_DEPENDS+=	gjs>=1.32.0:${PORTSDIR}/lang/gjs
-LIB_DEPENDS+=	gjs:${PORTSDIR}/lang/gjs
+LIB_DEPENDS+=	libgjs.so:${PORTSDIR}/lang/gjs
 PLIST_SUB+=	GJS=""
 .else
 CONFIGURE_ARGS+=--enable-gjs=no

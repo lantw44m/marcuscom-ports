@@ -13,9 +13,10 @@ COMMENT=	A personal social data server.
 
 BUILD_DEPENDS=	xsltproc:${PORTSDIR}/textproc/libxslt \
 		vapigen:${PORTSDIR}/lang/vala-vapigen
-LIB_DEPENDS=	rest-0.7:${PORTSDIR}/devel/librest \
-		json-glib-1.0:${PORTSDIR}/devel/json-glib
+LIB_DEPENDS=	librest-0.7.so:${PORTSDIR}/devel/librest \
+		libjson-glib-1.0.so:${PORTSDIR}/devel/json-glib
 
+NO_STAGE=	yes
 USE_GNOME=	glib20 intlhack gconf2 introspection:build gnomehier
 USE_XZ=		yes
 GNU_CONFIGURE=	yes

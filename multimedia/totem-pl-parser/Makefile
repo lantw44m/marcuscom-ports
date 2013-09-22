@@ -11,9 +11,10 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GObject-based library to parse a host of playlist formats
 
-LIB_DEPENDS=	gmime-2.6:${PORTSDIR}/mail/gmime26 \
-		soup-gnome-2.4:${PORTSDIR}/devel/libsoup-gnome
+LIB_DEPENDS=	libgmime-2.6.so:${PORTSDIR}/mail/gmime26 \
+		libsoup-gnome-2.4.so:${PORTSDIR}/devel/libsoup-gnome
 
+NO_STAGE=	yes
 USE_XZ=		yes
 USES=		gettext gmake pathfix
 USE_GNOME=	gnomeprefix glib20 libxml2 intlhack ltverhack gnomehier \
@@ -33,7 +34,7 @@ QUVI_DESC=	Flash media stream URL support
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MQUVI}
-LIB_DEPENDS+=	quvi:${PORTSDIR}/multimedia/libquvi
+LIB_DEPENDS+=	libquvi.so:${PORTSDIR}/multimedia/libquvi
 CONFIGURE_ARGS+=--enable-quvi
 .else
 CONFIGURE_ARGS+=--enable-quvi=no

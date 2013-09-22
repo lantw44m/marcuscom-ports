@@ -11,16 +11,17 @@ COMMENT=	Jabber Connection Manager for Telepathy Framework
 
 BUILD_DEPENDS=	telepathy-glib>=0.18.0:${PORTSDIR}/net-im/telepathy-glib \
 		${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss
-LIB_DEPENDS=	soup-2.4:${PORTSDIR}/devel/libsoup \
-		nice:${PORTSDIR}/net-im/libnice \
-		telepathy-glib:${PORTSDIR}/net-im/telepathy-glib \
-		dbus-glib-1:${PORTSDIR}/devel/dbus-glib \
-		uuid:${PORTSDIR}/misc/e2fsprogs-libuuid \
-		loudmouth-1:${PORTSDIR}/net-im/loudmouth
+LIB_DEPENDS=	libsoup-2.4.so:${PORTSDIR}/devel/libsoup \
+		libnice.so:${PORTSDIR}/net-im/libnice \
+		libtelepathy-glib.so:${PORTSDIR}/net-im/telepathy-glib \
+		libdbus-glib-1.so:${PORTSDIR}/devel/dbus-glib \
+		libuuid.so:${PORTSDIR}/misc/e2fsprogs-libuuid \
+		libloudmouth-1.so:${PORTSDIR}/net-im/loudmouth
 RUN_DEPENDS=	${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss
 
 PORTSCOUT=	limitw:1,even
 
+NO_STAGE=	yes
 GNU_CONFIGURE=	yes
 USES=		gmake pathfix pkgconfig
 USE_GNOME=	glib20 libxslt:build

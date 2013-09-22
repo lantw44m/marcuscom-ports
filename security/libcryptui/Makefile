@@ -12,13 +12,14 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME application for managing encryption keys (PGP, SSH)
 
 BUILD_DEPENDS=	gpg:${PORTSDIR}/security/gnupg
-LIB_DEPENDS=	gpgme:${PORTSDIR}/security/gpgme \
-    		dbus-glib-1:${PORTSDIR}/devel/dbus-glib \
-		gnome-keyring:${PORTSDIR}/security/libgnome-keyring
+LIB_DEPENDS=	libgpgme.so:${PORTSDIR}/security/gpgme \
+		libdbus-glib-1.so:${PORTSDIR}/devel/dbus-glib \
+		libgnome-keyring.so:${PORTSDIR}/security/libgnome-keyring
 RUN_DEPENDS=	gpg:${PORTSDIR}/security/gnupg
 
 CONFLICTS=	seahorse-2.[0-9]* seahorse-3.0.[0-9]*
 
+NO_STAGE=	yes
 USE_LDCONFIG=	yes
 USE_XZ=		yes
 USES=		gettext gmake pathfix pkgconfig
@@ -36,7 +37,7 @@ OPTIONS_DEFINE=	NOTIFY
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNOTIFY}
-LIB_DEPENDS+=	notify:${PORTSDIR}/devel/libnotify
+LIB_DEPENDS+=	libnotify.so:${PORTSDIR}/devel/libnotify
 .else
 CONFIGURE_ARGS+=--disable-libnotify
 .endif

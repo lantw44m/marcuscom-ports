@@ -15,21 +15,21 @@ BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-
 		gsettings-desktop-schemas>=0:${PORTSDIR}/devel/gsettings-desktop-schemas \
 		itstool:${PORTSDIR}/textproc/itstool \
     		${LOCALBASE}/libexec/mission-control-5:${PORTSDIR}/net-im/telepathy-mission-control
-LIB_DEPENDS=	enchant:${PORTSDIR}/textproc/enchant \
-		geocode-glib:${PORTSDIR}/net/geocode-glib \
-		goa-1.0:${PORTSDIR}/net/gnome-online-accounts \
-		pulse:${PORTSDIR}/audio/pulseaudio \
-		telepathy:${PORTSDIR}/net-im/libtelepathy \
-		telepathy-glib:${PORTSDIR}/net-im/telepathy-glib \
-		telepathy-farstream:${PORTSDIR}/net-im/telepathy-farstream \
-		telepathy-logger:${PORTSDIR}/net-im/telepathy-logger \
-		folks-telepathy:${PORTSDIR}/net-im/folks \
-		notify:${PORTSDIR}/devel/libnotify \
-		gcr-3:${PORTSDIR}/security/gcr \
-		canberra-gtk3:${PORTSDIR}/audio/libcanberra-gtk3 \
-		clutter-gst-2.0:${PORTSDIR}/multimedia/clutter-gst \
-		webkitgtk-3.0:${PORTSDIR}/www/webkit-gtk3 \
-		soup-2.4:${PORTSDIR}/devel/libsoup
+LIB_DEPENDS=	libenchant.so:${PORTSDIR}/textproc/enchant \
+		libgeocode-glib.so:${PORTSDIR}/net/geocode-glib \
+		libgoa-1.0.so:${PORTSDIR}/net/gnome-online-accounts \
+		libpulse.so:${PORTSDIR}/audio/pulseaudio \
+		libtelepathy.so:${PORTSDIR}/net-im/libtelepathy \
+		libtelepathy-glib.so:${PORTSDIR}/net-im/telepathy-glib \
+		libtelepathy-farstream.so:${PORTSDIR}/net-im/telepathy-farstream \
+		libtelepathy-logger.so:${PORTSDIR}/net-im/telepathy-logger \
+		libfolks-telepathy.so:${PORTSDIR}/net-im/folks \
+		libnotify.so:${PORTSDIR}/devel/libnotify \
+		libgcr-3.so:${PORTSDIR}/security/gcr \
+		libcanberra-gtk3.so:${PORTSDIR}/audio/libcanberra-gtk3 \
+		libclutter-gst-2.0.so:${PORTSDIR}/multimedia/clutter-gst \
+		libwebkitgtk-3.0.so:${PORTSDIR}/www/webkit-gtk3 \
+		libsoup-2.4.so:${PORTSDIR}/devel/libsoup
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes \
 		${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss \
 		gsettings-desktop-schemas>=0:${PORTSDIR}/devel/gsettings-desktop-schemas \
@@ -37,6 +37,7 @@ RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-co
 
 CONFLICTS=	empathy-2.[0-9]*
 
+NO_STAGE=	yes
 LATEST_LINK=	empathy3
 USE_XZ=		yes
 USES=		gettext gmake pathfix pkgconfig

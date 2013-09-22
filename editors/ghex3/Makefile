@@ -15,6 +15,7 @@ BUILD_DEPENDS=	itstool:${PORTSDIR}/textproc/itstool
 
 CONFLICT=	ghex-2.\*
 
+NO_STAGE=	yes
 USE_XZ=		yes
 USE_GNOME=	gnomeprefix gtk30 intlhack libxml2:build
 USES=		gettext gmake pathfix pkgconfig

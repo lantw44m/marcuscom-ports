@@ -15,6 +15,7 @@ COMMENT=	Clearlooks theme engine
 
 LICENSE=	LGPL21
 
+NO_STAGE=	yes
 USE_BZIP2=	yes
 USE_GNOME=	gtk30 intlhack 
 USES=		gettext gmake pathfix

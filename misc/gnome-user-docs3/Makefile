@@ -13,6 +13,7 @@ COMMENT=	GNOME 3 users guide
 
 BUILD_DEPENDS=	itstool:${PORTSDIR}/textproc/itstool
 
+NO_STAGE=	yes
 LATEST_LINK=	gnome-user-docs3
 USE_XZ=		yes
 GNU_CONFIGURE=	yes

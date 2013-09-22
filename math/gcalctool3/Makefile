@@ -9,13 +9,14 @@ MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	A GNOME 3 calculator tool based on the old calctool for OpenWindows
+COMMENT=	GNOME 3 calculator tool based on the old calctool for OpenWindows
 
 CONFLICTS=	gcalctool-5.[0-9]*
 
 BUILD_DEPENDS=	yelp-build:${PORTSDIR}/textproc/yelp-tools \
 		itstool:${PORTSDIR}/textproc/itstool
 
+NO_STAGE=	yes
 LATEST_LINK=	gcalctool3
 USE_XZ=	yes
 USES=		bison gettext gmake pathfix

@@ -12,12 +12,13 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Plugins for GEdit 3
 
 BUILD_DEPENDS=	gedit>=${GEDITVER}:${PORTSDIR}/editors/gedit3
-LIB_DEPENDS=	peas-1.0.0:${PORTSDIR}/devel/libpeas
+LIB_DEPENDS=	libpeas-1.0.so:${PORTSDIR}/devel/libpeas
 RUN_DEPENDS=	gedit>=${GEDITVER}:${PORTSDIR}/editors/gedit3
 
 CONFLICTS=	gedit-plugins-2.[0-9]*
 
 GEDITVER=	3.6.0
+NO_STAGE=	yes
 LATEST_LINK=	gedit-plugins3
 USE_LDCONFIG=	yes
 USE_XZ=		yes

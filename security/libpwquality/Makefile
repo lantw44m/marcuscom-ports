@@ -9,8 +9,9 @@ MASTER_SITES=	https://fedorahosted.org/releases/l/i/libpwquality/
 MAINTAINER=	gnome@freebsd.org
 COMMENT=	Library for generating random passwords and quality checking
 
-LIB_DEPENDS=	crack:${PORTSDIR}/security/cracklib
+LIB_DEPENDS=	libcrack.so:${PORTSDIR}/security/cracklib
 
+NO_STAGE=	yes
 USES=		gettext gmake pathfix
 USE_BZIP2=	yes
 USE_AUTOTOOLS=	libtool

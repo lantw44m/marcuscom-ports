@@ -30,12 +30,13 @@ RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/dbus-python.pc:${PORTSDIR}/devel/py-
 		gdm>=3.6.0:${PORTSDIR}/x11/gdm3 \
 		${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss
 
+NO_STAGE=	yes
 USE_XZ=		yes
 USE_XORG=	x11 xfixes sm
 USES=		gettext gmake pathfix
 USE_AUTOTOOLS=	libtool
 USE_GNOME=	evolutiondataserver3 gnomedesktop3 gnomemenus3 gnomeprefix \
-		gtk30 intlhack ltverhack
+		gtk30 intlhack introspection ltverhack
 USE_GSTREAMER1=	yes
 USE_LDCONFIG=	yes
 

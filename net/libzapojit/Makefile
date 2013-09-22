@@ -12,10 +12,11 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GLib/GObject wrapper for the Skydrive and Hotmail API
 
 BUILD_DEPENDS=	itstool:${PORTSDIR}/textproc/itstool
-LIB_DEPENDS=	goa-1:${PORTSDIR}/net/gnome-online-accounts \
-		json-glib-1:${PORTSDIR}/devel/json-glib \
-		rest-0.7:${PORTSDIR}/devel/librest
+LIB_DEPENDS=	libgoa-1.so:${PORTSDIR}/net/gnome-online-accounts \
+		libjson-glib-1.so:${PORTSDIR}/devel/json-glib \
+		librest-0.7.so:${PORTSDIR}/devel/librest
 
+NO_STAGE=	yes
 USE_XZ=		yes
 USES=		gmake pathfix
 USE_GNOME=	gnomeprefix intlhack

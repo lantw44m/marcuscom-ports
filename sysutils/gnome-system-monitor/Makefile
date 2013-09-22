@@ -19,6 +19,7 @@ RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gnome-icon-theme.pc:${PORTSDIR}/misc
 
 CONFLICTS=	gnome-system-monitor-3.[0-9]*
 
+NO_STAGE=	yes
 USE_BZIP2=	yes
 USES=		gettext gmake pathfix pkgconfig
 INSTALLS_OMF=	yes

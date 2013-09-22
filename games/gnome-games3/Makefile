@@ -24,6 +24,7 @@ RUN_DEPENDS=	dbus-launch:${PORTSDIR}/devel/dbus
 CONFLICTS=	sol-1.0.* glchess-[0-9]* gnomesudoku-[0-9]* gnome-games-2.[0-9]*
 
 LATEST_LINK=	gnome-games3
+NO_STAGE=	yes
 USE_XZ=		yes
 USE_PYTHON=	yes
 USES=		desktop-file-utils gettext gmake pathfix pkgconfig

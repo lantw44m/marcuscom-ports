@@ -12,16 +12,17 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Control center for GNOME 2 project
 
-LIB_DEPENDS=	canberra-gtk:${PORTSDIR}/audio/libcanberra \
-		dbus-glib-1:${PORTSDIR}/devel/dbus-glib \
-		polkit-gobject-1:${PORTSDIR}/sysutils/polkit \
-		unique-1.0:${PORTSDIR}/x11-toolkits/unique
+LIB_DEPENDS=	libcanberra-gtk.so:${PORTSDIR}/audio/libcanberra \
+		libdbus-glib-1.so:${PORTSDIR}/devel/dbus-glib \
+		libpolkit-gobject-1.so:${PORTSDIR}/sysutils/polkit \
+		libunique-1.0.so:${PORTSDIR}/x11-toolkits/unique
 BUILD_DEPENDS=	${LOCALBASE}/libexec/gnome-settings-daemon:${PORTSDIR}/sysutils/gnome-settings-daemon
 RUN_DEPENDS=	gnome-eject:${PORTSDIR}/sysutils/gnome-mount \
 		${LOCALBASE}/libexec/gnome-settings-daemon:${PORTSDIR}/sysutils/gnome-settings-daemon
 
 CONFLICTS=	gnome-control-center-3.[0-9]*
 
+NO_STAGE=	yes
 USE_BZIP2=	yes
 USES=		desktop-file-utils gettext gmake pathfix pkgconfig \
 		shared-mime-info

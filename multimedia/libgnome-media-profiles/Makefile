@@ -12,6 +12,7 @@ COMMENT=	Library that contains code to manage media profiles
 
 CONFLICTS=	gnome-media-2.[0-9]*
 
+NO_STAGE=	yes
 USE_GNOME=	gtk30 gconf2 intlhack gnomedocutils
 GNU_CONFIGURE=	yes
 USE_GSTREAMER=	yes

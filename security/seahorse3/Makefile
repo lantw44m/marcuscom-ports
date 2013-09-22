@@ -13,18 +13,19 @@ COMMENT=	GNOME application for managing encryption keys (PGP, SSH)
 
 BUILD_DEPENDS=	gpg:${PORTSDIR}/security/gnupg \
 		itstool:${PORTSDIR}/textproc/itstool
-LIB_DEPENDS=	gpgme:${PORTSDIR}/security/gpgme \
-    		dbus-glib-1:${PORTSDIR}/devel/dbus-glib \
-		gnome-keyring:${PORTSDIR}/security/libgnome-keyring \
-		cryptui:${PORTSDIR}/security/libcryptui \
-		gcr-3:${PORTSDIR}/security/gcr \
-		gcrypt:${PORTSDIR}/security/libgcrypt \
-		secret-1:${PORTSDIR}/security/libsecret \
-		soup-2.4:${PORTSDIR}/devel/libsoup
+LIB_DEPENDS=	libgpgme.so:${PORTSDIR}/security/gpgme \
+		libdbus-glib-1.so:${PORTSDIR}/devel/dbus-glib \
+		libgnome-keyring.so:${PORTSDIR}/security/libgnome-keyring \
+		libcryptui.so:${PORTSDIR}/security/libcryptui \
+		libgcr-3.so:${PORTSDIR}/security/gcr \
+		libgcrypt.so:${PORTSDIR}/security/libgcrypt \
+		libsecret-1.so:${PORTSDIR}/security/libsecret \
+		libsoup-2.4.so:${PORTSDIR}/devel/libsoup
 RUN_DEPENDS=	gpg:${PORTSDIR}/security/gnupg
 
 CONFLICTS=	seahorse-2.[0-9]*
 
+NO_STAGE=	yes
 LATEST_LINK=	seahorse3
 USE_XORG=	sm
 USE_LDCONFIG=	yes

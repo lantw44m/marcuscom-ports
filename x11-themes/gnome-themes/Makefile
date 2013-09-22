@@ -17,6 +17,7 @@ RUN_DEPENDS=	gtk-engines2>=2.15.0:${PORTSDIR}/x11-themes/gtk-engines2
 
 CONFLICTS=	clearlooks-metacity-0.* gnome-themes-standard-3.[0-9]*
 
+NO_STAGE=	yes
 USE_BZIP2=	yes
 USES=		gettext gmake pathfix
 USE_AUTOTOOLS=	libtool

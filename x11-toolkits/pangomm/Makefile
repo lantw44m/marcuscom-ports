@@ -13,6 +13,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	C++ wrapper for Pango
 
 USE_XZ=		yes
+NO_STAGE=	yes
 
 .if !defined(REFERENCE_PORT)
 

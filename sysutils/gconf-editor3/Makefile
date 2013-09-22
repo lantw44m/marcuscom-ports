@@ -13,6 +13,7 @@ COMMENT=	A gconf database editor for the GNOME 3 environment
 
 CONFLICTS=	gconf-editor-2.[0-9]*
 
+NO_STAGE=	yes
 LATEST_LINK=	gconf-editor3
 USE_XZ=		yes
 USES=		gettext gmake pathfix pkgconfig

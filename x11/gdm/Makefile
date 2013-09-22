@@ -30,6 +30,7 @@ CONFLICTS=	gdm-3.[0-9]*
 USERS=		gdm
 GROUPS=		gdm
 
+NO_STAGE=	yes
 USE_XZ=		yes
 USE_LDCONFIG=	yes
 USE_XORG=	dmx dmxproto

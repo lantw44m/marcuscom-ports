@@ -10,9 +10,10 @@ MASTER_SITES=	GNOME
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME 3 RSI prevention tool
 
-LIB_DEPENDS=	canberra-gtk3:${PORTSDIR}/audio/libcanberra-gtk3 \
-		notify:${PORTSDIR}/devel/libnotify
+LIB_DEPENDS=	libcanberra-gtk3.so:${PORTSDIR}/audio/libcanberra-gtk3 \
+		libnotify.so:${PORTSDIR}/devel/libnotify
 
+NO_STAGE=	yes
 USE_XZ=		yes
 USE_GNOME=	intlhack gtk30 gnomecontrolcenter3
 USE_XORG=	x11 xscrnsaver

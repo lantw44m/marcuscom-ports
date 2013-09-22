@@ -15,14 +15,15 @@ BUILD_DEPENDS=	zenity>=3.0.0:${PORTSDIR}/x11/zenity3 \
 		itstool:${PORTSDIR}/textproc/itstool \
 		xmllint:${PORTSDIR}/textproc/libxml2 \
 		gsettings-desktop-schemas>=3.3.0:${PORTSDIR}/devel/gsettings-desktop-schemas
-LIB_DEPENDS=	startup-notification-1:${PORTSDIR}/x11/startup-notification \
-		gtop-2.0:${PORTSDIR}/devel/libgtop \
-		canberra-gtk:${PORTSDIR}/audio/libcanberra
+LIB_DEPENDS=	libstartup-notification-1.so:${PORTSDIR}/x11/startup-notification \
+		libgtop-2.0.so:${PORTSDIR}/devel/libgtop \
+		libcanberra-gtk.so:${PORTSDIR}/audio/libcanberra
 RUN_DEPENDS=	zenity>=3.0.0:${PORTSDIR}/x11/zenity3 \
 		gsettings-desktop-schemas>=3.3.0:${PORTSDIR}/devel/gsettings-desktop-schemas
 
 CONFLICTS=	metacity-2.30.[0-9]*
 
+NO_STAGE=	yes
 LATEST_LINK=	metacity3
 USE_XZ=		yes
 USE_XORG=	x11 xcomposite xdamage xrender xcursor xinerama xext xrandr

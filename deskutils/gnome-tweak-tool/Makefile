@@ -13,6 +13,7 @@ COMMENT=	Allows to tweak some hidden settings in GTK3 / GNOME3
 BUILD_DEPENDS=	gsettings-desktop-schemas>=3.4.0:${PORTSDIR}/devel/gsettings-desktop-schemas
 RUN_DEPENDS=	gsettings-desktop-schemas>=3.4.0:${PORTSDIR}/devel/gsettings-desktop-schemas
 
+NO_STAGE=	yes
 USE_XZ=		yes
 USE_GNOME=	gnomeprefix gconf2 pygobject3
 USE_PYTHON=	yes

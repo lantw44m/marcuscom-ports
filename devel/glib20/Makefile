@@ -16,6 +16,7 @@ LICENSE=	LGPL20
 
 USE_XZ=		yes
 PORTSCOUT=	limitw:1,even
+NO_STAGE=	yes
 
 .if !defined(REFERENCE_PORT)
 
@@ -73,7 +74,7 @@ GLIB_ARCH=	${ARCH}
 CONFIGURE_TARGET=${GLIB_ARCH}-portbld-freebsd${OSREL}
 
 .if ${PORT_OPTIONS:MCOLLATION_FIX}
-LIB_DEPENDS+=	icui18n:${PORTSDIR}/devel/icu
+LIB_DEPENDS+=	libicui18n.so:${PORTSDIR}/devel/icu
 EXTRA_PATCHES+=	${FILESDIR}/extra-patch-glib_Makefile.in \
 		${FILESDIR}/extra-patch-glib_gunicollate.c
 # Disable it until someone can figure why it causes net-im/pidgin crashed.

@@ -16,6 +16,7 @@ RUN_DEPENDS=	${LOCALBASE}/bin/gtar:${PORTSDIR}/archivers/gtar \
 
 CONFLICTS=	file-roller-2.[0-9]*
 
+NO_STAGE=	yes
 LATEST_LINK=	file-roller3
 USE_LDCONFIG=	yes
 USE_XZ=		yes

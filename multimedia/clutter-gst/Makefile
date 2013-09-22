@@ -10,8 +10,9 @@ MASTER_SITES=	GNOME
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Clutter GStreamer integration
 
-LIB_DEPENDS=	clutter-1.0:${PORTSDIR}/graphics/clutter
+LIB_DEPENDS=	libclutter-1.0.so:${PORTSDIR}/graphics/clutter
 
+NO_STAGE=	yes
 USE_XZ=		yes
 USE_AUTOTOOLS=	libtool
 USE_GL=		gl

@@ -26,6 +26,7 @@ RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gnome-icon-theme.pc:${PORTSDIR}/misc
 
 CONFLICTS=	anjuta-2.[0-9]*
 
+NO_STAGE=yes
 LATEST_LINK=	anjuta3
 USE_XZ=		yes
 USES=		bison gettext gmake pathfix perl5 pkgconfig shared-mime-info

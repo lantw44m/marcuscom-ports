@@ -12,6 +12,7 @@ COMMENT=	GNOME Symbolic Icons
 
 BUILD_DEPENDS=	icon-naming-utils>=0.8.7:${PORTSDIR}/x11-themes/icon-naming-utils
 
+NO_STAGE=	yes
 USE_XZ=		yes
 INSTALLS_ICONS=	yes
 USES=		gmake pathfix pkgconfig

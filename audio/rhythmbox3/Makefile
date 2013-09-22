@@ -14,17 +14,18 @@ MAINTAINER=	marcus@FreeBSD.org
 COMMENT=	Audio player for GNOME
 
 BUILD_DEPENDS=	${LOCALBASE}/include/linux/videodev2.h:${PORTSDIR}/multimedia/v4l_compat
-LIB_DEPENDS=	musicbrainz3:${PORTSDIR}/audio/libmusicbrainz3 \
-		totem-plparser:${PORTSDIR}/multimedia/totem-pl-parser \
-		dbus-glib-1:${PORTSDIR}/devel/dbus-glib \
-		peas-1.0:${PORTSDIR}/devel/libpeas \
-		json-glib-1.0:${PORTSDIR}/devel/json-glib \
-		soup-gnome-2.4:${PORTSDIR}/devel/libsoup-gnome \
-		gnome-media-profiles-3.0:${PORTSDIR}/multimedia/libgnome-media-profiles \
-		brasero-media3:${PORTSDIR}/sysutils/brasero3
+LIB_DEPENDS=	libmusicbrainz3.so:${PORTSDIR}/audio/libmusicbrainz3 \
+		libtotem-plparser.so:${PORTSDIR}/multimedia/totem-pl-parser \
+		libdbus-glib-1.so:${PORTSDIR}/devel/dbus-glib \
+		libpeas-1.0.so:${PORTSDIR}/devel/libpeas \
+		libjson-glib-1.0.so:${PORTSDIR}/devel/json-glib \
+		libsoup-gnome-2.4.so:${PORTSDIR}/devel/libsoup-gnome \
+		libgnome-media-profiles-3.0.so:${PORTSDIR}/multimedia/libgnome-media-profiles \
+		libbrasero-media3.so:${PORTSDIR}/sysutils/brasero3
 
 CONFLICTS=	rhythmbox-0.[0-9]*
 
+NO_STAGE=	yes
 LATEST_LINK=	rhythmbox3
 USE_BZIP2=	yes
 USES=		gettext gmake pathfix
@@ -60,7 +61,7 @@ USE_GSTREAMER+=	faad
 .endif
 
 .if ${PORT_OPTIONS:MFAAD}
-LIB_DEPENDS+=	lirc_client:${PORTSDIR}/comms/lirc
+LIB_DEPENDS+=	liblirc_client.so:${PORTSDIR}/comms/lirc
 PLIST_SUB+=	LIRC=""
 CONFIGURE_ARGS+=--enable-lirc
 .else
@@ -69,8 +70,8 @@ PLIST_SUB+=	LIRC="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MMTP}
-LIB_DEPENDS+=	mtp:${PORTSDIR}/audio/libmtp \
-		hal:${PORTSDIR}/sysutils/hal
+LIB_DEPENDS+=	libmtp.so:${PORTSDIR}/audio/libmtp \
+		libhal.so:${PORTSDIR}/sysutils/hal
 PLIST_SUB+=	MTP=""
 CONFIGURE_ARGS+=--with-mtp
 .else
@@ -93,7 +94,7 @@ PLIST_SUB+=	DAAP="@comment "
 #.endif
 
 .if ${PORT_OPTIONS:MNOTIFY}
-LIB_DEPENDS+=	notify:${PORTSDIR}/devel/libnotify
+LIB_DEPENDS+=	libnotify.so:${PORTSDIR}/devel/libnotify
 PLIST_SUB+=	NOTIFY=""
 .else
 CONFIGURE_ARGS+=--disable-libnotify
@@ -111,7 +112,7 @@ PLIST_SUB+=	PYTHON="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MIPOD}
-LIB_DEPENDS+=	gpod:${PORTSDIR}/audio/libgpod
+LIB_DEPENDS+=	libgpod.so:${PORTSDIR}/audio/libgpod
 CONFIGURE_ARGS+=--with-ipod
 PLIST_SUB+=	IPOD=""
 .else
@@ -134,7 +135,7 @@ PLIST_SUB+=	ITMS_PLUGIN="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MWEBKIT}
-LIB_DEPENDS+=	webkitgtk-3.0:${PORTSDIR}/www/webkit-gtk3
+LIB_DEPENDS+=	libwebkitgtk-3.0.so:${PORTSDIR}/www/webkit-gtk3
 CONFIGURE_ARGS+=--with-webkit
 PLIST_SUB+=	WEBKIT=""
 .else

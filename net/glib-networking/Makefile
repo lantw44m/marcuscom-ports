@@ -20,6 +20,7 @@ LIB_DEPENDS=	libgnutls.so:${PORTSDIR}/security/gnutls \
 RUN_DEPENDS=	${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss \
 		gsettings-desktop-schemas>=0:${PORTSDIR}/devel/gsettings-desktop-schemas
 
+NO_STAGE=	yes
 USE_XZ=		yes
 GNU_CONFIGURE=	yes
 USE_GNOME=	glib20 intltool

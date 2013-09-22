@@ -13,13 +13,14 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Evolution plugin to connect to Microsoft Exchange servers
 
 BUILD_DEPENDS=	${PKGFILES}:${PORTSDIR}/mail/evolution
-LIB_DEPENDS=	mapi:${PORTSDIR}/mail/libmapi
+LIB_DEPENDS=	libmapi.so:${PORTSDIR}/mail/libmapi
 RUN_DEPENDS=	${PKGFILES}:${PORTSDIR}/mail/evolution
 
 CONFLICTS=	evolution-mapi-3.[0-9]*
 
 PKGFILES=	${LOCALBASE}/libdata/pkgconfig/evolution-plugin.pc
 
+NO_STAGE=	yes
 USE_BZIP2=	yes
 USES=		gettext gmake
 USE_GNOME=	evolutiondataserver

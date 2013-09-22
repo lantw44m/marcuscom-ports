@@ -14,6 +14,7 @@ COMMENT=	GNOME 2 hex editor
 
 CONFLICT=	ghex-3.\*
 
+NO_STAGE=	yes
 USE_BZIP2=	yes
 USE_GNOME=	gnomeprefix intlhack libgnomeprintui libgnomeui gnomedocutils
 USES=		gettext gmake pathfix pkgconfig

@@ -18,6 +18,7 @@ RUN_DEPENDS=	epiphany>=3.6.0:${PORTSDIR}/www/epiphany3
 
 CONFLICTS=	epiphany-extensions-2.[0-9]*
 
+NO_STAGE=	yes
 LATEST_LINK=	epiphany-extensions3
 USES=		gettext gmake pathfix pkgconfig
 USE_XZ=		yes

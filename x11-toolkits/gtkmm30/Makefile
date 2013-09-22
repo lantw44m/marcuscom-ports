@@ -14,6 +14,7 @@ COMMENT=	C++ wrapper for Gtk+3
 
 USE_XZ=		yes
 LATEST_LINK=	gtkmm30
+NO_STAGE=	yes
 
 .if !defined(REFERENCE_PORT)
 

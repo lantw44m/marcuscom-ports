@@ -10,13 +10,14 @@ MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	A SOAP (Simple Object Access Protocol) implementation in C
+COMMENT=	SOAP (Simple Object Access Protocol) implementation in C
 
 BUILD_DEPENDS=	glib-networking>=2.29.18:${PORTSDIR}/net/glib-networking
-LIB_DEPENDS=	gcrypt:${PORTSDIR}/security/libgcrypt
+LIB_DEPENDS=	libgcrypt.so:${PORTSDIR}/security/libgcrypt
 RUN_DEPENDS=	glib-networking>=2.29.18:${PORTSDIR}/net/glib-networking
 
 USE_XZ=		yes
+NO_STAGE=	yes
 
 .if !defined(REFERENCE_PORT)
 
@@ -34,8 +35,8 @@ PLIST_SUB=	VERSION="2.4"
 
 .if defined(SOUP_SLAVE)
 USE_SQLITE=	yes
-LIB_DEPENDS+=	soup-2.4:${PORTSDIR}/devel/libsoup \
-		gnome-keyring:${PORTSDIR}/security/libgnome-keyring
+LIB_DEPENDS+=	libsoup-2.4.so:${PORTSDIR}/devel/libsoup \
+		libgnome-keyring.so:${PORTSDIR}/security/libgnome-keyring
 CONFIGURE_ARGS+=--with-gnome
 .else
 USE_GNOME+=	introspection:build

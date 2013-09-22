@@ -16,6 +16,7 @@ LIB_DEPENDS=	libdbus-glib-1.so:${PORTSDIR}/devel/dbus-glib \
 		libpolkit-gobject-1.so:${PORTSDIR}/sysutils/polkit
 RUN_DEPENDS=	p5-Net-DBus>=0:${PORTSDIR}/devel/p5-Net-DBus
 
+NO_STAGE=	yes
 USE_BZIP2=	yes
 USES=		gmake pathfix perl5
 USE_GNOME=	intlhack glib20

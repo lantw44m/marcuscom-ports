@@ -12,6 +12,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Panel component for the GNOME 3 Desktop
 
 USE_XZ=		yes
+NO_STAGE=	yes
 
 .if !defined(REFERENCE_PORT)
 

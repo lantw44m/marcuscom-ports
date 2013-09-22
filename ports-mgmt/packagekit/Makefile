@@ -12,10 +12,11 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A DBUS packaging abstraction layer
 
 BUILD_DEPENDS=	${LOCALBASE}/bin/docbook2man:${PORTSDIR}/textproc/docbook-utils
-LIB_DEPENDS=	execinfo:${PORTSDIR}/devel/libexecinfo \
-		polkit-gobject-1.0:${PORTSDIR}/sysutils/polkit
+LIB_DEPENDS=	libexecinfo.so:${PORTSDIR}/devel/libexecinfo \
+		libpolkit-gobject-1.so:${PORTSDIR}/sysutils/polkit
 RUN_DEPENDS=	lsof:${PORTSDIR}/sysutils/lsof
 
+NO_STAGE=	yes
 USE_XZ=		yes
 USES=		gettext gmake iconv pathfix shared-mime-info
 USE_GNOME=	glib20 intltool introspection

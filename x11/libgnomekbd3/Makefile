@@ -18,6 +18,7 @@ LATEST_LINK=	libgnomekbd3
 
 CONFLICTS=	libgnomekbd-2.[0-9]*
 
+NO_STAGE=	yes
 USE_XZ=		yes
 USE_GNOME=	gnomeprefix ltverhack intltool gtk30 introspection:build
 USE_AUTOTOOLS=	libtool

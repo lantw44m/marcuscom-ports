@@ -14,6 +14,7 @@ COMMENT=	Utilities to help manage documentation for Yelp and the web
 BUILD_DEPENDS=	yelp-xsl>=3.1.5:${PORTSDIR}/textproc/yelp-xsl \
 		itstool:${PORTSDIR}/textproc/itstool
 
+NO_STAGE=	yes
 USES=		gettext gmake pathfix pkgconfig
 USE_XZ=		yes
 USE_GNOME=	gnomeprefix intlhack libxml2 libxslt

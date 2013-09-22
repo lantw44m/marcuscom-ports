@@ -27,6 +27,7 @@ RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-co
 
 CONFLICTS=	epiphany-2.[0-9]*
 
+NO_STAGE=	yes
 LATEST_LINK=	epiphany3
 USE_LDCONFIG=	yes
 INSTALLS_ICONS=	yes

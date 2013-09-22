@@ -8,8 +8,9 @@ CATEGORIES=	graphics
 MASTER_SITES=	GNOME
 
 MAINTAINER=	kwm@FreeBSD.org
-COMMENT=	A collection of Gstreamer effects
+COMMENT=	Collection of Gstreamer effects
 
+NO_STAGE=	yes
 USE_BZIP2=	yes
 USE_GNOME=	intlhack
 USES=		gettext gmake pathfix

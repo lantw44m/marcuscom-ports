@@ -1,6 +1,6 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
 # $FreeBSD$
-#
+#   $MCom$
 
 PORTNAME=	yelp
 PORTVERSION=	3.6.2
@@ -21,6 +21,7 @@ RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/yelp-xsl.pc:${PORTSDIR}/textproc/yel
 
 CONFLICTS=	yelp-2.[0-9]*
 
+NO_STAGE=	yes
 LATEST_LINK=	yelp3
 USES=		desktop-file-utils gettext gmake pathfix pkgconfig
 USE_XZ=		yes

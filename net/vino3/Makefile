@@ -11,15 +11,16 @@ DIST_SUBDIR=	gnome3
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	VNC server that allows for remote access to your GNOME desktop
 
-LIB_DEPENDS=	gnutls:${PORTSDIR}/security/gnutls \
-		telepathy-glib:${PORTSDIR}/net-im/telepathy-glib \
-		dbus-glib-1:${PORTSDIR}/devel/dbus-glib \
-		soup-2.4:${PORTSDIR}/devel/libsoup \
-		gnome-keyring:${PORTSDIR}/security/libgnome-keyring \
-		avahi-glib:${PORTSDIR}/net/avahi-app
+LIB_DEPENDS=	libgnutls.so:${PORTSDIR}/security/gnutls \
+		libtelepathy-glib.so:${PORTSDIR}/net-im/telepathy-glib \
+		libdbus-glib-1.so:${PORTSDIR}/devel/dbus-glib \
+		libsoup-2.4.so:${PORTSDIR}/devel/libsoup \
+		libgnome-keyring.so:${PORTSDIR}/security/libgnome-keyring \
+		libavahi-glib.so:${PORTSDIR}/net/avahi-app
 
 CONFLICTS=	vino-2.[0-9]*
 
+NO_STAGE=	yes
 LATEST_LINK=	vino3
 USE_XZ=		yes
 USES=		gettext gmake pathfix
@@ -39,7 +40,7 @@ OPTIONS_DEFAULT=NOTIFY
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNOTIFY}
-LIB_DEPENDS+=	notify:${PORTSDIR}/devel/libnotify
+LIB_DEPENDS+=	libnotify.so:${PORTSDIR}/devel/libnotify
 .else
 CONFIGURE_ARGS+=--without-libnotify
 .endif

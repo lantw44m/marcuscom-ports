@@ -12,14 +12,15 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	VNC client for the GNOME Desktop
 
-LIB_DEPENDS=	gtk-vnc-1.0:${PORTSDIR}/net/gtk-vnc \
-    		avahi-core:${PORTSDIR}/net/avahi-app \
-		avahi-ui:${PORTSDIR}/net/avahi-gtk \
-		gdbm:${PORTSDIR}/databases/gdbm \
-		gnome-keyring:${PORTSDIR}/security/libgnome-keyring
+LIB_DEPENDS=	libgtk-vnc-1.0.so:${PORTSDIR}/net/gtk-vnc \
+		libavahi-core.so:${PORTSDIR}/net/avahi-app \
+		libavahi-ui.so:${PORTSDIR}/net/avahi-gtk \
+		libgdbm.so:${PORTSDIR}/databases/gdbm \
+		libgnome-keyring.so:${PORTSDIR}/security/libgnome-keyring
 
 CONFLICTS=	vinagre-3.[0-9]*
 
+NO_STAGE=	yes
 USE_BZIP2=	yes
 USES=		desktop-file-utils gettext gmake pathfix shared-mime-info
 USE_GNOME=	gnomeprefix intlhack vte gconf2 gnomedocutils gnomepanel
@@ -42,7 +43,7 @@ TELEPATHY_DESC=	Telepathy integration
 
 .if ${PORT_OPTIONS:MTELEPATHY}
 CONFIGURE_ARGS+=--enable-telepathy
-LIB_DEPENDS+=	telepathy-glib.0:${PORTSDIR}/net-im/telepathy-glib
+LIB_DEPENDS+=	libtelepathy-glib.so:${PORTSDIR}/net-im/telepathy-glib
 PLIST_SUB+=	TELEPATHY=""
 .else
 CONFIGURE_ARGS+=--disable-telepathy

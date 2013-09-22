@@ -10,10 +10,11 @@ MASTER_SITES=	http://telepathy.freedesktop.org/releases/${PORTNAME}/
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Link-local Connection Manager for Telepathy Framework
 
-LIB_DEPENDS=	avahi-glib:${PORTSDIR}/net/avahi-app \
-		telepathy-glib:${PORTSDIR}/net-im/telepathy-glib \
-		soup-2.4:${PORTSDIR}/devel/libsoup
+LIB_DEPENDS=	libavahi-glib.so:${PORTSDIR}/net/avahi-app \
+		libtelepathy-glib.so:${PORTSDIR}/net-im/telepathy-glib \
+		libsoup-2.4.so:${PORTSDIR}/devel/libsoup
 
+NO_STAGE=	yes
 GNU_CONFIGURE=	yes
 USES=		gmake pathfix pkgconfig
 USE_GNOME=	glib20 libxslt:build

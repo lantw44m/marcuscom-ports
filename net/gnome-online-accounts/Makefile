@@ -18,6 +18,7 @@ LIB_DEPENDS=	libwebkitgtk-3.0.so:${PORTSDIR}/www/webkit-gtk3 \
 		libsecret-1.so:${PORTSDIR}/security/libsecret \
 		librest-0.7.so:${PORTSDIR}/devel/librest
 
+NO_STAGE=	yes
 USE_XZ=		yes
 USE_GNOME=	gtk30 intlhack introspection:build libxslt:build
 USES=		gettext gmake pathfix pkgconfig

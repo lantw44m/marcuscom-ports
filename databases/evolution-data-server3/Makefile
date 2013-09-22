@@ -16,17 +16,18 @@ LICENSE=	LGPL20
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 BUILD_DEPENDS=	gcr>=3.4.1:${PORTSDIR}/security/gcr
-LIB_DEPENDS=	soup-gnome-2.4:${PORTSDIR}/devel/libsoup-gnome \
-		oauth:${PORTSDIR}/net/liboauth \
-		goa-1:${PORTSDIR}/net/gnome-online-accounts \
-		gdata.13:${PORTSDIR}/devel/libgdata \
-		ical:${PORTSDIR}/devel/libical \
-		nss3:${PORTSDIR}/security/nss \
-		tasn1:${PORTSDIR}/security/libtasn1 \
-		gnome-keyring:${PORTSDIR}/security/libgnome-keyring
+LIB_DEPENDS=	libsoup-gnome-2.4.so:${PORTSDIR}/devel/libsoup-gnome \
+		liboauth.so:${PORTSDIR}/net/liboauth \
+		libgoa-1.so:${PORTSDIR}/net/gnome-online-accounts \
+		libgdata.so.13:${PORTSDIR}/devel/libgdata \
+		libical.so:${PORTSDIR}/devel/libical \
+		libnss3.so:${PORTSDIR}/security/nss \
+		libtasn1.so:${PORTSDIR}/security/libtasn1 \
+		libgnome-keyring.so:${PORTSDIR}/security/libgnome-keyring
 
 CONFLICTS=	evolution-data-server-2.[0-9]*
 
+NO_STAGE=	yes
 LATEST_LINK=	evolution-data-server3
 USE_XZ=		yes
 USES=		bison gettext gmake pathfix pkgconfig
@@ -63,7 +64,7 @@ KRB5_LIB=		`/usr/bin/krb5-config gssapi --libs`
 .endif
 
 .if ${PORT_OPTIONS:MWEATHER}
-LIB_DEPENDS+=		gweather-3:${PORTSDIR}/net/libgweather3
+LIB_DEPENDS+=		libgweather-3.so:${PORTSDIR}/net/libgweather3
 CONFIGURE_ARGS+=	--enable-weather
 PLIST_SUB+=		WEATHER=""
 .else

@@ -14,6 +14,7 @@ COMMENT=	Interactive Python accessibility explorer for GNOME
 
 CONFLICTS=	accerciser-3.[0-9].*
 
+NO_STAGE=	yes
 USE_BZIP2=	yes
 USE_GNOME=	pygnomedesktop atspi intlhack
 USE_PYTHON=	yes
@@ -27,4 +28,5 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 GCONF_SCHEMAS=	accerciser.schemas
 MAN1=		accerciser.1
 
+NO_STAGE=	yes
 .include <bsd.port.mk>

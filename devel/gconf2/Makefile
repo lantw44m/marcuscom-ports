@@ -12,17 +12,18 @@ DISTNAME=	GConf-${PORTVERSION}
 DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	A configuration database system for GNOME
+COMMENT=	Configuration database system for GNOME
 
 LICENSE=	LGPL20
 LICENSE_FILE=	${WRKSRC}/COPYING
 
+NO_STAGE=	yes
 USE_XZ=		yes
 
 .if !defined(REFERENCE_PORT)
 
-LIB_DEPENDS=	dbus-glib-1:${PORTSDIR}/devel/dbus-glib \
-		polkit-gobject-1:${PORTSDIR}/sysutils/polkit
+LIB_DEPENDS=	libdbus-glib-1.so:${PORTSDIR}/devel/dbus-glib \
+		libpolkit-gobject-1.so:${PORTSDIR}/sysutils/polkit
 
 USES=		gettext gmake pathfix pkgconfig
 USE_GNOME=	gnomehier orbit2 gtk20 libxml2 ltverhack \

@@ -12,12 +12,13 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	VNC server that allows for remote access to your GNOME desktop
 
-LIB_DEPENDS=	gnutls:${PORTSDIR}/security/gnutls \
-		telepathy-glib:${PORTSDIR}/net-im/telepathy-glib \
-		unique-1.0:${PORTSDIR}/x11-toolkits/unique
+LIB_DEPENDS=	libgnutls.so:${PORTSDIR}/security/gnutls \
+		libtelepathy-glib.so:${PORTSDIR}/net-im/telepathy-glib \
+		libunique-1.0.so:${PORTSDIR}/x11-toolkits/unique
 
 CONFLICTS=	vino-3.[0-9]*
 
+NO_STAGE=	yes
 USE_BZIP2=	yes
 USES=		gettext gmake pathfix pkgconfig
 USE_GNOME=	gnomeprefix intlhack gnomepanel
@@ -35,7 +36,7 @@ OPTIONS_DEFAULT=NOTIFY
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNOTIFY}
-LIB_DEPENDS+=	notify:${PORTSDIR}/devel/libnotify
+LIB_DEPENDS+=	libnotify.so:${PORTSDIR}/devel/libnotify
 CONFIGURE_ARGS+=--enable-libnotify=yes
 .else
 CONFIGURE_ARGS+=--enable-libnotify=no

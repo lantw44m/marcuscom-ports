@@ -11,12 +11,13 @@ MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	A GNOME utility that provides network information statistics
+COMMENT=	GNOME utility that provides network information statistics
 
-LIB_DEPENDS=	gtop-2.0:${PORTSDIR}/devel/libgtop
+LIB_DEPENDS=	libgtop-2.0.so:${PORTSDIR}/devel/libgtop
 
 CONFLICTS=	gnome-nettool-3.[0-9]*
 
+NO_STAGE=	yes
 USE_BZIP2=	yes
 USE_GNOME=	intlhack gnomeprefix libglade2 gconf2 gnomedocutils
 USES=		gettext gmake pathfix

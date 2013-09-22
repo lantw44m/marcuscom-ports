@@ -9,10 +9,11 @@ MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	A user interface builder for GTK+ 3
+COMMENT=	User interface builder for GTK+ 3
 
 CONFLICTS=	glade3-3.*
 
+NO_STAGE=	yes
 INSTALLS_ICONS=	yes
 USE_XZ=		yes
 USE_GNOME=	gtk30 gnomeprefix ltverhack gnomedocutils introspection:build

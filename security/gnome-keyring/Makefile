@@ -10,14 +10,15 @@ MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	A program that keeps passwords and other secrets
+COMMENT=	Program that keeps passwords and other secrets
 
-LIB_DEPENDS=	tasn1:${PORTSDIR}/security/libtasn1 \
-		gnome-keyring:${PORTSDIR}/security/libgnome-keyring
+LIB_DEPENDS=	libtasn1.so:${PORTSDIR}/security/libtasn1 \
+		libgnome-keyring.so:${PORTSDIR}/security/libgnome-keyring
 RUN_DEPENDS=	${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss
 
 CONFLICTS=	gnome-keyring-3.[0-9]* gcr-3.[0-9]*
 
+NO_STAGE=	yes
 USE_BZIP2=	yes
 USE_GNOME=	gnomeprefix gtk20 ltverhack intlhack
 USES=		gettext gmake pathfix pkgconfig

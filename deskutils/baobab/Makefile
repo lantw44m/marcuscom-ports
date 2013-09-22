@@ -13,10 +13,11 @@ COMMENT=	GNOME 3 graphical directory tree analyzer
 
 BUILD_DEPENDS=	itstool:${PORTSDIR}/textproc/itstool \
 		vapigen:${PORTSDIR}/lang/vala-vapigen
-LIB_DEPENDS=	gtop-2.0:${PORTSDIR}/devel/libgtop
+LIB_DEPENDS=	libgtop-2.0.so:${PORTSDIR}/devel/libgtop
 
 CONFLICTS=	gnome-utils-2.[0-9]*
 
+NO_STAGE=	yes
 USE_XZ=		yes
 USES=		gettext gmake pathfix pkgconfig
 USE_GNOME=	gnomeprefix intlhack libxml2 gtk30

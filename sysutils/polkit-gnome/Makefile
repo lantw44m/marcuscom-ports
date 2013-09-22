@@ -10,8 +10,9 @@ MASTER_SITES=	GNOME
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME frontend to the PolicyKit framework
 
-LIB_DEPENDS=	polkit-gobject-1:${PORTSDIR}/sysutils/polkit
+LIB_DEPENDS=	libpolkit-gobject-1.so:${PORTSDIR}/sysutils/polkit
 
+NO_STAGE=	yes
 USE_XZ=		yes
 USES=		gettext gmake pathfix
 USE_GNOME=	gnomeprefix gtk20 intlhack introspection:build

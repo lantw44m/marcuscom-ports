@@ -16,6 +16,7 @@ LIB_DEPENDS=	startup-notification-1:${PORTSDIR}/x11/startup-notification
 
 CONFLICTS=	gnome-terminal-3.[0-9]*
 
+NO_STAGE=	yes
 USES=		gettext gmake pathfix pkgconfig
 USE_BZIP2=	yes
 INSTALLS_OMF=	yes

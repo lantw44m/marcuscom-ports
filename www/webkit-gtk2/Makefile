@@ -20,6 +20,7 @@ LIB_DEPENDS=	libenchant.so:${PORTSDIR}/textproc/enchant \
 		libcurl.so:${PORTSDIR}/ftp/curl \
 		libsoup-2.4.so:${PORTSDIR}/devel/libsoup
 
+NO_STAGE=	yes
 USE_XZ=		yes
 USE_GSTREAMER=	yes
 USE_XORG=	xt

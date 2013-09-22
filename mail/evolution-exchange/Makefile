@@ -18,6 +18,7 @@ RUN_DEPENDS=	${EVO_PC_FILE}:${PORTSDIR}/mail/evolution
 
 CONFLICTS=	evolution-exchange-3.[0-9]*
 
+NO_STAGE=	yes
 USE_BZIP2=	yes
 USES=		gettext gmake pathfix pkgconfig
 USE_AUTOTOOLS=	libtool

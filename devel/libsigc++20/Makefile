@@ -12,6 +12,7 @@ COMMENT=	Callback Framework for C++
 
 BUILD_DEPENDS=	gm4:${PORTSDIR}/devel/m4
 
+NO_STAGE=	yes
 USE_AUTOTOOLS=	libtool
 USE_XZ=		yes
 USE_PERL5=	build

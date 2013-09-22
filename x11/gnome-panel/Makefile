@@ -13,6 +13,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Panel component for the GNOME 2 Desktop
 
 USE_BZIP2=	yes
+NO_STAGE=	yes
 
 .if !defined(REFERENCE_PORT)
 

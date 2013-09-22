@@ -19,6 +19,7 @@ RUN_DEPENDS=	gedit:${PORTSDIR}/editors/gedit \
 
 CONFLICTS=	gedit-plugins-3.[0-9]*
 
+NO_STAGE=	yes
 USE_LDCONFIG=	yes
 USE_BZIP2=	yes
 USES=		gettext gmake pathfix pkgconfig

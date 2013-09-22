@@ -10,6 +10,7 @@ MASTER_SITES=	http://nice.freedesktop.org/releases/
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Library and transmitter that implements ICE-19
 
+NO_STAGE=	yes
 USES=		gettext gmake pathfix pkgconfig
 USE_LDCONFIG=	yes
 USE_GNOME=	glib20 ltverhack
@@ -25,7 +26,7 @@ GUPNP_DESC=	UPnP IGD port mapping support
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGUPNP}
-LIB_DEPENDS+=	gupnp-igd-1.0:${PORTSDIR}/net/gupnp-igd
+LIB_DEPENDS+=	libgupnp-igd-1.0.so:${PORTSDIR}/net/gupnp-igd
 .else
 CONFIGURE_ARGS+=--disable-gupnp
 .endif

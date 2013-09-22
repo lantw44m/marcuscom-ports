@@ -12,16 +12,17 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	VNC client for the GNOME Desktop
 
 BUILD_DEPENDS=	itstool:${PORTSDIR}/textproc/itstool
-LIB_DEPENDS=	gtk-vnc-2.0:${PORTSDIR}/net/gtk-vnc3 \
-    		avahi-core:${PORTSDIR}/net/avahi-app \
-		avahi-ui-gtk3:${PORTSDIR}/net/avahi-gtk3 \
-		gdbm:${PORTSDIR}/databases/gdbm \
-		secret-1:${PORTSDIR}/security/libsecret \
-		gnome-keyring:${PORTSDIR}/security/libgnome-keyring
+LIB_DEPENDS=	libgtk-vnc-2.0.so:${PORTSDIR}/net/gtk-vnc3 \
+    		libavahi-core.so:${PORTSDIR}/net/avahi-app \
+		libavahi-ui-gtk3.so:${PORTSDIR}/net/avahi-gtk3 \
+		libgdbm.so:${PORTSDIR}/databases/gdbm \
+		libsecret-1.so:${PORTSDIR}/security/libsecret \
+		libgnome-keyring.so:${PORTSDIR}/security/libgnome-keyring
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gnome-icon-theme.pc:${PORTSDIR}/misc/gnome-icon-theme
 
 CONFLICTS=	vinagre-2.[0-9]*
 
+NO_STAGE=	yes
 LATEST_LINK=	vinagre3
 USE_XZ=		yes
 USES=		desktop-file-utils gettext gmake pathfix pkgconfig \
@@ -45,8 +46,8 @@ RDP_DESC=	MS Windows remote desktop support
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MTELEPATHY}
-LIB_DEPENDS+=	telepathy-glib:${PORTSDIR}/net-im/telepathy-glib \
-		dbus-glib-1:${PORTSDIR}/devel/dbus-glib
+LIB_DEPENDS+=	libtelepathy-glib.so:${PORTSDIR}/net-im/telepathy-glib \
+		libdbus-glib-1.so:${PORTSDIR}/devel/dbus-glib
 PLIST_SUB+=	TELEPATHY=""
 .else
 CONFIGURE_ARGS+=--without-telepathy

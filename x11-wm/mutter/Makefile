@@ -13,12 +13,13 @@ COMMENT=	Window and compositing manager based on Clutter
 
 BUILD_DEPENDS=	zenity>=3.0.0:${PORTSDIR}/x11/zenity3 \
 		gsettings-desktop-schemas>=3.4.0:${PORTSDIR}/devel/gsettings-desktop-schemas
-LIB_DEPENDS=	startup-notification-1:${PORTSDIR}/x11/startup-notification \
-		clutter-1.0:${PORTSDIR}/graphics/clutter \
-		canberra-gtk3:${PORTSDIR}/audio/libcanberra-gtk3
+LIB_DEPENDS=	libstartup-notification-1.so:${PORTSDIR}/x11/startup-notification \
+		libclutter-1.0.so:${PORTSDIR}/graphics/clutter \
+		libcanberra-gtk3.so:${PORTSDIR}/audio/libcanberra-gtk3
 RUN_DEPENDS=	zenity>=3.0.0:${PORTSDIR}/x11/zenity3 \
 		gsettings-desktop-schemas>=3.4.0:${PORTSDIR}/devel/gsettings-desktop-schemas
 
+NO_STAGE=	yes
 USE_XZ=		yes
 USE_XORG=	x11 xext xrandr xcomposite xcursor xinerama ice sm xfixes \
 		xrender xdamage

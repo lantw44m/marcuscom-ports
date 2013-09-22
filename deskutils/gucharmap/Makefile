@@ -12,10 +12,11 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A Unicode/ISO10646 character map and font viewer
 
-LIB_DEPENDS=	rarian:${PORTSDIR}/textproc/rarian
+LIB_DEPENDS=	librarian.so:${PORTSDIR}/textproc/rarian
 
 CONFLICTS=	gucharmap-3.[0-9]*
 
+NO_STAGE=	yes
 USE_BZIP2=	yes
 USES=		gettext gmake pathfix pkgconfig
 USE_GNOME=	gnomeprefix intlhack gtk20 gnomedocutils gconf2

@@ -9,20 +9,21 @@ MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	A program that keeps passwords and other secrets
+COMMENT=	Program that keeps passwords and other secrets
 
 BUILD_DEPENDS=	${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss \
 		gcr>=3.5.3:${PORTSDIR}/security/gcr
-LIB_DEPENDS=	gnome-keyring:${PORTSDIR}/security/libgnome-keyring \
-		dbus-1:${PORTSDIR}/devel/dbus \
-		gcr:${PORTSDIR}/security/gcr \
-		tasn1:${PORTSDIR}/security/libtasn1 \
-		p11-kit:${PORTSDIR}/security/p11-kit \
-		gcrypt:${PORTSDIR}/security/libgcrypt
+LIB_DEPENDS=	libgnome-keyring.so:${PORTSDIR}/security/libgnome-keyring \
+		libdbus-1.so:${PORTSDIR}/devel/dbus \
+		libgcr.so:${PORTSDIR}/security/gcr \
+		libtasn1.so:${PORTSDIR}/security/libtasn1 \
+		libp11-kit.so:${PORTSDIR}/security/p11-kit \
+		libgcrypt.so:${PORTSDIR}/security/libgcrypt
 RUN_DEPENDS=	${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss
 
 CONFLICTS=	gnome-keyring-2.[0-9]*
 
+NO_STAGE=	yes
 LATEST_LINK=	gnome-keyring3
 USE_XZ=		yes
 USE_GNOME=	gnomeprefix gtk30 ltverhack intlhack

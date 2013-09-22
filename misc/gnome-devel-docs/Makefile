@@ -17,6 +17,7 @@ RUN_DEPENDS=	gnome-doc-prepare:${PORTSDIR}/textproc/gnome-doc-utils
 
 CONFLICTS=	gnome-devel-docs-3.[0-9]*
 
+NO_STAGE=	yes
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 USES=		gmake

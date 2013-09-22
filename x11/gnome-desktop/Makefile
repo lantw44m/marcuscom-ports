@@ -18,6 +18,7 @@ USE_BZIP2=	yes
 
 LIB_DEPENDS=	startup-notification-1:${PORTSDIR}/x11/startup-notification
 
+NO_STAGE=	yes
 USE_XORG=	xpm
 USES=		bison gettext gmake pathfix pkgconfig
 USE_GNOME=	gnomeprefix intlhack gnomedocutils gconf2 pygtk2 \

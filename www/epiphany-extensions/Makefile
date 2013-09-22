@@ -19,6 +19,7 @@ RUN_DEPENDS=	epiphany:${PORTSDIR}/www/epiphany
 
 CONFLICTS=	epiphany-extensions-3.[0-9]*
 
+NO_STAGE=	yes
 USES=		gettext gmake pathfix
 USE_BZIP2=	yes
 USE_GNOME=	gnomeprefix intlhack

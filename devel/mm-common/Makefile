@@ -10,8 +10,9 @@ MASTER_SITES=	GNOME
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Common build infrastructure for the GNOME C++ binding libraries
 
-LIB_DEPENDS=	curl:${PORTSDIR}/ftp/curl
+LIB_DEPENDS=	libcurl.so:${PORTSDIR}/ftp/curl
 
+NO_STAGE=	yes
 USES=		gmake pathfix
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes

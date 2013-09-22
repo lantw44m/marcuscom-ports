@@ -12,6 +12,7 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A graphic library for GTK+
 
+NO_STAGE=	yes
 LATEST_LINK=	gdk-pixbuf2
 USE_XZ=		yes
 USE_XORG=	xt xi x11

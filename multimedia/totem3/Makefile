@@ -13,12 +13,12 @@ COMMENT=	A gstreamer-based video player for the GNOME 3 Desktop
 
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes \
 		${LOCALBASE}/libdata/pkgconfig/gnome-icon-theme.pc:${PORTSDIR}/misc/gnome-icon-theme
-LIB_DEPENDS=	gdata.13:${PORTSDIR}/devel/libgdata \
-		dbus-glib-1:${PORTSDIR}/devel/dbus-glib \
-		clutter-gst-2.0:${PORTSDIR}/multimedia/clutter-gst \
-		clutter-gtk-1.0:${PORTSDIR}/graphics/clutter-gtk3 \
-		peas-1.0:${PORTSDIR}/devel/libpeas \
-		totem-plparser:${PORTSDIR}/multimedia/totem-pl-parser
+LIB_DEPENDS=	libgdata.so.13:${PORTSDIR}/devel/libgdata \
+		libdbus-glib-1.so:${PORTSDIR}/devel/dbus-glib \
+		libclutter-gst-2.0.so:${PORTSDIR}/multimedia/clutter-gst \
+		libclutter-gtk-1.0.so:${PORTSDIR}/graphics/clutter-gtk3 \
+		libpeas-1.0.so:${PORTSDIR}/devel/libpeas \
+		libtotem-plparser.so:${PORTSDIR}/multimedia/totem-pl-parser
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes \
 		${LOCALBASE}/libdata/pkgconfig/gnome-icon-theme.pc:${PORTSDIR}/misc/gnome-icon-theme \
 		gnome-settings-daemon>=2.91.0:${PORTSDIR}/sysutils/gnome-settings-daemon3 \
@@ -26,6 +26,7 @@ RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-co
 
 CONFLICTS=	totem-2.[0-9]*
 
+NO_STAGE=	yes
 LATEST_LINK=	totem3
 USE_PYTHON=	yes
 USE_XORG=	x11 xproto xtst ice sm
@@ -71,7 +72,7 @@ TOTEM_PLUGINS=	brasero-disc-recorder chapters dbusservice im-status gromit \
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPUBLISH}
-LIB_DEPENDS+=	epc-1.0:${PORTSDIR}/www/libepc
+LIB_DEPENDS+=	libepc-1.0.so:${PORTSDIR}/www/libepc
 PLIST_SUB+=	PUBLISH=""
 TOTEM_PLUGINS:=	${TOTEM_PLUGINS} publish
 GLIB_SCHEMAS=	org.gnome.totem.enums.xml \
@@ -91,7 +92,7 @@ PLIST_SUB+=	TRACKER="@comment "
 #.endif
 
 .if ${PORT_OPTIONS:MLIRC}
-LIB_DEPENDS+=	lirc_client:${PORTSDIR}/comms/lirc
+LIB_DEPENDS+=	liblirc_client.so:${PORTSDIR}/comms/lirc
 PLIST_SUB+=	LIRC=""
 TOTEM_PLUGINS:=	${TOTEM_PLUGINS} lirc
 .else

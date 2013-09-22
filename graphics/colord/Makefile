@@ -10,13 +10,14 @@ MASTER_SITES=	http://www.freedesktop.org/software/colord/releases/
 MAINTAINER=	kwm@FreeBSD.org
 COMMENT=	Manage color profiles to accurately color input/output devices
 
-LIB_DEPENDS=	polkit-gobject-1:${PORTSDIR}/sysutils/polkit \
-		dbus-1:${PORTSDIR}/devel/dbus \
-		lcms2:${PORTSDIR}/graphics/lcms2
+LIB_DEPENDS=	libpolkit-gobject-1.so:${PORTSDIR}/sysutils/polkit \
+		libdbus-1.so:${PORTSDIR}/devel/dbus \
+		liblcms2.so:${PORTSDIR}/graphics/lcms2
 
 USERS=		colord
 GROUPS=		colord
 
+NO_STAGE=	yes
 USE_XZ=		yes
 USE_GNOME=	gnomehier glib20 intlhack introspection:build
 USES=		gettext gmake pathfix pkgconfig

@@ -16,6 +16,7 @@ RUN_DEPENDS=	evolution>=${EVO_VER}:${PORTSDIR}/mail/evolution3
 
 CONFLICTS=	evolution-exchange-2.[0-9]*
 
+NO_STAGE=	yes
 EVO_VER=	3.4.3
 LATEST_LINK=	evolution-exchange3
 USE_XZ=	yes

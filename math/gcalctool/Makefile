@@ -11,10 +11,11 @@ MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	A GNOME 2 calculator tool based on the old calctool for OpenWindows
+COMMENT=	GNOME 2 calculator tool based on the old calctool for OpenWindows
 
 CONFLICTS=	gcalctool-6.[0-9]*
 
+NO_STAGE=	yes
 USE_BZIP2=	yes
 USES=		bison gettext gmake pathfix
 USE_AUTOTOOLS=	libtool

@@ -14,6 +14,7 @@ COMMENT=	Implementation of the FreeDesktop Desktop Menu Spec
 
 CONFLICTS=	gnome-menus-3.[0-9]*
 
+NO_STAGE=	yes
 USES=		gettext gmake pathfix pkgconfig
 USE_BZIP2=	yes
 USE_GNOME=	gnomehier gnomeprefix intlhack glib20 ltverhack \

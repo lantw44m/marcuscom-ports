@@ -14,11 +14,12 @@ COMMENT=	Lightweight HTML rendering/printing/editing engine
 
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes \
 		${LOCALBASE}/libdata/pkgconfig/gnome-icon-theme.pc:${PORTSDIR}/misc/gnome-icon-theme
-LIB_DEPENDS=	soup-2.4:${PORTSDIR}/devel/libsoup \
-		enchant:${PORTSDIR}/textproc/enchant
+LIB_DEPENDS=	libsoup-2.4.so:${PORTSDIR}/devel/libsoup \
+		libenchant.so:${PORTSDIR}/textproc/enchant
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes \
 		${LOCALBASE}/libdata/pkgconfig/gnome-icon-theme.pc:${PORTSDIR}/misc/gnome-icon-theme
 
+NO_STAGE=	yes
 USES=		gettext gmake pathfix pkgconfig
 USE_XZ=		yes
 USE_XORG=	xinerama xi xrandr xcursor xcomposite xdamage xproto

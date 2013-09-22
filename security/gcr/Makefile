@@ -11,13 +11,14 @@ MAINTAINER=	kwm@FreeBSD.org
 COMMENT=	Library for bits of crypto UI and parsing
 
 BUILD_DEPENDS=	gtk-doc>0:${PORTSDIR}/textproc/gtk-doc
-LIB_DEPENDS=	dbus-1:${PORTSDIR}/devel/dbus \
-		tasn1:${PORTSDIR}/security/libtasn1 \
-		p11-kit:${PORTSDIR}/security/p11-kit \
-		gcrypt:${PORTSDIR}/security/libgcrypt
+LIB_DEPENDS=	libdbus-1.so:${PORTSDIR}/devel/dbus \
+		libtasn1.so:${PORTSDIR}/security/libtasn1 \
+		libp11-kit.so:${PORTSDIR}/security/p11-kit \
+		libgcrypt.so:${PORTSDIR}/security/libgcrypt
 
 CONFLICTS=	gnome-keyring-2.[0-9]*
 
+NO_STAGE=	yes
 USE_XZ=		yes
 USE_GNOME=	gtk30 intlhack introspection:build
 USES=		gettext gmake pathfix pkgconfig shared-mime-info

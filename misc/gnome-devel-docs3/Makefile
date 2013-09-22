@@ -13,6 +13,7 @@ COMMENT=	Documents targeted for GNOME developers
 
 CONFLICTS=	gnome-devel-docs-2.[0-9]*
 
+NO_STAGE=	yes
 LATEST_LINK=	gnome-devel-docs3
 USE_XZ=	yes
 GNU_CONFIGURE=	yes

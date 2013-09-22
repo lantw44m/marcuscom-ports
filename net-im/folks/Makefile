@@ -11,13 +11,14 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	library to aggregates people from multiple sources
 
 BUILD_DEPENDS=	vapigen:${PORTSDIR}/lang/vala-vapigen
-LIB_DEPENDS=	gee.2:${PORTSDIR}/devel/libgee06 \
-		gcr:${PORTSDIR}/security/gcr \
-		zeitgeist-1.0:${PORTSDIR}/sysutils/libzeitgeist \
-		telepathy-glib:${PORTSDIR}/net-im/telepathy-glib
+LIB_DEPENDS=	libgee.so.2:${PORTSDIR}/devel/libgee06 \
+		libgcr.so:${PORTSDIR}/security/gcr \
+		libzeitgeist-1.0.so:${PORTSDIR}/sysutils/libzeitgeist \
+		libtelepathy-glib.so:${PORTSDIR}/net-im/telepathy-glib
 
 CONFLICTS=	folks-0.4.[0-9]*
 
+NO_STAGE=	yes
 USE_XZ=		yes
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
@@ -40,7 +41,7 @@ SOCIALWEB_DESC=	Social web backend
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MSOCIALWEB}
-LIB_DEPENDS+=	socialweb:${PORTSDIR}/www/libsocialweb
+LIB_DEPENDS+=	libsocialweb.so:${PORTSDIR}/www/libsocialweb
 CONFIGURE_ARGS+=--enable-libsocialweb-backend=yes
 .else
 CONFIGURE_ARGS+=--enable-libsocialweb-backend=no

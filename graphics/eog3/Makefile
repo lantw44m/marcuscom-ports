@@ -14,13 +14,14 @@ COMMENT=	The Eye Of Gnome image viewer
 BUILD_DEPENDS=	${LOCALBASE}/share/icons/gnome/index.theme:${PORTSDIR}/misc/gnome-icon-theme \
 		itstool:${PORTSDIR}/textproc/itstool \
 		${LOCALBASE}/libdata/pkgconfig/gsettings-desktop-schemas.pc:${PORTSDIR}/devel/gsettings-desktop-schemas
-LIB_DEPENDS=	peas-gtk-1.0:${PORTSDIR}/devel/libpeas \
-		lcms.1:${PORTSDIR}/graphics/lcms
+LIB_DEPENDS=	libpeas-gtk-1.0.so:${PORTSDIR}/devel/libpeas \
+		liblcms.so:${PORTSDIR}/graphics/lcms
 RUN_DEPENDS=	${LOCALBASE}/share/icons/gnome/index.theme:${PORTSDIR}/misc/gnome-icon-theme \
 		${LOCALBASE}/libdata/pkgconfig/gsettings-desktop-schemas.pc:${PORTSDIR}/devel/gsettings-desktop-schemas
 
 CONFLICTS=	eog-2.[0-9]*
 
+NO_STAGE=	yes
 LATEST_LINK=	eog3
 USE_XZ=		yes
 USE_GNOME=	gnomeprefix intlhack librsvg2 gtk30 gnomedesktop3 \
@@ -49,7 +50,7 @@ _WITH_EXEMPI=	no
 
 .if ${PORT_OPTIONS:MEXIF}
 CONFIGURE_ARGS+=--with-libexif
-LIB_DEPENDS+=	exif:${PORTSDIR}/graphics/libexif
+LIB_DEPENDS+=	libexif.so:${PORTSDIR}/graphics/libexif
 PLIST_SUB+=	EXIF=""
 _WITH_EXIF=	yes
 .else
@@ -59,7 +60,7 @@ PLIST_SUB+=	EXIF="@comment "
 
 .if ${PORT_OPTIONS:MEXEMPI}
 CONFIGURE_ARGS+=--with-xmp
-LIB_DEPENDS+=	exempi:${PORTSDIR}/textproc/exempi
+LIB_DEPENDS+=	libexempi.so:${PORTSDIR}/textproc/exempi
 _WITH_EXEMPI=	yes
 .else
 CONFIGURE_ARGS+=--without-xmp

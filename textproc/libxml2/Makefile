@@ -14,6 +14,8 @@ DIST_SUBDIR=	gnome2
 MAINTAINER?=	gnome@FreeBSD.org
 COMMENT?=	XML parser library for GNOME
 
+NO_STAGE=	yes
+
 .if !defined(REFERENCE_PORT)
 
 GNU_CONFIGURE=	yes

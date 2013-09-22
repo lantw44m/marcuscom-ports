@@ -19,6 +19,7 @@ LIB_DEPENDS=	libclutter-glx-1.0.so:${PORTSDIR}/graphics/clutter \
 		libxklavier.so:${PORTSDIR}/x11/libxklavier
 RUN_DEPENDS=	py*-atspi>=2.1.91:${PORTSDIR}/accessibility/py-atspi
 
+NO_STAGE=	yes
 USE_XZ=		yes
 USES=		gettext gmake pathfix pkgconfig shebangfix
 SHEBANG_FILES=	tools/fix_gir.py tools/make_schema.py

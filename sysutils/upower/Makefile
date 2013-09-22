@@ -3,8 +3,7 @@
 #   $MCom: ports/trunk/sysutils/upower/Makefile 18681 2013-09-15 22:52:32Z marcus $
 
 PORTNAME=	upower
-PORTVERSION=	0.9.18
-PORTREVISION=	1
+PORTVERSION=	0.9.21
 CATEGORIES=	sysutils
 MASTER_SITES=	http://upower.freedesktop.org/releases/
 
@@ -17,9 +16,10 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 LIB_DEPENDS=	libpolkit-gobject-1.so:${PORTSDIR}/sysutils/polkit \
 		libdbus-glib-1.so:${PORTSDIR}/devel/dbus-glib
 
+NO_STAGE=	yes
 USES=		gettext gmake pathfix pkgconfig
 USE_XZ=		yes
-USE_GNOME=	intlhack ltverhack glib20 introspection
+USE_GNOME=	intlhack ltverhack glib20 introspection:build
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 USE_PYTHON=	yes

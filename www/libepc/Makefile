@@ -10,11 +10,12 @@ MASTER_SITES=	GNOME
 MAINTAINER=	kwm@FreeBSD.org
 COMMENT=	The Easy Publish and Consume library
 
-LIB_DEPENDS=	uuid:${PORTSDIR}/misc/e2fsprogs-libuuid \
-		soup-2.4:${PORTSDIR}/devel/libsoup \
-		gnutls:${PORTSDIR}/security/gnutls \
-		avahi-ui-gtk3:${PORTSDIR}/net/avahi-gtk3
+LIB_DEPENDS=	libuuid.so:${PORTSDIR}/misc/e2fsprogs-libuuid \
+		libsoup-2.4.so:${PORTSDIR}/devel/libsoup \
+		libgnutls.so:${PORTSDIR}/security/gnutls \
+		libavahi-ui-gtk3.so:${PORTSDIR}/net/avahi-gtk3
 
+NO_STAGE=	yes
 USE_XZ=		yes
 USES=		gettext gmake pathfix pkgconfig
 USE_GNOME=	gnomeprefix gtk30

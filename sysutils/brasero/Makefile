@@ -12,16 +12,17 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	CD/DVD mastering tool for the GNOME desktop
 
-LIB_DEPENDS=	notify:${PORTSDIR}/devel/libnotify \
-		unique-1.0:${PORTSDIR}/x11-toolkits/unique \
-		totem-plparser:${PORTSDIR}/multimedia/totem-pl-parser \
-		canberra-gtk:${PORTSDIR}/audio/libcanberra
+LIB_DEPENDS=	libnotify.so:${PORTSDIR}/devel/libnotify \
+		libunique-1.0.so:${PORTSDIR}/x11-toolkits/unique \
+		libtotem-plparser.so:${PORTSDIR}/multimedia/totem-pl-parser \
+		libcanberra-gtk.so:${PORTSDIR}/audio/libcanberra
 RUN_DEPENDS=	growisofs:${PORTSDIR}/sysutils/dvd+rw-tools \
 		cdrdao:${PORTSDIR}/sysutils/cdrdao \
 		yelp:${PORTSDIR}/x11/yelp
 
 CONFLICTS=	brasero-3.[0-9]*
 
+NO_STAGE=	yes
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 USE_XORG=	sm

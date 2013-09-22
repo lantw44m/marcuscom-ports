@@ -11,11 +11,12 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Library to accessing online weather informations
 
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gnome-icon-theme.pc:${PORTSDIR}/misc/gnome-icon-theme
-LIB_DEPENDS=	soup-2.4:${PORTSDIR}/devel/libsoup
+LIB_DEPENDS=	libsoup-2.4.so:${PORTSDIR}/devel/libsoup
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gnome-icon-theme.pc:${PORTSDIR}/misc/gnome-icon-theme
 
 CONFLICTS=	libgweather-2.[0-9]*
 
+NO_STAGE=	yes
 LATEST_LINK=	libgweather3
 USES=		gettext gmake pathfix pkgconfig
 USE_XZ=		yes

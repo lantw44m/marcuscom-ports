@@ -13,13 +13,14 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME 2 support utilities
 
-LIB_DEPENDS=	gtop-2.0:${PORTSDIR}/devel/libgtop \
-		canberra-gtk:${PORTSDIR}/audio/libcanberra
+LIB_DEPENDS=	libgtop-2.0.so:${PORTSDIR}/devel/libgtop \
+		libcanberra-gtk.so:${PORTSDIR}/audio/libcanberra
 
 CONFLICTS=	baobob-3.[0-9]* gnome-dictionary-3.[0-9]* \
 		gnome-font-viewer-3.[0-9]* gnome-screenshot-3.[0-9]* \
 		gnome-search-tool-3.[0-9]* gnome-system-log-3.[0-9]*
 
+NO_STAGE=	yes
 USE_BZIP2=	yes
 USES=		gettext gmake pathfix pkgconfig
 INSTALLS_OMF=	yes

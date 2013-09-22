@@ -9,8 +9,9 @@ MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	A collection of backgrounds for GNOME
+COMMENT=	Collection of backgrounds for GNOME
 
+NO_STAGE=	yes
 USE_XZ=		yes
 USES=		gettext gmake pathfix
 GNU_CONFIGURE=	yes

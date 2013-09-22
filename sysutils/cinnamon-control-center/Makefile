@@ -13,22 +13,22 @@ COMMENT=	A gnome-control-center replacement for Cinnamon
 BUILD_DEPENDS=	${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss \
 		gnome-settings-daemon>=3.4.0:${PORTSDIR}/sysutils/gnome-settings-daemon3 \
 		gnome-autogen.sh:${PORTSDIR}/devel/gnome-common
-LIB_DEPENDS=	startup-notification-1:${PORTSDIR}/x11/startup-notification \
-		upower-glib:${PORTSDIR}/sysutils/upower \
-		cheese:${PORTSDIR}/multimedia/cheese3 \
-		krb5support:${PORTSDIR}/security/krb5 \
-		caribou:${PORTSDIR}/accessibility/caribou \
-		gtop:${PORTSDIR}/devel/libgtop \
-		muffin:${PORTSDIR}/x11-wm/muffin \
-		telepathy-glib:${PORTSDIR}/net-im/telepathy-glib \
-		telepathy-logger:${PORTSDIR}/net-im/telepathy-logger \
-		folks:${PORTSDIR}/net-im/folks \
-		pulse:${PORTSDIR}/audio/pulseaudio \
-		croco:${PORTSDIR}/textproc/libcroco \
-		dbus-glib-1:${PORTSDIR}/devel/dbus-glib \
-		clutter-glx-1:${PORTSDIR}/graphics/clutter \
-		clutter-gst-1:${PORTSDIR}/multimedia/clutter-gst \
-		gjs:${PORTSDIR}/lang/gjs
+LIB_DEPENDS=	libstartup-notification-1.so:${PORTSDIR}/x11/startup-notification \
+		libupower-glib.so:${PORTSDIR}/sysutils/upower \
+		libcheese.so:${PORTSDIR}/multimedia/cheese3 \
+		libkrb5support.so:${PORTSDIR}/security/krb5 \
+		libcaribou.so:${PORTSDIR}/accessibility/caribou \
+		libgtop.so:${PORTSDIR}/devel/libgtop \
+		libmuffin.so:${PORTSDIR}/x11-wm/muffin \
+		libtelepathy-glib.so:${PORTSDIR}/net-im/telepathy-glib \
+		libtelepathy-logger.so:${PORTSDIR}/net-im/telepathy-logger \
+		libfolks.so:${PORTSDIR}/net-im/folks \
+		libpulse.so:${PORTSDIR}/audio/pulseaudio \
+		libcroco.so:${PORTSDIR}/textproc/libcroco \
+		libdbus-glib-1.so:${PORTSDIR}/devel/dbus-glib \
+		libclutter-glx-1.so:${PORTSDIR}/graphics/clutter \
+		libclutter-gst-1.so:${PORTSDIR}/multimedia/clutter-gst \
+		libgjs.so:${PORTSDIR}/lang/gjs
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/dbus-python.pc:${PORTSDIR}/devel/py-dbus \
 		${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss \
 		${LOCALBASE}/share/doc/py-lxml/CREDITS.txt:${PORTSDIR}/devel/py-lxml
@@ -38,6 +38,7 @@ GH_ACCOUNT=	linuxmint
 GH_TAGNAME=	1.7.1
 GH_COMMIT=	a3883df
 
+NO_STAGE=	yes
 USE_XORG=	x11 xfixes sm
 USES=		gettext gmake pathfix
 USE_GNOME=	gnomeprefix intlhack gtk30 gconf2 gnomemenus3 \

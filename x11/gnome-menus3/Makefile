@@ -13,6 +13,7 @@ COMMENT=	Implementation of the FreeDesktop Desktop Menu Spec
 
 CONFLICTS=	gnome-menus-2.[0-9]*
 
+NO_STAGE=	yes
 LATEST_LINK=	gnome-menus3
 USES=		gettext gmake pathfix pkgconfig
 USE_XZ=		yes

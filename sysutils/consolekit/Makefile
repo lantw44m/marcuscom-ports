@@ -14,6 +14,7 @@ COMMENT=	Framework for defining and tracking users
 LIB_DEPENDS=	libdbus-glib-1.so:${PORTSDIR}/devel/dbus-glib \
     		libpolkit-gobject-1.so:${PORTSDIR}/sysutils/polkit
 
+NO_STAGE=	yes
 WRKSRC=		${WRKDIR}/ConsoleKit-${PORTVERSION}
 USE_BZIP2=	yes
 USES=		gettext gmake pathfix pkgconfig

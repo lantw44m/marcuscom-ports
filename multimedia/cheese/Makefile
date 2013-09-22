@@ -13,11 +13,12 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A Photobooth-inspired app for taking pictures and videos from webcam
 
 BUILD_DEPENDS=	${LOCALBASE}/include/linux/videodev.h:${PORTSDIR}/multimedia/v4l_compat
-LIB_DEPENDS=	canberra-gtk:${PORTSDIR}/audio/libcanberra \
-		hal:${PORTSDIR}/sysutils/hal
+LIB_DEPENDS=	libcanberra-gtk.so:${PORTSDIR}/audio/libcanberra \
+		libhal.so:${PORTSDIR}/sysutils/hal
 
 CONFLICTS=	cheese-3.[0-9]*
 
+NO_STAGE=	yes
 USE_XORG=	xxf86vm
 USE_BZIP2=	yes
 USE_GNOME=	gnomeprefix intlhack evolutiondataserver librsvg2 \

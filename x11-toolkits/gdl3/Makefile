@@ -14,6 +14,7 @@ COMMENT=	Components intended to be shared between GNOME development tools
 LICENSE=	LGPL20
 LICENSE_FILE=	${WRKSRC}/COPYING
 
+NO_STAGE=	yes
 LATEST_LINK=	gdl3
 USE_XZ=		yes
 USE_GNOME=	gnomeprefix gtk30 intltool

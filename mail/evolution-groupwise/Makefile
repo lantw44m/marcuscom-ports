@@ -14,6 +14,7 @@ COMMENT=	GroupWise connector for evolution 3
 BUILD_DEPENDS=	evolution>=${EVO_VER}:${PORTSDIR}/mail/evolution3
 RUN_DEPENDS=	evolution>=${EVO_VER}:${PORTSDIR}/mail/evolution3
 
+NO_STAGE=	yes
 EVO_VER=	3.4.1
 USE_XZ=		yes
 USES=		gettext gmake pathfix pkgconfig

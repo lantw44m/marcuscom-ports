@@ -7,21 +7,21 @@ CATEGORIES=	x11 gnome
 DIST_SUBDIR=	gnome3
 
 MAINTAINER=	gustau.perez@gmail.com
-COMMENT=	A fork of GNOME Shell with layout similar to GNOME 2
+COMMENT=	Fork of GNOME Shell with layout similar to GNOME 2
 
 BUILD_DEPENDS=	${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss \
 		gnome-autogen.sh:${PORTSDIR}/devel/gnome-common
-LIB_DEPENDS=	startup-notification-1:${PORTSDIR}/x11/startup-notification \
-		caribou:${PORTSDIR}/accessibility/caribou \
-		muffin:${PORTSDIR}/x11-wm/muffin \
-		telepathy-glib:${PORTSDIR}/net-im/telepathy-glib \
-		telepathy-logger:${PORTSDIR}/net-im/telepathy-logger \
-		folks:${PORTSDIR}/net-im/folks \
-		pulse:${PORTSDIR}/audio/pulseaudio \
-		croco:${PORTSDIR}/textproc/libcroco \
-		dbus-glib-1:${PORTSDIR}/devel/dbus-glib \
-		clutter-glx-1:${PORTSDIR}/graphics/clutter \
-		gjs:${PORTSDIR}/lang/gjs
+LIB_DEPENDS=	libstartup-notification-1.so:${PORTSDIR}/x11/startup-notification \
+		libcaribou.so:${PORTSDIR}/accessibility/caribou \
+		libmuffin.so:${PORTSDIR}/x11-wm/muffin \
+		libtelepathy-glib.so:${PORTSDIR}/net-im/telepathy-glib \
+		libtelepathy-logger.so:${PORTSDIR}/net-im/telepathy-logger \
+		libfolks.so:${PORTSDIR}/net-im/folks \
+		libpulse.so:${PORTSDIR}/audio/pulseaudio \
+		libcroco.so:${PORTSDIR}/textproc/libcroco \
+		libdbus-glib-1.so:${PORTSDIR}/devel/dbus-glib \
+		libclutter-glx-1.so:${PORTSDIR}/graphics/clutter \
+		libgjs.so:${PORTSDIR}/lang/gjs
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/dbus-python.pc:${PORTSDIR}/devel/py-dbus \
 		${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss \
 		cinnamon-control-center:${PORTSDIR}/sysutils/cinnamon-control-center \
@@ -36,6 +36,7 @@ GH_COMMIT=	941456a
 
 WRKSRC=		${WRKDIR}/${GH_ACCOUNT}-Cinnamon-${GH_COMMIT}
 
+NO_STAGE=	yes
 USE_XORG=	x11 xfixes sm
 USES=		gettext gmake pathfix
 USE_AUTOTOOLS=	libtool autoconf automake

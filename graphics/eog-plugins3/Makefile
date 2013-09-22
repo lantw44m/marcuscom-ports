@@ -12,13 +12,14 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Plug-ins for the Eye of GNOME image viewer application
 
 BUILD_DEPENDS=	eog>=3.6.0:${PORTSDIR}/graphics/eog3
-LIB_DEPENDS=	gdata.13:${PORTSDIR}/devel/libgdata \
-		exif:${PORTSDIR}/graphics/libexif \
-		peas-1.0:${PORTSDIR}/devel/libpeas
+LIB_DEPENDS=	libgdata.so.13:${PORTSDIR}/devel/libgdata \
+		libexif.so:${PORTSDIR}/graphics/libexif \
+		libpeas-1.0.so:${PORTSDIR}/devel/libpeas
 RUN_DEPENDS=	eog>=3.6.0:${PORTSDIR}/graphics/eog3
 
 CONFLICTS=	eog-plugins-2.[0-9]*
 
+NO_STAGE=	yes
 LATEST_LINK=	eog-plugins3
 USE_XZ=		yes
 USE_GNOME=	gnomeprefix intlhack gtk30
@@ -37,7 +38,7 @@ CHAMPLAIN_DESC=	Champlain map plugin
 
 .if ${PORT_OPTIONS:MCHAMPLAIN}
 USE_GL=		gl
-LIB_DEPENDS+=	champlain-0.12:${PORTSDIR}/graphics/libchamplain
+LIB_DEPENDS+=	libchamplain-0.12.so:${PORTSDIR}/graphics/libchamplain
 PLIST_SUB+=	CHAMPLAIN=""
 .else
 PLIST_SUB+=	CHAMPLAIN="@comment "

@@ -11,10 +11,11 @@ DIST_SUBDIR=	gnome3
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Power management system for the GNOME Desktop
 
-LIB_DEPENDS=	upower-glib:${PORTSDIR}/sysutils/upower \
+LIB_DEPENDS=	libupower-glib.so:${PORTSDIR}/sysutils/upower \
 
 CONFLICTS=	gnome-power-manager-2.[0-9]*
 
+NO_STAGE=	yes
 LATEST_LINK=	gnome-power-manager3
 USES=		gettext gmake pathfix pkgconfig
 USE_XZ=		yes

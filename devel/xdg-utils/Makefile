@@ -16,6 +16,7 @@ RUN_DEPENDS=	${LOCALBASE}/share/icons/hicolor/index.theme:${PORTSDIR}/misc/hicol
 		xprop:${PORTSDIR}/x11/xprop \
 		xset:${PORTSDIR}/x11/xset
 
+NO_STAGE=	yes
 WRKSRC=		${WRKDIR}/${PORTNAME}
 SNAPDATE=	20130811
 USE_XZ=		yes

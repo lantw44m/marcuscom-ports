@@ -17,6 +17,7 @@ RUN_DEPENDS=	xscreensaver-gl-helper:${PORTSDIR}/x11/xscreensaver-gnome-hacks
 
 CONFLICTS=	gnome-screensaver-3.[0-9]*
 
+NO_STAGE=	yes
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 USE_XORG=	xtst xxf86vm

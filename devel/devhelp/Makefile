@@ -13,11 +13,12 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Developer help browser for GNOME 2
 
-LIB_DEPENDS=	webkitgtk-1.0:${PORTSDIR}/www/webkit-gtk2 \
-		unique-1.0:${PORTSDIR}/x11-toolkits/unique
+LIB_DEPENDS=	libwebkitgtk-1.0.so:${PORTSDIR}/www/webkit-gtk2 \
+		libunique-1.0.so:${PORTSDIR}/x11-toolkits/unique
 
 CONFLICTS=	devhelp-3.[0-9]*
 
+NO_STAGE=	yes
 USE_BZIP2=	yes
 USE_XORG=	x11
 USES=		gettext gmake pathfix pkgconfig

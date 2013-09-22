@@ -20,6 +20,7 @@ RUN_DEPENDS=	${LOCALBASE}/sbin/console-kit-daemon:${PORTSDIR}/sysutils/consoleki
 
 CONFLICTS=	gnome-session-2.[0-9]*
 
+NO_STAGE=	yes
 LATEST_LINK=	gnome-session3
 INSTALLS_ICONS=	yes
 USES=		gettext gmake pathfix pkgconfig

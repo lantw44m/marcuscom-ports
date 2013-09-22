@@ -13,11 +13,12 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Plug-ins for the Eye of GNOME image viewer application
 
 BUILD_DEPENDS=	eog:${PORTSDIR}/graphics/eog
-LIB_DEPENDS=	gdata:${PORTSDIR}/devel/libgdata06
+LIB_DEPENDS=	libgdata.so.7:${PORTSDIR}/devel/libgdata06
 RUN_DEPENDS=	eog:${PORTSDIR}/graphics/eog
 
 CONFLICTS=	eog-plugins-3.[0-9]*
 
+NO_STAGE=	yes
 USE_BZIP2=	yes
 USE_GNOME=	gnomeprefix intlhack gtk20
 WANT_GNOME=	yes

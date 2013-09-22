@@ -10,15 +10,16 @@ MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	A window manager for the adult in you
+COMMENT=	Window manager for the adult in you
 
 BUILD_DEPENDS=	zenity:${PORTSDIR}/x11/zenity
-LIB_DEPENDS=	startup-notification-1:${PORTSDIR}/x11/startup-notification \
-		canberra-gtk:${PORTSDIR}/audio/libcanberra
+LIB_DEPENDS=	libstartup-notification-1.so:${PORTSDIR}/x11/startup-notification \
+		libcanberra-gtk.so:${PORTSDIR}/audio/libcanberra
 RUN_DEPENDS=	zenity:${PORTSDIR}/x11/zenity
 
 CONFLICTS=	metacity-2.3[4-9]*
 
+NO_STAGE=	yes
 USE_BZIP2=	yes
 USE_XORG=	x11 xcomposite xdamage
 USES=		gettext gmake pathfix pkgconfig

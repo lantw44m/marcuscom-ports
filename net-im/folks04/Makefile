@@ -12,11 +12,12 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	library to aggregates people from multiple sources
 
 BUILD_DEPENDS=	vapigen:${PORTSDIR}/lang/vala-vapigen
-LIB_DEPENDS=	gee:${PORTSDIR}/devel/libgee06 \
-		telepathy-glib:${PORTSDIR}/net-im/telepathy-glib
+LIB_DEPENDS=	libgee.so:${PORTSDIR}/devel/libgee06 \
+		libtelepathy-glib.so:${PORTSDIR}/net-im/telepathy-glib
 
 CONFLICTS=	folks-0.[6-9].[0-9]*
 
+NO_STAGE=	yes
 USE_BZIP2=	yes
 USE_LDCONFIG=	yes
 USES=		pathfix gettext gmake

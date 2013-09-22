@@ -13,6 +13,7 @@ COMMENT=	DocBook XSLT stylesheets for yelp
 
 BUILD_DEPENDS=	itstool:${PORTSDIR}/textproc/itstool
 
+NO_STAGE=	yes
 USE_XZ=		yes
 USES=		gettext gmake pathfix pkgconfig
 USE_GNOME=	gnomeprefix intlhack libxml2 libxslt

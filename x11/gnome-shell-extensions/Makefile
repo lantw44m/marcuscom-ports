@@ -13,6 +13,7 @@ COMMENT=	GNOME desktop shell extensions
 LIB_DEPENDS=	libgtop-2.0.so:${PORTSDIR}/devel/libgtop
 RUN_DEPENDS=	gnome-shell>=3.6.2:${PORTSDIR}/x11/gnome-shell
 
+NO_STAGE=	yes
 USE_BZIP2=	yes
 USES=		gettext gmake pathfix pkgconfig
 USE_GNOME=	glib20 gnomedesktop3 intltool

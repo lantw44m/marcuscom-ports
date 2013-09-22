@@ -14,13 +14,14 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GObject JavaScriptCore bridge
 
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gnome-js-common.pc:${PORTSDIR}/devel/gnome-js-common
-LIB_DEPENDS=	ffi:${PORTSDIR}/devel/libffi \
-		webkitgtk-3.0:${PORTSDIR}/www/webkit-gtk3 \
-		dbus-glib-1:${PORTSDIR}/devel/dbus-glib \
-		mpfr:${PORTSDIR}/math/mpfr
+LIB_DEPENDS=	libffi.so:${PORTSDIR}/devel/libffi \
+		libwebkitgtk-3.0.so:${PORTSDIR}/www/webkit-gtk3 \
+		libdbus-glib-1.so:${PORTSDIR}/devel/dbus-glib \
+		libmpfr.so:${PORTSDIR}/math/mpfr
 
 CONFLICTS=	seed-2.[0-9]*
 
+NO_STAGE=	yes
 LATEST_LINK=	seed3
 USE_XZ=		yes
 GNU_CONFIGURE=	yes

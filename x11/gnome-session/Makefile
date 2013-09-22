@@ -24,6 +24,7 @@ RUN_DEPENDS=	${LOCALBASE}/libexec/gnome-settings-daemon:${PORTSDIR}/sysutils/gno
     		${LOCALBASE}/sbin/console-kit-daemon:${PORTSDIR}/sysutils/consolekit \
 		${LOCALBASE}/bin/xdpyinfo:${PORTSDIR}/x11/xdpyinfo
 
+NO_STAGE=	yes
 INSTALLS_ICONS=	yes
 USES=		gettext gmake pathfix pkgconfig
 USE_BZIP2=	yes

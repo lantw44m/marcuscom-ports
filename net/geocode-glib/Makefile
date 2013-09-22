@@ -7,11 +7,12 @@ CATEGORIES=	net devel gnome
 MASTER_SITES=	GNOME
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	a convenience library for the Yahoo! Place Finder APIs
+COMMENT=	Convenience library for the Yahoo! Place Finder APIs
 
-LIB_DEPENDS=	json-glib-1.0:${PORTSDIR}/devel/json-glib \
-		soup-2.4:${PORTSDIR}/devel/libsoup
+LIB_DEPENDS=	libjson-glib-1.0.so:${PORTSDIR}/devel/json-glib \
+		libsoup-2.4.so:${PORTSDIR}/devel/libsoup
 
+NO_STAGE=	yes
 USES=		gettext gmake pathfix
 USE_BZIP2=	yes
 USE_AUTOTOOLS=	libtool

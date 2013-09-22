@@ -16,6 +16,7 @@ COMMENT=	Gimp Toolkit for X11 GUI (current stable version)
 
 LICENSE=	LGPL20
 
+NO_STAGE=	yes
 USE_XZ=		yes
 LATEST_LINK=	gtk30
 

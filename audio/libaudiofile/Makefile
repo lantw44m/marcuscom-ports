@@ -1,6 +1,6 @@
 # Created by: Vanilla I. Shu <vanilla@FreeBSD.org>
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/trunk/audio/libaudiofile/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	libaudiofile
 PORTVERSION=	0.3.2
@@ -14,6 +14,7 @@ COMMENT=	Sound library for SGI audio file
 
 CONFLICTS=	osalp-0.7.*
 
+NO_STAGE=	yes
 USE_XZ=		yes
 USE_AUTOTOOLS=	libtool
 USES=		pathfix pkgconfig
