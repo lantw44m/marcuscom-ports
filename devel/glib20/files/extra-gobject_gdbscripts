@@ -1,15 +1,15 @@
---- gobject/Makefile.in.orig	2012-05-03 11:42:11.000000000 +0200
-+++ gobject/Makefile.in	2012-05-03 11:42:51.000000000 +0200
-@@ -1381,7 +1381,7 @@
+--- gobject/Makefile.in.orig	2013-09-26 18:22:19.000000000 +0200
++++ gobject/Makefile.in	2013-09-26 18:23:11.000000000 +0200
+@@ -2001,7 +2001,7 @@
  
  info-am:
  
 -install-data-am: install-data-local install-dist_gdbSCRIPTS \
 +install-data-am: install-data-local \
- 	install-libgobjectincludeHEADERS install-tapsetDATA
- 	@$(NORMAL_INSTALL)
- 	$(MAKE) $(AM_MAKEFLAGS) install-data-hook
-@@ -1649,9 +1649,7 @@
+ 	install-installed_testLTLIBRARIES \
+ 	install-installed_testPROGRAMS install-installed_testSCRIPTS \
+ 	install-installed_test_metaDATA \
+@@ -2279,9 +2279,7 @@
  uninstall-gdb:
  	-rm -r $(DESTDIR)$(datadir)/gdb
  
