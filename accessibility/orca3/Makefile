@@ -25,8 +25,6 @@ RUN_DEPENDS=	${PYTHON_SITELIBDIR}/_dbus_bindings.so:${PORTSDIR}/devel/py-dbus \
 # and py*-json-py shadows this.
 CONFLICTS=	orca-2.[0-9]* py*-json-py-[0-9]*
 
-LATEST_LINK=	gnome-orca3
-
 NO_STAGE=	yes
 USE_XZ=		yes
 USES=		gettext gmake pathfix pkgconfig
