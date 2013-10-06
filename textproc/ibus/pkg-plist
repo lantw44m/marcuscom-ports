@@ -1,8 +1,11 @@
 bin/ibus
 bin/ibus-daemon
 bin/ibus-setup
-etc/dconf/db/ibus
-etc/dconf/db/ibus.d/00-upstream-settings
+@comment dconf update only runs on system dirs, not in stage
+@exec dconf update
+@unexec /bin/rm etc/dconf/db/ibus
+@unexec /bin/rm etc/dconf/db/ibus.d/00-upstream-settings
+@unexec dconf update
 etc/dconf/profile/ibus
 etc/xdg/autostart/ibus.desktop
 include/ibus-1.0/ibus.h
