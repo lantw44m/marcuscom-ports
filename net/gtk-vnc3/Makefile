@@ -6,6 +6,7 @@ PORTVERSION=	0.4.4
 PORTREVISION=	1
 CATEGORIES=	net gnome
 MASTER_SITES=	GNOME
+PKGNAMESUFFIX=	3
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	VNC viewer widget for GTK+
@@ -19,17 +20,14 @@ LICENSE_FILE=	${WRKSRC}/COPYING.LIB
 
 CONFLICTS=	gtk-vnc-0.3.[0-9]*
 
-NO_STAGE=	yes
-LATEST_LINK=	gtk-vnc3
 USE_XZ=		yes
 USE_GNOME=	gtk30
-USES=		gettext gmake pathfix
+USES=		gettext gmake pathfix pkgconfig
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--with-gtk=3.0 --disable-introspection \
 		--disable-plugin --without-python
-MAN1=		gvnccapture.1
 
 .include <bsd.port.mk>

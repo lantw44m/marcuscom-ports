@@ -6,6 +6,7 @@ PORTNAME=	gcalctool
 PORTVERSION=	6.4.2.1
 CATEGORIES=	math gnome
 MASTER_SITES=	GNOME
+PKGNAMESUFFIX=	3
 DIST_SUBDIR=	gnome3
 
 MAINTAINER=	gnome@FreeBSD.org
@@ -16,16 +17,13 @@ CONFLICTS=	gcalctool-5.[0-9]*
 BUILD_DEPENDS=	yelp-build:${PORTSDIR}/textproc/yelp-tools \
 		itstool:${PORTSDIR}/textproc/itstool
 
-NO_STAGE=	yes
-LATEST_LINK=	gcalctool3
 USE_XZ=	yes
-USES=		bison gettext gmake pathfix
+USES=		bison gettext gmake pathfix pkgconfig
 GNU_CONFIGURE=	yes
 USE_GNOME=	gnomeprefix intlhack gconf2 gtk30 libxml2
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-MAN1=		gcalccmd.1 gcalctool.1
 GLIB_SCHEMAS=	org.gnome.gcalctool.gschema.xml
 
 .include <bsd.port.mk>

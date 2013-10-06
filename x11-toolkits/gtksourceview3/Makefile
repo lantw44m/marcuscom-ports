@@ -11,16 +11,15 @@ PKGNAMESUFFIX=	3
 DIST_SUBDIR=	gnome3
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	A text widget that adds syntax highlighting to the GtkTextView widget
+COMMENT=	Text widget that adds syntax highlighting to the GtkTextView widget
 
 USE_XZ=		yes
-NO_STAGE=	yes
 
 .if !defined(REFERENCE_PORT)
 
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
-USES=		gettext gmake pathfix
+USES=		gettext gmake pathfix pkgconfig
 USE_GNOME=	gnomeprefix gtk30 intlhack libxml2 ltverhack referencehack
 CONFIGURE_ARGS=	--enable-compile-warnings=no --enable-glade-catalog=no \
 		--enable-introspection

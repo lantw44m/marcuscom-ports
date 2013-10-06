@@ -7,6 +7,7 @@ PORTVERSION=	3.6.2
 PORTREVISION?=	0
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
+PKGNAMESUFFIX=	3
 DIST_SUBDIR=	gnome3
 
 MAINTAINER=	gnome@FreeBSD.org
@@ -25,10 +26,8 @@ RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gsettings-desktop-schemas.pc:${PORTS
 		${LOCALBASE}/libdata/pkgconfig/xkeyboard-config.pc:${PORTSDIR}/x11/xkeyboard-config \
 		${LOCALBASE}/libdata/pkgconfig/xkbfile.pc:${PORTSDIR}/x11/libxkbfile
 
-NO_STAGE=	yes
-LATEST_LINK=	gnome-desktop3
 USE_XORG=	x11 xrandr xext
-USES=		bison gettext gmake pathfix
+USES=		bison gettext gmake pathfix pkgconfig
 USE_GNOME=	gnomeprefix intlhack gtk30 ltverhack referencehack \
 		introspection:build
 USE_PYTHON=	yes

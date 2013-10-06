@@ -19,7 +19,6 @@ RUN_DEPENDS=	gpg:${PORTSDIR}/security/gnupg
 
 CONFLICTS=	seahorse-2.[0-9]* seahorse-3.0.[0-9]*
 
-NO_STAGE=	yes
 USE_LDCONFIG=	yes
 USE_XZ=		yes
 USES=		gettext gmake pathfix pkgconfig
@@ -30,7 +29,6 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--enable-introspection=no
 
 GLIB_SCHEMAS=	org.gnome.seahorse.recipients.gschema.xml
-MAN1=		seahorse-daemon.1
 
 OPTIONS_DEFINE=	NOTIFY
 

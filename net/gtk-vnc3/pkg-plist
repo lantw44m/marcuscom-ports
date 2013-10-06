@@ -21,6 +21,7 @@ lib/libgvnc-1.0.so
 lib/libgvnc-1.0.so.0
 libdata/pkgconfig/gtk-vnc-2.0.pc
 libdata/pkgconfig/gvnc-1.0.pc
+man/man1/gvnccapture.1.gz
 share/locale/ca/LC_MESSAGES/gtk-vnc.mo
 share/locale/ca@valencia/LC_MESSAGES/gtk-vnc.mo
 share/locale/cs/LC_MESSAGES/gtk-vnc.mo

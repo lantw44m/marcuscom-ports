@@ -15,17 +15,16 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}dbus>=0.83.0:${PORTSDIR}/devel/py-dbus \
 		vapigen:${PORTSDIR}/lang/vala-vapigen \
 		librsvg2>=2.0:${PORTSDIR}/graphics/librsvg2
+LIB_DEPENDS=	libdbus-glib-1.so:${PORTSDIR}/devel/dbus-glib
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}dbus>=0.83.0:${PORTSDIR}/devel/py-dbus \
 		${PYTHON_SITELIBDIR}/gtk-2.0/pynotify/__init__.py:${PORTSDIR}/devel/py-notify \
 		${PYTHON_SITELIBDIR}/xdg/__init__.py:${PORTSDIR}/devel/py-xdg \
 		librsvg2>=2.0:${PORTSDIR}/graphics/librsvg2
-LIB_DEPENDS=	dbus-glib-1:${PORTSDIR}/devel/dbus-glib
 
 USE_PYTHON=	yes
 
-NO_STAGE=	yes
 USE_LDCONFIG=	yes
-USES=		gmake
+USES=		gmake pkgconfig
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 GLIB_SCHEMAS=	org.freedesktop.ibus.gschema.xml
@@ -72,7 +71,7 @@ PLIST_SUB+=	VALA="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MGINTRO}
-USE_GNOME+=		introspection
+USE_GNOME+=		introspection:build
 CONFIGURE_ARGS+=	--enable-introspection=yes
 PLIST_SUB+=		GINTRO=""
 .else
@@ -93,13 +92,8 @@ post-patch:
 		${WRKSRC}/ui/gtk3/Makefile.in
 
 post-install:
-	@${MKDIR} ${PREFIX}/etc/xdg/autostart
-	@${INSTALL_DATA} ${WRKSRC}/bus/ibus.desktop ${PREFIX}/etc/xdg/autostart
-.	if ${PORT_OPTIONS:MGTK3}
-		@${LOCALBASE}/bin/gtk-query-immodules-3.0 > ${LOCALBASE}/lib/gtk-3.0/${GTK3_VERSION}/immodules.cache
-.	endif
-	@${LOCALBASE}/bin/gtk-query-immodules-2.0 > ${LOCALBASE}/etc/gtk-2.0/gtk.immodules
-	@${CAT} ${PKGMESSAGE}
+	@${MKDIR} ${STAGEDIR}${PREFIX}/etc/xdg/autostart
+	@${INSTALL_DATA} ${WRKSRC}/bus/ibus.desktop ${STAGEDIR}${PREFIX}/etc/xdg/autostart
 	@${ECHO} To display this message again, type ${PKG_INFO} -D ${PKGNAME}
 
 .include <bsd.port.mk>

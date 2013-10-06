@@ -6,6 +6,7 @@ PORTNAME=	gnome-keyring
 PORTVERSION=	3.6.2
 CATEGORIES=	security gnome
 MASTER_SITES=	GNOME
+PKGNAMESUFFIX=	3
 DIST_SUBDIR=	gnome3
 
 MAINTAINER=	gnome@FreeBSD.org
@@ -15,7 +16,7 @@ BUILD_DEPENDS=	${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_
 		gcr>=3.5.3:${PORTSDIR}/security/gcr
 LIB_DEPENDS=	libgnome-keyring.so:${PORTSDIR}/security/libgnome-keyring \
 		libdbus-1.so:${PORTSDIR}/devel/dbus \
-		libgcr.so:${PORTSDIR}/security/gcr \
+		libgcr-3.so:${PORTSDIR}/security/gcr \
 		libtasn1.so:${PORTSDIR}/security/libtasn1 \
 		libp11-kit.so:${PORTSDIR}/security/p11-kit \
 		libgcrypt.so:${PORTSDIR}/security/libgcrypt
@@ -23,8 +24,6 @@ RUN_DEPENDS=	${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_ro
 
 CONFLICTS=	gnome-keyring-2.[0-9]*
 
-NO_STAGE=	yes
-LATEST_LINK=	gnome-keyring3
 USE_XZ=		yes
 USE_GNOME=	gnomeprefix gtk30 ltverhack intlhack
 USES=		gettext gmake pathfix pkgconfig
