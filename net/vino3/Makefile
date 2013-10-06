@@ -6,6 +6,7 @@ PORTNAME=	vino
 PORTVERSION=	3.6.2
 CATEGORIES=	net gnome
 MASTER_SITES=	GNOME
+PKGNAMESUFFIX=	3
 DIST_SUBDIR=	gnome3
 
 MAINTAINER=	gnome@FreeBSD.org
@@ -20,10 +21,8 @@ LIB_DEPENDS=	libgnutls.so:${PORTSDIR}/security/gnutls \
 
 CONFLICTS=	vino-2.[0-9]*
 
-NO_STAGE=	yes
-LATEST_LINK=	vino3
 USE_XZ=		yes
-USES=		gettext gmake pathfix
+USES=		gettext gmake pathfix pkgconfig
 USE_GNOME=	gnomeprefix gtk30 intlhack
 USE_XORG=	xdamage xfixes xtst
 GNU_CONFIGURE=	yes

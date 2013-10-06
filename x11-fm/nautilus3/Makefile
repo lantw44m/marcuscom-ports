@@ -6,6 +6,7 @@ PORTNAME=	nautilus
 PORTVERSION=	3.6.3
 CATEGORIES=	x11-fm gnome
 MASTER_SITES=	GNOME
+PKGNAMESUFFIX=	3
 DIST_SUBDIR=	gnome3
 
 MAINTAINER=	gnome@FreeBSD.org
@@ -21,10 +22,9 @@ RUN_DEPENDS=	${LOCALBASE}/share/icons/gnome/index.theme:${PORTSDIR}/misc/gnome-i
 
 CONFLICTS=	nautilus-2.[0-9]*
 
-NO_STAGE=	yes
-LATEST_LINK=	nautilus3
 USE_XZ=		yes
-USES=		desktop-file-utils gettext gmake pathfix shared-mime-info
+USES=		desktop-file-utils gettext gmake pathfix pkgconfig \
+		shared-mime-info
 USE_GNOME=	gnomeprefix intlhack gnomedesktop3 libxml2 \
 		ltverhack gvfs ltasneededhack introspection:build
 USE_LDCONFIG=	yes

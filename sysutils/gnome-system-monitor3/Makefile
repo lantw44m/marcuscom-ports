@@ -6,6 +6,7 @@ PORTNAME=	gnome-system-monitor
 PORTVERSION=	3.6.1
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	GNOME
+PKGNAMESUFFIX=	3
 DIST_SUBDIR=	gnome3
 
 MAINTAINER=	gnome@FreeBSD.org
@@ -18,10 +19,8 @@ RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gnome-icon-theme.pc:${PORTSDIR}/misc
 
 CONFLICTS=	gnome-system-monitor-2.[0-9]*
 
-NO_STAGE=	yes
-LATEST_LINK=	gnome-system-monitor3
 USE_XZ=		yes
-USES=		gettext gmake pathfix
+USES=		gettext gmake pathfix pkgconfig
 INSTALLS_OMF=	yes
 USE_GNOME=	gnomeprefix gtkmm30 intlhack librsvg2 libwnck3
 GNU_CONFIGURE=	yes
