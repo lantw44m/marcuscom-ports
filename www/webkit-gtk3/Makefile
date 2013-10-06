@@ -157,6 +157,6 @@ post-patch:
 
 post-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/Programs/GtkLauncher \
-		${PREFIX}/bin/GtkLauncher-3
+		${STAGEDIR}${PREFIX}/bin/GtkLauncher-3
 
 .include <bsd.port.post.mk>
