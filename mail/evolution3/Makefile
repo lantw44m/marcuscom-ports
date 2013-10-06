@@ -6,10 +6,11 @@ PORTNAME=	evolution
 PORTVERSION=	3.6.4
 CATEGORIES=	mail gnome
 MASTER_SITES=	GNOME
+PKGNAMESUFFIX=	3
 DIST_SUBDIR=	gnome3
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	An integrated mail, calendar and address book distributed suite
+COMMENT=	Integrated mail, calendar and address book distributed suite
 
 BUILD_DEPENDS=	itstool:${PORTSDIR}/textproc/itstool
 LIB_DEPENDS=	libnss3.so:${PORTSDIR}/security/nss \
@@ -21,10 +22,8 @@ LIB_DEPENDS=	libnss3.so:${PORTSDIR}/security/nss \
 
 CONFLICTS=	evolution-2.[0-9]*
 
-NO_STAGE=	yes
-LATEST_LINK=	evolution3
 USE_XZ=		yes
-USES=		desktop-file-utils bison gettext gmake pathfix
+USES=		desktop-file-utils bison gettext gmake pathfix pkgconfig
 USE_GNOME=	gnomeprefix intlhack evolutiondataserver3 gtkhtml4 \
 		gnomedocutils ltasneededhack gnomedesktop3
 USE_AUTOTOOLS=	libtool
@@ -82,7 +81,7 @@ CONFIGURE_ARGS+=--with-openldap=no
 .endif
 
 .if ${PORT_OPTIONS:MWEATHER}
-LIB_DEPENDS+=	gweather-3:${PORTSDIR}/net/libgweather3
+LIB_DEPENDS+=	libgweather-3.so:${PORTSDIR}/net/libgweather3
 CONFIGURE_ARGS+=--enable-weather
 PLIST_SUB+=	WEATHER=""
 .else
@@ -106,7 +105,7 @@ KRB5_LIB=		`/usr/bin/krb5-config gssapi --libs`
 .endif
 
 .if ${PORT_OPTIONS:MCANBERRA}
-LIB_DEPENDS+=	canberra-gtk3:${PORTSDIR}/audio/libcanberra-gtk3
+LIB_DEPENDS+=	libcanberra-gtk3.so:${PORTSDIR}/audio/libcanberra-gtk3
 CONFIGURE_ARGS+=--enable-canberra=yes
 PLIST_SUB+=	CANBERRA=""
 .else

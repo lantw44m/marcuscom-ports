@@ -6,6 +6,7 @@ PORTNAME=	gnome-control-center
 PORTVERSION=	3.6.3
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	GNOME
+PKGNAMESUFFIX=	3
 DIST_SUBDIR=	gnome3
 
 MAINTAINER=	gnome@FreeBSD.org
@@ -18,7 +19,7 @@ LIB_DEPENDS=	libcanberra-gtk3.so:${PORTSDIR}/audio/libcanberra-gtk3 \
 		libxklavier.so:${PORTSDIR}/x11/libxklavier \
 		libupower-glib.so:${PORTSDIR}/sysutils/upower \
 		libcolord.so:${PORTSDIR}/graphics/colord \
-		libibus.so:${PORTSDIR}/textproc/ibus \
+		libibus-1.0.so:${PORTSDIR}/textproc/ibus \
 		libgoa-1.0.so:${PORTSDIR}/net/gnome-online-accounts \
 		libsocialweb.so:${PORTSDIR}/www/libsocialweb \
 		libpwquality.so:${PORTSDIR}/security/libpwquality \
@@ -35,8 +36,6 @@ RUN_DEPENDS=	gnome-eject:${PORTSDIR}/sysutils/gnome-mount \
 
 CONFLICTS=	gnome-control-center-2.[0-9]* gnome-media-2.[0-9]*
 
-NO_STAGE=	yes
-LATEST_LINK=	gnome-control-center3
 USE_XZ=		yes
 USES=		desktop-file-utils gettext gmake pathfix pkgconfig \
 		shared-mime-info
