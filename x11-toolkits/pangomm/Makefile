@@ -3,7 +3,7 @@
 #   $MCom: ports/trunk/x11-toolkits/pangomm/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	pangomm
-PORTVERSION=	2.28.4
+PORTVERSION=	2.34.0
 PORTREVISION?=	0
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	GNOME
@@ -13,7 +13,6 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	C++ wrapper for Pango
 
 USE_XZ=		yes
-NO_STAGE=	yes
 
 .if !defined(REFERENCE_PORT)
 
@@ -21,8 +20,8 @@ BUILD_DEPENDS=	gm4:${PORTSDIR}/devel/m4
 
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
-USES=		gmake pathfix
-USE_GNOME=	pango glibmm cairomm
+USES=		gmake pathfix pkgconfig
+USE_GNOME=	cairomm glibmm pango
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--disable-documentation \
