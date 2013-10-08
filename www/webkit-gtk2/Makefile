@@ -98,7 +98,7 @@ post-patch:
 
 post-install:
 # Add work around for epiphany 2.x gobject-introspection build.
-	${LN} -sf ${PREFIX}/libdata/pkgconfig/webkit-1.0.pc \
-		${PREFIX}/libdata/pkgconfig/webkitgtk-1.0.pc
+	${LN} -sf ${STAGEDIR}${PREFIX}/libdata/pkgconfig/webkit-1.0.pc \
+		${STAGEDIR}${PREFIX}/libdata/pkgconfig/webkitgtk-1.0.pc
 
 .include <bsd.port.post.mk>
