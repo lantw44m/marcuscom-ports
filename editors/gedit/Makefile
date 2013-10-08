@@ -19,10 +19,9 @@ RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-co
 
 CONFLICTS=	gedit-3.[0-9]*
 
-NO_STAGE=	yes
 USE_XORG=	sm
 USE_BZIP2=	yes
-USES=		desktop-file-utils gettext gmake pathfix
+USES=		desktop-file-utils gettext gmake pathfix pkgconfig
 INSTALLS_OMF=	yes
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool

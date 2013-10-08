@@ -17,10 +17,9 @@ LIB_DEPENDS=	libgee.so:${PORTSDIR}/devel/libgee06 \
 
 CONFLICTS=	folks-0.[6-9].[0-9]*
 
-NO_STAGE=	yes
 USE_BZIP2=	yes
 USE_LDCONFIG=	yes
-USES=		pathfix gettext gmake
+USES=		pathfix gettext gmake pkgconfig
 USE_GNOME=	intlhack gnomehier introspection:build
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include

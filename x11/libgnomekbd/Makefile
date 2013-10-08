@@ -12,16 +12,15 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME keyboard shared library
 
-LIB_DEPENDS=	xklavier:${PORTSDIR}/x11/libxklavier
+LIB_DEPENDS=	libxklavier.so:${PORTSDIR}/x11/libxklavier
 
 CONFLICTS=	libgnomekbd-3.[0-9]*
 
-NO_STAGE=	yes
 USE_BZIP2=	yes
 USE_GNOME=	gnomeprefix ltverhack gconf2
 USE_AUTOTOOLS=	libtool
 INSTALLS_ICONS=	yes
-USES=		gettext gmake pathfix
+USES=		gettext gmake pathfix pkgconfig
 USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib

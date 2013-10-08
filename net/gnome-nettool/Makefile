@@ -17,10 +17,9 @@ LIB_DEPENDS=	libgtop-2.0.so:${PORTSDIR}/devel/libgtop
 
 CONFLICTS=	gnome-nettool-3.[0-9]*
 
-NO_STAGE=	yes
 USE_BZIP2=	yes
 USE_GNOME=	intlhack gnomeprefix libglade2 gconf2 gnomedocutils
-USES=		gettext gmake pathfix
+USES=		gettext gmake pathfix pkgconfig
 INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
 GNU_CONFIGURE=	yes
@@ -29,8 +28,8 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 CFLAGS+=	-DHAVE_SOCKADDR_SA_LEN
 
 post-install:
-	${MKDIR} ${PREFIX}/share/pixmaps
-	${LN} -sf ${PREFIX}/share/gnome-nettool/pixmaps/gnome-nettool.png \
-		${PREFIX}/share/pixmaps/gnome-nettool.png
+	${MKDIR} ${STAGEDIR}${PREFIX}/share/pixmaps
+	${LN} -sf ${STAGEDIR}${PREFIX}/share/gnome-nettool/pixmaps/gnome-nettool.png \
+		${STAGEDIR}${PREFIX}/share/pixmaps/gnome-nettool.png
 
 .include <bsd.port.mk>

@@ -8,6 +8,7 @@ PORTREVISION=	1
 CATEGORIES=	audio gnome
 #MASTER_SITES=	GNOME
 MASTER_SITES=	LOCAL/kwm
+PKGNAMESUFFIX=	3
 DIST_SUBDIR=	gnome3
 
 MAINTAINER=	marcus@FreeBSD.org
@@ -25,10 +26,8 @@ LIB_DEPENDS=	libmusicbrainz3.so:${PORTSDIR}/audio/libmusicbrainz3 \
 
 CONFLICTS=	rhythmbox-0.[0-9]*
 
-NO_STAGE=	yes
-LATEST_LINK=	rhythmbox3
 USE_BZIP2=	yes
-USES=		gettext gmake pathfix
+USES=		gettext gmake pathfix pkgconfig
 INSTALLS_OMF=	yes
 USE_XORG=	ice xproto
 USE_GNOME=	intlhack gnomeprefix gtk30 introspection:build

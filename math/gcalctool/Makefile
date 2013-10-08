@@ -15,15 +15,13 @@ COMMENT=	GNOME 2 calculator tool based on the old calctool for OpenWindows
 
 CONFLICTS=	gcalctool-6.[0-9]*
 
-NO_STAGE=	yes
 USE_BZIP2=	yes
-USES=		bison gettext gmake pathfix
+USES=		bison gettext gmake pathfix pkgconfig
 USE_AUTOTOOLS=	libtool
 USE_GNOME=	gnomeprefix intlhack gconf2 gnomedocutils gtk20
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-MAN1=		gcalctool.1
 GLIB_SCHEMAS=	org.gnome.gcalctool.gschema.xml
 
 .include <bsd.port.mk>
