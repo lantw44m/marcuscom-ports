@@ -31,8 +31,7 @@ USE_GNOME=	gnomeprefix intlhack evolutiondataserver3 librsvg2 \
 		gnomedesktop3 libxml2:build introspection:build
 USES=		gettext gmake pathfix pkgconfig
 # USE_GSTREAMER= bad gconf good jpeg ogg theora v4l2 vorbis
-USE_GSTREAMER1=	bad good jpeg ogg theora v4l2
-INSTALLS_OMF=	yes
+USE_GSTREAMER1=	bad good jpeg ogg theora v4l2 vpx
 INSTALLS_ICONS=	yes
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
