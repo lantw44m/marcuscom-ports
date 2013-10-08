@@ -4,7 +4,7 @@
 
 PORTNAME=	webkit
 PORTVERSION=	1.8.3
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	www
 MASTER_SITES=	http://webkitgtk.org/releases/
 PKGNAMESUFFIX=	-gtk2
@@ -98,7 +98,7 @@ post-patch:
 
 post-install:
 # Add work around for epiphany 2.x gobject-introspection build.
-	${LN} -sf ${STAGEDIR}${PREFIX}/libdata/pkgconfig/webkit-1.0.pc \
+	${LN} -sf ${PREFIX}/libdata/pkgconfig/webkit-1.0.pc \
 		${STAGEDIR}${PREFIX}/libdata/pkgconfig/webkitgtk-1.0.pc
 
 .include <bsd.port.post.mk>
