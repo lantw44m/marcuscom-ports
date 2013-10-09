@@ -1020,6 +1020,11 @@ gnome-post-install:
 		${ECHO_CMD} "@unexec ${LOCALBASE}/bin/gtk-update-icon-cache -q -f %D/$${i} 2>/dev/null || /usr/bin/true" \
 			>> ${TMPPLIST}; \
 	done
+.if ! defined(NO_STAGE)
+	@for i in `${GREP} "^share/icons/.*/" ${TMPPLIST} | ${CUT} -d / -f 1-3 | ${SORT} -u`; do \
+		${LOCALBASE}/bin/gtk-update-icon-cache -q -f ${PREFIX}/$${i} 2>/dev/null || ${TRUE}; \
+	done
+.endif
 	@if test -f ${TMPPLIST}.icons1; then \
 		${CAT} ${TMPPLIST}.icons1 ${TMPPLIST} > ${TMPPLIST}.icons2; \
 		${RM} -f ${TMPPLIST}.icons1; \
