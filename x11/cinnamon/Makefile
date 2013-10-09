@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	cinnamon
-PORTVERSION=	1.7.1
+PORTVERSION=	1.8.8.1
 CATEGORIES=	x11 gnome
 DIST_SUBDIR=	gnome3
 
@@ -18,9 +18,9 @@ LIB_DEPENDS=	libstartup-notification-1.so:${PORTSDIR}/x11/startup-notification \
 		libtelepathy-logger.so:${PORTSDIR}/net-im/telepathy-logger \
 		libfolks.so:${PORTSDIR}/net-im/folks \
 		libpulse.so:${PORTSDIR}/audio/pulseaudio \
-		libcroco.so:${PORTSDIR}/textproc/libcroco \
+		libcroco-0.6.so:${PORTSDIR}/textproc/libcroco \
 		libdbus-glib-1.so:${PORTSDIR}/devel/dbus-glib \
-		libclutter-glx-1.so:${PORTSDIR}/graphics/clutter \
+		libclutter-glx-1.0.so:${PORTSDIR}/graphics/clutter \
 		libgjs.so:${PORTSDIR}/lang/gjs
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/dbus-python.pc:${PORTSDIR}/devel/py-dbus \
 		${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss \
@@ -29,19 +29,18 @@ RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/dbus-python.pc:${PORTSDIR}/devel/py-
 		${PYTHONPREFIX_INCLUDEDIR}/Imaging.h:${PORTSDIR}/graphics/py-imaging \
 		${LOCALBASE}/share/doc/py-lxml/CREDITS.txt:${PORTSDIR}/devel/py-lxml
 
+WRKSRC=		${WRKDIR}/linuxmint-Cinnamon-aa9fb31
+
 USE_GITHUB=	yes
 GH_ACCOUNT=	linuxmint
-GH_TAGNAME=	1.7.1
-GH_COMMIT=	941456a
+GH_TAGNAME=	1.8.8.1
+GH_COMMIT=	6d44281
 
-WRKSRC=		${WRKDIR}/${GH_ACCOUNT}-Cinnamon-${GH_COMMIT}
-
-NO_STAGE=	yes
 USE_XORG=	x11 xfixes sm
-USES=		gettext gmake pathfix
+USES=		gettext gmake pathfix pkgconfig
 USE_AUTOTOOLS=	libtool autoconf automake
-USE_GNOME=	gnomeprefix intlhack gtk30 gconf2 gnomemenus3 \
-		gnomedesktop3 evolutiondataserver3 pygnome2
+USE_GNOME=	evolutiondataserver3 gconf2 gnomedesktop3 gnomemenus3 \
+		gnomeprefix gtk30 intlhack introspection:build
 USE_GSTREAMER=	theora vp8 ogg
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
@@ -49,31 +48,27 @@ USE_PYTHON=	yes
 
 GLIB_SCHEMAS=	org.cinnamon.gschema.xml
 
-MAN1=		cinnamon.1 \
-		cinnamon-extension-tool.1 \
-		cinnamon-launcher.1 \
-		cinnamon-menu-editor.1 \
-		cinnamon-settings.1 \
-		cinnamon2d.1 \
-		gnome-session-cinnamon.1 \
-		gnome-session-cinnamon2d.1
-
 CONFIGURE_ARGS+=--enable-compile-warnings=no \
 		--with-ca-certificates=${LOCALBASE}/share/certs/ca-root-nss.crt
 CPPFLAGS+=	-I${LOCALASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
 post-patch:
-	@${MKDIR} ${WRKSRC}/files${PREFIX}
+	@${MKDIR} ${WRKSRC}/files${STAGE}${PREFIX}
 .for d in bin lib share
 	@${MV} ${WRKSRC}/files/usr/${d} ${WRKSRC}/files${PREFIX}
 .endfor
+	@${MV} ${WRKSRC}/files/${PREFIX}/share/cinnamon/locale \
+		${WRKSRC}/files/${PREFIX}/share/locale
 	@${MV} ${WRKSRC}/files/etc ${WRKSRC}/files${PREFIX}
 	@${MV} ${WRKSRC}/files/${PREFIX}/lib/* ${WRKSRC}/files${PREFIX}/share/
 	@${RMDIR} ${WRKSRC}/files/${PREFIX}/lib
 
 	@${REINPLACE_CMD} -e 's|/usr/lib|${PREFIX}/lib/|g' \
 		${WRKSRC}/files${PREFIX}/share/cinnamon-settings/bin/capi.py
+
+	@${FIND} ${WRKSRC} -name \* | ${XARGS} ${EGREP} -l "/usr/share/cinnamon/locale" | \
+		${XARGS} ${REINPLACE_CMD} -e "s|/usr/share/cinnamon/locale|${PREFIX}/share/locale|g"
 
 	@${REINPLACE_CMD} -e 's|/usr/share|${PREFIX}/share/|g ;\
 		s|/usr/lib|${PREFIX}/share/|g' \
@@ -83,7 +78,6 @@ post-patch:
 			${WRKSRC}/js/ui/expo.js \
 			${WRKSRC}/makepot \
 			${WRKSRC}/src/st/st-background-effect.c \
-			${WRKSRC}/files/generate_desktop_files \
 			${WRKSRC}/files${PREFIX}/bin/cinnamon-launcher \
 			${WRKSRC}/files${PREFIX}/share/cinnamon/applets/brightness@cinnamon.org/applet.js \
 			${WRKSRC}/files${PREFIX}/share/cinnamon/applets/panel-launchers@cinnamon.org/cinnamon-add-panel-launcher.py \
@@ -118,9 +112,6 @@ post-patch:
 		s|const GnomeBluetooth = imports.gi.GnomeBluetooth;||g' \
 			${WRKSRC}/files${PREFIX}/share/cinnamon/applets/bluetooth\@cinnamon.org/applet.js
 
-	@${FIND} ${WRKSRC} -name \* | ${XARGS} ${EGREP} -l "\/usr\/share\/cinnamon\/locale" | \
-		${XARGS} ${REINPLACE_CMD} -e "s|/usr/share/cinnamon/locale/|${PREFIX}cinnamon/locale|g"
-
 	@${REINPLACE_CMD} -e 's|/usr/lib/gnome-session|${PREFIX}/libexec|g' \
 		${WRKSRC}/files${PREFIX}/share/gnome-session/sessions/cinnamon.session
 
@@ -131,8 +122,12 @@ post-patch:
 		/datadir/s|/usr|${PREFIX}|g' \
 			${WRKSRC}/files${PREFIX}/share/cinnamon-menu-editor/cme/config.py
 
-	@${REINPLACE_CMD} -e 's|"usr/lib|"${PREFIX}/share/|g ;\
-		s|"usr/share|"${PREFIX}/share/|g' \
+	@${REINPLACE_CMD} -e 's|/usr/share|${STAGEDIR}${PREFIX}/share/|g ;\
+		s|/usr/lib|${PREFIX}/share/|g' \
+			${WRKSRC}/files/generate_desktop_files
+
+	@${REINPLACE_CMD} -e 's|"usr/lib|"${STAGEDIR}${PREFIX}/share/|g ;\
+		s|"usr/share|"${STAGEDIR}${PREFIX}/share/|g' \
 			${WRKSRC}/files/generate_desktop_files
 
 	@${REINPLACE_CMD} -e 's|/usr/bin|${PREFIX}/bin|g' \

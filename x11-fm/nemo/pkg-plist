@@ -20,6 +20,8 @@ lib/libnemo-extension.so
 lib/libnemo-extension.so.5
 libdata/pkgconfig/libnemo-extension.pc
 libexec/nemo-convert-metadata
+man/man1/nemo-connect-server.1.gz
+man/man1/nemo.1.gz
 share/GConf/gsettings/nemo.convert
 share/applications/nemo-autorun-software.desktop
 share/applications/nemo.desktop
@@ -33,7 +35,6 @@ share/icons/hicolor/16x16/apps/nemo.png
 share/icons/hicolor/22x22/apps/nemo.png
 share/icons/hicolor/24x24/apps/nemo.png
 share/icons/hicolor/32x32/apps/nemo.png
-share/icons/hicolor/icon-theme.cache
 share/icons/hicolor/scalable/actions/location-symbolic.svg
 share/icons/hicolor/scalable/actions/sidebar-hide-symbolic.svg
 share/icons/hicolor/scalable/actions/sidebar-places-symbolic.svg
@@ -160,11 +161,11 @@ share/mime/packages/nemo.xml
 %%DATADIR%%/actions/sample.nemo_action
 %%DATADIR%%/icons/hicolor/16x16/emblems/emblem-note.png
 %%DATADIR%%/icons/hicolor/24x24/emblems/emblem-note.png
-%%DATADIR%%/icons/hicolor/4%%XAWVER%%x4%%XAWVER%%/emblems/emblem-note.png
+%%DATADIR%%/icons/hicolor/48x48/emblems/emblem-note.png
 %%DATADIR%%/nemo-extras.placeholder
 %%DATADIR%%/nemo-suggested.placeholder
-@dirrm %%DATADIR%%/icons/hicolor/4%%XAWVER%%x4%%XAWVER%%/emblems
-@dirrm %%DATADIR%%/icons/hicolor/4%%XAWVER%%x4%%XAWVER%%
+@dirrm %%DATADIR%%/icons/hicolor/48x48/emblems
+@dirrm %%DATADIR%%/icons/hicolor/48x48
 @dirrm %%DATADIR%%/icons/hicolor/24x24/emblems
 @dirrm %%DATADIR%%/icons/hicolor/24x24
 @dirrm %%DATADIR%%/icons/hicolor/16x16/emblems

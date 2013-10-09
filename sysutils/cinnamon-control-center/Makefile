@@ -3,12 +3,12 @@
 #
 
 PORTNAME=	cinnamon-control-center
-PORTVERSION=	1.7.1
+PORTVERSION=	1.8.2
 CATEGORIES=	sysutils gnome
 DIST_SUBDIR=	gnome3
 
 MAINTAINER=	gustau.perez@gmail.com
-COMMENT=	A gnome-control-center replacement for Cinnamon
+COMMENT=	gnome-control-center replacement for Cinnamon
 
 BUILD_DEPENDS=	${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss \
 		gnome-settings-daemon>=3.4.0:${PORTSDIR}/sysutils/gnome-settings-daemon3 \
@@ -18,29 +18,30 @@ LIB_DEPENDS=	libstartup-notification-1.so:${PORTSDIR}/x11/startup-notification \
 		libcheese.so:${PORTSDIR}/multimedia/cheese3 \
 		libkrb5support.so:${PORTSDIR}/security/krb5 \
 		libcaribou.so:${PORTSDIR}/accessibility/caribou \
-		libgtop.so:${PORTSDIR}/devel/libgtop \
+		libgtop-2.0.so:${PORTSDIR}/devel/libgtop \
 		libmuffin.so:${PORTSDIR}/x11-wm/muffin \
 		libtelepathy-glib.so:${PORTSDIR}/net-im/telepathy-glib \
 		libtelepathy-logger.so:${PORTSDIR}/net-im/telepathy-logger \
 		libfolks.so:${PORTSDIR}/net-im/folks \
 		libpulse.so:${PORTSDIR}/audio/pulseaudio \
-		libcroco.so:${PORTSDIR}/textproc/libcroco \
+		libcroco-0.6.so:${PORTSDIR}/textproc/libcroco \
 		libdbus-glib-1.so:${PORTSDIR}/devel/dbus-glib \
-		libclutter-glx-1.so:${PORTSDIR}/graphics/clutter \
-		libclutter-gst-1.so:${PORTSDIR}/multimedia/clutter-gst \
+		libclutter-glx-1.0.so:${PORTSDIR}/graphics/clutter \
+		libclutter-gst-2.0.so:${PORTSDIR}/multimedia/clutter-gst \
 		libgjs.so:${PORTSDIR}/lang/gjs
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/dbus-python.pc:${PORTSDIR}/devel/py-dbus \
 		${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss \
 		${LOCALBASE}/share/doc/py-lxml/CREDITS.txt:${PORTSDIR}/devel/py-lxml
 
+WRKSRC=		${WRKDIR}/linuxmint-cinnamon-control-center-2249c94
+
 USE_GITHUB=	yes
 GH_ACCOUNT=	linuxmint
-GH_TAGNAME=	1.7.1
-GH_COMMIT=	a3883df
+GH_TAGNAME=	1.8.2
+GH_COMMIT=	3b93fd2
 
-NO_STAGE=	yes
 USE_XORG=	x11 xfixes sm
-USES=		gettext gmake pathfix
+USES=		gettext gmake pathfix pkgconfig
 USE_GNOME=	gnomeprefix intlhack gtk30 gconf2 gnomemenus3 \
 		gnomedesktop3 evolutiondataserver3
 USE_LDCONFIG=	yes
@@ -69,22 +70,13 @@ PLIST_SUB+=	CUPS="@comment "
 .endif
 
 post-patch:
-	@${MKDIR} ${WRKSRC}/files${PREFIX}
-
-	@${MV} ${WRKSRC}/files/usr/share ${WRKSRC}/files${PREFIX}
-
 	@${REINPLACE_CMD} -e 's|find|find ${WRKSRC}/files|g' \
 		${WRKSRC}/files/Makefile.in
-
-	@${REINPLACE_CMD} -e 's|/usr/share/|${PREFIX}/share/|g ;\
-		s|"usr/lib|"${PREFIX}/share/|g ;\
-		s|.utf8|.UTF-8|g' \
-			${WRKSRC}/files${PREFIX}/share/cinnamon-control-center/language-options
 
 	@${REINPLACE_CMD} -e 's|/usr/share/|${PREFIX}/share/|g' \
 		${WRKSRC}/panels/common/cc-common-language.c
 
 pre-configure:
-	cd ${WRKSRC} && ${PREFIX}/bin/autoreconf && :> panels/info/hostnames-test.txt
+	cd ${WRKSRC} && ${PREFIX}/bin/autoreconf
 
 .include <bsd.port.mk>

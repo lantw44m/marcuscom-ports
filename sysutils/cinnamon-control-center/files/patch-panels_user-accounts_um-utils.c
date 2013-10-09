@@ -1,23 +1,19 @@
---- panels/user-accounts/um-utils.orig.c	2013-02-28 12:30:49.816494890 +0100
-+++ panels/user-accounts/um-utils.c	2013-02-28 12:32:17.656493654 +0100
-@@ -23,9 +23,10 @@
- 
- #include <math.h>
+--- panels/user-accounts/um-utils.c.orig	2013-05-22 16:25:19.000000000 +0000
++++ panels/user-accounts/um-utils.c	2013-10-09 16:50:07.978760476 +0000
+@@ -25,7 +25,15 @@
  #include <stdlib.h>
-+#include <sys/param.h>
  #include <sys/types.h>
  #include <pwd.h>
 -#include <utmp.h>
++
++#include <sys/param.h>
++#if __FreeBSD_version < 900000
++ #include <utmp.h>
++#else
 +#include <utmpx.h>
++/* from the old utmp.h */
++#define UT_NAMESIZE 16
++#endif
  
  #include <glib.h>
- #include <glib/gi18n.h>
-@@ -445,7 +446,7 @@
- }
- 
- 
--#define MAXNAMELEN  (UT_NAMESIZE - 1)
-+#define MAXNAMELEN  (MAXLOGNAME - 1)
- 
- static gboolean
- is_username_used (const gchar *username)
+ #include <glib/gi18n-lib.h>

@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	nemo
-PORTVERSION=	1.7.1
+PORTVERSION=	1.8.5
 CATEGORIES=	x11-fm gnome
 DIST_SUBDIR=	gnome3
 
@@ -19,15 +19,18 @@ LIB_DEPENDS=	libexif.so:${PORTSDIR}/graphics/libexif \
 RUN_DEPENDS=	${LOCALBASE}/share/icons/gnome/index.theme:${PORTSDIR}/misc/gnome-icon-theme \
 		${LOCALBASE}/libdata/pkgconfig/gsettings-desktop-schemas.pc:${PORTSDIR}/devel/gsettings-desktop-schemas
 
+WRKSRC=		${WRKDIR}/linuxmint-nemo-63f7b44
+
 USE_GITHUB=	yes
 GH_ACCOUNT=	linuxmint
-GH_TAGNAME=	1.7.1
-GH_COMMIT=	63f7b44
+GH_TAGNAME=	1.8.5
+GH_COMMIT=	40f84d6
 
-NO_STAGE=	yes
 INSTALLS_ICONS=	yes
-USES=		desktop-file-utils gettext gmake pathfix
-USE_GNOME=	gnomeprefix intlhack gnomedesktop3 libxml2 introspection:build
+USES=		desktop-file-utils gettext gmake pathfix \
+		pkgconfig shared-mime-info
+USE_GNOME=	gnomeprefix intlhack gnomedesktop3 libxml2 \
+		introspection:build
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool autoconf automake
 CPPFLAGS+=	-I${LOCALBASE}/include
@@ -36,9 +39,6 @@ CONFIGURE_ARGS=	--enable-static --disable-packagekit --disable-tracker
 MAKE_ENV=	G_CHARSET_ALIAS="${LOCALBASE}/libdata/charset.alias"
 
 GLIB_SCHEMAS=	org.nemo.gschema.xml
-
-MAN1=		nemo-connect-server.1 \
-		nemo.1
 
 post-patch:
 	@${MKDIR} ${WRKSRC}/files${PREFIX}
