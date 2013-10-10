@@ -44,6 +44,12 @@ lib/totem/plugins/dbus/dbusservice.plugin
 lib/totem/plugins/dbus/dbusservice.py
 lib/totem/plugins/dbus/dbusservice.pyc
 lib/totem/plugins/dbus/dbusservice.pyo
+lib/totem/plugins/grilo/grilo.plugin
+lib/totem/plugins/grilo/grilo.ui
+lib/totem/plugins/grilo/libgrilo.a
+lib/totem/plugins/grilo/libgrilo.la
+lib/totem/plugins/grilo/libgrilo.so
+lib/totem/plugins/grilo/totem-grilo.conf
 lib/totem/plugins/gromit/gromit.plugin
 lib/totem/plugins/gromit/libgromit.a
 lib/totem/plugins/gromit/libgromit.la
@@ -73,11 +79,6 @@ lib/totem/plugins/opensubtitles/opensubtitles.py
 lib/totem/plugins/opensubtitles/opensubtitles.pyc
 lib/totem/plugins/opensubtitles/opensubtitles.pyo
 lib/totem/plugins/opensubtitles/opensubtitles.ui
-%%PUBLISH%%lib/totem/plugins/publish/libpublish.a
-%%PUBLISH%%lib/totem/plugins/publish/libpublish.la
-%%PUBLISH%%lib/totem/plugins/publish/libpublish.so
-%%PUBLISH%%lib/totem/plugins/publish/publish-plugin.ui
-%%PUBLISH%%lib/totem/plugins/publish/publish.plugin
 lib/totem/plugins/properties/libmovie-properties.a
 lib/totem/plugins/properties/libmovie-properties.la
 lib/totem/plugins/properties/libmovie-properties.so
@@ -645,7 +646,6 @@ share/thumbnailers/totem.thumbnailer
 @dirrm lib/totem/plugins/skipto
 @dirrm lib/totem/plugins/screenshot
 @dirrm lib/totem/plugins/screensaver
-%%PUBLISH%%@dirrm lib/totem/plugins/publish
 @dirrm lib/totem/plugins/properties
 @dirrm lib/totem/plugins/opensubtitles
 @dirrm lib/totem/plugins/ontop
@@ -653,6 +653,7 @@ share/thumbnailers/totem.thumbnailer
 %%LIRC%%@dirrm lib/totem/plugins/lirc
 @dirrm lib/totem/plugins/im-status
 @dirrm lib/totem/plugins/gromit
+@dirrm lib/totem/plugins/grilo
 @dirrm lib/totem/plugins/dbus
 @dirrm lib/totem/plugins/chapters
 @dirrm lib/totem/plugins/brasero-disc-recorder

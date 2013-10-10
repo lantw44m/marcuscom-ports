@@ -12,7 +12,8 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A gstreamer-based video player for the GNOME 3 Desktop
 
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes \
-		${LOCALBASE}/libdata/pkgconfig/gnome-icon-theme.pc:${PORTSDIR}/misc/gnome-icon-theme
+		${LOCALBASE}/libdata/pkgconfig/gnome-icon-theme.pc:${PORTSDIR}/misc/gnome-icon-theme \
+		grilo-plugins>=0.2:${PORTSDIR}/net/grilo-plugins
 LIB_DEPENDS=	libgdata.so.13:${PORTSDIR}/devel/libgdata \
 		libdbus-glib-1.so:${PORTSDIR}/devel/dbus-glib \
 		libclutter-gst-2.0.so:${PORTSDIR}/multimedia/clutter-gst \
@@ -22,7 +23,8 @@ LIB_DEPENDS=	libgdata.so.13:${PORTSDIR}/devel/libgdata \
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes \
 		${LOCALBASE}/libdata/pkgconfig/gnome-icon-theme.pc:${PORTSDIR}/misc/gnome-icon-theme \
 		gnome-settings-daemon>=2.91.0:${PORTSDIR}/sysutils/gnome-settings-daemon3 \
-		gnome-icon-theme-symbolic>=2.91.0:${PORTSDIR}/x11-themes/gnome-icon-theme-symbolic
+		gnome-icon-theme-symbolic>=2.91.0:${PORTSDIR}/x11-themes/gnome-icon-theme-symbolic \
+		grilo-plugins>=0.2:${PORTSDIR}/net/grilo-plugins
 
 CONFLICTS=	totem-2.[0-9]*
 
@@ -52,15 +54,14 @@ GLIB_SCHEMAS=	org.gnome.totem.enums.xml \
 		org.gnome.totem.plugins.opensubtitles.gschema.xml
 
 
-OPTIONS_DEFINE=	LIRC BROWSER_PLUGINS PUBLISH
+OPTIONS_DEFINE=	LIRC BROWSER_PLUGINS
 BROWSER_PLUGINS_DESC=	Plugins for gecko browser
-PUBLISH_DESC=	Publish (network playlist) plugin
 TRACKER_DESC=	Tracker local search plugin
 
 OPTIONS_DEFAULT=BROWSER_PLUGINS
 
 # check configure script for allowed_plugins="..." for new plugins
-TOTEM_PLUGINS=	brasero-disc-recorder chapters dbusservice im-status gromit \
+TOTEM_PLUGINS=	brasero-disc-recorder chapters dbusservice im-status grilo gromit \
 		iplayer media-player-keys ontop opensubtitles properties \
 		screensaver screenshot sidebar-test skipto youtube
 
@@ -70,18 +71,6 @@ TOTEM_PLUGINS=	brasero-disc-recorder chapters dbusservice im-status gromit \
 # iplayer zeitgeist-dp grilo
 
 .include <bsd.port.options.mk>
-
-.if ${PORT_OPTIONS:MPUBLISH}
-LIB_DEPENDS+=	libepc-1.0.so:${PORTSDIR}/www/libepc
-PLIST_SUB+=	PUBLISH=""
-TOTEM_PLUGINS:=	${TOTEM_PLUGINS} publish
-GLIB_SCHEMAS=	org.gnome.totem.enums.xml \
-		org.gnome.totem.gschema.xml \
-		org.gnome.totem.plugins.publish.gschema.xml \
-		org.gnome.totem.plugins.opensubtitles.gschema.xml
-.else
-PLIST_SUB+=	PUBLISH="@comment "
-.endif
 
 #.if defined(WITH_TRACKER)
 #LIB_DEPENDS+=	tracker-gtk:${PORTSDIR}/sysutils/tracker-libtrackergtk
