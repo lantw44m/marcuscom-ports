@@ -30,11 +30,15 @@ lib/libmuffin.a
 lib/libmuffin.la
 lib/libmuffin.so
 lib/libmuffin.so.0
-lib/muffin/Meta-3.0.gir
-lib/muffin/Meta-3.0.typelib
+lib/muffin/Meta-Muffin.0.gir
+lib/muffin/Meta-Muffin.0.typelib
 lib/muffin/plugins/default.so
 libdata/pkgconfig/libmuffin.pc
 libdata/pkgconfig/muffin-plugins.pc
+man/man1/muffin-message.1.gz
+man/man1/muffin-theme-viewer.1.gz
+man/man1/muffin-window-demo.1.gz
+man/man1/muffin.1.gz
 share/applications/muffin.desktop
 share/gnome/wm-properties/muffin-wm.desktop
 share/GConf/gsettings/muffin-schemas.convert
