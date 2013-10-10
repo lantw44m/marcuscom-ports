@@ -127,8 +127,15 @@ CPP=		clang-cpp33
 CONFIGURE_ENV+=	CC=${CC} CXX=${CXX} CPP=${CPP}
 . endif
 .else
+# we need clang also for !Webkit2 builds
+. if ${OSVERSION}<1000019
+BUILD_DEPENDS+=	clang>=3.3_1:${PORTSDIR}/lang/clang33
+CC=		clang33
+CXX=		clang++33
+CPP=		clang-cpp33
 CONFIGURE_ARGS+=--disable-webkit2
 PLIST_SUB+=	WEBKIT2="@comment "
+. endif
 .endif
 
 .if ${ARCH} == powerpc64
