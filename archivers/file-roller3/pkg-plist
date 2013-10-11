@@ -687,7 +687,7 @@ share/locale/zu/LC_MESSAGES/file-roller.mo
 @dirrmtry share/help/de
 @dirrm share/help/da/file-roller/figures
 @dirrm share/help/da/file-roller
-@dirrm share/help/da
+@dirrmtry share/help/da
 @dirrm share/help/cs/file-roller/figures
 @dirrm share/help/cs/file-roller
 @dirrmtry share/help/cs
@@ -696,7 +696,7 @@ share/locale/zu/LC_MESSAGES/file-roller.mo
 @dirrmtry share/help/ca
 @dirrm share/help/bg/file-roller/figures
 @dirrm share/help/bg/file-roller
-@dirrm share/help/bg
+@dirrmtry share/help/bg
 @dirrm share/help/C/file-roller/figures
 @dirrm share/help/C/file-roller
 @dirrmtry share/help/C
