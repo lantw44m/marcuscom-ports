@@ -513,6 +513,34 @@ share/help/pt_BR/gcalctool/scientific.page
 share/help/pt_BR/gcalctool/superscript.page
 share/help/pt_BR/gcalctool/trigonometry.page
 share/help/pt_BR/gcalctool/variables.page
+share/help/ro/gcalctool/absolute.page
+share/help/ro/gcalctool/base.page
+share/help/ro/gcalctool/boolean.page
+share/help/ro/gcalctool/complex.page
+share/help/ro/gcalctool/conv-base.page
+share/help/ro/gcalctool/conv-character.page
+share/help/ro/gcalctool/conv-currency.page
+share/help/ro/gcalctool/conv-length.page
+share/help/ro/gcalctool/conv-time.page
+share/help/ro/gcalctool/conv-weight.page
+share/help/ro/gcalctool/equation.page
+share/help/ro/gcalctool/factorial.page
+share/help/ro/gcalctool/factorize.page
+share/help/ro/gcalctool/financial.page
+share/help/ro/gcalctool/functions.page
+share/help/ro/gcalctool/index.page
+share/help/ro/gcalctool/keyboard.page
+share/help/ro/gcalctool/legal.xml
+share/help/ro/gcalctool/logarithm.page
+share/help/ro/gcalctool/modulus.page
+share/help/ro/gcalctool/mouse.page
+share/help/ro/gcalctool/number-display.page
+share/help/ro/gcalctool/percentage.page
+share/help/ro/gcalctool/power.page
+share/help/ro/gcalctool/scientific.page
+share/help/ro/gcalctool/superscript.page
+share/help/ro/gcalctool/trigonometry.page
+share/help/ro/gcalctool/variables.page
 share/help/ru/gcalctool/absolute.page
 share/help/ru/gcalctool/base.page
 share/help/ru/gcalctool/boolean.page
@@ -803,8 +831,6 @@ share/locale/zh_TW/LC_MESSAGES/gcalctool.mo
 @dirrmtry share/locale/zh_HK
 @dirrmtry share/locale/xh/LC_MESSAGES
 @dirrmtry share/locale/xh
-@dirrmtry share/locale/ug/LC_MESSAGES
-@dirrmtry share/locale/ug
 @dirrmtry share/locale/te/LC_MESSAGES
 @dirrmtry share/locale/te
 @dirrmtry share/locale/sr@latin/LC_MESSAGES
@@ -847,55 +873,57 @@ share/locale/zh_TW/LC_MESSAGES/gcalctool.mo
 @dirrmtry share/locale/ast
 @dirrmtry share/locale/as/LC_MESSAGES
 @dirrmtry share/locale/as
-@dirrmtry share/help/zh_TW/gcalctool
+@dirrm share/help/zh_TW/gcalctool
 @dirrmtry share/help/zh_TW
-@dirrmtry share/help/zh_HK/gcalctool
+@dirrm share/help/zh_HK/gcalctool
 @dirrmtry share/help/zh_HK
-@dirrmtry share/help/zh_CN/gcalctool
+@dirrm share/help/zh_CN/gcalctool
 @dirrmtry share/help/zh_CN
-@dirrmtry share/help/te/gcalctool
+@dirrm share/help/te/gcalctool
 @dirrmtry share/help/te
-@dirrmtry share/help/sv/gcalctool
+@dirrm share/help/sv/gcalctool
 @dirrmtry share/help/sv
-@dirrmtry share/help/sl/gcalctool
+@dirrm share/help/sl/gcalctool
 @dirrmtry share/help/sl
-@dirrmtry share/help/ru/gcalctool
+@dirrm share/help/ru/gcalctool
 @dirrmtry share/help/ru
-@dirrmtry share/help/pt_BR/gcalctool
+@dirrm share/help/ro/gcalctool
+@dirrmtry share/help/ro
+@dirrm share/help/pt_BR/gcalctool
 @dirrmtry share/help/pt_BR
-@dirrmtry share/help/oc/gcalctool
+@dirrm share/help/oc/gcalctool
 @dirrmtry share/help/oc
-@dirrmtry share/help/lv/gcalctool
+@dirrm share/help/lv/gcalctool
 @dirrmtry share/help/lv
-@dirrmtry share/help/ko/gcalctool
+@dirrm share/help/ko/gcalctool
 @dirrmtry share/help/ko
-@dirrmtry share/help/ja/gcalctool
+@dirrm share/help/ja/gcalctool
 @dirrmtry share/help/ja
-@dirrmtry share/help/it/gcalctool
+@dirrm share/help/it/gcalctool
 @dirrmtry share/help/it
-@dirrmtry share/help/hu/gcalctool
+@dirrm share/help/hu/gcalctool
 @dirrmtry share/help/hu
-@dirrmtry share/help/gl/gcalctool
+@dirrm share/help/gl/gcalctool
 @dirrmtry share/help/gl
-@dirrmtry share/help/fr/gcalctool
+@dirrm share/help/fr/gcalctool
 @dirrmtry share/help/fr
-@dirrmtry share/help/fi/gcalctool
+@dirrm share/help/fi/gcalctool
 @dirrmtry share/help/fi
-@dirrmtry share/help/eu/gcalctool
+@dirrm share/help/eu/gcalctool
 @dirrmtry share/help/eu
-@dirrmtry share/help/es/gcalctool
+@dirrm share/help/es/gcalctool
 @dirrmtry share/help/es
-@dirrmtry share/help/el/gcalctool
+@dirrm share/help/el/gcalctool
 @dirrmtry share/help/el
-@dirrmtry share/help/de/gcalctool
+@dirrm share/help/de/gcalctool
 @dirrmtry share/help/de
-@dirrmtry share/help/cs/gcalctool
+@dirrm share/help/cs/gcalctool
 @dirrmtry share/help/cs
-@dirrmtry share/help/ca/gcalctool
+@dirrm share/help/ca/gcalctool
 @dirrmtry share/help/ca
-@dirrmtry share/help/bg/gcalctool
+@dirrm share/help/bg/gcalctool
 @dirrmtry share/help/bg
-@dirrmtry share/help/C/gcalctool
+@dirrm share/help/C/gcalctool
 @dirrmtry share/help/C
 @dirrmtry share/help
 @dirrm %%DATADIR%%
