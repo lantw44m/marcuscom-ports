@@ -1,9 +1,9 @@
 # Created by: Florent Thoumie <flz@FreeBSD.org>
 # $FreeBSD$
-#    $MCom: ports/trunk/net-im/telepathy-idle/Makefile 18610 2013-06-30 16:33:05Z marcus $
+#    $MCom$
 
 PORTNAME=	telepathy-idle
-PORTVERSION=	0.1.11
+PORTVERSION=	0.1.14
 CATEGORIES=	net-im
 MASTER_SITES=	http://telepathy.freedesktop.org/releases/${PORTNAME}/
 
@@ -14,13 +14,10 @@ LIB_DEPENDS=	libexecinfo.so:${PORTSDIR}/devel/libexecinfo \
 		libdbus-glib-1.so:${PORTSDIR}/devel/dbus-glib \
 		libtelepathy-glib.so:${PORTSDIR}/net-im/telepathy-glib
 
-NO_STAGE=	yes
 GNU_CONFIGURE=	yes
 USE_OPENSSL=	yes
 USES=		gmake pathfix pkgconfig
 USE_GNOME=	glib20 libxslt:build
-
-MAN8=		telepathy-idle.8
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib

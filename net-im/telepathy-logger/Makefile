@@ -1,9 +1,10 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
 # $FreeBSD$
-#    $MCom: ports/trunk/net-im/telepathy-logger/Makefile 18610 2013-06-30 16:33:05Z marcus $
+#    $MCom$
 
 PORTNAME=	telepathy-logger
-PORTVERSION=	0.4.0
+PORTVERSION=	0.8.0
+PORTREVISION=	1
 CATEGORIES=	net-im
 MASTER_SITES=	http://telepathy.freedesktop.org/releases/${PORTNAME}/
 
@@ -14,14 +15,14 @@ LIB_DEPENDS=	libdbus-glib-1.so:${PORTSDIR}/devel/dbus-glib \
 		libtelepathy-glib.so:${PORTSDIR}/net-im/telepathy-glib
 
 LICENSE=	LGPL21
+LICENSE_FILE=	${WRKSRC}/COPYING
 
-NO_STAGE=	yes
 USE_BZIP2=	yes
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 USES=		gmake pathfix pkgconfig
-USE_GNOME=	glib20 intltool gnomedocutils ltverhack libxml2 libxslt:build \
-		introspection:build
+USE_GNOME=	glib20 gnomedocutils intltool introspection:build \
+		ltverhack libxml2 libxslt:build
 USE_SQLITE=	yes
 USE_PYTHON_BUILD=	yes
 GLIB_SCHEMAS=	org.freedesktop.Telepathy.Logger.gschema.xml

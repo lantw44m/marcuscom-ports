@@ -1,8 +1,9 @@
+# Created by:  Florent Thoumie <flz@FreeBSD.org>
 # $FreeBSD$
-#    $MCom: ports/trunk/net-im/telepathy-gabble/Makefile 18610 2013-06-30 16:33:05Z marcus $
+#    $MCom$
 
 PORTNAME=	telepathy-gabble
-PORTVERSION=	0.16.6
+PORTVERSION=	0.17.3
 CATEGORIES=	net-im
 MASTER_SITES=	http://telepathy.freedesktop.org/releases/${PORTNAME}/
 
@@ -17,21 +18,20 @@ LIB_DEPENDS=	libsoup-2.4.so:${PORTSDIR}/devel/libsoup \
 		libdbus-glib-1.so:${PORTSDIR}/devel/dbus-glib \
 		libuuid.so:${PORTSDIR}/misc/e2fsprogs-libuuid \
 		libloudmouth-1.so:${PORTSDIR}/net-im/loudmouth
-RUN_DEPENDS=	${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss
+RUN_DEPENDS=	${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss \
+		libnice-gst1>=0:${PORTSDIR}/net-im/libnice-gst1
 
 PORTSCOUT=	limitw:1,even
 
-NO_STAGE=	yes
 GNU_CONFIGURE=	yes
 USES=		gmake pathfix pkgconfig
 USE_GNOME=	glib20 libxslt:build
 USE_SQLITE=	yes
 USE_OPENSSL=	yes
 USE_PYTHON_BUILD=	yes
+MAKE_JOBS_UNSAFE=	yes
 CONFIGURE_ARGS=	--with-ca-certificates=${LOCALBASE}/share/certs/ca-root-nss.crt
 CONFIGURE_ENV=	LIBS="-pthread"
-
-MAN8=		telepathy-gabble.8
 
 PLIST_SUB=	PVERSION=${PORTVERSION}
 

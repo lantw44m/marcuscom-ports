@@ -4,6 +4,7 @@
 
 PORTNAME=	gnome-shell
 PORTVERSION=	3.6.2
+PORTREVISION=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -12,20 +13,20 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Next generation GNOME desktop shell
 
 BUILD_DEPENDS=	${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss
-LIB_DEPENDS=	startup-notification-1:${PORTSDIR}/x11/startup-notification \
-		caribou:${PORTSDIR}/accessibility/caribou \
-		mutter:${PORTSDIR}/x11-wm/mutter \
-		gnome-keyring:${PORTSDIR}/security/libgnome-keyring \
-		gcr-3:${PORTSDIR}/security/gcr \
-		telepathy-glib:${PORTSDIR}/net-im/telepathy-glib \
-		telepathy-logger:${PORTSDIR}/net-im/telepathy-logger \
-		folks:${PORTSDIR}/net-im/folks \
-		ibus:${PORTSDIR}/textproc/ibus \
-		pulse:${PORTSDIR}/audio/pulseaudio \
-		croco-0.6:${PORTSDIR}/textproc/libcroco \
-		dbus-glib-1:${PORTSDIR}/devel/dbus-glib \
-		clutter-1.0:${PORTSDIR}/graphics/clutter \
-		gjs:${PORTSDIR}/lang/gjs
+LIB_DEPENDS=	libstartup-notification-1.so:${PORTSDIR}/x11/startup-notification \
+		libcaribou.so:${PORTSDIR}/accessibility/caribou \
+		libmutter.so:${PORTSDIR}/x11-wm/mutter \
+		libgnome-keyring.so:${PORTSDIR}/security/libgnome-keyring \
+		libgcr-3.so:${PORTSDIR}/security/gcr \
+		libtelepathy-glib.so:${PORTSDIR}/net-im/telepathy-glib \
+		libtelepathy-logger.so:${PORTSDIR}/net-im/telepathy-logger \
+		libfolks.so:${PORTSDIR}/net-im/folks \
+		libibus.so:${PORTSDIR}/textproc/ibus \
+		libpulse.so:${PORTSDIR}/audio/pulseaudio \
+		libcroco-0.6.so:${PORTSDIR}/textproc/libcroco \
+		libdbus-glib-1.so:${PORTSDIR}/devel/dbus-glib \
+		libclutter-1.0.so:${PORTSDIR}/graphics/clutter \
+		libgjs.so:${PORTSDIR}/lang/gjs
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/dbus-python.pc:${PORTSDIR}/devel/py-dbus \
 		gdm>=3.6.0:${PORTSDIR}/x11/gdm3 \
 		${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss
@@ -33,7 +34,7 @@ RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/dbus-python.pc:${PORTSDIR}/devel/py-
 NO_STAGE=	yes
 USE_XZ=		yes
 USE_XORG=	x11 xfixes sm
-USES=		gettext gmake pathfix
+USES=		gettext gmake pathfix pkgconfig
 USE_AUTOTOOLS=	libtool
 USE_GNOME=	evolutiondataserver3 gnomedesktop3 gnomemenus3 gnomeprefix \
 		gtk30 intlhack introspection ltverhack

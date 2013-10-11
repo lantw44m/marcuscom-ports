@@ -1,6 +1,6 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom
+#    $MCom$
 
 PORTNAME=	telepathy-farstream
 PORTVERSION=	0.6.0
