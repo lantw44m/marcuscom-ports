@@ -134,8 +134,8 @@ CC=		clang33
 CXX=		clang++33
 CPP=		clang-cpp33
 CONFIGURE_ARGS+=--disable-webkit2
-PLIST_SUB+=	WEBKIT2="@comment "
 . endif
+PLIST_SUB+=	WEBKIT2="@comment "
 .endif
 
 .if ${ARCH} == powerpc64
