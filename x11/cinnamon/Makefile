@@ -4,6 +4,7 @@
 PORTNAME=	cinnamon
 PORTVERSION=	1.8.8.1
 CATEGORIES=	x11 gnome
+MASTER_SITES=	http://github.com/linuxmint/${PORTNAME}/archive/${PORTVERSION}.tar.gz?dummy=/
 DIST_SUBDIR=	gnome3
 
 MAINTAINER=	gustau.perez@gmail.com
@@ -26,16 +27,12 @@ RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/dbus-python.pc:${PORTSDIR}/devel/py-
 		${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss \
 		cinnamon-control-center:${PORTSDIR}/sysutils/cinnamon-control-center \
 		nemo:${PORTSDIR}/x11-fm/nemo \
-		${PYTHONPREFIX_INCLUDEDIR}/Imaging.h:${PORTSDIR}/graphics/py-imaging \
+		${PYTHON_SITELIBDIR}/PIL/__init__.py:${PORTSDIR}/graphics/py-imaging \
 		${LOCALBASE}/share/doc/py-lxml/CREDITS.txt:${PORTSDIR}/devel/py-lxml
 
-WRKSRC=		${WRKDIR}/linuxmint-Cinnamon-aa9fb31
+WRKSRC=		${WRKDIR}/Cinnamon-1.8.8.1
 
-USE_GITHUB=	yes
-GH_ACCOUNT=	linuxmint
-GH_TAGNAME=	1.8.8.1
-GH_COMMIT=	6d44281
-
+FETCH_ARGS=	-Fpr
 USE_XORG=	x11 xfixes sm
 USES=		gettext gmake pathfix pkgconfig
 USE_AUTOTOOLS=	libtool autoconf automake
@@ -54,10 +51,19 @@ CPPFLAGS+=	-I${LOCALASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
 post-patch:
-	@${MKDIR} ${WRKSRC}/files${STAGE}${PREFIX}
+	@${MKDIR} ${WRKSRC}/files${PREFIX}
 .for d in bin lib share
 	@${MV} ${WRKSRC}/files/usr/${d} ${WRKSRC}/files${PREFIX}
 .endfor
+
+	@${REINPLACE_CMD} -e 's|/usr/share/cinnamon|${STAGEDIR}${PREFIX}/share/|g ;\
+		s|/usr/lib|${STAGEDIR}${PREFIX}/share/|g' \
+			${WRKSRC}/files/generate_desktop_files
+
+	@${REINPLACE_CMD} -e 's|"usr/lib|"${STAGEDIR}${PREFIX}/share/|g ;\
+		s|"usr/share|"${STAGEDIR}${PREFIX}/share/|g' \
+			${WRKSRC}/files/generate_desktop_files
+
 	@${MV} ${WRKSRC}/files/${PREFIX}/share/cinnamon/locale \
 		${WRKSRC}/files/${PREFIX}/share/locale
 	@${MV} ${WRKSRC}/files/etc ${WRKSRC}/files${PREFIX}
@@ -122,17 +128,13 @@ post-patch:
 		/datadir/s|/usr|${PREFIX}|g' \
 			${WRKSRC}/files${PREFIX}/share/cinnamon-menu-editor/cme/config.py
 
-	@${REINPLACE_CMD} -e 's|/usr/share|${STAGEDIR}${PREFIX}/share/|g ;\
-		s|/usr/lib|${PREFIX}/share/|g' \
-			${WRKSRC}/files/generate_desktop_files
-
-	@${REINPLACE_CMD} -e 's|"usr/lib|"${STAGEDIR}${PREFIX}/share/|g ;\
-		s|"usr/share|"${STAGEDIR}${PREFIX}/share/|g' \
-			${WRKSRC}/files/generate_desktop_files
-
 	@${REINPLACE_CMD} -e 's|/usr/bin|${PREFIX}/bin|g' \
 		${WRKSRC}/files${PREFIX}/share/xsessions/cinnamon.desktop \
 		${WRKSRC}/files${PREFIX}/share/xsessions/cinnamon2d.desktop
+
+	@${REINPLACE_CMD} -e 's|AM_GNU_GETTEXT_VERSION(\[0.17\])||g ;\
+		s|AM_GNU_GETTEXT(\[external\])||g' \
+		${WRKSRC}/configure.ac
 
 # Some python files use #! /usr/bin/python (note the space between the bang and the python interpreter
 	@${FIND} ${WRKSRC} -name \* | ${XARGS} ${EGREP} -l "#!.*\/usr\/bin\/python" | \

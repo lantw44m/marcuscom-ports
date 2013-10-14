@@ -4,6 +4,7 @@
 PORTNAME=	nemo
 PORTVERSION=	1.8.5
 CATEGORIES=	x11-fm gnome
+MASTER_SITES=	http://github.com/linuxmint/${PORTNAME}/archive/${PORTVERSION}.tar.gz?dummy=/
 DIST_SUBDIR=	gnome3
 
 MAINTAINER=	gustau.perez@gmail.com
@@ -19,13 +20,7 @@ LIB_DEPENDS=	libexif.so:${PORTSDIR}/graphics/libexif \
 RUN_DEPENDS=	${LOCALBASE}/share/icons/gnome/index.theme:${PORTSDIR}/misc/gnome-icon-theme \
 		${LOCALBASE}/libdata/pkgconfig/gsettings-desktop-schemas.pc:${PORTSDIR}/devel/gsettings-desktop-schemas
 
-WRKSRC=		${WRKDIR}/linuxmint-nemo-63f7b44
-
-USE_GITHUB=	yes
-GH_ACCOUNT=	linuxmint
-GH_TAGNAME=	1.8.5
-GH_COMMIT=	40f84d6
-
+FETCH_ARGS=	-Fpr
 INSTALLS_ICONS=	yes
 USES=		desktop-file-utils gettext gmake pathfix \
 		pkgconfig shared-mime-info
@@ -50,6 +45,11 @@ post-patch:
 
 	@${REINPLACE_CMD} -e 's|/usr/share|${PREFIX}/share|g' \
 		${WRKSRC}/src/nemo-properties-window.c
+
+	@${REINPLACE_CMD} -e 's|/usr/share|${PREFIX}/share|g ;\
+		s|@INTROSPECTION_TYPELIBDIR@|$$(libdir)/girepository-1.0|g ;\
+		s|@INTROSPECTION_GIRDIR@|$$(datadir)/gir-1.0|g' \
+		${WRKSRC}/libnemo-extension/Makefile.am
 
 	@${FIND} ${WRKSRC} -name \* | ${XARGS} ${EGREP} -l "#!.*\/usr\/bin\/python" | \
 		${XARGS} ${REINPLACE_CMD} -e "s|#!.*python.*|#!/usr/bin/env python|g"

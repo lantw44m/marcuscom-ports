@@ -4,6 +4,7 @@
 PORTNAME=	muffin
 PORTVERSION=	1.8.2
 CATEGORIES=	x11-wm gnome
+MASTER_SITES=	http://github.com/linuxmint/${PORTNAME}/archive/${PORTVERSION}.tar.gz?dummy=/
 DIST_SUBDIR=	gnome3
 
 MAINTAINER=	gustau.perez@gmail.com
@@ -18,13 +19,7 @@ LIB_DEPENDS=	libstartup-notification-1.so:${PORTSDIR}/x11/startup-notification \
 		libcanberra-gtk3.so:${PORTSDIR}/audio/libcanberra-gtk3
 RUN_DEPENDS=	zenity>=3.0.0:${PORTSDIR}/x11/zenity3
 
-WRKSRC=		${WRKDIR}/linuxmint-muffin-60cab8b
-
-USE_GITHUB=	yes
-GH_ACCOUNT=	linuxmint
-GH_TAGNAME=	1.8.2
-GH_COMMIT=	aa1ef1d
-
+FETCH_ARGS=	-Fpr
 USE_XORG=	x11 xext xrandr xcomposite xcursor xinerama ice sm
 USE_PYTHON=	2.5+
 USES=		gettext gmake pathfix pkgconfig

@@ -5,6 +5,7 @@
 PORTNAME=	cinnamon-control-center
 PORTVERSION=	1.8.2
 CATEGORIES=	sysutils gnome
+MASTER_SITES=	http://github.com/linuxmint/${PORTNAME}/archive/${PORTVERSION}.tar.gz?dummy=/
 DIST_SUBDIR=	gnome3
 
 MAINTAINER=	gustau.perez@gmail.com
@@ -33,13 +34,7 @@ RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/dbus-python.pc:${PORTSDIR}/devel/py-
 		${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss \
 		${LOCALBASE}/share/doc/py-lxml/CREDITS.txt:${PORTSDIR}/devel/py-lxml
 
-WRKSRC=		${WRKDIR}/linuxmint-cinnamon-control-center-2249c94
-
-USE_GITHUB=	yes
-GH_ACCOUNT=	linuxmint
-GH_TAGNAME=	1.8.2
-GH_COMMIT=	3b93fd2
-
+FETCH_ARGS=	-Fpr
 USE_XORG=	x11 xfixes sm
 USES=		gettext gmake pathfix pkgconfig
 USE_GNOME=	gnomeprefix intlhack gtk30 gconf2 gnomemenus3 \
@@ -77,6 +72,6 @@ post-patch:
 		${WRKSRC}/panels/common/cc-common-language.c
 
 pre-configure:
-	cd ${WRKSRC} && ${PREFIX}/bin/autoreconf
+	cd ${WRKSRC} && ${LOCALBASE}/bin/autoreconf
 
 .include <bsd.port.mk>
