@@ -6,8 +6,6 @@ PORTNAME=	ekiga
 PORTVERSION=	4.0.1
 CATEGORIES=	net-im
 MASTER_SITES=	GNOME
-#MASTER_SITES=	http://www.ekiga.org/admin/downloads/latest/sources/ekiga_${PORTVERSION}/
-#DISTNAME=	ekiga-${PORTVERSION}
 DIST_SUBDIR=	gnome3
 
 MAINTAINER=	gnome@FreeBSD.org
@@ -25,13 +23,10 @@ GNU_CONFIGURE=	yes
 USES=		gettext gmake pathfix perl5 pkgconfig
 USE_XORG=	xv
 USE_GNOME=	gtk20 intltool libxml2
-INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-I${LOCALBASE}/lib
-
-MAN1=		ekiga.1
 
 OPTIONS_DEFINE=	LDAP NOTIFY EVOLUTION GCONF DBUS AVAHI GNOMEHELP
 OPTIONS_DEFAULT=NOTIFY DBUS GCONF AVAHI
@@ -50,7 +45,6 @@ LOUDMOUTH_DESC=	XMPP (jabber) support
 
 # Note that h.323 support is enabled when opal is build with it.
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 PLIST_SUB+=	VERSION=${PORTVERSION}
@@ -142,7 +136,8 @@ PLIST_SUB+=	GCONF=""
 .endif
 
 .if ${PORT_OPTIONS:MEVOLUTION}
-USE_GNOME+=	evolutiondataserver
+USE_GNOME+=	evolutiondataserver3
+LIB_DEPENDS+=	libgcr-3.so:${PORTSDIR}/security/gcr
 CONFIGURE_ARGS+=--enable-eds
 PLIST_SUB+=	EVOLUTION=""
 WITH_PLUGINS=	1
@@ -162,6 +157,7 @@ PLIST_SUB+=	AVAHI="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MGNOMEHELP}
+INSTALLS_OMF=	yes
 PLIST_SUB+=	GNOMEHELP=""
 USE_GNOME+=	gnomedocutils
 .else
