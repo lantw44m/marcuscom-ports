@@ -28,7 +28,7 @@ RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/dbus-python.pc:${PORTSDIR}/devel/py-
 		cinnamon-control-center:${PORTSDIR}/sysutils/cinnamon-control-center \
 		nemo:${PORTSDIR}/x11-fm/nemo \
 		${PYTHON_SITELIBDIR}/PIL/__init__.py:${PORTSDIR}/graphics/py-imaging \
-		${LOCALBASE}/share/doc/py-lxml/CREDITS.txt:${PORTSDIR}/devel/py-lxml
+		py*-lxml>=0:${PORTSDIR}/devel/py-lxml
 
 WRKSRC=		${WRKDIR}/Cinnamon-1.8.8.1
 
