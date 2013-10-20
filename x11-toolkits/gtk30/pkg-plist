@@ -397,6 +397,7 @@ libdata/pkgconfig/gdk-x11-3.0.pc
 libdata/pkgconfig/gtk+-3.0.pc
 libdata/pkgconfig/gtk+-unix-print-3.0.pc
 libdata/pkgconfig/gtk+-x11-3.0.pc
+man/man1/gtk-query-immodules-3.0.1.gz
 share/aclocal/gtk-3.0.m4
 share/gir-1.0/Gdk-3.0.gir
 share/gir-1.0/GdkX11-3.0.gir
@@ -725,7 +726,7 @@ share/themes/Emacs/gtk-3.0/gtk-keys.css
 @dirrm lib/gtk-3.0/%%GTK3_VERSION%%/engines
 @dirrm lib/gtk-3.0/%%GTK3_VERSION%%
 @dirrm lib/gtk-3.0
-@exec %D/bin/gtk-query-immodules-3.0 > /dev/null 2>&1 && %D/bin/gtk-query-immodules-3.0 > %D/lib/gtk-3.0/%%GTK3_VERSION%%/immodules.cache 2>/dev/null || /usr/bin/true
+@exec %D/bin/gtk-query-immodules-3.0 --update-cache > /dev/null 2>&1 || /usr/bin/true
 @unexec /bin/rm -f %D/lib/gtk-3.0/%%GTK3_VERSION%%/immodules.cache
 @dirrm include/gtk-3.0/unix-print/gtk
 @dirrm include/gtk-3.0/unix-print

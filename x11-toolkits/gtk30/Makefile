@@ -17,7 +17,6 @@ COMMENT=	Gimp Toolkit for X11 GUI (current stable version)
 
 LICENSE=	LGPL20
 
-NO_STAGE=	yes
 USE_XZ=		yes
 
 .if !defined(REFERENCE_PORT)
@@ -29,7 +28,6 @@ RUN_DEPENDS+=	${LOCALBASE}/share/icons/hicolor/index.theme:${PORTSDIR}/misc/hico
 		${LOCALBASE}/libdata/pkgconfig/atk-bridge-2.0.pc:${PORTSDIR}/accessibility/at-spi2-atk
 
 USE_PERL5=	build
-MAKE_JOBS_UNSAFE=	yes
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
 USE_GNOME=	atk pango gdkpixbuf2 ltverhack gtk-update-icon-cache
@@ -45,8 +43,6 @@ CONFIGURE_ENV=	INTROSPECTION_GIRDIR=`pkg-config --variable=girdir gobject-intros
 GLIB_SCHEMAS=	org.gtk.Demo.gschema.xml \
 		org.gtk.Settings.ColorChooser.gschema.xml \
 		org.gtk.Settings.FileChooser.gschema.xml
-
-MAN1=		gtk-query-immodules-3.0.1
 
 OPTIONS_DEFINE=	CUPS COLORD DEBUG
 OPTIONS_DEFAULT=CUPS COLORD
@@ -93,13 +89,16 @@ pre-build:
 	@${RM} -rf ${WRKSRC}/docs/gtk.info*
 
 post-install:
-	-@${FIND} ${LOCALBASE}/share/icons -type d -depth 1 -exec \
-		${PREFIX}/bin/gtk-update-icon-cache -q -f {} \; 2>/dev/null
-	@${MKDIR} ${PREFIX}/lib/gtk-3.0/modules
-	@${MKDIR} ${PREFIX}/lib/gtk-3.0/${GTK3_VERSION}/engines
-	@${MKDIR} ${PREFIX}/lib/gtk-3.0/${GTK3_VERSION}/loaders
-	${INSTALL_MAN} ${MAN1:S|^|${WRKSRC}/docs/reference/gtk/|} \
-		${PREFIX}/man/man1
+	@${MKDIR} ${STAGEDIR}${PREFIX}/lib/gtk-3.0/modules
+	@${MKDIR} ${STAGEDIR}${PREFIX}/lib/gtk-3.0/${GTK3_VERSION}/engines
+	@${MKDIR} ${STAGEDIR}${PREFIX}/lib/gtk-3.0/${GTK3_VERSION}/loaders
+	${INSTALL_MAN} ${WRKSRC}/docs/reference/gtk/gtk-query-immodules-3.0.1 \
+		${STAGEDIR}${PREFIX}/man/man1
+	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libgdk-3.so.0
+	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libgtk-3.so.0
+	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libgailutil-3.so.0
+	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/gtk-3.0/3.0.0/immodules/im*.so
+	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/gtk-3.0/3.0.0/printbackends/libprintbackend-*.so
 
 .include <bsd.port.mk>
 
