@@ -10,7 +10,7 @@ MASTER_SITES=	GNOME
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Extra anjuta 3 plugins
 
-LIB_DEPENDS=	libanjuta-3.so:${PORTSDIR}/devel/anjuta3
+LIB_DEPENDS=	libanjuta-3.so:${PORTSDIR}/devel/anjuta
 		
 NO_STAGE=	yes
 USE_XZ=		yes
