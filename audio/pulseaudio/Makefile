@@ -25,7 +25,6 @@ LIB_DEPENDS=	libsamplerate.so:${PORTSDIR}/audio/libsamplerate \
 		libexecinfo.so:${PORTSDIR}/devel/libexecinfo \
 		libck-connector.so:${PORTSDIR}/sysutils/consolekit
 
-NO_STAGE=	yes
 USE_XZ=		yes
 USE_GNOME=	glib20 intltool ltverhack gnomehier
 USE_XORG=	x11 sm xtst ice
@@ -61,12 +60,6 @@ OPTIONS_DEFAULT=AVAHI GCONF SIMD
 
 PULSE_VERSION=	${PORTVERSION}
 PLIST_SUB=	PULSE_VERSION=${PULSE_VERSION}
-
-MAN1=		esdcompat.1 pacat.1 pacmd.1 pactl.1 padsp.1 \
-		paplay.1 pasuspender.1 pax11publish.1 pulseaudio.1 \
-		start-pulseaudio-kde.1 start-pulseaudio-x11.1
-MAN5=		default.pa.5 pulse-cli-syntax.5 pulse-client.conf.5 \
-		pulse-daemon.conf.5
 
 .include <bsd.port.options.mk>
 
@@ -112,7 +105,6 @@ CONFIGURE_ARGS+=--disable-orc
 .include <bsd.port.pre.mk>
 
 # OSVERSION wasn't bumped after the MFC. So we need to use the next bump.
-# Sadly for 7-stable the OSVERSION wasn't bumped after 7.4-R
 .if ((${OSVERSION} >= 800000) && (${OSVERSION} < 802504)) || \
 	((${OSVERSION} >= 900000) && (${OSVERSION} < 900037))
 EXTRA_PATCHES+=	${FILESDIR}/extra-src_modules_oss_module-oss.c
@@ -125,14 +117,13 @@ post-patch:
 		${WRKSRC}/configure
 
 post-install:
-	${MKDIR} ${PREFIX}/etc/pulse
+	${MKDIR} ${STAGEDIR}${PREFIX}/etc/pulse
 .for ii in default.pa daemon.conf client.conf system.pa
 	${INSTALL_DATA} ${WRKSRC}/src/${ii} \
-		${PREFIX}/etc/pulse/${ii}-dist
-. if !exists(${PREFIX}/etc/pulse/${II})
-	${INSTALL_DATA} ${WRKSRC}/src/${ii} \
-		${PREFIX}/etc/pulse/${ii}
-. endif
+		${STAGEDIR}${PREFIX}/etc/pulse/${ii}-dist
 .endfor
+	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/pulseaudio/libpulse*.so
+	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libpulse*.so*
+	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/pulse-${PORTVERSION}/modules/*.so
 
 .include <bsd.port.post.mk>
