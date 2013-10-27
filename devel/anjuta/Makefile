@@ -76,7 +76,7 @@ PLIST_SUB+=	SVN="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MDEVHELP}
-LIB_DEPENDS+=	libdevhelp-3.so:${PORTSDIR}/devel/devhelp3
+LIB_DEPENDS+=	libdevhelp-3.so:${PORTSDIR}/devel/devhelp
 PLIST_SUB+=	DEVHELP=""
 .else
 CONFIGURE_ARGS+=--disable-plugin-devhelp
