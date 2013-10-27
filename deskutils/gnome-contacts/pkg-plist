@@ -80,4 +80,3 @@ share/locale/zh_TW/LC_MESSAGES/gnome-contacts.mo
 @dirrmtry share/locale/as
 @dirrmtry share/gnome-shell/search-providers
 @dirrmtry share/gnome-shell
-@dirrmtry share/applications

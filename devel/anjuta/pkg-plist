@@ -2249,7 +2249,6 @@ share/pixmaps/anjuta/anjuta-preferences-general-48.png
 @dirrm %%DATADIR%%/class-templates
 @dirrm %%DATADIR%%/build
 @dirrm %%DATADIR%%
-@dirrmtry share/applications
 @dirrm lib/anjuta
 @dirrm include/libanjuta-3.0/libanjuta/interfaces
 @dirrm include/libanjuta-3.0/libanjuta

@@ -416,4 +416,3 @@ share/locale/zh_TW/LC_MESSAGES/baobab.mo
 @dirrm share/help/C/baobab
 @dirrmtry share/help/C
 @dirrmtry share/help
-@dirrmtry share/applications

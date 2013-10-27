@@ -571,7 +571,6 @@ share/omf/glade/glade-zh_CN.omf
 @dirrm share/glade/catalogs
 @dirrm share/glade
 @dirrm share/doc/gladeui-2
-@dirrmtry share/applications
 @dirrm lib/glade/modules
 @dirrm lib/glade
 @dirrm include/libgladeui-2.0/gladeui

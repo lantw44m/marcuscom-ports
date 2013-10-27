@@ -52,4 +52,3 @@ share/regexxer/prefdialog.ui
 @dirrmtry share/locale/or
 @dirrmtry share/locale/dz/LC_MESSAGES
 @dirrmtry share/locale/dz
-@dirrmtry share/applications

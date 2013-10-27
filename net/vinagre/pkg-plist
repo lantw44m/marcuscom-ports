@@ -389,4 +389,3 @@ share/mime/packages/vinagre-mime.xml
 @dirrmtry share/help/C
 @dirrmtry share/help
 %%PORTDOCS%%@dirrm %%DOCSDIR%%
-@dirrmtry share/applications

@@ -186,7 +186,6 @@ share/locale/zh_TW/LC_MESSAGES/muffin.mo
 @dirrmtry share/locale/ast
 @dirrmtry share/locale/as/LC_MESSAGES
 @dirrmtry share/locale/as
-@dirrmtry share/applications
 @dirrm lib/muffin/plugins
 @dirrm lib/muffin
 @dirrm include/muffin/meta

@@ -343,7 +343,6 @@ share/omf/glom/glom-sv.omf
 @dirrm %%DATADIR%%/glade/developer
 @dirrm %%DATADIR%%/glade
 @dirrm %%DATADIR%%
-@dirrmtry share/applications
 @dirrmtry share/locale/sr@latin/LC_MESSAGES
 @dirrmtry share/locale/sr@latin
 @dirrmtry share/locale/rw/LC_MESSAGES

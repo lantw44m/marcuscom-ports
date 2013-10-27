@@ -288,7 +288,6 @@ share/mime/packages/gcr-crypto-types.xml
 @dirrmtry share/gtk-doc
 @dirrm share/gcr-3/ui
 @dirrm share/gcr-3
-@dirrmtry share/applications
 @dirrm include/gcr-3/gcr
 @dirrm include/gcr-3
 @dirrm include/gck-1/gck

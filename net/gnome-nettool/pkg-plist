@@ -198,4 +198,3 @@ share/omf/gnome-nettool/gnome-nettool-zh_CN.omf
 @dirrm %%DATADIR%%/ui
 @dirrm %%DATADIR%%/pixmaps
 @dirrm %%DATADIR%%
-@dirrmtry share/applications

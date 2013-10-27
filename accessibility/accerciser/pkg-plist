@@ -775,7 +775,6 @@ share/locale/zh_TW/LC_MESSAGES/accerciser.mo
 @dirrmtry share/help/C/accerciser
 @dirrmtry share/help/C
 @dirrmtry share/help
-@dirrmtry share/applications
 @dirrm %%DATADIR%%/plugins
 @dirrm %%DATADIR%%/plugindata/validate
 @dirrm %%DATADIR%%/plugindata

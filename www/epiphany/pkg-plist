@@ -208,7 +208,6 @@ share/locale/zh_TW/LC_MESSAGES/epiphany.mo
 @dirrm %%DATADIR%%/pages
 @dirrm %%DATADIR%%/icons
 @dirrmtry %%DATADIR%%
-@dirrmtry share/applications
 @dirrm include/epiphany/%%EPHY_VERSION%%/epiphany
 @dirrm include/epiphany/%%EPHY_VERSION%%
 @dirrm include/epiphany

@@ -219,6 +219,5 @@ share/locale/zh_TW/LC_MESSAGES/gucharmap.mo
 @dirrm share/help/C/gucharmap
 @dirrmtry share/help/C
 @dirrmtry share/help
-@dirrmtry share/applications
 @dirrm include/gucharmap-2.90/gucharmap
 @dirrm include/gucharmap-2.90

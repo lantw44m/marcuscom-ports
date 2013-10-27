@@ -927,4 +927,3 @@ share/locale/zh_TW/LC_MESSAGES/gcalctool.mo
 @dirrmtry share/help/C
 @dirrmtry share/help
 @dirrm %%DATADIR%%
-@dirrmtry share/applications

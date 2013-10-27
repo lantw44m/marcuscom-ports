@@ -1861,7 +1861,6 @@ share/locale/zu/LC_MESSAGES/eog.mo
 @dirrm %%DATADIR%%/gir-1.0
 @dirrm %%DATADIR%%
 @dirrm %%DOCSDIR%%
-@dirrmtry share/applications
 @dirrm lib/eog/plugins
 @dirrm lib/eog/girepository-1.0
 @dirrm lib/eog

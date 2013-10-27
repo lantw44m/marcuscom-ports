@@ -642,7 +642,6 @@ share/thumbnailers/totem.thumbnailer
 @dirrm share/gnome/help/totem/C
 @dirrm share/gnome/help/totem
 @dirrm %%DOCSDIR%%
-@dirrmtry share/applications
 @dirrm libexec/totem
 %%TRACKER%%@dirrm lib/totem/plugins/tracker
 @dirrm lib/totem/plugins/skipto

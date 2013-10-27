@@ -791,7 +791,6 @@ share/omf/rhythmbox/rhythmbox-zh_CN.omf
 @dirrm share/gnome/help/rhythmbox/C/figures
 @dirrm share/gnome/help/rhythmbox/C
 @dirrm share/gnome/help/rhythmbox
-@dirrmtry share/applications
 %%VISUAL%%@dirrm lib/rhythmbox/plugins/visualizer
 %%PYTHON%%@dirrm lib/rhythmbox/plugins/sendto
 %%PYTHON%%@dirrm lib/rhythmbox/plugins/replaygain

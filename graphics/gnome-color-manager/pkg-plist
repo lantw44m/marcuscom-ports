@@ -152,4 +152,3 @@ share/locale/zh_TW/LC_MESSAGES/gnome-color-manager.mo
 @dirrm share/help/el/gnome-color-manager
 @dirrm share/help/de/gnome-color-manager
 @dirrm share/help/C/gnome-color-manager
-@dirrmtry share/applications

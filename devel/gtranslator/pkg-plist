@@ -386,7 +386,6 @@ share/omf/gtranslator/gtranslator-zh_CN.omf
 @dirrm share/gnome/help/gtranslator/C
 @dirrm share/gnome/help/gtranslator
 @dirrm %%DOCSDIR%%
-@dirrmtry share/applications
 @dirrm lib/gtranslator/plugins/charmap
 @dirrm lib/gtranslator/plugins
 @dirrm lib/gtranslator/girepository-1.0

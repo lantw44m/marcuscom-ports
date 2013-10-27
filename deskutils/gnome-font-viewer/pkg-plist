@@ -142,4 +142,3 @@ share/thumbnailers/gnome-font-viewer.thumbnailer
 @dirrmtry share/locale/an/LC_MESSAGES
 @dirrmtry share/locale/an
 @dirrmtry share/thumbnailers
-@dirrmtry share/applications

@@ -898,7 +898,6 @@ share/mime/packages/brasero.xml
 @dirrm %%DATADIR%%/icons/hicolor
 @dirrm %%DATADIR%%/icons
 @dirrm %%DATADIR%%
-@dirrmtry share/applications
 @dirrm lib/brasero3/plugins
 @dirrm lib/brasero3
 @dirrm include/brasero3

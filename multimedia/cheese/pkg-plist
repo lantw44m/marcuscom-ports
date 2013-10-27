@@ -910,5 +910,4 @@ share/locale/zu/LC_MESSAGES/cheese.mo
 @dirrm %%DOCSDIR%%
 @dirrm %%DATADIR%%/pixmaps
 @dirrm %%DATADIR%%
-@dirrmtry share/applications
 @dirrm include/cheese

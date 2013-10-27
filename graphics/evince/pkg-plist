@@ -3137,7 +3137,6 @@ share/thumbnailers/evince.thumbnailer
 @dirrm share/doc/libevview
 @dirrm share/doc/libevdocument
 @dirrm %%DOCSDIR%%
-@dirrmtry share/applications
 @dirrm lib/evince/4/backends
 @dirrm lib/evince/4
 @dirrm lib/evince

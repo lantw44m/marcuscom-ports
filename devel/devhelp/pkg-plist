@@ -147,6 +147,5 @@ share/locale/zh_TW/LC_MESSAGES/devhelp.mo
 @dirrm share/devhelp/dtd
 @dirrm share/devhelp/assistant
 @dirrm share/devhelp
-@dirrmtry share/applications
 @dirrm include/devhelp-3.0/devhelp
 @dirrm include/devhelp-3.0

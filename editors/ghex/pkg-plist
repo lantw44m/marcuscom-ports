@@ -202,5 +202,4 @@ share/locale/zh_TW/LC_MESSAGES/ghex-3.0.mo
 @dirrm share/help/C/ghex
 @dirrmtry share/help/C
 @dirrmtry share/help
-@dirrmtry share/applications
 @dirrm include/gtkhex-3

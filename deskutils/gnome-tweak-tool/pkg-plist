@@ -120,6 +120,5 @@ share/locale/zh_TW/LC_MESSAGES/gnome-tweak-tool.mo
 @dirrmtry share/locale/ca@valencia/LC_MESSAGES
 @dirrmtry share/locale/ca@valencia
 @dirrm %%DATADIR%%
-@dirrmtry share/applications
 @dirrm %%PYTHON_SITELIBDIR%%/gtweak/tweaks
 @dirrm %%PYTHON_SITELIBDIR%%/gtweak

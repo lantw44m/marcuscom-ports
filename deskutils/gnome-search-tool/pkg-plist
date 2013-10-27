@@ -215,4 +215,3 @@ share/pixmaps/gsearchtool/thumbnail_frame.png
 @dirrm share/help/C/gnome-search-tool
 @dirrmtry share/help/C
 @dirrmtry share/help
-@dirrmtry share/applications

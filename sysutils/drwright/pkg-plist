@@ -110,7 +110,6 @@ share/locale/zh_TW/LC_MESSAGES/drwright.mo
 share/locale/zu/LC_MESSAGES/drwright.mo
 @dirrm share/drwright/pixmaps
 @dirrm share/drwright
-@dirrmtry share/applications
 @dirrm libexec/drwright
 @dirrmtry share/locale/zu/LC_MESSAGES
 @dirrmtry share/locale/zu

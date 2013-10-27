@@ -187,7 +187,6 @@ share/icons/hicolor/scalable/apps/ibus.svg
 @dirrmtry share/gtk-doc/html
 @dirrmtry share/gtk-doc
 @dirrmtry share/gir-1.0
-@dirrmtry share/applications
 @dirrm include/ibus-1.0
 @dirrmtry etc/xdg/autostart
 @dirrmtry etc/xdg

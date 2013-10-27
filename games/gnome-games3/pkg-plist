@@ -4909,7 +4909,6 @@ share/quadrapassel/sounds/turn.ogg
 @dirrm share/glchess/pieces
 @dirrm share/glchess
 @dirrmtry share/games
-@dirrmtry share/applications
 @dirrm %%PYTHON_SITELIBDIR%%/gnome_sudoku/gtk_goodies
 @dirrm %%PYTHON_SITELIBDIR%%/gnome_sudoku
 @dirrm lib/gnome-games

@@ -452,6 +452,5 @@ share/locale/zh_TW/LC_MESSAGES/gnome-dictionary.mo
 @dirrm share/gdict-1.0/sources
 @dirrm share/gdict-1.0
 @dirrm share/doc/gdict
-@dirrmtry share/applications
 @dirrm include/gdict-1.0/gdict
 @dirrm include/gdict-1.0

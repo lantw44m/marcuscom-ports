@@ -1671,6 +1671,5 @@ share/telepathy/clients/Empathy.FileTransfer.client
 @dirrm share/adium/message-styles
 @dirrm share/adium
 @dirrm %%DATADIR%%
-@dirrmtry share/applications
 @dirrm lib/mission-control-plugins.0
 @dirrm lib/empathy

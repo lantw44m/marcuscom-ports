@@ -407,4 +407,3 @@ share/locale/zh_TW/LC_MESSAGES/gnome-system-log.mo
 @dirrmtry share/help/C/gnome-system-log
 @dirrmtry share/help/C
 @dirrmtry share/help
-@dirrmtry share/applications

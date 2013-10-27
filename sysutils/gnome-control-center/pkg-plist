@@ -590,6 +590,5 @@ share/sounds/gnome/default/alerts/sonar.ogg
 @dirrm %%DATADIR%%/icons
 @dirrm %%DATADIR%%/datetime
 @dirrmtry share/desktop-directories
-@dirrmtry share/applications
 @dirrm lib/control-center-1/panels
 @dirrm lib/control-center-1

@@ -257,7 +257,6 @@ share/mime/packages/nautilus.xml
 @dirrmtry share/locale/as/LC_MESSAGES
 @dirrmtry share/locale/as
 @dirrm share/doc/libnautilus-extension
-@dirrmtry share/applications
 @dirrmtry lib/nautilus/extensions-3.0
 @dirrmtry lib/nautilus
 @dirrm include/nautilus/libnautilus-extension

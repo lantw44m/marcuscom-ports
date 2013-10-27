@@ -521,6 +521,5 @@ share/locale/zu/LC_MESSAGES/gnome-panel-3.0.mo
 @dirrm %%DATADIR%%/4.0
 @dirrm %%DATADIR%%
 @dirrm share/doc/panel-applet-4.0
-@dirrmtry share/applications
 @dirrm include/gnome-panel-4.0/libpanel-applet
 @dirrm include/gnome-panel-4.0

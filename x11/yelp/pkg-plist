@@ -254,5 +254,4 @@ share/yelp-xsl/xslt/common/domains/yelp.xml
 @dirrmtry share/locale/as/LC_MESSAGES
 @dirrmtry share/locale/as
 @dirrm share/doc/libyelp
-@dirrmtry share/applications
 @dirrm include/libyelp

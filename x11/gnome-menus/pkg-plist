@@ -154,7 +154,6 @@ share/locale/zu/LC_MESSAGES/gnome-menus-3.0.mo
 @dirrm share/gnome-menus/ui
 @dirrm share/gnome-menus
 @dirrmtry share/desktop-directories
-@dirrmtry share/applications
 @dirrm %%PYTHON_SITELIBDIR%%/GMenuSimpleEditor
 @dirrm include/gnome-menus-3.0
 @dirrmtry etc/xdg/menus

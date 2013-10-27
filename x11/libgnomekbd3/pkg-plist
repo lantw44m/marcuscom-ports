@@ -129,5 +129,4 @@ share/locale/zh_TW/LC_MESSAGES/libgnomekbd.mo
 @dirrm %%DATADIR%%/ui
 @dirrm %%DATADIR%%/icons
 @dirrm %%DATADIR%%
-@dirrmtry share/applications
 @dirrm include/libgnomekbd

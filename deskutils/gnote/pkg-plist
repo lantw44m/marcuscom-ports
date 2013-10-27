@@ -552,7 +552,6 @@ share/locale/zh_CN/LC_MESSAGES/gnote.mo
 @dirrm share/gnome/help/gnote/C
 @dirrm share/gnome/help/gnote
 %%PORTDOCS%%@dirrm %%DOCSDIR%%
-@dirrmtry share/applications
 @dirrmtry lib/gnote/addins/%%VERSION%%
 @dirrmtry lib/gnote/addins
 @dirrmtry lib/gnote

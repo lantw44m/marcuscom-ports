@@ -2309,7 +2309,6 @@ share/locale/zh_TW/LC_MESSAGES/gedit.mo
 @dirrm share/gedit/logo
 @dirrm share/gedit
 @dirrm %%DOCSDIR%%
-@dirrmtry share/applications
 @dirrmtry libexec/gedit
 @dirrm lib/gedit/girepository-1.0
 @dirrm lib/gedit/plugins/snippets

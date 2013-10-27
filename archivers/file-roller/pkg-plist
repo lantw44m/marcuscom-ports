@@ -707,5 +707,4 @@ share/locale/zu/LC_MESSAGES/file-roller.mo
 @dirrm %%DATADIR%%/icons/hicolor
 @dirrm %%DATADIR%%/icons
 @dirrm %%DATADIR%%
-@dirrmtry share/applications
 @dirrm libexec/file-roller
