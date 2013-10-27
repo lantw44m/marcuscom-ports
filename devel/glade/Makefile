@@ -13,11 +13,10 @@ COMMENT=	User interface builder for GTK+ 3
 
 CONFLICTS=	glade3-3.*
 
-NO_STAGE=	yes
 INSTALLS_ICONS=	yes
 USE_XZ=		yes
 USE_GNOME=	gtk30 gnomeprefix ltverhack gnomedocutils introspection:build
-USES=		desktop-file-utilsgettext gmake pathfix pkgconfig
+USES=		desktop-file-utils gettext gmake pathfix pkgconfig
 INSTALLS_OMF=	yes
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
@@ -40,5 +39,9 @@ CONFIGURE_ARGS+=--enable-python
 CONFIGURE_ARGS+=--disable-python
 PLIST_SUB+=	PYTHON:="@comment "
 .endif
+
+post-install:
+	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libgladeui-2.so.2
+	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/glade/modules/lib*.so
 
 .include <bsd.port.mk>
