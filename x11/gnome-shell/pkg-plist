@@ -18,6 +18,7 @@ lib/gnome-shell/libgnome-shell.so
 libexec/gnome-shell-calendar-server
 libexec/gnome-shell-hotplug-sniffer
 libexec/gnome-shell-perf-helper
+man/man1/gnome-shell.1.gz
 share/GConf/gsettings/gnome-shell-overrides.convert
 share/applications/gnome-shell-extension-prefs.desktop
 share/applications/gnome-shell.desktop

@@ -28,10 +28,9 @@ LIB_DEPENDS=	libstartup-notification-1.so:${PORTSDIR}/x11/startup-notification \
 		libclutter-1.0.so:${PORTSDIR}/graphics/clutter \
 		libgjs.so:${PORTSDIR}/lang/gjs
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/dbus-python.pc:${PORTSDIR}/devel/py-dbus \
-		gdm>=3.6.0:${PORTSDIR}/x11/gdm3 \
+		gdm>=3.6.0:${PORTSDIR}/x11/gdm \
 		${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss
 
-NO_STAGE=	yes
 USE_XZ=		yes
 USE_XORG=	x11 xfixes sm
 USES=		gettext gmake pathfix pkgconfig
@@ -42,8 +41,6 @@ USE_GSTREAMER1=	yes
 USE_LDCONFIG=	yes
 
 GLIB_SCHEMAS=	org.gnome.shell.gschema.xml
-
-MAN1=		gnome-shell.1
 
 CONFIGURE_ARGS+=--enable-compile-warnings=no \
 		--with-ca-certificates=${LOCALBASE}/share/certs/ca-root-nss.crt
@@ -59,5 +56,9 @@ post-patch:
 		${WRKSRC}/browser-plugin/Makefile.in 
 	@${REINPLACE_CMD} -e 's|libnm-glib libnm-util ||g' \
 		${WRKSRC}/configure
+
+post-install:	
+	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/gnome-shell/libgnome-*.so
+	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/browser_plugins/libgnome-shell-browser-plugin.so
 
 .include <bsd.port.mk>
