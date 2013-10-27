@@ -38,7 +38,7 @@ GJS_DESC=	JavaScript support based on spidermonkey
 
 .if ${PORT_OPTIONS:MSEED}
 CONFIGURE_ARGS+=--enable-seed=yes
-LIB_DEPENDS=	libseed-gtk3.so:${PORTSDIR}/devel/seed3
+LIB_DEPENDS=	libseed-gtk3.so:${PORTSDIR}/devel/seed
 PLIST_SUB+=	SEED=""
 .else
 CONFIGURE_ARGS+=--enable-seed=no
