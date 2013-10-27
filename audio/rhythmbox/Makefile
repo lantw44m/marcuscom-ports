@@ -21,8 +21,7 @@ LIB_DEPENDS=	libmusicbrainz3.so:${PORTSDIR}/audio/libmusicbrainz3 \
 		libjson-glib-1.0.so:${PORTSDIR}/devel/json-glib \
 		libsoup-gnome-2.4.so:${PORTSDIR}/devel/libsoup-gnome \
 		libgnome-media-profiles-3.0.so:${PORTSDIR}/multimedia/libgnome-media-profiles \
-		libbrasero-media3.so:${PORTSDIR}/sysutils/brasero3
-
+		libbrasero-media3.so:${PORTSDIR}/sysutils/brasero
 
 USE_BZIP2=	yes
 USES=		gettext gmake pathfix pkgconfig
