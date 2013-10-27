@@ -1,4 +1,3 @@
-bin/camel-kolab-imapx-provider
 bin/evolution_kolab
 bin/tdriver
 bin/test-kolab-mail-access
@@ -6,10 +5,6 @@ bin/test-kolab-util-cal-freebusy
 bin/test-kolab-util-http
 bin/test-kolab-util-ldap
 bin/unittest-libekolabconv
-lib/evolution/%%VERSION%%/plugins/liborg-gnome-kolab.a
-lib/evolution/%%VERSION%%/plugins/liborg-gnome-kolab.la
-lib/evolution/%%VERSION%%/plugins/liborg-gnome-kolab.so
-lib/evolution/%%VERSION%%/plugins/org-gnome-kolab.eplug
 lib/evolution-data-server/addressbook-backends/libebookbackendkolab.a
 lib/evolution-data-server/addressbook-backends/libebookbackendkolab.la
 lib/evolution-data-server/addressbook-backends/libebookbackendkolab.so
@@ -20,19 +15,20 @@ lib/evolution-data-server/camel-providers/libcamelkolab.a
 lib/evolution-data-server/camel-providers/libcamelkolab.la
 lib/evolution-data-server/camel-providers/libcamelkolab.so
 lib/evolution-data-server/camel-providers/libcamelkolab.urls
-lib/libekolab.a
-lib/libekolab.la
-lib/libekolab.so
-lib/libekolabbackend.a
-lib/libekolabbackend.la
-lib/libekolabbackend.so
+lib/evolution-data-server/registry-modules/module-kolab-backend.a
+lib/evolution-data-server/registry-modules/module-kolab-backend.la
+lib/evolution-data-server/registry-modules/module-kolab-backend.so
+lib/evolution/%%VERSION%%/modules/module-kolab-configuration.a
+lib/evolution/%%VERSION%%/modules/module-kolab-configuration.la
+lib/evolution/%%VERSION%%/modules/module-kolab-configuration.so
+lib/evolution/%%VERSION%%/plugins/liborg-gnome-kolab.a
+lib/evolution/%%VERSION%%/plugins/liborg-gnome-kolab.la
+lib/evolution/%%VERSION%%/plugins/liborg-gnome-kolab.so
+lib/evolution/%%VERSION%%/plugins/org-gnome-kolab.eplug
 lib/libekolabconv.a
 lib/libekolabconv.la
 lib/libekolabconv.so
 lib/libekolabconv.so.0
-lib/libekolabutil.a
-lib/libekolabutil.la
-lib/libekolabutil.so
 share/doc/evolution-kolab_addressbook/EBookBackendKolab.html
 share/doc/evolution-kolab_addressbook/api-index-full.html
 share/doc/evolution-kolab_addressbook/ch01.html
@@ -61,15 +57,9 @@ share/doc/evolution-kolab_calendar/object-tree.html
 share/doc/evolution-kolab_calendar/right.png
 share/doc/evolution-kolab_calendar/style.css
 share/doc/evolution-kolab_calendar/up.png
-share/doc/evolution-kolab_camel/CamelKolabIMAPXFolder.html
-share/doc/evolution-kolab_camel/CamelKolabIMAPXStore.html
-share/doc/evolution-kolab_camel/CamelKolabSession.html
 share/doc/evolution-kolab_camel/api-index-full.html
 share/doc/evolution-kolab_camel/ch01.html
-share/doc/evolution-kolab_camel/evolution-kolab-camel-camel-kolab-imapx-metadata-db.html
-share/doc/evolution-kolab_camel/evolution-kolab-camel-camel-kolab-imapx-metadata.html
 share/doc/evolution-kolab_camel/evolution-kolab-camel-camel-kolab-imapx-provider.html
-share/doc/evolution-kolab_camel/evolution-kolab-camel-camel-kolab-stream.html
 share/doc/evolution-kolab_camel/evolution-kolab_camel.devhelp2
 share/doc/evolution-kolab_camel/home.png
 share/doc/evolution-kolab_camel/index.html
@@ -132,14 +122,11 @@ share/doc/evolution_kolab/ChangeLog
 share/doc/evolution_kolab/INSTALL
 share/doc/evolution_kolab/NEWS
 share/doc/evolution_kolab/README
-share/evolution-kolab/README
-share/evolution-kolab/VERSIONS
 share/locale/am/LC_MESSAGES/evolution_kolab.mo
 share/locale/ar/LC_MESSAGES/evolution_kolab.mo
 share/locale/as/LC_MESSAGES/evolution_kolab.mo
 share/locale/ast/LC_MESSAGES/evolution_kolab.mo
 share/locale/az/LC_MESSAGES/evolution_kolab.mo
-share/locale/be/LC_MESSAGES/evolution_kolab.mo
 share/locale/bg/LC_MESSAGES/evolution_kolab.mo
 share/locale/bn/LC_MESSAGES/evolution_kolab.mo
 share/locale/bn_IN/LC_MESSAGES/evolution_kolab.mo
@@ -216,6 +203,38 @@ share/locale/xh/LC_MESSAGES/evolution_kolab.mo
 share/locale/zh_CN/LC_MESSAGES/evolution_kolab.mo
 share/locale/zh_HK/LC_MESSAGES/evolution_kolab.mo
 share/locale/zh_TW/LC_MESSAGES/evolution_kolab.mo
+@dirrmtry share/locale/zh_HK/LC_MESSAGES
+@dirrmtry share/locale/zh_HK
+@dirrmtry share/locale/xh/LC_MESSAGES
+@dirrmtry share/locale/xh
+@dirrmtry share/locale/ug/LC_MESSAGES
+@dirrmtry share/locale/ug
+@dirrmtry share/locale/te/LC_MESSAGES
+@dirrmtry share/locale/te
+@dirrmtry share/locale/sr@latin/LC_MESSAGES
+@dirrmtry share/locale/sr@latin
+@dirrmtry share/locale/si/LC_MESSAGES
+@dirrmtry share/locale/si
+@dirrmtry share/locale/rw/LC_MESSAGES
+@dirrmtry share/locale/rw
+@dirrmtry share/locale/oc/LC_MESSAGES
+@dirrmtry share/locale/oc
+@dirrmtry share/locale/mr/LC_MESSAGES
+@dirrmtry share/locale/mr
+@dirrmtry share/locale/mai/LC_MESSAGES
+@dirrmtry share/locale/mai
+@dirrmtry share/locale/en@shaw/LC_MESSAGES
+@dirrmtry share/locale/en@shaw
+@dirrmtry share/locale/dz/LC_MESSAGES
+@dirrmtry share/locale/dz
+@dirrmtry share/locale/ca@valencia/LC_MESSAGES
+@dirrmtry share/locale/ca@valencia
+@dirrmtry share/locale/bn_IN/LC_MESSAGES
+@dirrmtry share/locale/bn_IN
+@dirrmtry share/locale/ast/LC_MESSAGES
+@dirrmtry share/locale/ast
+@dirrmtry share/locale/as/LC_MESSAGES
+@dirrmtry share/locale/as
 @dirrm share/doc/evolution-kolab_libekolabconv
 @dirrm share/doc/evolution-kolab_libekolab
 @dirrm share/doc/evolution-kolab_eplugin
@@ -223,4 +242,3 @@ share/locale/zh_TW/LC_MESSAGES/evolution_kolab.mo
 @dirrm share/doc/evolution-kolab_calendar
 @dirrm share/doc/evolution-kolab_addressbook
 @dirrm share/doc/evolution_kolab
-@dirrm share/evolution-kolab
