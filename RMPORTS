@@ -29,6 +29,7 @@ net/vino3|net/vino|%DATE%|moved
 net-im/empathy3|net-im/empathy|%DATE%|moved
 net-im/folks04|net-im/folks|%DATE%|moved
 net-im/farsight2|net-im/farstream|%DATE%|replaced
+net-im/papyon||%DATE%|removed
 net-im/telepathy-farsight|net-im/telepathy-farstream|%DATE%|replaced
 security/seahorse3|security/seahorse|%DATE%|moved
 sysutils/brasero3|sysutils/brasero|%DATE%|moved
