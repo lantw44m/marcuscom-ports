@@ -16,7 +16,6 @@ LICENSE_FILE=	${WRKSRC}/LGPL
 
 LIB_DEPENDS=	libvorbisfile.so:${PORTSDIR}/audio/libvorbis
 
-NO_STAGE=	yes
 USES=		gmake pathfix pkgconfig
 USE_GNOME=	gnomeprefix gnomehier gtk20 ltverhack gconf2
 USE_LDCONFIG=	yes
@@ -64,4 +63,10 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|-Wmissing-include-dirs||g' \
 	    	${WRKSRC}/configure
 
+.if !defined(SLAVEPORT)
+post-install:
+	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libcanberra*.so.0
+	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libcanberra-0.28/libcanberra-*.so
+	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/gtk-2.0/modules/libcanberra-gtk-module.so
+.endif
 .include <bsd.port.mk>
