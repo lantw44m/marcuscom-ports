@@ -22,7 +22,7 @@ RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gnome-icon-theme.pc:${PORTSDIR}/misc
 		autoconf-2.69:${PORTSDIR}/devel/autoconf \
 		libtool>=2.4:${PORTSDIR}/devel/libtool \
 		gdb>=7.3:${PORTSDIR}/devel/gdb \
-		yelp>=3.0.0:${PORTSDIR}/x11/yelp3
+		yelp>=3.0.0:${PORTSDIR}/x11/yelp
 
 USE_XZ=		yes
 USES=		bison gettext gmake pathfix perl5 pkgconfig shared-mime-info
