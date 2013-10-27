@@ -17,7 +17,6 @@ COMMENT=	Configuration database system for GNOME
 LICENSE=	LGPL20
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-NO_STAGE=	yes
 USE_XZ=		yes
 
 .if !defined(REFERENCE_PORT)
@@ -35,8 +34,6 @@ CONFIGURE_ARGS=	--with-html-dir=${PREFIX}/share/doc \
 		--disable-gtk-doc
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
-MAN1=		gconftool-2.1 gsettings-data-convert.1 \
-		gsettings-schema-convert.1
 
 OPTIONS_DEFINE=	LDAP
 
@@ -52,7 +49,9 @@ PLIST_SUB+=	LDAP="@comment "
 .endif
 
 post-install:
-	-${LOCALBASE}/bin/gio-querymodules ${PREFIX}/lib/gio/modules
+	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/GConf/2/libgconfbackend-*.so
+	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libgconf-2.so.4
+	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/gio/modules/libgsettingsgconfbackend.so
 
 .include <bsd.port.mk>
 

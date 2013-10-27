@@ -35,6 +35,9 @@ lib/libgconf-2.so.4
 libdata/pkgconfig/gconf-2.0.pc
 libexec/gconf-defaults-mechanism
 libexec/gconfd-2
+man/man1/gconftool-2.1.gz
+man/man1/gsettings-data-convert.1.gz
+man/man1/gsettings-schema-convert.1.gz
 %%LDAP%%share/GConf/schema/evoldap.schema
 share/aclocal/gconf-2.m4
 share/dbus-1/system-services/org.gnome.GConf.Defaults.service
