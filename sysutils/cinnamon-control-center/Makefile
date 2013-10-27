@@ -12,11 +12,11 @@ MAINTAINER=	gustau.perez@gmail.com
 COMMENT=	gnome-control-center replacement for Cinnamon
 
 BUILD_DEPENDS=	${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss \
-		gnome-settings-daemon>=3.4.0:${PORTSDIR}/sysutils/gnome-settings-daemon3 \
+		gnome-settings-daemon>=3.4.0:${PORTSDIR}/sysutils/gnome-settings-daemon \
 		gnome-autogen.sh:${PORTSDIR}/devel/gnome-common
 LIB_DEPENDS=	libstartup-notification-1.so:${PORTSDIR}/x11/startup-notification \
 		libupower-glib.so:${PORTSDIR}/sysutils/upower \
-		libcheese.so:${PORTSDIR}/multimedia/cheese3 \
+		libcheese.so:${PORTSDIR}/multimedia/cheese \
 		libkrb5support.so:${PORTSDIR}/security/krb5 \
 		libcaribou.so:${PORTSDIR}/accessibility/caribou \
 		libgtop-2.0.so:${PORTSDIR}/devel/libgtop \
@@ -57,7 +57,7 @@ OPTIONS_DEFAULT=CUPS
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MCUPS}
-LIB_DEPENDS+=	cups:${PORTSDIR}/print/cups-client
+LIB_DEPENDS+=	libcups.so:${PORTSDIR}/print/cups-client
 PLIST_SUB+=	CUPS=""
 .else
 CONFIGURE_ARGS+=--disable-cups

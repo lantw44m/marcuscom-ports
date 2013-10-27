@@ -1,38 +1,41 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/trunk/graphics/eog/Makefile 18610 2013-06-30 16:33:05Z marcus $
+#   $MCom: ports/trunk/graphics/eog3/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	eog
-PORTVERSION=	2.32.1
-PORTREVISION=	5
+PORTVERSION=	3.6.2
 CATEGORIES=	graphics gnome
 MASTER_SITES=	GNOME
-DIST_SUBDIR=	gnome2
+DIST_SUBDIR=	gnome3
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	The Eye Of Gnome image viewer
 
-BUILD_DEPENDS=	${LOCALBASE}/share/icons/gnome/index.theme:${PORTSDIR}/misc/gnome-icon-theme
-LIB_DEPENDS=	liblcms.so:${PORTSDIR}/graphics/lcms
-RUN_DEPENDS=	${LOCALBASE}/share/icons/gnome/index.theme:${PORTSDIR}/misc/gnome-icon-theme
+BUILD_DEPENDS=	${LOCALBASE}/share/icons/gnome/index.theme:${PORTSDIR}/misc/gnome-icon-theme \
+		itstool:${PORTSDIR}/textproc/itstool \
+		${LOCALBASE}/libdata/pkgconfig/gsettings-desktop-schemas.pc:${PORTSDIR}/devel/gsettings-desktop-schemas
+LIB_DEPENDS=	libpeas-gtk-1.0.so:${PORTSDIR}/devel/libpeas \
+		liblcms.so:${PORTSDIR}/graphics/lcms
+RUN_DEPENDS=	${LOCALBASE}/share/icons/gnome/index.theme:${PORTSDIR}/misc/gnome-icon-theme \
+		${LOCALBASE}/libdata/pkgconfig/gsettings-desktop-schemas.pc:${PORTSDIR}/devel/gsettings-desktop-schemas
 
-CONFLICTS=	eog-3.[0-9]*
-
-NO_STAGE=	yes
-USE_BZIP2=	yes
-USE_GNOME=	gnomeprefix intlhack librsvg2 gconf2 gnomedesktop
+USE_XZ=		yes
+USE_GNOME=	gnomeprefix intlhack librsvg2 gtk30 gnomedesktop3 \
+		introspection:build
 INSTALLS_ICONS=	yes
 USES=		desktop-file-utils gettext gmake pathfix pkgconfig \
 		shared-mime-info
-INSTALLS_OMF=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-GCONF_SCHEMAS=	eog.schemas
+GLIB_SCHEMAS=	org.gnome.eog.enums.xml \
+		org.gnome.eog.gschema.xml
 
-OPTIONS_DEFINE= EXIF EXEMPI PYTHON
-OPTIONS_DEFAULT=EXIF EXEMPI PYTHON
+PLIST_SUB+=	VERSION=3.0
+
+OPTIONS_DEFINE=	EXIF EXEMPI
+OPTIONS_DEFAULT=EXIF EXEMPI
 EXIF_DESC=	Digital camera file meta-data support
 EXEMPI_DESC=	XMP support
 
@@ -42,6 +45,7 @@ _WITH_EXIF=	no
 _WITH_EXEMPI=	no
 
 .if ${PORT_OPTIONS:MEXIF}
+CONFIGURE_ARGS+=--with-libexif
 LIB_DEPENDS+=	libexif.so:${PORTSDIR}/graphics/libexif
 PLIST_SUB+=	EXIF=""
 _WITH_EXIF=	yes
@@ -51,6 +55,7 @@ PLIST_SUB+=	EXIF="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MEXEMPI}
+CONFIGURE_ARGS+=--with-xmp
 LIB_DEPENDS+=	libexempi.so:${PORTSDIR}/textproc/exempi
 _WITH_EXEMPI=	yes
 .else
@@ -63,11 +68,7 @@ PLIST_SUB+=	EXIFEXEMPI=""
 PLIST_SUB+=	EXIFEXEMPI="@comment "
 .endif
 
-.if ${PORT_OPTIONS:MPYTHON}
-USE_GNOME+=	pygtk2
-CONFIGURE_ARGS+=--enable-python
-.else
-CONFIGURE_ARGS+=--disable-python
-.endif
+post-install:
+	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/eog/plugins/lib*.so
 
 .include <bsd.port.mk>

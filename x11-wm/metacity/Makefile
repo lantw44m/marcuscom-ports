@@ -1,42 +1,37 @@
 # Created by: Garrett Rooney <rooneg@electricjellyfish.net>
 # $FreeBSD$
-#   $MCom: ports/trunk/x11-wm/metacity/Makefile 18610 2013-06-30 16:33:05Z marcus $
+#   $MCom: ports/trunk/x11-wm/metacity3/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	metacity
-PORTVERSION=	2.30.3
-PORTREVISION=	2
+PORTVERSION=	2.34.13
 CATEGORIES=	x11-wm
 MASTER_SITES=	GNOME
-DIST_SUBDIR=	gnome2
+DIST_SUBDIR=	gnome3
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Window manager for the adult in you
 
-BUILD_DEPENDS=	zenity:${PORTSDIR}/x11/zenity
+BUILD_DEPENDS=	zenity>=3.0.0:${PORTSDIR}/x11/zenity3 \
+		itstool:${PORTSDIR}/textproc/itstool \
+		gsettings-desktop-schemas>=3.3.0:${PORTSDIR}/devel/gsettings-desktop-schemas
 LIB_DEPENDS=	libstartup-notification-1.so:${PORTSDIR}/x11/startup-notification \
+		libgtop-2.0.so:${PORTSDIR}/devel/libgtop \
 		libcanberra-gtk.so:${PORTSDIR}/audio/libcanberra
-RUN_DEPENDS=	zenity:${PORTSDIR}/x11/zenity
+RUN_DEPENDS=	zenity>=3.0.0:${PORTSDIR}/x11/zenity3 \
+		gsettings-desktop-schemas>=3.3.0:${PORTSDIR}/devel/gsettings-desktop-schemas
 
-CONFLICTS=	metacity-2.3[4-9]*
-
-NO_STAGE=	yes
-USE_BZIP2=	yes
-USE_XORG=	x11 xcomposite xdamage
+USE_XZ=		yes
+USE_XORG=	x11 xcomposite xdamage xrender xcursor xinerama xext xrandr
 USES=		gettext gmake pathfix pkgconfig
 USE_AUTOTOOLS=	libtool
-USE_GNOME=	gnomeprefix intlhack gconf2 ltverhack gtk20
+USE_GNOME=	gnomeprefix gtk20 intlhack ltverhack libxml2:build
 USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
-MAKE_ENV=	G_CHARSET_ALIAS="${LOCALBASE}/libdata/charset.alias"
 
-GCONF_SCHEMAS=	metacity.schemas
+GLIB_SCHEMAS=	org.gnome.metacity.gschema.xml
 
-MAN1=		metacity-message.1 metacity-theme-viewer.1 \
-		metacity-window-demo.1 metacity.1
-
-post-patch:
-	@${REINPLACE_CMD} -e 's|-Werror||g' \
-		${WRKSRC}/configure
+post-install:
+	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libmetacity-private.so.0
 
 .include <bsd.port.mk>

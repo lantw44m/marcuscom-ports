@@ -1,29 +1,31 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/trunk/editors/ghex/Makefile 18610 2013-06-30 16:33:05Z marcus $
+#   $MCom: ports/trunk/editors/ghex3/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	ghex
-PORTVERSION=	2.24.0
-PORTREVISION=	6
+PORTVERSION=	3.8.1
 CATEGORIES=	editors gnome
 MASTER_SITES=	GNOME
-DIST_SUBDIR=	gnome2
+DIST_SUBDIR=	gnome3
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	GNOME 2 hex editor
+COMMENT=	GNOME 3 hex editor
 
-CONFLICT=	ghex-3.\*
+BUILD_DEPENDS=	itstool:${PORTSDIR}/textproc/itstool
 
-NO_STAGE=	yes
-USE_BZIP2=	yes
-USE_GNOME=	gnomeprefix intlhack libgnomeprintui libgnomeui gnomedocutils
+USE_XZ=		yes
+USE_GNOME=	gnomeprefix gtk30 intlhack libxml2:build
 USES=		gettext gmake pathfix pkgconfig
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 USE_LDCONFIG=	yes
+CONFIGURE_ARGS=	--enable-compile-warnings=no
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-GCONF_SCHEMAS=	ghex2.schemas
+GLIB_SCHEMAS=	org.gnome.GHex.gschema.xml
+
+post-install:
+	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libgtkhex-3.so.0
 
 .include <bsd.port.mk>

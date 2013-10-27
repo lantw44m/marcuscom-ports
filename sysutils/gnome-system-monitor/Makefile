@@ -1,33 +1,30 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/trunk/sysutils/gnome-system-monitor/Makefile 18610 2013-06-30 16:33:05Z marcus $
+#   $MCom: ports/trunk/sysutils/gnome-system-monitor3/Makefile 18579 2013-06-23 08:34:44Z kwm $
 
 PORTNAME=	gnome-system-monitor
-PORTVERSION=	2.28.2
-PORTREVISION=	2
+PORTVERSION=	3.6.1
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	GNOME
-DIST_SUBDIR=	gnome2
+DIST_SUBDIR=	gnome3
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	GNOME 2 system monitor program
+COMMENT=	GNOME 3 system monitor program
 
-BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gnome-icon-theme.pc:${PORTSDIR}/misc/gnome-icon-theme
-LIB_DEPENDS=	gtop-2.0:${PORTSDIR}/devel/libgtop \
-		gtkmm-2.4:${PORTSDIR}/x11-toolkits/gtkmm24
+BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gnome-icon-theme.pc:${PORTSDIR}/misc/gnome-icon-theme \
+		itstool:${PORTSDIR}/textproc/itstool
+LIB_DEPENDS=	libgtop-2.0.so:${PORTSDIR}/devel/libgtop
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gnome-icon-theme.pc:${PORTSDIR}/misc/gnome-icon-theme
 
-CONFLICTS=	gnome-system-monitor-3.[0-9]*
-
-NO_STAGE=	yes
-USE_BZIP2=	yes
+USE_XZ=		yes
 USES=		gettext gmake pathfix pkgconfig
 INSTALLS_OMF=	yes
-USE_GNOME=	gnomeprefix intlhack libwnck gnomevfs2 gnomedocutils librsvg2
+USE_GNOME=	gnomeprefix gtkmm30 intlhack librsvg2 libwnck3
 GNU_CONFIGURE=	yes
-CPPFLAGS+=	-I${LOCALBASE}/include -DGLIB_COMPILATION
-LDFLAGS+=	-L${LOCALBASE}/lib -lutil
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
 
-GCONF_SCHEMAS=	gnome-system-monitor.schemas
+GLIB_SCHEMAS=	org.gnome.gnome-system-monitor.enums.xml \
+		org.gnome.gnome-system-monitor.gschema.xml
 
 .include <bsd.port.mk>

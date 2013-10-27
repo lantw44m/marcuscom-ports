@@ -1,29 +1,29 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/trunk/accessibility/mousetweaks/Makefile 18610 2013-06-30 16:33:05Z marcus $
+#   $MCom: ports/trunk/accessibility/mousetweaks3/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	mousetweaks
-PORTVERSION=	2.32.1
+PORTVERSION=	3.6.0
 CATEGORIES=	accessibility
 MASTER_SITES=	GNOME
-DIST_SUBDIR=	gnome2
+DIST_SUBDIR=	gnome3
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Mouse accessibility enhancements for the GNOME desktop
 
-CONFLICTS=	mousetweaks-3.[0-9]*
+BUILD_DEPENDS=	gsettings-desktop-schemas>=0.1.0:${PORTSDIR}/devel/gsettings-desktop-schemas
+RUN_DEPENDS=	gsettings-desktop-schemas>=0.1.0:${PORTSDIR}/devel/gsettings-desktop-schemas
 
-NO_STAGE=	yes
+USE_XZ=		yes
 USE_XORG=	x11 xfixes xcursor xtst
-USE_BZIP2=	yes
-USE_GNOME=	gnomeprefix gnomepanel intlhack
+USE_GNOME=	gnomeprefix intlhack gtk30
 USES=		gettext gmake pathfix pkgconfig
 INSTALLS_OMF=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-GCONF_SCHEMAS=	mousetweaks.schemas pointer-capture-applet.schemas
-MAN1=		dwell-click-applet.1 mousetweaks.1 pointer-capture-applet.1
+GLIB_SCHEMAS=	org.gnome.mousetweaks.enums.xml \
+		org.gnome.mousetweaks.gschema.xml
 
 .include <bsd.port.mk>

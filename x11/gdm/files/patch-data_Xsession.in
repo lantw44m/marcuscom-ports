@@ -1,6 +1,6 @@
---- data/Xsession.in.orig	2008-05-12 20:25:54.000000000 -0400
-+++ data/Xsession.in	2008-06-09 01:29:59.000000000 -0400
-@@ -231,12 +231,31 @@ if [ "x$command" = "xdefault" ] ; then
+--- data/Xsession.in.orig	2011-03-11 13:18:54.000000000 +0100
++++ data/Xsession.in	2011-03-11 13:20:48.000000000 +0100
+@@ -189,12 +189,31 @@
    fi
  fi
  
@@ -18,7 +18,7 @@
 +        echo "$0: seahorse-agent not found!"
 +    fi
 +fi
-+ 
++
  # add ssh-agent if found
 -sshagent="`gdmwhich ssh-agent`"
 -if [ -n "$sshagent" ] && [ -x "$sshagent" ] && [ -z "$SSH_AUTH_SOCK" ]; then

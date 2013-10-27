@@ -1,27 +1,25 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/trunk/misc/gnome-devel-docs/Makefile 18610 2013-06-30 16:33:05Z marcus $
+#   $MCom: ports/trunk/misc/gnome-devel-docs3/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	gnome-devel-docs
-PORTVERSION=	2.32.0
-PORTREVISION=	1
+PORTVERSION=	3.6.2
 CATEGORIES=	misc gnome
 MASTER_SITES=	GNOME
-DIST_SUBDIR=	gnome2
+DIST_SUBDIR=	gnome3
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Documents targeted for GNOME developers
 
-BUILD_DEPENDS=	gnome-doc-prepare:${PORTSDIR}/textproc/gnome-doc-utils
-RUN_DEPENDS=	gnome-doc-prepare:${PORTSDIR}/textproc/gnome-doc-utils
-
-CONFLICTS=	gnome-devel-docs-3.[0-9]*
-
-NO_STAGE=	yes
-USE_BZIP2=	yes
+USE_XZ=	yes
 GNU_CONFIGURE=	yes
-USES=		gmake
-USE_GNOME=	gnomehier
+USES=		gmake shebangfix
+USE_GNOME=	gnomehier gnomedocutils
 INSTALLS_OMF=	yes
+SHEBANG_FILES=	platform-demos/C/*/*.js platform-demos/C/*/*.py \
+		platform-demos/C/samples/helloWorld/helloWorld
+SHEBANG_LANG+=	gjs
+gjs_OLD_CMD=	/usr/bin/gjs
+gjs_CMD=	${LOCALBASE}/bin/gjs
 
 .include <bsd.port.mk>
