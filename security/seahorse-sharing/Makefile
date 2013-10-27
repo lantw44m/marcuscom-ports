@@ -3,7 +3,7 @@
 #   $MCom: ports/trunk/security/seahorse-sharing/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	seahorse-sharing
-PORTVERSION=	3.2.1
+PORTVERSION=	3.6.1
 CATEGORIES=	security gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -16,9 +16,8 @@ LIB_DEPENDS=	libgpgme.so:${PORTSDIR}/security/gpgme \
 		libavahi-glib.so:${PORTSDIR}/net/avahi-app \
 		libsoup-2.4.so:${PORTSDIR}/devel/libsoup
 RUN_DEPENDS=	gpg:${PORTSDIR}/security/gnupg \
-		seahorse>=3.2.1:${PORTSDIR}/security/seahorse3
+		seahorse>=3.2.1:${PORTSDIR}/security/seahorse
 
-NO_STAGE=	yes
 USE_XZ=		yes
 USES=		gettext gmake pathfix pkgconfig
 USE_GNOME=	intlhack gnomeprefix
@@ -26,7 +25,5 @@ GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
-
-MAN1=		seahorse-sharing.1
 
 .include <bsd.port.mk>
