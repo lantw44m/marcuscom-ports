@@ -18,7 +18,7 @@ BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-
 LIB_DEPENDS=	libboost_python.so:${PORTSDIR}/devel/boost-python-libs \
 		libepc-1.0.so:${PORTSDIR}/www/libepc \
 		libgoocanvasmm-2.0.so:${PORTSDIR}/graphics/goocanvasmm2 \
-		libevview3.so:${PORTSDIR}/graphics/evince3
+		libevview3.so:${PORTSDIR}/graphics/evince
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes \
 		${LOCALBASE}/libdata/pkgconfig/libgda-mysql-5.0.pc:${PORTSDIR}/databases/libgda5-mysql \
 		${LOCALBASE}/libdata/pkgconfig/libgda-postgres-5.0.pc:${PORTSDIR}/databases/libgda5-postgresql

@@ -12,8 +12,8 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GLib/GObject wrapper for the Skydrive and Hotmail API
 
 BUILD_DEPENDS=	itstool:${PORTSDIR}/textproc/itstool
-LIB_DEPENDS=	libgoa-1.so:${PORTSDIR}/net/gnome-online-accounts \
-		libjson-glib-1.so:${PORTSDIR}/devel/json-glib \
+LIB_DEPENDS=	libgoa-1.0.so:${PORTSDIR}/net/gnome-online-accounts \
+		libjson-glib-1.0.so:${PORTSDIR}/devel/json-glib \
 		librest-0.7.so:${PORTSDIR}/devel/librest
 
 NO_STAGE=	yes
