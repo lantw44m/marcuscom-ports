@@ -327,7 +327,9 @@ libbonobo_DETECT=	${LOCALBASE}/libdata/pkgconfig/libbonobo-2.0.pc
 libbonobo_USE_GNOME_IMPL=libxml2 orbit2
 
 introspection_DETECT=		${LOCALBASE}/libdata/pkgconfig/gobject-introspection-1.0.pc
+introspection_BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 introspection_LIB_DEPENDS=	libgirepository-1.0.so:${PORTSDIR}/devel/gobject-introspection
+introspection_RUN_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 introspection_USE_GNOME_IMPL=	glib20 gnomehier
 introspection_MAKE_ENV=		GI_SCANNER_DISABLE_CACHE=1
 
