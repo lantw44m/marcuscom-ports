@@ -326,7 +326,7 @@ libxslt_RUN_DEPENDS=	${libxslt_BUILD_DEPENDS}
 libxslt_DETECT=		${LOCALBASE}/libdata/pkgconfig/libxslt.pc
 libxslt_USE_GNOME_IMPL=	libxml2
 
-libbonobo_LIB_DEPENDS=	libbonobo-2.0.so:${PORTSDIR}/devel/libbonobo
+libbonobo_LIB_DEPENDS=	libbonobo-2.so:${PORTSDIR}/devel/libbonobo
 libbonobo_DETECT=	${LOCALBASE}/libdata/pkgconfig/libbonobo-2.0.pc
 libbonobo_USE_GNOME_IMPL=libxml2 orbit2
 
@@ -337,15 +337,15 @@ introspection_RUN_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 introspection_USE_GNOME_IMPL=	glib20 gnomehier
 introspection_MAKE_ENV=		GI_SCANNER_DISABLE_CACHE=1
 
-gconf2_LIB_DEPENDS=	libgconf-2.4.so:${PORTSDIR}/devel/gconf2
+gconf2_LIB_DEPENDS=	libgconf-2.so:${PORTSDIR}/devel/gconf2
 gconf2_DETECT=		${LOCALBASE}/libdata/pkgconfig/gconf-2.0.pc
 gconf2_USE_GNOME_IMPL=	orbit2 libxml2 gtk20
 
-gnomevfs2_LIB_DEPENDS=	libgnomevfs-2.0.so:${PORTSDIR}/devel/gnome-vfs
+gnomevfs2_LIB_DEPENDS=	libgnomevfs-2.so:${PORTSDIR}/devel/gnome-vfs
 gnomevfs2_DETECT=	${LOCALBASE}/libdata/pkgconfig/gnome-vfs-2.0.pc
 gnomevfs2_USE_GNOME_IMPL=gconf2 gnomemimedata
 
-libgnomecanvas_LIB_DEPENDS=	libgnomecanvas-2.0.so:${PORTSDIR}/graphics/libgnomecanvas
+libgnomecanvas_LIB_DEPENDS=	libgnomecanvas-2.so:${PORTSDIR}/graphics/libgnomecanvas
 libgnomecanvas_DETECT=		${LOCALBASE}/libdata/pkgconfig/libgnomecanvas-2.0.pc
 libgnomecanvas_USE_GNOME_IMPL=	libglade2 libartlgpl2
 
@@ -360,15 +360,15 @@ libgnomeprintui_LIB_DEPENDS=	libgnomeprintui-2-2.so:${PORTSDIR}/x11-toolkits/lib
 libgnomeprintui_DETECT=		${LOCALBASE}/libdata/pkgconfig/libgnomeprintui-2.2.pc
 libgnomeprintui_USE_GNOME_IMPL=	libgnomeprint libgnomecanvas
 
-libgnome_LIB_DEPENDS=	libgnome-2.0.so:${PORTSDIR}/x11/libgnome
+libgnome_LIB_DEPENDS=	libgnome-2.so:${PORTSDIR}/x11/libgnome
 libgnome_DETECT=	${LOCALBASE}/libdata/pkgconfig/libgnome-2.0.pc
 libgnome_USE_GNOME_IMPL=gnomevfs2 esound libbonobo
 
-libbonoboui_LIB_DEPENDS=	libbonoboui-2.0.so:${PORTSDIR}/x11-toolkits/libbonoboui
+libbonoboui_LIB_DEPENDS=	libbonoboui-2.so:${PORTSDIR}/x11-toolkits/libbonoboui
 libbonoboui_DETECT=		${LOCALBASE}/libdata/pkgconfig/libbonoboui-2.0.pc
 libbonoboui_USE_GNOME_IMPL=	libgnomecanvas libgnome
 
-libgnomeui_LIB_DEPENDS=		libgnomeui-2.0.so:${PORTSDIR}/x11-toolkits/libgnomeui
+libgnomeui_LIB_DEPENDS=		libgnomeui-2.so:${PORTSDIR}/x11-toolkits/libgnomeui
 libgnomeui_DETECT=		${LOCALBASE}/libdata/pkgconfig/libgnomeui-2.0.pc
 libgnomeui_USE_GNOME_IMPL=	libbonoboui
 
@@ -380,7 +380,7 @@ libgailgnome_DETECT=		${LOCALBASE}/libdata/pkgconfig/libgail-gnome.pc
 libgailgnome_RUN_DEPENDS=	${libgailgnome_DETECT}:${PORTSDIR}/x11-toolkits/libgail-gnome
 libgailgnome_USE_GNOME_IMPL=	libgnomeui atspi
 
-libgtkhtml_LIB_DEPENDS=	libgtkhtml-2.0.so:${PORTSDIR}/www/libgtkhtml
+libgtkhtml_LIB_DEPENDS=	libgtkhtml-2.so:${PORTSDIR}/www/libgtkhtml
 libgtkhtml_DETECT=	${LOCALBASE}/libdata/pkgconfig/libgtkhtml-2.0.pc
 libgtkhtml_USE_GNOME_IMPL=libxslt gnomevfs2
 
@@ -399,7 +399,7 @@ libwnck_DETECT=		${LOCALBASE}/libdata/pkgconfig/libwnck-1.0.pc
 libwnck_USE_GNOME_IMPL=	gtk20
 libwnck_GNOME_DESKTOP_VERSION=2
 
-libwnck3_LIB_DEPENDS=	libwnck-3.0.so:${PORTSDIR}/x11-toolkits/libwnck3
+libwnck3_LIB_DEPENDS=	libwnck-3.so:${PORTSDIR}/x11-toolkits/libwnck3
 libwnck3_DETECT=	${LOCALBASE}/libdata/pkgconfig/libwnck-3.0.pc
 libwnck3_USE_GNOME_IMPL=gtk30
 libwnck3_GNOME_DESKTOP_VERSION=3
@@ -552,23 +552,23 @@ pygnomeextras_BUILD_DEPENDS=	${pygnomeextras_DETECT}:${PORTSDIR}/x11-toolkits/py
 pygnomeextras_RUN_DEPENDS=	${pygnomeextras_DETECT}:${PORTSDIR}/x11-toolkits/py-gnome-extras
 pygnomeextras_USE_GNOME_IMPL=pygnome2 libgtkhtml
 
-gnomedocutils_DETECT=	${LOCALBASE}/libdata/pkgconfig/gnome-doc-utils.pc
-gnomedocutils_BUILD_DEPENDS=${gnomedocutils_DETECT}:${PORTSDIR}/textproc/gnome-doc-utils
-gnomedocutils_RUN_DEPENDS=${gnomedocutils_DETECT}:${PORTSDIR}/textproc/gnome-doc-utils
-gnomedocutils_USE_GNOME_IMPL=libxslt
+gnomedocutils_DETECT=		${LOCALBASE}/libdata/pkgconfig/gnome-doc-utils.pc
+gnomedocutils_BUILD_DEPENDS=	${gnomedocutils_DETECT}:${PORTSDIR}/textproc/gnome-doc-utils
+gnomedocutils_RUN_DEPENDS=	${gnomedocutils_DETECT}:${PORTSDIR}/textproc/gnome-doc-utils
+gnomedocutils_USE_GNOME_IMPL=	libxslt
 
 pygnomedesktop_DETECT=		${LOCALBASE}/libdata/pkgconfig/gnome-python-desktop-2.0.pc
 pygnomedesktop_BUILD_DEPENDS=	${pygnomedesktop_DETECT}:${PORTSDIR}/x11-toolkits/py-gnome-desktop
 pygnomedesktop_RUN_DEPENDS=	${pygnomedesktop_DETECT}:${PORTSDIR}/x11-toolkits/py-gnome-desktop
-pygnomedesktop_USE_GNOME_IMPL=pygnome2 libgnomeprintui gtksourceview gnomepanel libwnck nautilus2 metacity
+pygnomedesktop_USE_GNOME_IMPL=	pygnome2 libgnomeprintui gtksourceview gnomepanel libwnck nautilus2 metacity
 pygnomedesktop_GNOME_DESKTOP_VERSION=2
 
-gtksharp10_DETECT=			${LOCALBASE}/libdata/pkgconfig/gtk-sharp.pc
+gtksharp10_DETECT=		${LOCALBASE}/libdata/pkgconfig/gtk-sharp.pc
 gtksharp10_BUILD_DEPENDS=	${gtksharp10_DETECT}:${PORTSDIR}/x11-toolkits/gtk-sharp10
 gtksharp10_RUN_DEPENDS=		${gtksharp10_DETECT}:${PORTSDIR}/x11-toolkits/gtk-sharp10
 gtksharp10_USE_GNOME_IMPL=	gtk20
 
-gtksharp20_DETECT=			${LOCALBASE}/libdata/pkgconfig/gtk-sharp-2.0.pc
+gtksharp20_DETECT=		${LOCALBASE}/libdata/pkgconfig/gtk-sharp-2.0.pc
 gtksharp20_BUILD_DEPENDS=	${gtksharp20_DETECT}:${PORTSDIR}/x11-toolkits/gtk-sharp20
 gtksharp20_RUN_DEPENDS=		${gtksharp20_DETECT}:${PORTSDIR}/x11-toolkits/gtk-sharp20
 gtksharp20_USE_GNOME_IMPL=	gtk20
