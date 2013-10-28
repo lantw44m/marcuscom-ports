@@ -145,7 +145,7 @@ libxml++26_LIB_DEPENDS=		libxml++-2.6.so:${PORTSDIR}/textproc/libxml++26
 libxml++26_USE_GNOME_IMPL=	glibmm libxml2
 
 cairo_DETECT=		${LOCALBASE}/libdata/pkgconfig/cairo.pc
-cairo_LIB_DEPENDS=	libcairo:${PORTSDIR}/graphics/cairo
+cairo_LIB_DEPENDS=	libcairo.so:${PORTSDIR}/graphics/cairo
 
 cairomm_DETECT=		${LOCALBASE}/libdata/pkgconfig/cairomm-1.0.pc
 cairomm_LIB_DEPENDS=	libcairomm-1.0.so:${PORTSDIR}/graphics/cairomm
