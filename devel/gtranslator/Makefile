@@ -3,44 +3,41 @@
 #   $MCom: ports/trunk/devel/gtranslator/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	gtranslator
-PORTVERSION=	2.91.5
+PORTVERSION=	2.91.6
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	A GNOME application for creating GNU gettext translation files
+COMMENT=	GNOME application for creating GNU gettext translation files
 
 LICENSE=	GPLv3
 
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes \
+		itstool:${PORTSDIR}/textproc/itstool \
 		${LOCALBASE}/libdata/pkgconfig/gsettings-desktop-schemas.pc:${PORTSDIR}/devel/gsettings-desktop-schemas
 LIB_DEPENDS=	libpeas-1.0.so:${PORTSDIR}/devel/libpeas \
-		libgdl-3.so:${PORTSDIR}/x11-toolkits/gdl3 \
+		libgdl-3.so:${PORTSDIR}/x11-toolkits/gdl \
 		libjson-glib-1.0.so:${PORTSDIR}/devel/json-glib
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes \
 		${LOCALBASE}/libdata/pkgconfig/gsettings-desktop-schemas.pc:${PORTSDIR}/devel/gsettings-desktop-schemas
 
-NO_STAGE=	yes
 USE_XZ=		yes
-USE_GNOME=	intlhack gnomeprefix gtk30 libgda4 gtksourceview3 libxml2 \
+USE_GNOME=	intlhack gnomeprefix gtk30 libgda5 gtksourceview3 libxml2 \
 		introspection:build
-USES=		gettext gmake pathfix pkgconfig
+USES=		desktop-file-utils gettext gmake pathfix pkgconfig
 USE_PYTHON=	yes
-INSTALLS_OMF=	yes
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 INSTALLS_ICONS=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--disable-debug \
-		--with-gda=4.0 \
+		--with-gda=5.0 \
 		--enable-compile-warnings=no
 GLIB_SCHEMAS=	org.gnome.gtranslator.gschema.xml \
 		org.gnome.gtranslator.plugins.codeview.gschema.xml \
 		org.gnome.gtranslator.plugins.open-tran.gschema.xml \
 		org.gnome.gtranslator.plugins.translation-memory.gschema.xml
-MAN1=		gtranslator.1
-MANCOMPRESSED=	yes
 
 OPTIONS_DEFINE=	DICT
 OPTIONS_DEFAULT=DICT
@@ -59,5 +56,9 @@ PLIST_SUB+=	DICT=""
 CONFIGURE_ARGS+=--without-dictionary
 PLIST_SUB+=	DICT="@comment "
 .endif
+
+post-install:
+	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/gtranslator/libgtranslator-private.so
+	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/gtranslator/plugins/lib*.so
 
 .include <bsd.port.mk>
