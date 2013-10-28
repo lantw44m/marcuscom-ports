@@ -303,11 +303,11 @@ linc_LIB_DEPENDS=	liblinc.so:${PORTSDIR}/net/linc
 linc_DETECT=		${LOCALBASE}/libdata/pkgconfig/linc.pc
 linc_USE_GNOME_IMPL=	glib20
 
-libidl_LIB_DEPENDS=	libIDL-2.0.so:${PORTSDIR}/devel/libIDL
+libidl_LIB_DEPENDS=	libIDL-2.so:${PORTSDIR}/devel/libIDL
 libidl_DETECT=		${LOCALBASE}/libdata/pkgconfig/libIDL-2.0.pc
 libidl_USE_GNOME_IMPL=	glib20
 
-orbit2_LIB_DEPENDS=	libORBit-2.0.so:${PORTSDIR}/devel/ORBit2
+orbit2_LIB_DEPENDS=	libORBit-2.so:${PORTSDIR}/devel/ORBit2
 orbit2_DETECT=		${LOCALBASE}/libdata/pkgconfig/ORBit-2.0.pc
 orbit2_USE_GNOME_IMPL=	libidl
 
