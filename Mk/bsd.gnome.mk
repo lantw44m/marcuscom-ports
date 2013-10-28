@@ -315,10 +315,14 @@ libglade2_LIB_DEPENDS=	libglade-2.0.so:${PORTSDIR}/devel/libglade2
 libglade2_DETECT=	${LOCALBASE}/libdata/pkgconfig/libglade-2.0.pc
 libglade2_USE_GNOME_IMPL=libxml2 gtk20
 
+libxml2_BUILD_DEPENDS=	xml2-config:${PORTSDIR}/textproc/libxml2
 libxml2_LIB_DEPENDS=	libxml2.so:${PORTSDIR}/textproc/libxml2
+libxml2_RUN_DEPENDS=	xml2-config:${PORTSDIR}/textproc/libxml2
 libxml2_DETECT=		${LOCALBASE}/libdata/pkgconfig/libxml-2.0.pc
-
+ 
+libxslt_BUILD_DEPENDS=	xsltproc:${PORTSDIR}/textproc/libxslt
 libxslt_LIB_DEPENDS=	libxslt.so:${PORTSDIR}/textproc/libxslt
+libxslt_RUN_DEPENDS=	${libxslt_BUILD_DEPENDS}
 libxslt_DETECT=		${LOCALBASE}/libdata/pkgconfig/libxslt.pc
 libxslt_USE_GNOME_IMPL=	libxml2
 
