@@ -48,4 +48,5 @@ x11/gnome-session3|x11/gnome-session|%DATE%|moved
 x11/gnome-terminal3|x11/gnome-terminal|%DATE%|moved
 x11/yelp3|x11/yelp|%DATE%|moved
 x11-fm/nautilus3|x11-fm/nautilus|%DATE%|moved
+x11-toolkits/gdl3|x11-toolkits/gdl|%DATE%|moved
 x11-wm/metacity3|x11-wm/metacity|%DATE%|moved

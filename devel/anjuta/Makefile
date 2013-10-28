@@ -15,7 +15,7 @@ BUILD_DEPENDS=	glade>=3.12.0:${PORTSDIR}/devel/glade \
 		valac:${PORTSDIR}/lang/vala
 LIB_DEPENDS=	libpcre.so:${PORTSDIR}/devel/pcre \
 		libgladeui-2.so:${PORTSDIR}/devel/glade \
-		libgdl-3.so:${PORTSDIR}/x11-toolkits/gdl3
+		libgdl-3.so:${PORTSDIR}/x11-toolkits/gdl
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gnome-icon-theme.pc:${PORTSDIR}/misc/gnome-icon-theme \
 		autogen:${PORTSDIR}/devel/autogen \
 		automake-1.12:${PORTSDIR}/devel/automake \
