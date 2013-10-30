@@ -13,7 +13,7 @@ EXTRACT_ONLY=	# empty
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT?=	The "meta-port" for the GNOME 3 integrated X11 desktop
 
-CONFLICTS?=	gnome2-[0-9]* gnome2-lite-[0-9]* gnome3-lite-[0-9]*
+CONFLICTS?=	gnome3-lite-[0-9]*
 
 RUN_DEPENDS?=	gnome-panel>=3.0.0:${PORTSDIR}/x11/gnome-panel \
 		dconf-editor:${PORTSDIR}/devel/dconf-editor \
@@ -66,18 +66,12 @@ RUN_DEPENDS+=	empathy>=3.0.0:${PORTSDIR}/net-im/empathy \
 		brasero>=3.0.0:${PORTSDIR}/sysutils/brasero \
 		accerciser>=3.0.0:${PORTSDIR}/accessibility/accerciser \
 		gcalctool>=3.0.0:${PORTSDIR}/math/gcalctool \
-		baobab>=3.4.0:${PORTSDIR}/deskutils/baobab \
-		gnome-dictionary>=3.4.0:${PORTSDIR}/deskutils/gnome-dictionary \
-		gnome-font-viewer>=3.4.0:${PORTSDIR}/deskutils/gnome-font-viewer \
-		gnome-screenshot>=3.4.0:${PORTSDIR}/deskutils/gnome-screenshot \
-		gnome-search-tool>=3.4.0:${PORTSDIR}/deskutils/gnome-search-tool \
-		gnome-system-log>=3.4.0:${PORTSDIR}/deskutils/gnome-system-log \
-		gnome-system-monitor>=3.0.0:${PORTSDIR}/sysutils/gnome-system-monitor \
+		gnome-utils>=3.6.0:${PORTSDIR}/deskutils/gnome-utils \
 		file-roller>=3.0.0:${PORTSDIR}/archivers/file-roller \
 		evince>=3.0.0:${PORTSDIR}/graphics/evince \
 		vino>=3.0.0:${PORTSDIR}/net/vino \
 		vinagre>=3.0.0:${PORTSDIR}/net/vinagre \
-		gnome-games>=3.0.0:${PORTSDIR}/games/gnome-games3 \
+		gnome-games>=3.0.0:${PORTSDIR}/games/gnome-games \
 		totem>=3.0.0:${PORTSDIR}/multimedia/totem \
 		gconf-editor>=3.0.0:${PORTSDIR}/sysutils/gconf-editor \
 		gdm>=3.0.0:${PORTSDIR}/x11/gdm \
