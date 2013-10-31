@@ -110,7 +110,7 @@ post-patch:
 		${WRKSRC}/gobject/Makefile.in
 
 post-install:
-	@${MKDIR} ${STAGEDIR}/${PREFIX}/share/GConf/gsettings
+	@${MKDIR} ${STAGEDIR}${PREFIX}/share/GConf/gsettings
 
 .include <bsd.port.post.mk>
 
