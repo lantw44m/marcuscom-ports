@@ -761,7 +761,6 @@ share/locale/zh_TW/LC_MESSAGES/five-or-more.mo
 @dirrmtry share/locale/ast
 @dirrmtry share/locale/as/LC_MESSAGES
 @dirrmtry share/locale/as
-@dirrmtry var/games
 @dirrm share/help/zh_CN/five-or-more/figures
 @dirrm share/help/zh_CN/five-or-more
 @dirrmtry share/help/zh_CN
