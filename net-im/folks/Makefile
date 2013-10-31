@@ -12,13 +12,12 @@ COMMENT=	library to aggregates people from multiple sources
 
 BUILD_DEPENDS=	vapigen:${PORTSDIR}/lang/vala-vapigen
 LIB_DEPENDS=	libgee.so.2:${PORTSDIR}/devel/libgee06 \
-		libgcr.so:${PORTSDIR}/security/gcr \
+		libgcr-3.so:${PORTSDIR}/security/gcr \
 		libzeitgeist-1.0.so:${PORTSDIR}/sysutils/libzeitgeist \
 		libtelepathy-glib.so:${PORTSDIR}/net-im/telepathy-glib
 
 CONFLICTS=	folks-0.4.[0-9]*
 
-NO_STAGE=	yes
 USE_XZ=		yes
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
@@ -43,12 +42,18 @@ SOCIALWEB_DESC=	Social web backend
 .if ${PORT_OPTIONS:MSOCIALWEB}
 LIB_DEPENDS+=	libsocialweb.so:${PORTSDIR}/www/libsocialweb
 CONFIGURE_ARGS+=--enable-libsocialweb-backend=yes
+PLIST_SUB+=	SOCIAL=""
 .else
 CONFIGURE_ARGS+=--enable-libsocialweb-backend=no
+PLIST_SUB+=	SOCIAL="@comment "
 .endif
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|^build_old_libs=yes|build_old_libs=no|g' \
 		${WRKDIR}/gnome-libtool
+
+post-install:
+	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libfolks*.so.*
+	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/folks/*/backends/*/*.so
 
 .include <bsd.port.mk>
