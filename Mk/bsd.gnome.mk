@@ -424,7 +424,7 @@ eel2_LIB_DEPENDS=	libeel-2.2.so:${PORTSDIR}/x11-toolkits/eel
 eel2_DETECT=		${LOCALBASE}/libdata/pkgconfig/eel-2.0.pc
 eel2_USE_GNOME_IMPL=	gnomedesktop
 
-gnomepanel3_LIB_DEPENDS=libpanel-applet-4.0.so:${PORTSDIR}/x11/gnome-panel
+gnomepanel3_LIB_DEPENDS=libpanel-applet-4.so:${PORTSDIR}/x11/gnome-panel
 gnomepanel3_DETECT=	${LOCALBASE}/libdata/pkgconfig/libpanelapplet-4.0.pc
 gnomepanel3_USE_GNOME_IMPL=gnomedesktop3 libwnck3 gnomemenus3 gnomedocutils librsvg2
 gnomepanel3_GNOME_DESKTOP_VERSION=3
