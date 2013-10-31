@@ -5,7 +5,9 @@
 PORTNAME=	gnome-games
 PORTVERSION=	3.8
 CATEGORIES=	games gnome
-MASTER_SITES=	#
+MASTER_SITES=	# empty
+DISTFILES=	# empty
+EXTRACT_ONLY=	# empty
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Gnome games meta port
