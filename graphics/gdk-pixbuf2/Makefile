@@ -1,19 +1,17 @@
 # Created by: Ade Lovett <ade@lovett.com>
-# $FreeBSD: head/graphics/gdk-pixbuf2/Makefile 314952 2013-03-22 19:00:36Z mezz $
+# $FreeBSD: head/graphics/gdk-pixbuf2/Makefile 332360 2013-11-01 12:19:48Z kwm $
 #    $MCom$
 
 PORTNAME=	gdk-pixbuf
-PORTVERSION=	2.28.2
+PORTVERSION=	2.30.0
 CATEGORIES=	graphics
 MASTER_SITES=	GNOME
 PKGNAMESUFFIX=	2
 DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	A graphic library for GTK+
+COMMENT=	Graphic library for GTK+
 
-NO_STAGE=	yes
-LATEST_LINK=	gdk-pixbuf2
 USE_XZ=		yes
 USE_XORG=	xt xi x11
 USE_AUTOTOOLS=	libtool
@@ -24,8 +22,6 @@ GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--enable-introspection=yes --with-x11
-
-MAN1=		gdk-pixbuf-csource.1 gdk-pixbuf-query-loaders.1
 
 OPTIONS_DEFINE=	JASPER JPEG PNG TIFF
 OPTIONS_DEFAULT=JASPER JPEG PNG TIFF
@@ -41,7 +37,7 @@ PLIST_SUB+=	NLS="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MJASPER}
-LIB_DEPENDS+=	jasper:${PORTSDIR}/graphics/jasper
+LIB_DEPENDS+=	libjasper.so:${PORTSDIR}/graphics/jasper
 CONFIGURE_ARGS+=--with-libjasper
 PLIST_SUB+=	JP2=""
 .else
@@ -49,7 +45,7 @@ PLIST_SUB+=	JP2="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MJPEG}
-LIB_DEPENDS+=	jpeg:${PORTSDIR}/graphics/jpeg
+LIB_DEPENDS+=	libjpeg.so:${PORTSDIR}/graphics/jpeg
 PLIST_SUB+=	JPEG=""
 .else
 CONFIGURE_ARGS+=--without-libjpeg
@@ -57,7 +53,7 @@ PLIST_SUB+=	JPEG="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MPNG}
-LIB_DEPENDS+=	png15:${PORTSDIR}/graphics/png
+LIB_DEPENDS+=	libpng15.so:${PORTSDIR}/graphics/png
 PLIST_SUB+=	PNG=""
 .else
 CONFIGURE_ARGS+=--without-libpng
@@ -65,7 +61,7 @@ PLIST_SUB+=	PNG="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MTIFF}
-LIB_DEPENDS+=	tiff:${PORTSDIR}/graphics/tiff
+LIB_DEPENDS+=	libtiff.so:${PORTSDIR}/graphics/tiff
 PLIST_SUB+=	TIFF=""
 .else
 CONFIGURE_ARGS+=--without-libtiff
@@ -73,6 +69,8 @@ PLIST_SUB+=	TIFF="@comment "
 .endif
 
 post-install:
-	@cd ${WRKSRC}/docs/reference/gdk-pixbuf && ${GMAKE} install-man1
+	@cd ${WRKSRC}/docs/reference/gdk-pixbuf && env DESTDIR=${STAGEDIR} ${GMAKE} install-man1
+	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libgdk_pixbuf*-2.0.so.0
+	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/gdk-pixbuf-2.0/${GTK2_VERSION}/loaders/lib*.so
 
 .include <bsd.port.mk>
