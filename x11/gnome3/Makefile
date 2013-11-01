@@ -21,7 +21,7 @@ RUN_DEPENDS?=	gnome-panel>=3.0.0:${PORTSDIR}/x11/gnome-panel \
 		gnome-themes-standard>=3.0.0:${PORTSDIR}/x11-themes/gnome-themes-standard \
 		gnome-icon-theme-extras>=3.0.0:${PORTSDIR}/misc/gnome-icon-theme-extras \
 		gnome-icon-theme-symbolic>=3.0.0:${PORTSDIR}/x11-themes/gnome-icon-theme-symbolic \
-		gnome-keyring>=3.0.0:${PORTSDIR}/security/gnome-keyring3 \
+		gnome-keyring3>=3.0.0:${PORTSDIR}/security/gnome-keyring3 \
 		gnome-power-manager>=3.0.0:${PORTSDIR}/sysutils/gnome-power-manager \
 		orca>=3.0.0:${PORTSDIR}/accessibility/orca \
 		gnome-mount:${PORTSDIR}/sysutils/gnome-mount \
@@ -31,7 +31,7 @@ RUN_DEPENDS?=	gnome-panel>=3.0.0:${PORTSDIR}/x11/gnome-panel \
 		${LOCALBASE}/lib/X11/fonts/bitstream-vera/Vera.ttf:${PORTSDIR}/x11-fonts/bitstream-vera \
 		${LOCALBASE}/share/hal/fdi/information/10freedesktop/10-camera-ptp.fdi:${PORTSDIR}/sysutils/hal-info \
 		yelp>=3.0.0:${PORTSDIR}/x11/yelp \
-		zenity>=3.0.0:${PORTSDIR}/x11/zenity3 \
+		zenity3>=3.0.0:${PORTSDIR}/x11/zenity3 \
 		seahorse>=3.0.0:${PORTSDIR}/security/seahorse \
 		metacity>=2.34.0:${PORTSDIR}/x11-wm/metacity \
 		gnome-control-center>=3.0.0:${PORTSDIR}/sysutils/gnome-control-center \
