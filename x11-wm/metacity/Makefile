@@ -11,13 +11,13 @@ DIST_SUBDIR=	gnome3
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Window manager for the adult in you
 
-BUILD_DEPENDS=	zenity>=3.0.0:${PORTSDIR}/x11/zenity3 \
+BUILD_DEPENDS=	zenity3>=3.0.0:${PORTSDIR}/x11/zenity3 \
 		itstool:${PORTSDIR}/textproc/itstool \
 		gsettings-desktop-schemas>=3.3.0:${PORTSDIR}/devel/gsettings-desktop-schemas
 LIB_DEPENDS=	libstartup-notification-1.so:${PORTSDIR}/x11/startup-notification \
 		libgtop-2.0.so:${PORTSDIR}/devel/libgtop \
 		libcanberra-gtk.so:${PORTSDIR}/audio/libcanberra
-RUN_DEPENDS=	zenity>=3.0.0:${PORTSDIR}/x11/zenity3 \
+RUN_DEPENDS=	zenity3>=3.0.0:${PORTSDIR}/x11/zenity3 \
 		gsettings-desktop-schemas>=3.3.0:${PORTSDIR}/devel/gsettings-desktop-schemas
 
 USE_XZ=		yes

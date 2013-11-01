@@ -11,7 +11,7 @@ DIST_SUBDIR=	gnome3
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME 3 version of xdm display manager
 
-BUILD_DEPENDS=	zenity>=3.0.0:${PORTSDIR}/x11/zenity3 \
+BUILD_DEPENDS=	zenity3>=3.0.0:${PORTSDIR}/x11/zenity3 \
 		itstool:${PORTSDIR}/textproc/itstool \
     		${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes
 LIB_DEPENDS=	libck-connector.so:${PORTSDIR}/sysutils/consolekit \
@@ -23,7 +23,7 @@ LIB_DEPENDS=	libck-connector.so:${PORTSDIR}/sysutils/consolekit \
 		libaccountsservice.so:${PORTSDIR}/sysutils/accountsservice \
 		libxklavier.so:${PORTSDIR}/x11/libxklavier \
 		libcanberra-gtk3.so:${PORTSDIR}/audio/libcanberra-gtk3
-RUN_DEPENDS=	zenity>=3.0.0:${PORTSDIR}/x11/zenity3 \
+RUN_DEPENDS=	zenity3>=3.0.0:${PORTSDIR}/x11/zenity3 \
 		gnome-settings-daemon>=3.0.0:${PORTSDIR}/sysutils/gnome-settings-daemon \
 		gnome-keyring-3:${PORTSDIR}/security/gnome-keyring3 \
 		gnome-session>=3.0.0:${PORTSDIR}/x11/gnome-session \
