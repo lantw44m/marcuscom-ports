@@ -3,7 +3,7 @@
 #  $MCom: ports/trunk/graphics/cogl/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	cogl
-PORTVERSION=	1.16.0
+PORTVERSION=	1.12.2
 CATEGORIES=	graphics
 MASTER_SITES=	GNOME
 

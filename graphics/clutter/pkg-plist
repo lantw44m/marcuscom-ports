@@ -83,7 +83,6 @@ include/clutter-1.0/clutter/clutter-stage-manager.h
 include/clutter-1.0/clutter/clutter-stage.h
 include/clutter-1.0/clutter/clutter-swipe-action.h
 include/clutter-1.0/clutter/clutter-table-layout.h
-include/clutter-1.0/clutter/clutter-tap-action.h
 include/clutter-1.0/clutter/clutter-text-buffer.h
 include/clutter-1.0/clutter/clutter-text.h
 include/clutter-1.0/clutter/clutter-texture.h
@@ -173,13 +172,10 @@ share/doc/cally/ix01.html
 share/doc/cally/ix02.html
 share/doc/cally/ix03.html
 share/doc/cally/ix04.html
-share/doc/cally/left-insensitive.png
 share/doc/cally/left.png
 share/doc/cally/license.html
-share/doc/cally/right-insensitive.png
 share/doc/cally/right.png
 share/doc/cally/style.css
-share/doc/cally/up-insensitive.png
 share/doc/cally/up.png
 %%DOCSDIR%%/ClutterAction.html
 %%DOCSDIR%%/ClutterActor.html
@@ -251,7 +247,6 @@ share/doc/cally/up.png
 %%DOCSDIR%%/ClutterState.html
 %%DOCSDIR%%/ClutterSwipeAction.html
 %%DOCSDIR%%/ClutterTableLayout.html
-%%DOCSDIR%%/ClutterTapAction.html
 %%DOCSDIR%%/ClutterText.html
 %%DOCSDIR%%/ClutterTextBuffer.html
 %%DOCSDIR%%/ClutterTexture.html
@@ -299,7 +294,6 @@ share/doc/cally/up.png
 %%DOCSDIR%%/clutter-Value-intervals.html
 %%DOCSDIR%%/clutter-Versioning-Macros.html
 %%DOCSDIR%%/clutter-Wayland-compositor-specific-support.html
-%%DOCSDIR%%/clutter-Wayland-specific-support.html
 %%DOCSDIR%%/clutter-Win32-Specific-Support.html
 %%DOCSDIR%%/clutter-X11-Specific-Support.html
 %%DOCSDIR%%/clutter-overview.html
@@ -335,8 +329,6 @@ share/doc/cally/up.png
 %%DOCSDIR%%/ix11.html
 %%DOCSDIR%%/ix12.html
 %%DOCSDIR%%/ix13.html
-%%DOCSDIR%%/ix14.html
-%%DOCSDIR%%/left-insensitive.png
 %%DOCSDIR%%/left.png
 %%DOCSDIR%%/license.html
 %%DOCSDIR%%/migrating-ClutterAnimation.html
@@ -347,18 +339,15 @@ share/doc/cally/up.png
 %%DOCSDIR%%/offscreen-redirect.png
 %%DOCSDIR%%/path-alpha-func.png
 %%DOCSDIR%%/pt09.html
-%%DOCSDIR%%/right-insensitive.png
 %%DOCSDIR%%/right.png
 %%DOCSDIR%%/running-clutter.html
 %%DOCSDIR%%/style.css
 %%DOCSDIR%%/table-layout.png
-%%DOCSDIR%%/up-insensitive.png
 %%DOCSDIR%%/up.png
 %%DOCSDIR%%/using-cairo.html
 share/gir-1.0/Cally-1.0.gir
 share/gir-1.0/Clutter-1.0.gir
 share/gir-1.0/ClutterX11-1.0.gir
-share/locale/an/LC_MESSAGES/clutter-1.0.mo
 share/locale/ar/LC_MESSAGES/clutter-1.0.mo
 share/locale/as/LC_MESSAGES/clutter-1.0.mo
 share/locale/ast/LC_MESSAGES/clutter-1.0.mo
@@ -399,7 +388,6 @@ share/locale/pt/LC_MESSAGES/clutter-1.0.mo
 share/locale/pt_BR/LC_MESSAGES/clutter-1.0.mo
 share/locale/ro/LC_MESSAGES/clutter-1.0.mo
 share/locale/ru/LC_MESSAGES/clutter-1.0.mo
-share/locale/sk/LC_MESSAGES/clutter-1.0.mo
 share/locale/sl/LC_MESSAGES/clutter-1.0.mo
 share/locale/sr/LC_MESSAGES/clutter-1.0.mo
 share/locale/sr@latin/LC_MESSAGES/clutter-1.0.mo
@@ -440,8 +428,6 @@ share/locale/zh_TW/LC_MESSAGES/clutter-1.0.mo
 @dirrmtry share/locale/ast
 @dirrmtry share/locale/as/LC_MESSAGES
 @dirrmtry share/locale/as
-@dirrmtry share/locale/an/LC_MESSAGES
-@dirrmtry share/locale/an
 @dirrm %%DOCSDIR%%
 @dirrm share/doc/cally
 @dirrm include/clutter-1.0/clutter/x11

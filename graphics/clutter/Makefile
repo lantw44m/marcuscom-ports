@@ -3,7 +3,7 @@
 #  $MCom: ports/trunk/graphics/clutter/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	clutter
-PORTVERSION=	1.16.0
+PORTVERSION=	1.12.2
 CATEGORIES=	graphics
 MASTER_SITES=	GNOME
 
@@ -25,7 +25,7 @@ USE_GL=		gl
 USE_XORG=	glproto x11 xfixes xdamage xcomposite xi
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--with-x --enable-conformance=no \
-		--disable-gdk-backend --disable-wayland-backend
+		--disable-gdk-backend
 
 CPPFLAGS+=	-I${LOCALBASE}/include -fno-omit-frame-pointer
 LDFLAGS+=	-L${LOCALBASE}/lib
