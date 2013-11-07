@@ -1,6 +1,6 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/x11/gdm/Makefile 18858 2013-11-07 19:21:23Z gusi $
 
 PORTNAME=	gdm
 PORTVERSION=	3.6.2
@@ -36,12 +36,9 @@ RUN_DEPENDS+=	xrdb:${PORTSDIR}/x11/xrdb \
 		xmodmap:${PORTSDIR}/x11/xmodmap \
 		xterm:${PORTSDIR}/x11/xterm
 
-CONFLICTS=	gdm-2.[0-9]*
-
 USERS=		gdm
 GROUPS=		gdm
 
-LATEST_LINK=	gdm3
 USE_XZ=		yes
 USE_LDCONFIG=	yes
 USE_XORG=	dmx dmxproto
