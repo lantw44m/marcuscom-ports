@@ -1,6 +1,6 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/trunk/x11/gdm3/Makefile 18610 2013-06-30 16:33:05Z marcus $
+#   $MCom$
 
 PORTNAME=	gdm
 PORTVERSION=	3.6.2
@@ -16,18 +16,18 @@ BUILD_DEPENDS=	zenity3>=3.0.0:${PORTSDIR}/x11/zenity3 \
     		${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes
 LIB_DEPENDS=	libck-connector.so:${PORTSDIR}/sysutils/consolekit \
 		libdbus-glib-1.so:${PORTSDIR}/devel/dbus-glib \
-		libpolkit-gtk-1.so:${PORTSDIR}/sysutils/polkit-gnome \
 		libupower-glib.so:${PORTSDIR}/sysutils/upower \
 		libnss3.so:${PORTSDIR}/security/nss \
 		libfontconfig.so:${PORTSDIR}/x11-fonts/fontconfig \
 		libaccountsservice.so:${PORTSDIR}/sysutils/accountsservice \
-		libxklavier.so:${PORTSDIR}/x11/libxklavier \
+		libexecinfo.so:${PORTSDIR}/devel/libexecinfo \
 		libcanberra-gtk3.so:${PORTSDIR}/audio/libcanberra-gtk3
 RUN_DEPENDS=	zenity3>=3.0.0:${PORTSDIR}/x11/zenity3 \
 		gnome-settings-daemon>=3.0.0:${PORTSDIR}/sysutils/gnome-settings-daemon \
 		gnome-keyring-3:${PORTSDIR}/security/gnome-keyring3 \
 		gnome-session>=3.0.0:${PORTSDIR}/x11/gnome-session \
 		gnome-icon-theme-symbolic>=0:${PORTSDIR}/x11-themes/gnome-icon-theme-symbolic \
+		polkit-gnome>=0.105:${PORTSDIR}/sysutils/polkit-gnome \
 		${LOCALBASE}/libexec/at-spi2-registryd:${PORTSDIR}/accessibility/at-spi2-core \
 		${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes
 # used in scripts
@@ -36,9 +36,12 @@ RUN_DEPENDS+=	xrdb:${PORTSDIR}/x11/xrdb \
 		xmodmap:${PORTSDIR}/x11/xmodmap \
 		xterm:${PORTSDIR}/x11/xterm
 
+CONFLICTS=	gdm-2.[0-9]*
+
 USERS=		gdm
 GROUPS=		gdm
 
+LATEST_LINK=	gdm3
 USE_XZ=		yes
 USE_LDCONFIG=	yes
 USE_XORG=	dmx dmxproto
@@ -47,25 +50,35 @@ INSTALLS_ICONS=	yes
 USE_RC_SUBR=	gdm
 USE_GNOME_SUBR=	yes
 USES=		gettext gmake pathfix pkgconfig
-USE_GNOME=	dconf gnomehier gnomeprefix intlhack librsvg2 gnomepanel3
+USE_GNOME=	dconf gnomehier gnomeprefix intlhack introspection librsvg2 gnomepanel3
 GNU_CONFIGURE=	yes
 GLIB_SCHEMAS=	org.gnome.login-screen.gschema.xml
-CONFIGURE_ARGS=	--with-working-directory=${PREFIX}/etc/gdm/home \
+CONFIGURE_ARGS=	--disable-static \
+		--mandir=${PREFIX}/man \
+		--with-lang-file=${PREFIX}/etc/gdm/i18n \
 		--with-at-spi-registryd-directory=${LOCALBASE}/libexec \
+		--with-custom-conf=${PREFIX}/etc/gdm/custom.conf \
+		--with-dbus-sys=${PREFIX}/etc/dbus-1/system.d \
+		--with-log-dir=/var/log/gdm \
+		--with-working-directory=${PREFIX}/etc/gdm/home \
+		--with-sysconfsubdir=gdm \
+		--with-pid-file=/var/run/gdm.pid \
+		--with-dmconfdir=${LOCALBASE}/share/xsessions \
+		--with-screenshot-dir=/var/run/gdm/greeter \
 		--enable-authentication-scheme=pam \
-		--with-console-kit \
-		--with-initial-vt=9 \
+		--with-user=gdm \
+		--with-group=gdm \
+ 		--with-initial-vt=09 \
 		--with-systemd=no
+
 # this is a hack until we can get our own pam dir and dir in order.
 CONFIGURE_ARGS+=--with-default-pam-config=redhat
 CPPFLAGS+=	-I${LOCALBASE}/include -DHAS_SA_LEN
 LDFLAGS+=	-L${LOCALBASE}/lib
-CONFIGLIBS=	-lm
-CONFIGURE_ENV=	LIBS="${CONFIGLIBS}" \
-		GTKDOC="false" \
-		ac_cv_header_execinfo_h=no
 
-SUB_FILES+=	gdm.pam
+SUB_FILES+=	gdm-launch-environment \
+		gdm-password \
+		gdm-autologin
 
 GDMDIR?=	${PREFIX}/etc/gdm
 PKGMESSAGE=	${WRKDIR}/pkg-message
@@ -98,12 +111,9 @@ CONFIGURE_ARGS+=	--disable-ipv6
 post-patch:
 	@${REINPLACE_CMD} -e 's|root:root|root:wheel|g' \
 		${WRKSRC}/data/Makefile.in
-	@${REINPLACE_CMD} -e 's|-lexecinfo||g' \
-		${WRKSRC}/common/Makefile.in
 	@${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|g' \
 	    	-e 's|%%LOCALBASE%%|${LOCALBASE}|g' \
 	    	${WRKSRC}/daemon/gdm-session-worker.c
-#		${WRKSRC}/gui/simple-greeter/extensions/password/gdm-password.pam
 	@${REINPLACE_CMD} -e 's|/usr/X11R6|${LOCALBASE}|g' \
 		-e 's|/usr/bin/X|${LOCALBASE}/bin/X|g' \
 		-e 's|/usr/bin/Xorg|${LOCALBASE}/bin/Xorg|g' \
@@ -122,15 +132,21 @@ post-patch:
 		${WRKSRC}/data/applications/gnome-mag.desktop \
 		${WRKSRC}/data/applications/gnome-shell.desktop \
 		${WRKSRC}/data/applications/gok.desktop
-#		${WRKSRC}/data/applications/orca-screen-reader.desktop
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/data/gdm.conf-custom \
 		${STAGEDIR}${PREFIX}/etc/gdm/custom.conf.default
 	${MKDIR} ${STAGEDIR}${PREFIX}/share/xsessions
-	${INSTALL_DATA} ${WRKDIR}/gdm.pam ${STAGEDIR}${PREFIX}/etc/pam.d/gdm-welcome
+	${MKDIR} -p ${STAGEDIR}${PREFIX}/etc/gdm/Sessions
+	${MKDIR} -p ${STAGEDIR}${PREFIX}/etc/dm/Sessions
+
+	${INSTALL_DATA} ${WRKDIR}/gdm-autologin ${STAGEDIR}${PREFIX}/etc/pam.d/gdm-autologin
+	${INSTALL_DATA} ${WRKDIR}/gdm-launch-environment ${STAGEDIR}${PREFIX}/etc/pam.d/gdm-launch-environment
+	${INSTALL_DATA} ${WRKDIR}/gdm-password ${STAGEDIR}${PREFIX}/etc/pam.d/gdm-password
+
 	@${SED} -e 's|%%PREFIX%%|${PREFIX}|g' < ${PKGDIR}/pkg-message \
 		| /usr/bin/fmt 75 79 > ${PKGMESSAGE}
+
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libgdm*.so.1
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/gdm/simple-greeter/extensions/lib*.so
 
