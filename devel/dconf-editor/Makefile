@@ -18,6 +18,6 @@ do-build:
 	@cd ${WRKSRC}/editor && ${GMAKE}
 
 do-install:
-	@cd ${WRKSRC}/editor && ${GMAKE} install
+	@cd ${WRKSRC}/editor && DESTDIR=${STAGEDIR} ${GMAKE} install
 
 .include "${MASTERDIR}/Makefile"
