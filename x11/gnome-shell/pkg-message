@@ -1,0 +1,17 @@
+To enable acceleration to run gnome-shell for Intel (and probably ATI) cards, the 
+user running the shell needs to have read/write permissions on /dev/dri/cardN (usually N=0). 
+
+To have access you may put your user on the wheel group or you may use devfs.rules to
+change the mode of the /dev/dri/card0; to allow read/write access to the group your
+user belongs to or to grant read/write access to any user, i.e (untested):
+
+	add path 'dri/*' mode 0666 group operator
+
+will do both things; will make /dev/dri/* belong to the operator group and give 
+everyone read/write access. Please check:
+
+	 man 5 devfs.rules 
+
+for more info. 
+
+NVIDIA cards seems to be fine by default so no further action seems to be needed.
