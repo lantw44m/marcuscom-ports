@@ -13,6 +13,7 @@ devel/seed3|devel/seed|%DATE%|moved
 editors/gedit3|editors/gedit|%DATE%|moved
 editors/gedit-plugins3|editors/gedit-plugins|%DATE%|moved
 editors/ghex3|editors/ghex|%DATE%|moved
+games/gnome-games3|games/gnome-games|%DATE%|moved
 graphics/eog3|graphics/eog|%DATE%|moved
 graphics/eog-plugins3|graphics/eog-plugins|%DATE%|moved
 graphics/evince3|graphics/evince|%DATE%|moved
@@ -28,8 +29,6 @@ net/vinagre3|net/vinagre|%DATE%|moved
 net/vino3|net/vino|%DATE%|moved
 net-im/empathy3|net-im/empathy|%DATE%|moved
 net-im/folks04|net-im/folks|%DATE%|moved
-net-im/farsight2|net-im/farstream|%DATE%|replaced
-net-im/papyon||%DATE%|removed
 net-im/telepathy-farsight|net-im/telepathy-farstream|%DATE%|replaced
 security/seahorse3|security/seahorse|%DATE%|moved
 sysutils/brasero3|sysutils/brasero|%DATE%|moved
