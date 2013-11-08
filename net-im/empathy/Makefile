@@ -55,12 +55,12 @@ CONFIGURE_ARGS=	--disable-Werror \
 GLIB_SCHEMAS=	org.gnome.Empathy.gschema.xml
 
 OPTIONS_DEFINE=	JABBER MSN IRC SALUT HAZE MAP CHEESE
-OPTIONS_DEFAULT=JABBER     IRC            MAP
+OPTIONS_DEFAULT=JABBER MSN IRC SALU       MAP
 JABBER_DESC=	Enable jabber (XMPP) client support
-MSN_DESC=	Enable MSN client support (broken)
+MSN_DESC=	Enable MSN client support
 IRC_DESC=	Enable IRC client support
 SALUT_DESC=	Enable link-local (serverless) XMPP support
-HAZE_DESC=	Enable libpurple protocol integration (broken)
+HAZE_DESC=	Enable libpurple protocol integration
 MAP_DESC=	Enable graphical map support
 CHEESE_DESC=	Enable cheese camera support
 NST_DESC=	Enable Nautilus SendTo plugin
@@ -72,7 +72,6 @@ RUN_DEPENDS+=	${LOCALBASE}/libexec/telepathy-gabble:${PORTSDIR}/net-im/telepathy
 .endif
 
 .if ${PORT_OPTIONS:MMSN}
-BROKEN=		conflict in dependancies
 RUN_DEPENDS+=	${LOCALBASE}/libexec/telepathy-butterfly:${PORTSDIR}/net-im/telepathy-butterfly
 .endif
 
@@ -85,7 +84,6 @@ RUN_DEPENDS+=	${LOCALBASE}/libexec/telepathy-salut:${PORTSDIR}/net-im/telepathy-
 .endif
 
 .if !defined(WITHOUT_HAZE)
-BROKEN=		conflict in dependancies
 RUN_DEPENDS+=	${LOCALBASE}/libexec/telepathy-haze:${PORTSDIR}/net-im/telepathy-haze
 .endif
 
@@ -110,8 +108,8 @@ PLIST_SUB+=	MAP="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MCHEESE}
-BUILD_DEPENDS+=	cheese>=3.0.0:${PORTSDIR}/multimedia/cheese3
-RUN_DEPENDS+=	cheese>=3.0.0:${PORTSDIR}/multimedia/cheese3
+BUILD_DEPENDS+=	cheese>=3.0.0:${PORTSDIR}/multimedia/cheese
+RUN_DEPENDS+=	cheese>=3.0.0:${PORTSDIR}/multimedia/cheese
 CONFIGURE_ARGS+=--with-cheese
 .else
 CONFIGURE_ARGS+=--without-cheese
