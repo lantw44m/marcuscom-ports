@@ -1,6 +1,6 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/trunk/net-im/farstream/Makefile 18610 2013-06-30 16:33:05Z marcus $
+#   $MCom$
 
 PORTNAME=	farstream
 PORTVERSION=	0.2.3
@@ -16,7 +16,7 @@ RUN_DEPENDS=	libnice-gst1>=0:${PORTSDIR}/net-im/libnice-gst1
 USE_LDCONFIG=	yes
 USE_PYTHON=	yes
 USES=		gettext gmake pathfix pkgconfig
-USE_GNOME=	glib20 ltverhack
+USE_GNOME=	glib20 ltverhack introspection:build
 USE_GSTREAMER1=	good bad
 USE_AUTOTOOLS=	libtool
 CPPFLAGS+=	-I${LOCALBASE}/include
