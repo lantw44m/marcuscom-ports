@@ -55,7 +55,7 @@ CONFIGURE_ARGS=	--disable-Werror \
 GLIB_SCHEMAS=	org.gnome.Empathy.gschema.xml
 
 OPTIONS_DEFINE=	JABBER MSN IRC SALUT HAZE MAP CHEESE
-OPTIONS_DEFAULT=JABBER MSN IRC SALU       MAP
+OPTIONS_DEFAULT=JABBER MSN IRC SALUT      MAP
 JABBER_DESC=	Enable jabber (XMPP) client support
 MSN_DESC=	Enable MSN client support
 IRC_DESC=	Enable IRC client support
