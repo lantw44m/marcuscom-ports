@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/trunk/Mk/bsd.gnome.mk 18610 2013-06-30 16:33:05Z marcus $
+#     $MCom$
 #
 # Please view me with 4 column tabs!
 
@@ -73,7 +73,7 @@ _USE_GNOME_ALL= esound intlhack intltool introspection ltasneededhack lthack \
 		gnomeprefix
 
 # GNOME 1 components
-_USE_GNOME_ALL+= gdkpixbuf glib12 gnomelibs gtk12 libxml imlib orbit
+_USE_GNOME_ALL+= gdkpixbuf glib12 gtk12 libxml imlib
 
 # GNOME 2 components
 _USE_GNOME_ALL+= atk atspi cairo desktopfileutils eel2 gal2 \
@@ -227,13 +227,6 @@ libxml_MAKE_ENV=	XML_CONFIG="${XML_CONFIG}"
 libxml_DETECT=		${XML_CONFIG}
 libxml_USE_GNOME_IMPL=	glib12
 
-ORBIT_CONFIG?=		${LOCALBASE}/bin/orbit-config
-orbit_LIB_DEPENDS=	libORBit.so:${PORTSDIR}/devel/ORBit
-orbit_CONFIGURE_ENV=	ORBIT_CONFIG="${ORBIT_CONFIG}"
-orbit_MAKE_ENV=		ORBIT_CONFIG="${ORBIT_CONFIG}"
-orbit_DETECT=		${ORBIT_CONFIG}
-orbit_USE_GNOME_IMPL=	glib12
-
 GDK_PIXBUF_CONFIG?=	${LOCALBASE}/bin/gdk-pixbuf-config
 gdkpixbuf_LIB_DEPENDS=	libgdk_pixbuf.so:${PORTSDIR}/graphics/gdk-pixbuf
 gdkpixbuf_CONFIGURE_ENV=GDK_PIXBUF_CONFIG="${GDK_PIXBUF_CONFIG}"
@@ -247,13 +240,6 @@ imlib_CONFIGURE_ENV=	IMLIB_CONFIG="${IMLIB_CONFIG}"
 imlib_MAKE_ENV=		IMLIB_CONFIG="${IMLIB_CONFIG}"
 imlib_DETECT=		${IMLIB_CONFIG}
 imlib_USE_GNOME_IMPL=	gtk12
-
-GNOME_CONFIG?=		${LOCALBASE}/bin/gnome-config
-gnomelibs_LIB_DEPENDS=	libgnome.so:${PORTSDIR}/x11/gnome-libs
-gnomelibs_CONFIGURE_ENV=GNOME_CONFIG="${GNOME_CONFIG}"
-gnomelibs_MAKE_ENV=	GNOME_CONFIG="${GNOME_CONFIG}"
-gnomelibs_DETECT=	${GNOME_CONFIG}
-gnomelibs_USE_GNOME_IMPL=esound gtk12 imlib libxml orbit
 
 gnomemimedata_DETECT=	${LOCALBASE}/libdata/pkgconfig/gnome-mime-data-2.0.pc
 gnomemimedata_BUILD_DEPENDS=${gnomemimedata_DETECT}:${PORTSDIR}/misc/gnome-mime-data
