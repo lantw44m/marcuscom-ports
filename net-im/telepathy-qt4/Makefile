@@ -13,8 +13,10 @@ COMMENT=	High-level Qt binding for Telepathy
 
 LICENSE=	LGPL21
 
+BUILD_DEPENDS=	${PYTHON_SITELIBDIR}/_dbus_bindings.so:${PORTSDIR}/devel/py-dbus
 LIB_DEPENDS=	libtelepathy-farstream.so:${PORTSDIR}/net-im/telepathy-farstream \
 		libtelepathy-glib.so:${PORTSDIR}/net-im/telepathy-glib
+RUN_DEPENDS=	${PYTHON_SITELIBDIR}/_dbus_bindings.so:${PORTSDIR}/devel/py-dbus
 
 USE_GNOME=	libxslt:build
 USE_GSTREAMER=	yes
