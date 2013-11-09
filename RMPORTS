@@ -31,6 +31,7 @@ net-im/empathy3|net-im/empathy|%DATE%|moved
 net-im/folks04|net-im/folks|%DATE%|moved
 net-im/telepathy-farsight|net-im/telepathy-farstream|%DATE%|replaced
 security/seahorse3|security/seahorse|%DATE%|moved
+security/seahorse-plugins||%DATE%|removed
 sysutils/brasero3|sysutils/brasero|%DATE%|moved
 sysutils/gconf-editor3|sysutils/gconf-editor|%DATE%|moved
 sysutils/gnome-control-center3|sysutils/gnome-control-center|%DATE%|moved
