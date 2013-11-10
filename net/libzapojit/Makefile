@@ -16,9 +16,8 @@ LIB_DEPENDS=	libgoa-1.0.so:${PORTSDIR}/net/gnome-online-accounts \
 		libjson-glib-1.0.so:${PORTSDIR}/devel/json-glib \
 		librest-0.7.so:${PORTSDIR}/devel/librest
 
-NO_STAGE=	yes
 USE_XZ=		yes
-USES=		gmake pathfix
+USES=		gmake pathfix pkgconfig
 USE_GNOME=	gnomeprefix intlhack
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
