@@ -1,9 +1,9 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/trunk/devel/libgdata/Makefile 18878 2013-11-11 19:28:42Z gusi $
 
 PORTNAME=	libgdata
-PORTVERSION=	0.13.2
+PORTVERSION=	0.14.0
 CATEGORIES=	devel
 MASTER_SITES=	GNOME
 
@@ -27,5 +27,8 @@ USE_GNOME=	glib20 gnomeprefix intltool introspection:build ltverhack
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS+=--with-ca-certs=${LOCALBASE}/share/certs/ca-root-nss.crt
+
+post-install:
+	 @${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libgdata.so.13
 
 .include <bsd.port.mk>
