@@ -10,6 +10,7 @@ include/libgdata/gdata/gcontact/gdata-gcontact-jot.h
 include/libgdata/gdata/gcontact/gdata-gcontact-language.h
 include/libgdata/gdata/gcontact/gdata-gcontact-relation.h
 include/libgdata/gdata/gcontact/gdata-gcontact-website.h
+include/libgdata/gdata/gdata-goa-authorizer.h
 include/libgdata/gdata/gd/gdata-gd-email-address.h
 include/libgdata/gdata/gd/gdata-gd-im-address.h
 include/libgdata/gdata/gd/gdata-gd-name.h
@@ -57,6 +58,7 @@ include/libgdata/gdata/services/contacts/gdata-contacts-group.h
 include/libgdata/gdata/services/contacts/gdata-contacts-query.h
 include/libgdata/gdata/services/contacts/gdata-contacts-service.h
 include/libgdata/gdata/services/documents/gdata-documents-document.h
+include/libgdata/gdata/services/documents/gdata-documents-drawing.h
 include/libgdata/gdata/services/documents/gdata-documents-entry.h
 include/libgdata/gdata/services/documents/gdata-documents-enums.h
 include/libgdata/gdata/services/documents/gdata-documents-feed.h
@@ -66,6 +68,7 @@ include/libgdata/gdata/services/documents/gdata-documents-query.h
 include/libgdata/gdata/services/documents/gdata-documents-service.h
 include/libgdata/gdata/services/documents/gdata-documents-spreadsheet.h
 include/libgdata/gdata/services/documents/gdata-documents-text.h
+include/libgdata/gdata/services/documents/gdata-documents-upload-query.h
 include/libgdata/gdata/services/picasaweb/gdata-picasaweb-album.h
 include/libgdata/gdata/services/picasaweb/gdata-picasaweb-comment.h
 include/libgdata/gdata/services/picasaweb/gdata-picasaweb-enums.h
@@ -111,6 +114,7 @@ share/doc/gdata/GDataContactsContact.html
 share/doc/gdata/GDataContactsGroup.html
 share/doc/gdata/GDataContactsQuery.html
 share/doc/gdata/GDataContactsService.html
+share/doc/gdata/GDataDocumentsDrawing.html
 share/doc/gdata/GDataDocumentsDocument.html
 share/doc/gdata/GDataDocumentsEntry.html
 share/doc/gdata/GDataDocumentsFeed.html
@@ -120,6 +124,7 @@ share/doc/gdata/GDataDocumentsQuery.html
 share/doc/gdata/GDataDocumentsService.html
 share/doc/gdata/GDataDocumentsSpreadsheet.html
 share/doc/gdata/GDataDocumentsText.html
+share/doc/gdata/GDataDocumentsUploadQuery.html
 share/doc/gdata/GDataDownloadStream.html
 share/doc/gdata/GDataEntry.html
 share/doc/gdata/GDataFeed.html
@@ -141,6 +146,7 @@ share/doc/gdata/GDataGDWhen.html
 share/doc/gdata/GDataGDWhere.html
 share/doc/gdata/GDataGDWho.html
 share/doc/gdata/GDataGenerator.html
+share/doc/gdata/GDataGoaAuthorizer.html
 share/doc/gdata/GDataLink.html
 share/doc/gdata/GDataMediaCategory.html
 share/doc/gdata/GDataMediaContent.html
@@ -208,6 +214,8 @@ share/doc/gdata/ix11.html
 share/doc/gdata/ix12.html
 share/doc/gdata/ix13.html
 share/doc/gdata/ix14.html
+share/doc/gdata/ix15.html
+share/doc/gdata/ix16.html
 share/doc/gdata/left.png
 share/doc/gdata/pt01.html
 share/doc/gdata/pt02.html
@@ -251,6 +259,7 @@ share/locale/lv/LC_MESSAGES/gdata.mo
 share/locale/ml/LC_MESSAGES/gdata.mo
 share/locale/mr/LC_MESSAGES/gdata.mo
 share/locale/nb/LC_MESSAGES/gdata.mo
+share/locale/nl/LC_MESSAGES/gdata.mo
 share/locale/or/LC_MESSAGES/gdata.mo
 share/locale/pa/LC_MESSAGES/gdata.mo
 share/locale/pl/LC_MESSAGES/gdata.mo
