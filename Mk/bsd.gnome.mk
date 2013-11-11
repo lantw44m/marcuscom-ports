@@ -728,14 +728,15 @@ PLIST_SUB+=			GTK2_VERSION="${GTK2_VERSION}" \
 # included in the post-makefile section).
 .if defined(_AUTOTOOL_libtool)
 lthacks_CONFIGURE_ENV=		ac_cv_path_DOLT_BASH=
-lthacks_PRE_PATCH=		${CP} -pf ${LTMAIN} ${WRKDIR}/gnome-ltmain.sh && \
-						${CP} -pf ${LIBTOOL} ${WRKDIR}/gnome-libtool && \
-						for file in ${LIBTOOLFILES}; do \
-							${REINPLACE_CMD} -e \
-								'/^ltmain=/!s|$$ac_aux_dir/ltmain\.sh|${LIBTOOLFLAGS} ${WRKDIR}/gnome-ltmain.sh|g; \
-								 /^LIBTOOL=/s|$$(top_builddir)/libtool|${WRKDIR}/gnome-libtool|g' \
-								${PATCH_WRKSRC}/$$file; \
-						done;
+lthacks_PRE_PATCH=	\
+	${CP} -pf ${LTMAIN} ${WRKDIR}/gnome-ltmain.sh && \
+	${CP} -pf ${LIBTOOL} ${WRKDIR}/gnome-libtool && \
+	for file in ${LIBTOOLFILES}; do \
+		${REINPLACE_CMD} -e \
+		'/^ltmain=/!s|$$ac_aux_dir/ltmain\.sh|${LIBTOOLFLAGS} ${WRKDIR}/gnome-ltmain.sh|g; \
+		'/^LIBTOOL=/s|$$(top_builddir)/libtool|${WRKDIR}/gnome-libtool|g' \
+		${PATCH_WRKSRC}/$$file; \
+	done;
 .else
 .  if ${USE_GNOME:Mltverhack*}!="" || ${USE_GNOME:Mltasneededhack}!=""
 IGNORE=	cannot install: ${PORTNAME} uses the ltverhack and/or ltasneededhack GNOME components but does not use libtool
@@ -748,22 +749,24 @@ ltverhack_LIB_VERSION=	major=.`expr $$current - $$age`
 ltverhack_LIB_VERSION=	major=".${USE_GNOME:Mltverhack\:*:C/^[^:]+:([^:]+).*/\1/}"
 .endif
 ltverhack_PATCH_DEPENDS=${LIBTOOL_DEPENDS}
-ltverhack_PRE_PATCH=	for file in gnome-ltmain.sh gnome-libtool; do \
-							if [ -f ${WRKDIR}/$$file ]; then \
-								${REINPLACE_CMD} -e \
-									'/freebsd-elf)/,/;;/ s|major="\.$$current"|${ltverhack_LIB_VERSION}|; \
-									 /freebsd-elf)/,/;;/ s|versuffix="\.$$current"|versuffix="$$major"|' \
-									${WRKDIR}/$$file; \
-							fi; \
-						done
+ltverhack_PRE_PATCH=	\
+	for file in gnome-ltmain.sh gnome-libtool; do \
+		if [ -f ${WRKDIR}/$$file ]; then \
+			${REINPLACE_CMD} -e \
+			'/freebsd-elf)/,/;;/ s|major="\.$$current"|${ltverhack_LIB_VERSION}|; \
+			 /freebsd-elf)/,/;;/ s|versuffix="\.$$current"|versuffix="$$major"|' \
+			${WRKDIR}/$$file; \
+		fi; \
+	done
 
 ltasneededhack_PATCH_DEPENDS=${LIBTOOL_DEPENDS}
-ltasneededhack_PRE_PATCH=	if [ -f ${WRKDIR}/gnome-libtool ]; then \
-								${REINPLACE_CMD} -e \
-									'/^archive_cmds=/s/-shared/-shared -Wl,--as-needed/ ; \
-									/^archive_expsym_cmds=/s/-shared/-shared -Wl,--as-needed/' \
-									${WRKDIR}/gnome-libtool; \
-							fi
+ltasneededhack_PRE_PATCH=	\
+	if [ -f ${WRKDIR}/gnome-libtool ]; then \
+		${REINPLACE_CMD} -e \
+		'/^archive_cmds=/s/-shared/-shared -Wl,--as-needed/ ; \
+		 /^archive_expsym_cmds=/s/-shared/-shared -Wl,--as-needed/' \
+		${WRKDIR}/gnome-libtool; \
+	fi
 
 # Set USE_CSTD for all ports that depend on glib12
 .if defined(_USE_GNOME) && !empty(_USE_GNOME:Mglib12)
