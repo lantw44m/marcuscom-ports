@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom$
+#     $MCom: ports/trunk/Mk/bsd.gnome.mk 18880 2013-11-11 21:52:38Z kwm $
 #
 # Please view me with 4 column tabs!
 
@@ -734,7 +734,7 @@ lthacks_PRE_PATCH=	\
 	for file in ${LIBTOOLFILES}; do \
 		${REINPLACE_CMD} -e \
 		'/^ltmain=/!s|$$ac_aux_dir/ltmain\.sh|${LIBTOOLFLAGS} ${WRKDIR}/gnome-ltmain.sh|g; \
-		'/^LIBTOOL=/s|$$(top_builddir)/libtool|${WRKDIR}/gnome-libtool|g' \
+		/^LIBTOOL=/s|$$(top_builddir)/libtool|${WRKDIR}/gnome-libtool|g' \
 		${PATCH_WRKSRC}/$$file; \
 	done;
 .else
