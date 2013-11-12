@@ -734,12 +734,12 @@ lthacks_PRE_PATCH=	\
 	for file in ${LIBTOOLFILES}; do \
 		${REINPLACE_CMD} -e \
 		'/^ltmain=/!s|$$ac_aux_dir/ltmain\.sh|${LIBTOOLFLAGS} ${WRKDIR}/gnome-ltmain.sh|g; \
-		/^LIBTOOL=/s|$$(top_builddir)/libtool|${WRKDIR}/gnome-libtool|g' \
+		 /^LIBTOOL=/s|$$(top_builddir)/libtool|${WRKDIR}/gnome-libtool|g' \
 		${PATCH_WRKSRC}/$$file; \
 	done;
 .else
-.  if ${USE_GNOME:Mltverhack*}!="" || ${USE_GNOME:Mltasneededhack}!=""
-IGNORE=	cannot install: ${PORTNAME} uses the ltverhack and/or ltasneededhack GNOME components but does not use libtool
+.  if ${USE_GNOME:Mltasneededhack}!=""
+IGNORE=	cannot install: ${PORTNAME} uses the ltasneededhack GNOME component but does not use libtool
 .  endif
 .endif
 
@@ -748,14 +748,21 @@ ltverhack_LIB_VERSION=	major=.`expr $$current - $$age`
 .else
 ltverhack_LIB_VERSION=	major=".${USE_GNOME:Mltverhack\:*:C/^[^:]+:([^:]+).*/\1/}"
 .endif
+
+.if defined(USE_AUTOTOOLS) &&  ${USE_AUTOTOOLS:Mlibtool*}
 ltverhack_PATCH_DEPENDS=${LIBTOOL_DEPENDS}
+ltverhack_PATCH_FILES=	../gnome-ltmain.sh ../gnome-libtool
+.else
+ltverhack_PATCH_FILES=	ltmain.sh libtool
+.endif
+
 ltverhack_PRE_PATCH=	\
-	for file in gnome-ltmain.sh gnome-libtool; do \
-		if [ -f ${WRKDIR}/$$file ]; then \
+	for file in ${ltverhack_PATCH_FILES}; do \
+		if [ -f ${WRKSRC}/$$file ]; then \
 			${REINPLACE_CMD} -e \
 			'/freebsd-elf)/,/;;/ s|major="\.$$current"|${ltverhack_LIB_VERSION}|; \
 			 /freebsd-elf)/,/;;/ s|versuffix="\.$$current"|versuffix="$$major"|' \
-			${WRKDIR}/$$file; \
+			${WRKSRC}/$$file; \
 		fi; \
 	done
 
@@ -776,7 +783,9 @@ USE_CSTD=	gnu89
 # Then traverse through all components, check which of them
 # exist in ${_USE_GNOME} and set variables accordingly
 .ifdef _USE_GNOME
-. if ${USE_GNOME:Mltverhack*}!= "" || ${USE_GNOME:Mltasneededhack}!= ""
+
+. if ${USE_GNOME:Mltasneededhack}!= "" || (${USE_GNOME:Mltverhack*}!= "" && \
+	defined(USE_AUTOTOOLS) && ${USE_AUTOTOOLS:Mlibtool*})
 GNOME_PRE_PATCH+=	${lthacks_PRE_PATCH}
 CONFIGURE_ENV+=		${lthacks_CONFIGURE_ENV}
 . endif
