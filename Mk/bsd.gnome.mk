@@ -785,17 +785,20 @@ USE_CSTD=	gnu89
 .ifdef _USE_GNOME
 
 . if ${USE_GNOME:Mltasneededhack}!= ""
-GNOME_PRE_PATCH+=	${lthacks_PRE_PATCH}
-CONFIGURE_ENV+=		${lthacks_CONFIGURE_ENV}
+_GNOME_NEED_LIBTOOL=1
 . endif
 
 # this is splitted out from the above entry because fmake is trows a fit otherwise
 . if defined(USE_AUTOTOOLS) && ${USE_AUTOTOOLS:Mlibtool*}
 .  if ${USE_GNOME:Mltverhack*}!= ""
-GNOME_PRE_PATCH+=	${lthacks_PRE_PATCH}
-CONFIGURE_ENV+=		${lthacks_CONFIGURE_ENV}
+_GNOME_NEED_LIBTOOL=1
 .  endif
 . endif
+
+.if defined(_GNOME_NEED_LIBTOOL)
+GNOME_PRE_PATCH+=	${lthacks_PRE_PATCH}
+CONFIGURE_ENV+=		${lthacks_CONFIGURE_ENV}
+.endif
 
 . for component in ${_USE_GNOME:O:u}
 .  if defined(${component}_PATCH_DEPENDS)
