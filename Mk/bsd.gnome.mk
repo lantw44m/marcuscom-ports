@@ -784,10 +784,17 @@ USE_CSTD=	gnu89
 # exist in ${_USE_GNOME} and set variables accordingly
 .ifdef _USE_GNOME
 
-. if ${USE_GNOME:Mltasneededhack}!= "" || (${USE_GNOME:Mltverhack*}!= "" && \
-	defined(USE_AUTOTOOLS) && ${USE_AUTOTOOLS:Mlibtool*})
+. if ${USE_GNOME:Mltasneededhack}!= ""
 GNOME_PRE_PATCH+=	${lthacks_PRE_PATCH}
 CONFIGURE_ENV+=		${lthacks_CONFIGURE_ENV}
+. endif
+
+# this is splitted out from the above entry because fmake is trows a fit otherwise
+. if defined(USE_AUTOTOOLS) && ${USE_AUTOTOOLS:Mlibtool*}
+.  if ${USE_GNOME:Mltverhack*}!= ""
+GNOME_PRE_PATCH+=	${lthacks_PRE_PATCH}
+CONFIGURE_ENV+=		${lthacks_CONFIGURE_ENV}
+.  endif
 . endif
 
 . for component in ${_USE_GNOME:O:u}
