@@ -75,7 +75,8 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 SUB_FILES+=	gdm-launch-environment \
 		gdm-password \
-		gdm-autologin
+		gdm-autologin \
+		client.conf
 
 GDMDIR?=	${PREFIX}/etc/gdm
 PKGMESSAGE=	${WRKDIR}/pkg-message
@@ -137,9 +138,16 @@ post-install:
 	${MKDIR} -p ${STAGEDIR}${PREFIX}/etc/gdm/Sessions
 	${MKDIR} -p ${STAGEDIR}${PREFIX}/etc/dm/Sessions
 
+	${MKDIR} -p ${STAGEDIR}${PREFIX}/etc/gdm/home
+	${CHOWN} ${USER}:${GROUP} ${STAGEDIR}${PREFIX}/etc/gdm/home
+	${CHMOD} 1770 ${STAGEDIR}${PREFIX}/etc/gdm/home
+	${MKDIR} -p ${STAGEDIR}${PREFIX}/etc/gdm/home/.pulse/
+
 	${INSTALL_DATA} ${WRKDIR}/gdm-autologin ${STAGEDIR}${PREFIX}/etc/pam.d/gdm-autologin
 	${INSTALL_DATA} ${WRKDIR}/gdm-launch-environment ${STAGEDIR}${PREFIX}/etc/pam.d/gdm-launch-environment
 	${INSTALL_DATA} ${WRKDIR}/gdm-password ${STAGEDIR}${PREFIX}/etc/pam.d/gdm-password
+
+	${INSTALL_DATA} ${WRKDIR}/client.conf ${STAGEDIR}${PREFIX}/etc/gdm/home/.pulse/
 
 	@${SED} -e 's|%%PREFIX%%|${PREFIX}|g' < ${PKGDIR}/pkg-message \
 		| /usr/bin/fmt 75 79 > ${PKGMESSAGE}

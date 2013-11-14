@@ -5,7 +5,6 @@ etc/dconf/db/gdm.d/00-upstream-settings
 etc/dconf/db/gdm.d/locks/00-upstream-settings-locks
 etc/dconf/profile/gdm
 @unexec /bin/rm -f %D/etc/dconf/db/gdm
-@unexec /bin/rm -f %D/etc/dconf/db/gdm.d
 etc/gdm/Init/Default
 etc/gdm/PostLogin/Default.sample
 etc/gdm/PostSession/Default
@@ -14,6 +13,7 @@ etc/gdm/Xsession
 @unexec if cmp -s %D/etc/gdm/custom.conf %D/etc/gdm/custom.conf.default; then rm -f %D/etc/gdm/custom.conf; fi
 etc/gdm/custom.conf.default
 @exec [ -f %B/custom.conf ] || cp %B/%f %B/custom.conf
+etc/gdm/home/.pulse/client.conf
 etc/pam.d/gdm-autologin
 etc/pam.d/gdm-launch-environment
 etc/pam.d/gdm-password
@@ -221,12 +221,9 @@ share/pixmaps/nobody.png
 share/pixmaps/nohost.png
 @exec mkdir -p %D/share/xsessions
 @exec dconf update
-@unexec /bin/rm -f %D/etc/dconf/profile/gdm
 @unexec dconf update
-@cwd /
-@dirrmtry var/run/gdm
-@dirrmtry var/log/gdm
-@cwd
+@unexec /bin/rm -f /var/run/gdm/
+@unexec /bin/rm -f /var/log/gdm/
 @dirrm /var/gdm
 @dirrm /var/cache/gdm
 @dirrmtry share/xsessions
