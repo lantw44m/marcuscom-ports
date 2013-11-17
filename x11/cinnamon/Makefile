@@ -22,9 +22,11 @@ LIB_DEPENDS=	libstartup-notification-1.so:${PORTSDIR}/x11/startup-notification \
 		libcroco-0.6.so:${PORTSDIR}/textproc/libcroco \
 		libdbus-glib-1.so:${PORTSDIR}/devel/dbus-glib \
 		libclutter-glx-1.0.so:${PORTSDIR}/graphics/clutter \
-		libgjs.so:${PORTSDIR}/lang/gjs
+		libgjs.so:${PORTSDIR}/lang/gjs \
+		libaccountsservice.so:${PORTSDIR}/sysutils/accountsservice
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/dbus-python.pc:${PORTSDIR}/devel/py-dbus \
 		${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss \
+		gnome-themes-standard>=3.0.0:${PORTSDIR}/x11-themes/gnome-themes-standard \
 		cinnamon-control-center:${PORTSDIR}/sysutils/cinnamon-control-center \
 		nemo:${PORTSDIR}/x11-fm/nemo \
 		${PYTHON_SITELIBDIR}/PIL/__init__.py:${PORTSDIR}/graphics/py-imaging \
