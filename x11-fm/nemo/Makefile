@@ -51,10 +51,17 @@ post-patch:
 		s|@INTROSPECTION_GIRDIR@|$$(datadir)/gir-1.0|g' \
 		${WRKSRC}/libnemo-extension/Makefile.am
 
+	@${REINPLACE_CMD} -e 's|x-gnome-saved-search|x-nemo-saved-search|g' \
+		${WRKSRC}/data/nemo.xml.in \
+		${WRKSRC}/libnemo-private/nemo-file-utilities.h
+
 	@${FIND} ${WRKSRC} -name \* | ${XARGS} ${EGREP} -l "#!.*\/usr\/bin\/python" | \
-		${XARGS} ${REINPLACE_CMD} -e "s|#!.*python.*|#!/usr/bin/env python|g"
+		${XARGS} ${REINPLACE_CMD} -I "" -e "s|#!.*python.*|#!/usr/bin/env python|g"
 
 pre-configure:
 	cd ${WRKSRC} && NOCONFIGURE=yes ${SH} ./autogen.sh
+
+post-install:
+	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libnemo-extension.so.5 
 
 .include <bsd.port.mk>

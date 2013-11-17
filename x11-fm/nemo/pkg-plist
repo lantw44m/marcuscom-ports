@@ -97,10 +97,9 @@ share/locale/vi/LC_MESSAGES/nemo.mo
 share/locale/zh_CN/LC_MESSAGES/nemo.mo
 share/locale/zh_TW/LC_MESSAGES/nemo.mo
 share/mime/application/nemo-action.xml
-share/mime/application/x-gnome-saved-search.xml
+share/mime/application/x-nemo-saved-search.xml
 share/mime/packages/nemo.xml
 %%DATADIR%%/actions/myaction.py
-%%DATADIR%%/actions/myaction.py.bak
 %%DATADIR%%/actions/sample.nemo_action
 %%DATADIR%%/icons/hicolor/16x16/emblems/emblem-note.png
 %%DATADIR%%/icons/hicolor/24x24/emblems/emblem-note.png
