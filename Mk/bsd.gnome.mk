@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom$
+#     $MCom: ports/trunk/Mk/bsd.gnome.mk 18899 2013-11-18 18:34:00Z kwm $
 #
 # Please view me with 4 column tabs!
 
@@ -795,10 +795,10 @@ _GNOME_NEED_LIBTOOL=1
 .  endif
 . endif
 
-.if defined(_GNOME_NEED_LIBTOOL)
+. if defined(_GNOME_NEED_LIBTOOL)
 GNOME_PRE_PATCH+=	${lthacks_PRE_PATCH}
 CONFIGURE_ENV+=		${lthacks_CONFIGURE_ENV}
-.endif
+. endif
 
 . for component in ${_USE_GNOME:O:u}
 .  if defined(${component}_PATCH_DEPENDS)
