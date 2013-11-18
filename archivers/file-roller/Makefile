@@ -1,8 +1,10 @@
 # Created by: Anders Nordby <anders@FreeBSD.org>
 # $FreeBSD$
+#   $MCom$
 
 PORTNAME=	file-roller
 PORTVERSION=	3.6.2
+PORTEPOCH=	1
 CATEGORIES=	archivers gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
