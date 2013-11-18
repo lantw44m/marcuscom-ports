@@ -1,9 +1,9 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD$
-#   $MCom: ports/trunk/devel/libgtop/Makefile 18610 2013-06-30 16:33:05Z marcus $
+# $FreeBSD: head/devel/libgtop/Makefile 330901 2013-10-19 16:21:20Z kwm $
+#   $MCom$
 
 PORTNAME=	libgtop
-PORTVERSION=	2.28.4
+PORTVERSION=	2.28.5
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -11,15 +11,14 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME 2 top library
 
-NO_STAGE=	yes
 USE_XZ=		yes
 USE_PERL5=	build
 USE_XORG=	xau
 USES=		gettext gmake pathfix perl5 pkgconfig
-USE_GNOME=	gnomeprefix glib20 ltverhack intlhack
+USE_GNOME=	gnomeprefix glib20 ltverhack intlhack introspection:build
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
-CPPFLAGS+=	-I${LOCALBASE}/include -DHAVE_NET_IF_VAR_H
+CPPFLAGS+=	-I${LOCALBASE}/include -DHAVE_NET_IF_VAR_H -D_WANT_IFADDR
 LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--disable-introspection
 
@@ -31,8 +30,6 @@ post-configure:
 	@${FIND} ${WRKSRC} -type f | ${XARGS} ${TOUCH} -f
 
 post-install:
-	@${CHGRP} kmem ${PREFIX}/bin/libgtop_server2
-	@${CHMOD} 2555 ${PREFIX}/bin/libgtop_server2
-	@${CAT} ${PKGMESSAGE}
+	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libgtop-2.0.so.7
 
 .include <bsd.port.mk>
