@@ -753,7 +753,7 @@ ltverhack_LIB_VERSION=	major=".${USE_GNOME:Mltverhack\:*:C/^[^:]+:([^:]+).*/\1/}
 ltverhack_PATCH_DEPENDS=${LIBTOOL_DEPENDS}
 ltverhack_PATCH_FILES=	../gnome-ltmain.sh ../gnome-libtool
 .else
-ltverhack_PATCH_FILES=	ltmain.sh libtool
+ltverhack_PATCH_FILES?=	ltmain.sh libtool
 .endif
 
 ltverhack_PRE_PATCH=	\
