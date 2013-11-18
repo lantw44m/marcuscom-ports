@@ -3,7 +3,7 @@
 #   $MCom$
 
 PORTNAME=	glibmm
-PORTVERSION=	2.36.2
+PORTVERSION=	2.38.1
 PORTREVISION?=	0
 PORTEPOCH=	1
 CATEGORIES=	devel
@@ -14,7 +14,6 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	C++ interfaces for glib2
 
 USE_XZ=		yes
-NO_STAGE=	yes
 
 PLIST_SUB=	VERSION="2.4" API_VERSION="2.4"
 
@@ -24,14 +23,18 @@ BUILD_DEPENDS=	gm4:${PORTSDIR}/devel/m4
 
 USES=		gettext gmake pathfix perl5 pkgconfig
 USE_GNOME=	glib20 ltverhack libsigc++20
-USE_AUTOTOOLS=	libtool
+GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
-CONFIGURE_ARGS=	--enable-static --disable-documentation
+CONFIGURE_ARGS=	--disable-documentation
+ltverhack_PATCH_FILES=build/ltmain.sh
 
 post-patch:
 .for d in docs examples tests
 	@${REINPLACE_CMD} -e '/^SUBDIRS = /s/${d}//' ${WRKSRC}/Makefile.in
 .endfor
+
+post-install:
+	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/lib*-2.4.so.1
 
 .include <bsd.port.mk>
 
