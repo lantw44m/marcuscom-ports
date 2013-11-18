@@ -16,7 +16,7 @@ BUILD_DEPENDS=	itstool:${PORTSDIR}/textproc/itstool
 USE_XZ=		yes
 GNU_CONFIGURE=	yes
 MAKE_JOBS_UNSAFE=yes
-USES=		gmake pathfix
+USES=		gettext:build gmake pathfix
 USE_GNOME=	gnomeprefix gnomehier libxml2:build
 
 .include <bsd.port.mk>
