@@ -1,3 +1,6 @@
+sysutils/tracker-gnome/||%DATE%|removed, it is outdated
+sysutils/tracker-libtrackergtk||%DATE%|removed, it is outdated
+sysutils/tracker-client|sysutils/tracker|%DATE%|moved
 x11/gnome2||%DATE%|removed in flavor of GNOME 3
 x11/gnome2-lite||%DATE%|removed in flavor of GNOME 3
 accessibility/accerciser3|accessibility/accerciser|%DATE%|moved
