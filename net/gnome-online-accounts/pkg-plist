@@ -28,6 +28,7 @@ lib/libgoa-backend-1.0.so.0
 libdata/pkgconfig/goa-1.0.pc
 libdata/pkgconfig/goa-backend-1.0.pc
 libexec/goa-daemon
+man/man8/goa-daemon.8.gz
 share/dbus-1/services/org.gnome.OnlineAccounts.service
 share/gir-1.0/Goa-1.0.gir
 share/gnome-online-accounts/goawebview.css

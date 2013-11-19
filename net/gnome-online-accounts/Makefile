@@ -1,9 +1,9 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
 # $FreeBSD$
-#    $MCom: ports/trunk/net/gnome-online-accounts/Makefile 18594 2013-06-25 09:01:00Z kwm $
+#    $MCom$
 
 PORTNAME=	gnome-online-accounts
-PORTVERSION=	3.6.2
+PORTVERSION=	3.6.3
 CATEGORIES=	net
 MASTER_SITES=	GNOME
 
@@ -18,7 +18,6 @@ LIB_DEPENDS=	libwebkitgtk-3.0.so:${PORTSDIR}/www/webkit-gtk3 \
 		libsecret-1.so:${PORTSDIR}/security/libsecret \
 		librest-0.7.so:${PORTSDIR}/devel/librest
 
-NO_STAGE=	yes
 USE_XZ=		yes
 USE_GNOME=	gtk30 intlhack introspection:build libxslt:build
 USES=		gettext gmake pathfix pkgconfig
@@ -28,6 +27,7 @@ INSTALLS_ICONS=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-MAN8=		goa-daemon.8
+post-install:
+	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libgoa-*.so.0
 
 .include <bsd.port.mk>
