@@ -14,7 +14,7 @@ LIB_DEPENDS=	libpurple.so:${PORTSDIR}/net-im/libpurple \
 		libidn.so:${PORTSDIR}/dns/libidn \
 		libtelepathy-glib.so:${PORTSDIR}/net-im/telepathy-glib
 
-USES=		gmake pathfix
+USES=		gmake pathfix pkgconfig
 USE_GNOME=	libxslt:build
 CPPFLAGS+=	-I${LOCALBASE}/include
 GNU_CONFIGURE=	yes
