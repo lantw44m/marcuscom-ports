@@ -39,7 +39,7 @@ CONFIGURE_ARGS+=--with-cheese
 BUILD_DEPENDS+=	cheese>=3.0.1:${PORTSDIR}/multimedia/cheese
 LIB_DEPENDS+=	libcheese-gtk.so:${PORTSDIR}/multimedia/cheese
 .else
-BORKEN=		sorry cheese less build is currently borken
+BROKEN=		sorry cheese less build is currently borken
 CONFIGURE_ARGS+=--without-cheese
 .endif
 
