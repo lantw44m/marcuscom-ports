@@ -20,7 +20,8 @@ RUN_DEPENDS=	baobab>=3.0:${PORTSDIR}/deskutils/baobab \
 		gnome-search-tool>=3.0:${PORTSDIR}/deskutils/gnome-search-tool \
 		gnome-dictionary>=3.0:${PORTSDIR}/deskutils/gnome-dictionary \
 		gnome-system-log>=3.0:${PORTSDIR}/deskutils/gnome-system-log \
-		gnome-font-viewer>=3.0:${PORTSDIR}/deskutils/gnome-font-viewer
+		gnome-font-viewer>=3.0:${PORTSDIR}/deskutils/gnome-font-viewer \
+		gnome-system-monitor>=3.0:${PORTSDIR}/sysutils/gnome-system-monitor
 
 NO_BUILD=	yes
 NO_INSTALL=	yes
