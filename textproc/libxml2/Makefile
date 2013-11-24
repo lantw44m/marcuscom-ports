@@ -1,10 +1,10 @@
 # Created by: Yukihiro Nakai <Nakai@technologist.com>
 # $FreeBSD$
-#    $MCom: ports/trunk/textproc/libxml2/Makefile 18610 2013-06-30 16:33:05Z marcus $
+#    $MCom$
 
 PORTNAME=	libxml2
-PORTVERSION=	2.8.0
-PORTREVISION?=	2
+PORTVERSION=	2.9.1
+PORTREVISION?=	0
 CATEGORIES?=	textproc gnome
 MASTER_SITES=	ftp://xmlsoft.org/libxml2/ \
 		http://xmlsoft.org/sources/ \
@@ -14,22 +14,20 @@ DIST_SUBDIR=	gnome2
 MAINTAINER?=	gnome@FreeBSD.org
 COMMENT?=	XML parser library for GNOME
 
-NO_STAGE=	yes
-
 .if !defined(REFERENCE_PORT)
 
 GNU_CONFIGURE=	yes
-USES=		gmake iconv pathfix pkgconfig
+USES=		gmake iconv pathfix pkgconfig shebangfix
+USE_GNOME+=	ltverhack
 USE_LDCONFIG=	yes
-CONFIGURE_ARGS?=--with-iconv=${LOCALBASE} \
+CONFIGURE_ARGS?=--with-iconv=${ICONVBASE} \
 		--with-html-dir=${PREFIX}/share/doc \
 		--with-html-subdir=${PORTNAME} \
 		--with-lzma=/usr \
 		--without-python
+SHEBANG_FILES=	*.py */*.py */*/*.py
 
 .if !defined(MASTERDIR)
-MAN1=		xml2-config.1 xmllint.1 xmlcatalog.1
-MAN3=		libxml.3
 
 OPTIONS_DEFINE= SCHEMA THREADS MEM_DEBUG XMLLINT_HIST THREAD_ALLOC
 OPTIONS_DEFAULT=SCHEMA THREADS
@@ -72,13 +70,11 @@ post-patch:
 		's|/etc/xml/catalog|${LOCALBASE}/share/xml/catalog|g; \
 		 s|/etc/sgml/catalog|${LOCALBASE}/share/sgml/catalog|g' ${WRKSRC}/${f}
 .endfor
-# manual patch because WITH_FBSD10_FIX break the python bindings
-	${FIND} ${WRKSRC} -type f -name configure \
-		-exec ${SH} -c " \
-		mtime=\$$(date -r \$$(stat -f '%m' \$$0) '+%Y%m%d%H%M.%S'); \
-		${SED} -i '.batman' -e 's|freebsd1\*)|freebsd1.\*)|g' \
-		-e 's|freebsd\[123\]\*)|freebsd[123].*)|g' \$$0; \
-		touch -mt \$$mtime \$$0" {} \; || /usr/bin/true
+
+.if !defined(MASTERDIR)
+post-install:
+	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libxml2.so.2
+.endif
 
 .include <bsd.port.mk>
 
