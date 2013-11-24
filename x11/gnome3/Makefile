@@ -77,7 +77,7 @@ RUN_DEPENDS+=	empathy>=3.0.0:${PORTSDIR}/net-im/empathy \
 		gdm>=3.0.0:${PORTSDIR}/x11/gdm \
 		evolution>=3.0.0:${PORTSDIR}/mail/evolution \
 		cheese>=3.0.0:${PORTSDIR}/multimedia/cheese \
-		alacarte:${PORTSDIR}/deskutils/alacarte
+		alacarte>=3.0.0:${PORTSDIR}/deskutils/alacarte
 
 .if ${PORT_OPTIONS:MMAPI}
 #RUN_DEPENDS+=	evolution-mapi>=3.0.0:${PORTSDIR}/mail/evolution-mapi
