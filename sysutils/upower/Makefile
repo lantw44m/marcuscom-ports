@@ -34,8 +34,8 @@ CONFIGURE_ARGS+=--disable-man-pages
 .else
 BUILD_DEPENDS+=	${LOCALBASE}/share/sgml/docbook/4.1/dtd/catalog:${PORTSDIR}/textproc/docbook-410 \
     		${LOCALBASE}/share/xml/docbook/4.1.2/docbookx.dtd:${PORTSDIR}/textproc/docbook-sk \
-    		xsltproc:${PORTSDIR}/textproc/libxslt \
 		${LOCALBASE}/share/xsl/docbook/manpages/docbook.xsl:${PORTSDIR}/textproc/docbook-xsl
+USE_GNOME+=	libxslt:build
 MAN1=		upower.1
 MAN7=		UPower.7
 MAN8=		upowerd.8

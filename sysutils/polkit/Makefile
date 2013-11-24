@@ -36,9 +36,9 @@ OPTIONS_DEFINE=	MANPAGES
 
 .if ${PORT_OPTIONS:MMANPAGES}
 BUILD_DEPENDS+=	${LOCALBASE}/share/sgml/docbook/4.1/dtd/catalog:${PORTSDIR}/textproc/docbook-410 \
-    		xsltproc:${PORTSDIR}/textproc/libxslt \
 		${LOCALBASE}/share/xsl/docbook/manpages/docbook.xsl:${PORTSDIR}/textproc/docbook-xsl
 
+USE_GNOME+=	libxslt:build
 MAN1=		pkaction.1 pkcheck.1 pkexec.1 pkttyagent.1
 MAN8=		pklocalauthority.8 polkit.8 polkitd.8
 .else
