@@ -15,7 +15,8 @@ BUILD_DEPENDS=	libxklavier>=5.2:${PORTSDIR}/x11/libxklavier
 LIB_DEPENDS=	libxklavier.so:${PORTSDIR}/x11/libxklavier
 
 USE_XZ=		yes
-USE_GNOME=	gnomeprefix ltverhack intltool gtk30 introspection:build
+USE_GNOME=	gnomeprefix gtk30 intltool introspection:build \
+		ltverhack libxml2
 GNU_CONFIGURE=	yes
 USE_XORG=	ice
 INSTALLS_ICONS=	yes
