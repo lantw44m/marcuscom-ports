@@ -1,6 +1,6 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/trunk/graphics/cairo/Makefile 18924 2013-11-26 21:54:03Z kwm $
+#   $MCom$
 
 PORTNAME=	cairo
 PORTVERSION=	1.12.16
