@@ -1,6 +1,6 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/graphics/cairo/Makefile 18924 2013-11-26 21:54:03Z kwm $
 
 PORTNAME=	cairo
 PORTVERSION=	1.12.16
@@ -19,7 +19,7 @@ LIB_DEPENDS=	libfreetype.so:${PORTSDIR}/print/freetype2 \
 
 USE_XZ=		yes
 USES=		pathfix pkgconfig
-USE_XORG=	pixman
+USE_XORG=	pixman xext
 USE_GNOME=	ltverhack referencehack
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
