@@ -3,7 +3,7 @@
 #   $MCom: ports/trunk/x11-toolkits/gtk30/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	gtk
-PORTVERSION=	3.10.5
+PORTVERSION=	3.10.6
 PORTREVISION?=	0
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	GNOME
