@@ -1,6 +1,6 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/trunk/x11-toolkits/vte3/Makefile 18634 2013-07-26 10:42:35Z kwm $
+#   $MCom$
 
 PORTNAME?=	vte
 PORTVERSION=	0.34.7
@@ -15,7 +15,6 @@ MAINTAINER?=	gnome@FreeBSD.org
 COMMENT?=	Terminal widget with improved accessibility and I18N support
 
 USE_XZ=		yes
-NO_STAGE=	yes
 
 .if !defined(REFERENCE_PORT)
 VTE3_SLAVE?=	no
@@ -24,16 +23,16 @@ VTE3_SLAVE?=	no
 RUN_DEPENDS+=	${LOCALBASE}/libexec/gnome-pty-helper:${PORTSDIR}/x11-toolkits/gnome-pty-helper
 .endif
 
-LATEST_LINK?=	vte3
 USES=		bison gettext gmake pathfix pkgconfig
 USE_LDCONFIG=	yes
-USE_AUTOTOOLS=	libtool
+GNU_CONFIGURE=	yes
 USE_GNOME?=	gnomeprefix gtk30 ltverhack referencehack introspection:build
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS?=--disable-python \
 		--with-gtk=3.0 \
 		--enable-introspection \
+		--disable-static \
 		--disable-Bsymbolic \
 		--disable-gnome-pty-helper \
 		--disable-freetypetest
@@ -55,6 +54,9 @@ EXTRA_PATCHES+=		${FILESDIR}/extra-patch-gnome-pty-helper_gnome-utmp.c
 CONFIGURE_ARGS+=	--with-glX
 USE_GL=			yes
 .endif
+
+post-install:
+	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libvte2_90.so.9
 
 .include <bsd.port.mk>
 
