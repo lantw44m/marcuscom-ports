@@ -1,9 +1,10 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/x11-toolkits/gnome-pty-helper/Makefile 18942 2013-12-08 01:31:37Z kwm $
 
 PORTNAME=	gnome-pty-helper
 PORTREVISION=	0
+PKGNAMESUFFIX=	#empty
 
 COMMENT=	utmp/wtmp/lastlog helper program for the vte Terminal widget
 
