@@ -19,6 +19,5 @@ CONFIGURE_ARGS=	# empty
 PATCH_STRIP=	-p1
 EXTRA_PATCHES+=	${MASTERDIR}/files/patch-gnome-pty-helper_Makefile.in \
 		${MASTERDIR}/files/patch-gnome-pty-helper_gnome-pty-helper.c
-LATEST_LINK=	${PORTNAME}
 
 .include "${MASTERDIR}/Makefile"
