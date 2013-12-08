@@ -56,8 +56,10 @@ CONFIGURE_ARGS+=	--with-glX
 USE_GL=			yes
 .endif
 
+.if ${VTE3_SLAVE}!=yes
 post-install:
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libvte2_90.so.9
+.endif
 
 .include <bsd.port.mk>
 
