@@ -18,6 +18,7 @@ GNU_CONFIGURE=	yes
 USE_OPENSSL=	yes
 USES=		gmake pathfix pkgconfig
 USE_GNOME=	glib20 libxslt:build
+USE_PYTHON_BUILD=yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
