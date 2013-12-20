@@ -19,7 +19,7 @@ GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 USE_PYTHON=	yes
 USES=		gmake pathfix pkgconfig
-USE_GNOME=	glib20 libxslt:build ltverhack
+USE_GNOME=	glib20 libxslt:build ltverhack introspection:build
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
