@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: head/lang/vala-vapigen/Makefile 313633 2013-03-08 10:51:34Z kwm $
+# $FreeBSD$
 #   $MCom$
 
 PORTREVISION=	0
@@ -7,7 +7,7 @@ CATEGORIES=	devel gnome
 PKGNAMESUFFIX=	-vapigen
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	The vapigen program from vala
+COMMENT=	Vapigen program from vala
 
 MASTERDIR=	${.CURDIR}/../vala
 BUILD_WRKSRC=	${WRKSRC}/vapigen

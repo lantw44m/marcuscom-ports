@@ -1,5 +1,5 @@
 # Created by: Vanilla I. Shu <vanilla@FreeBSD.org>
-# $FreeBSD: head/devel/glib20/Makefile 326307 2013-09-04 18:06:07Z madpilot $
+# $FreeBSD$
 #   $MCom$
 
 PORTNAME=	glib

@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: head/accessibility/at-spi2-core/Makefile 313633 2013-03-08 10:51:34Z kwm $
+# $FreeBSD$
 #   $MCom$
 
 PORTNAME=	at-spi2-core
@@ -17,16 +17,17 @@ LIB_DEPENDS=	libdbus-1.so:${PORTSDIR}/devel/dbus
 
 PORTSCOUT=	limitw:1,even
 
-NO_STAGE=	yes
 USES=		gettext gmake pathfix pkgconfig
 USE_XZ=		yes
 USE_GNOME=	gnomehier glib20 intlhack introspection:build
 USE_XORG=	x11 xi xtst xext
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--enable-static \
-		--disable-xevie
+CONFIGURE_ARGS=	--disable-xevie
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
+
+post-install:
+	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libatspi.so.0
 
 .include <bsd.port.mk>

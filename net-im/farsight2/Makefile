@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: head/net-im/farsight2/Makefile 327756 2013-09-20 22:13:34Z bapt $
+# $FreeBSD$
 #    $MCom$
 
 PORTNAME=	farsight2

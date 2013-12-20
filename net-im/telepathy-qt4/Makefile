@@ -1,5 +1,5 @@
 # Created by: Alberto Villa <avilla@FreeBSD.org>
-# $FreeBSD: net-im/telepathy-qt4/Makefile 327756 2013-09-20 22:13:34Z bapt $
+# $FreeBSD$
 #    $MCom$
 
 PORTNAME=	telepathy-qt4

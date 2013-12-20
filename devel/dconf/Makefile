@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD: devel/dconf/Makefile 313956 2013-03-12 09:45:07Z kwm $
+# $FreeBSD$
 #   $MCom$
 
 PORTNAME?=	dconf
