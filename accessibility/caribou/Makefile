@@ -32,6 +32,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--enable-gtk2-module=no
 GLIB_SCHEMAS=	org.gnome.caribou.gschema.xml \
 		org.gnome.antler.gschema.xml
+python_CMD=	${PYTHON_CMD}
 
 post-install:
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libcaribou.so.0

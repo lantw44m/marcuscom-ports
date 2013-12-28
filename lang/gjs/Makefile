@@ -27,6 +27,8 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
 SHEBANG_FILES=	scripts/make-tests
+python_OLD_CMD=	/usr/bin/env python
+python_CMD=	${PYTHON_CMD}
 
 post-install:
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/lib*.so*
