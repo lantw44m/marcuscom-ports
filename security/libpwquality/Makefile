@@ -29,6 +29,7 @@ OPTIONS_DEFAULT=PYTHON
 
 .if ${PORT_OPTIONS:MPYTHON}
 USE_PYTHON=	yes
+BUILD_DEPENDS=	python:${PORTSDIR}/lang/python
 CONFIGURE_ARGS+=--enable-python-bindings
 PLIST_SUB+=	PYTHON=""
 .else
@@ -39,5 +40,9 @@ PLIST_SUB+=	PYTHON="@comment "
 post-patch:
 	@${REINPLACE_CMD} -e 's|python setup.py build|${PYTHON_VERSION} setup.py build|g' \
 		${WRKSRC}/python/Makefile.in
+
+post-install:
+	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libpwquality.so.1
+	@${STRIP_CMD} ${STAGEDIR}${PYTHON_SITELIBDIR}/pwquality.so
 
 .include <bsd.port.mk>
