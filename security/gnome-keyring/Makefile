@@ -18,7 +18,6 @@ RUN_DEPENDS=	${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_ro
 
 CONFLICTS=	gnome-keyring-3.[0-9]* gcr-3.[0-9]*
 
-NO_STAGE FUCK YEAH!
 USE_BZIP2=	yes
 USE_GNOME=	gnomeprefix gtk20 ltverhack intlhack
 USES=		gettext gmake pathfix pkgconfig
