@@ -33,6 +33,7 @@ net/vino3|net/vino|%DATE%|moved
 net-im/empathy3|net-im/empathy|%DATE%|moved
 net-im/folks04|net-im/folks|%DATE%|moved
 net-im/telepathy-farsight|net-im/telepathy-farstream|%DATE%|replaced
+security/gnome-keyring3|security/gnome-keyring|%DATE%|moved
 security/seahorse3|security/seahorse|%DATE%|moved
 security/seahorse-plugins||%DATE%|removed
 sysutils/brasero3|sysutils/brasero|%DATE%|moved
