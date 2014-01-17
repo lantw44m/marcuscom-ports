@@ -27,6 +27,7 @@ CATALOG_PORTS_SGML=	${PREFIX}/share/sgml/catalog.ports
 
 USE_XZ=		yes
 GNU_CONFIGURE=	yes
+USE_PYTHON=	yes
 USES=		gmake pathfix perl5 pkgconfig
 USE_GNOME=	gnomeprefix libxslt gnomedocutils
 INSTALLS_OMF=	yes
