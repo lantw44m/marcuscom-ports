@@ -3,6 +3,11 @@ sysutils/tracker-libtrackergtk||%DATE%|removed, it is outdated
 sysutils/tracker-client|sysutils/tracker|%DATE%|moved
 x11/gnome2||%DATE%|removed in flavor of GNOME 3
 x11/gnome2-lite||%DATE%|removed in flavor of GNOME 3
+x11/gnome2-fifth-toe||%DATE%|removed
+x11/gnome2-power-tools||%DATE%|removed
+editors/gnome2-office||%DATE%|removed
+misc/gnome2-reference||%DATE%|removed
+devel/gnome2-hacker-tools||%DATE%|removed
 accessibility/accerciser3|accessibility/accerciser|%DATE%|moved
 accessibility/mousetweaks3|accessibility/mousetweaks|%DATE%|moved
 accessibility/orca3|accessibility/orca|%DATE%|moved
