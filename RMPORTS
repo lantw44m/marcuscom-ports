@@ -1,3 +1,4 @@
+devel/bug-buddy||%DATE%|removed.
 sysutils/tracker-gnome/||%DATE%|removed, it is outdated
 sysutils/tracker-libtrackergtk||%DATE%|removed, it is outdated
 sysutils/tracker-client|sysutils/tracker|%DATE%|moved
