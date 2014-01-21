@@ -1,0 +1,32 @@
+bin/dropbox
+lib/nemo/extensions-3.0/libnemo-dropbox.a
+lib/nemo/extensions-3.0/libnemo-dropbox.la
+lib/nemo/extensions-3.0/libnemo-dropbox.so
+lib/nemo/extensions-3.0/libnemo-fileroller.a
+lib/nemo/extensions-3.0/libnemo-fileroller.la
+lib/nemo/extensions-3.0/libnemo-fileroller.so
+lib/nemo/extensions-3.0/libnemo-share.a
+lib/nemo/extensions-3.0/libnemo-share.la
+lib/nemo/extensions-3.0/libnemo-share.so
+man/man1/dropbox.1.gz
+share/applications/dropbox.desktop
+share/icons/hicolor/16x16/apps/dropbox.png
+share/icons/hicolor/22x22/apps/dropbox.png
+share/icons/hicolor/24x24/apps/dropbox.png
+share/icons/hicolor/256x256/apps/dropbox.png
+share/icons/hicolor/32x32/apps/dropbox.png
+share/icons/hicolor/48x48/apps/dropbox.png
+share/icons/hicolor/64x64/apps/dropbox.png
+share/nemo-dropbox/emblems/emblem-dropbox-syncing.icon
+share/nemo-dropbox/emblems/emblem-dropbox-syncing.png
+share/nemo-dropbox/emblems/emblem-dropbox-unsyncable.icon
+share/nemo-dropbox/emblems/emblem-dropbox-unsyncable.png
+share/nemo-dropbox/emblems/emblem-dropbox-uptodate.icon
+share/nemo-dropbox/emblems/emblem-dropbox-uptodate.png
+share/nemo-share/interfaces/share-dialog.ui
+@dirrm share/nemo-share/interfaces
+@dirrm share/nemo-dropbox/emblems
+@dirrm share/nemo-dropbox
+@dirrm share/nemo-share
+@dirrm lib/nemo/extensions-3.0
+@dirrm lib/nemo

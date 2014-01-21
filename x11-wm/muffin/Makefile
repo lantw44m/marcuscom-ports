@@ -3,7 +3,7 @@
 #    $MCom$
 
 PORTNAME=	muffin
-PORTVERSION=	1.8.2
+PORTVERSION=	2.0.5
 CATEGORIES=	x11-wm gnome
 MASTER_SITES=	http://github.com/linuxmint/${PORTNAME}/archive/${PORTVERSION}.tar.gz?dummy=/
 DIST_SUBDIR=	gnome3
@@ -17,12 +17,13 @@ BUILD_DEPENDS=	zenity3>=3.0.0:${PORTSDIR}/x11/zenity3 \
 LIB_DEPENDS=	libstartup-notification-1.so:${PORTSDIR}/x11/startup-notification \
 		libexecinfo.so:${PORTSDIR}/devel/libexecinfo \
 		libclutter-glx-1.0.so:${PORTSDIR}/graphics/clutter \
-		libcanberra-gtk3.so:${PORTSDIR}/audio/libcanberra-gtk3
+		libcanberra-gtk3.so:${PORTSDIR}/audio/libcanberra-gtk3 \
+		libcinnamon-desktop.so:${PORTSDIR}/x11/cinnamon-desktop
 RUN_DEPENDS=	zenity3>=3.0.0:${PORTSDIR}/x11/zenity3
 
-FETCH_ARGS=	-Fpr
 USE_XORG=	x11 xext xrandr xcomposite xcursor xinerama ice sm
-USE_PYTHON=	2.5+
+USE_PYTHON=	yes
+USE_CSTD=	gnu89
 USES=		gettext gmake pathfix pkgconfig
 USE_AUTOTOOLS=	libtool autoconf automake
 USE_GNOME=	gconf2 gnomedocutils gnomehier gnomeprefix gtk30 \
@@ -40,5 +41,9 @@ pre-configure:
 post-patch:
 	@${REINPLACE_CMD} -e 's|REQUIRED_AUTOMAKE_VERSION=1.10|REQUIRED_AUTOMAKE_VERSION=1.14|g' \
 		${WRKSRC}/autogen.sh
+
+post-install:
+	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/muffin/plugins/default.so
+	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libmuffin.so.0
 
 .include <bsd.port.mk>
