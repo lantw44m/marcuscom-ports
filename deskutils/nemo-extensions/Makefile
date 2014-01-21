@@ -76,7 +76,7 @@ do-build:
 
 do-install:
 .for i in ${NON_AUTO_EXTENSIONS} ${AUTO_EXTENSIONS}
-	cd ${WRKSRC}/${i} && ${GMAKE} install
+	cd ${WRKSRC}/${i} && DESTDIR=${STAGEDIR} ${GMAKE} install
 .endfor
 
 .include <bsd.port.mk>
