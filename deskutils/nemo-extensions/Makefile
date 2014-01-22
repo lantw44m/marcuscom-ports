@@ -1,6 +1,6 @@
 # Created by: Gustau Perez i Querol <gustau.perez@gmail.com>
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/trunk/deskutils/nemo-extensions/Makefile 18986 2014-01-21 17:08:01Z kwm $
 
 PORTNAME=	nemo-extensions
 PORTVERSION=	2.0.1
@@ -71,12 +71,12 @@ do-configure:
 
 do-build:
 .for i in ${NON_AUTO_EXTENSIONS} ${AUTO_EXTENSIONS}
-	cd ${WRKSRC}/${i} && ${GMAKE}
+	cd ${WRKSRC}/${i} && ${MAKE_ENV} ${MAKE_CMD} ${MAKE_FLAGS} ${MAKEFILE} ${_MAKE_JOBS} ${MAKE_ARGS} ${ALL_TARGET}
 .endfor
 
 do-install:
 .for i in ${NON_AUTO_EXTENSIONS} ${AUTO_EXTENSIONS}
-	cd ${WRKSRC}/${i} && DESTDIR=${STAGEDIR} ${GMAKE} install
+	cd ${WRKSRC}/${i} && ${MAKE_ENV} ${MAKE_CMD} ${MAKE_FLAGS} ${MAKEFILE} ${_MAKE_JOBS} ${MAKE_ARGS} ${INSTALL_TARGET}
 .endfor
 
 .include <bsd.port.mk>
