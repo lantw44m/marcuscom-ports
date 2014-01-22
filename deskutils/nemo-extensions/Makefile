@@ -1,6 +1,6 @@
 # Created by: Gustau Perez i Querol <gustau.perez@gmail.com>
 # $FreeBSD$
-#    $MCom: ports/trunk/deskutils/nemo-extensions/Makefile 18986 2014-01-21 17:08:01Z kwm $
+#    $MCom$
 
 PORTNAME=	nemo-extensions
 PORTVERSION=	2.0.1
