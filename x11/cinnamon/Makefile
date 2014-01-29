@@ -4,6 +4,7 @@
 
 PORTNAME=	cinnamon
 PORTVERSION=	2.0.14
+PORTREVISION=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	http://github.com/linuxmint/${PORTNAME}/archive/${PORTVERSION}.tar.gz?dummy=/
 DIST_SUBDIR=	gnome3
@@ -122,7 +123,7 @@ post-patch:
 		${WRKSRC}/files${PREFIX}/bin/cinnamon-settings \
 		${WRKSRC}/files${PREFIX}/bin/cinnamon-launcher
 
-	@${REINPLACE_CMD} -e 's|=/usr/bin/|=${PREFIX}/bin|g' \
+	@${REINPLACE_CMD} -e 's|=/usr/bin/|=${PREFIX}/bin/|g' \
 		${WRKSRC}/files${PREFIX}/share/xsessions/cinnamon2d.desktop \
 		${WRKSRC}/files${PREFIX}/share/xsessions/cinnamon.desktop \
 		${WRKSRC}/files${PREFIX}/share/applications/cinnamon2d.desktop
