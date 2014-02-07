@@ -51,6 +51,7 @@ GLIB_SCHEMAS=	org.gtk.Demo.gschema.xml \
 
 OPTIONS_DEFINE=	CUPS COLORD DEBUG
 OPTIONS_DEFAULT=CUPS COLORD
+OPTIONS_SUB=	yes
 COLORD_DESC=	Color profile support
 COLORD_LIB_DEPENDS=	libcolord.so:${PORTSDIR}/graphics/colord
 COLORD_CONFIGURE_ENABLE=colord
