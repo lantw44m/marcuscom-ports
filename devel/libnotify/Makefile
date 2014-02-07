@@ -14,14 +14,12 @@ LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 USE_XZ=		yes
-USE_GNOME=	intlhack glib20 gdkpixbuf2 ltverhack introspection
-USES=		gettext gmake pathfix pkgconfig
+USE_GNOME=	intlhack glib20 gdkpixbuf2 introspection
+USES=		gettext gmake libtool pathfix pkgconfig
 USE_LDCONFIG=	yes
-USE_AUTOTOOLS=	libtool
+GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
-
-post-install:
-	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libnotify.so.4
+INSTALL_TARGET=	install-strip
 
 .include <bsd.port.mk>

@@ -19,13 +19,11 @@ CONFLICTS=	libgdata-0.10.*
 USE_BZIP2=	yes
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
-USES=		gettext gmake pathfix pkgconfig
-USE_GNOME=	intltool ltverhack glib20 introspection:build
+USES=		gettext gmake libtool pathfix pkgconfig
+USE_GNOME=	intltool glib20 introspection:build
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
+INSTALL_TARGET=	install-strip
 CONFIGURE_ARGS+=--with-html-dir="${PREFIX}/share/doc"
-
-post-install:
-	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libgdata.so.7
 
 .include <bsd.port.mk>
