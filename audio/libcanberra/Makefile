@@ -20,6 +20,7 @@ USES=		gmake libtool pathfix pkgconfig
 USE_GNOME=	gnomeprefix gnomehier gtk20 gconf2
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
+USE_AUTOTOOLS=	libltdl
 CONFIGURE_ARGS=	--disable-lynx --disable-tdb --disable-alsa
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib

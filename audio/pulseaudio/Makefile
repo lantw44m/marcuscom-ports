@@ -31,6 +31,7 @@ USE_XORG=	x11 sm xtst ice
 USE_LDCONFIG=	yes
 USES=		gettext gmake libtool pathfix pkgconfig
 GNU_CONFIGURE=	yes
+USE_AUTOTOOLS=	libltdl
 MAKE_JOBS_UNSAFE=yes
 CONFIGURE_ENV=	PTHREAD_CFLAGS="${PTHREAD_CFLAGS}" \
 		PTHREAD_LIBS="${PTHREAD_LIBS}" \
