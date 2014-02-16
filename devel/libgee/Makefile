@@ -3,21 +3,21 @@
 #    $MCom$
 
 PORTNAME=	libgee
-PORTVERSION=	0.8.6
+PORTVERSION=	0.12.0
 CATEGORIES=	devel
 MASTER_SITES=	GNOME
 
 MAINTAINER=	kwm@FreeBSD.org
 COMMENT=	GObject collection library
 
+BUILD_DEPENDS=	valac:${PORTSDIR}/lang/vala
+
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-introspection=yes
 USE_XZ=		yes
-USES=		gmake pathfix pkgconfig
+USES=		gmake libtool pathfix pkgconfig
 USE_GNOME=	glib20 gnomehier introspection:build
 USE_LDCONFIG=	yes
-
-post-install:
-	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/lib*.so*
+INSTALL_TARGET=	install-strip
 
 .include <bsd.port.mk>
