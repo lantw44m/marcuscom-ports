@@ -17,7 +17,7 @@ LIB_DEPENDS=	libexecinfo.so:${PORTSDIR}/devel/libexecinfo \
 RUN_DEPENDS=	lsof:${PORTSDIR}/sysutils/lsof
 
 USE_XZ=		yes
-USES=		gettext gmake iconv pathfix shared-mime-info
+USES=		gettext gmake iconv pathfix pkgconfig shared-mime-info
 USE_GNOME=	glib20 intltool introspection
 USE_LDCONFIG=	yes
 USE_SQLITE=	3
