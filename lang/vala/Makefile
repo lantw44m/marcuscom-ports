@@ -3,7 +3,7 @@
 #   $MCom$
 
 PORTNAME=	vala
-PORTVERSION=	0.20.1
+PORTVERSION=	0.22.1
 CATEGORIES=	lang gnome
 MASTER_SITES=	GNOME
 
@@ -14,7 +14,7 @@ LICENSE=	LGPL21
 
 USES=		bison gettext gmake pathfix pkgconfig
 USE_XZ=		yes
-USE_GNOME=	glib20 gnomeprefix libxslt
+USE_GNOME=	glib20 gnomeprefix libxslt introspection:build
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
@@ -47,18 +47,19 @@ post-patch:
 .if defined(VALA_SLAVE)
 pre-build:
 	@cd ${WRKSRC} && ${GMAKE} version.h
-	@cd ${WRKSRC}/gobject-introspection && ${GMAKE} libgidl.la && \
-		${GMAKE} gen-introspect
+	@cd ${WRKSRC}/gobject-introspection && ${MAKE_CMD} libgidl.la && \
+		${MAKE_CMD} gen-introspect
+	@cd ${WRKSRC}/vapigen && ${MAKE_CMD} all
 
 post-install:
 	@cd ${WRKSRC}/gobject-introspection && DESTDIR=${STAGEDIR} ${GMAKE} install
-	@${INSTALL_MAN} ${WRKSRC}/doc/vapigen.1 ${WRKSRC}/doc/vala-gen-introspect.1 \
+	${INSTALL_MAN} ${WRKSRC}/doc/vapigen.1 ${WRKSRC}/doc/vala-gen-introspect.1 \
 		 ${STAGEDIR}${PREFIX}/man/man1/
 .else
 post-install:
 	${LN} -fs ${PREFIX}/libdata/pkgconfig/libvala-${VALA_VER}.pc \
 		${STAGEDIR}${PREFIX}/libdata/pkgconfig/vala-1.0.pc
-	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/lib*.so.*
+	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/lib*.so.*
 .endif
 
 .include <bsd.port.mk>
