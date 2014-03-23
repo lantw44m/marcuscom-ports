@@ -3,7 +3,7 @@
 #    $MCom$
 
 PORTNAME=	accountsservice
-PORTVERSION=	0.6.35
+PORTVERSION=	0.6.37
 CATEGORIES=	sysutils devel
 MASTER_SITES=	http://www.freedesktop.org/software/${PORTNAME}/
 
