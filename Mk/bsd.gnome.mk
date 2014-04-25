@@ -68,7 +68,7 @@ Gnome_Pre_Include=			bsd.gnome.mk
 #
 
 # non-version specific components
-_USE_GNOME_ALL= esound intlhack intltool introspection ltasneededhack lthack \
+_USE_GNOME_ALL= esound intlhack intltool introspection \
 		ltverhack gnomehack referencehack gnomehier gnomemimedata \
 		gnomeprefix
 
@@ -117,9 +117,6 @@ gnomehack_PRE_PATCH=	${FIND} ${WRKSRC} -name "${GNOME_MAKEFILEIN}*" -type f | ${
 
 referencehack_PRE_PATCH=	${FIND} ${WRKSRC} -name "Makefile.in" -type f | ${XARGS} ${REINPLACE_CMD} -e \
 				"s|test \"\$$\$$installfiles\" = '\$$(srcdir)/html/\*'|:|"
-
-lthack_PRE_PATCH=	${FIND} ${WRKSRC} -name "configure" -type f | ${XARGS} ${REINPLACE_CMD} -e \
-				'/^LIBTOOL_DEPS="$$ac_aux_dir\/ltmain.sh"$$/s|$$|; $$ac_aux_dir/ltconfig $$LIBTOOL_DEPS;|'
 
 GNOME_MTREE_FILE?=		${LOCALBASE}/etc/mtree/BSD.gnome.dist
 gnomehier_DETECT=	${GNOME_MTREE_FILE}
@@ -717,10 +714,6 @@ lthacks_PRE_PATCH=	\
 		 /^LIBTOOL=/s|$$(top_builddir)/libtool|${WRKDIR}/gnome-libtool|g' \
 		${PATCH_WRKSRC}/$$file; \
 	done;
-.else
-.  if ${USE_GNOME:Mltasneededhack}!=""
-IGNORE=	cannot install: ${PORTNAME} uses the ltasneededhack GNOME component but does not use libtool
-.  endif
 .endif
 
 .if ${USE_GNOME:Mltverhack\:*:C/^[^:]+:([^:]+).*/\1/}==""
@@ -749,15 +742,6 @@ ltverhack_PRE_PATCH=	\
 		fi; \
 	done
 
-ltasneededhack_PATCH_DEPENDS=${LIBTOOL_DEPENDS}
-ltasneededhack_PRE_PATCH=	\
-	if [ -f ${WRKDIR}/gnome-libtool ]; then \
-		${REINPLACE_CMD} -e \
-		'/^archive_cmds=/s/-shared/-shared -Wl,--as-needed/ ; \
-		 /^archive_expsym_cmds=/s/-shared/-shared -Wl,--as-needed/' \
-		${WRKDIR}/gnome-libtool; \
-	fi
-
 # Set USE_CSTD for all ports that depend on glib12
 .if defined(_USE_GNOME) && !empty(_USE_GNOME:Mglib12)
 USE_CSTD=	gnu89
@@ -766,10 +750,6 @@ USE_CSTD=	gnu89
 # Then traverse through all components, check which of them
 # exist in ${_USE_GNOME} and set variables accordingly
 .ifdef _USE_GNOME
-
-. if ${USE_GNOME:Mltasneededhack}!= ""
-_GNOME_NEED_LIBTOOL=1
-. endif
 
 # this is splitted out from the above entry because fmake trows a fit otherwise
 . if defined(USE_AUTOTOOLS) && ${USE_AUTOTOOLS:Mlibtool*}
