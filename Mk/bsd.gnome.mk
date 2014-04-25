@@ -91,7 +91,8 @@ _USE_GNOME_ALL+= atk atspi cairo desktopfileutils eel2 gal2 \
 # GNOME 3 components
 _USE_GNOME_ALL+=dconf evolutiondataserver3 gnomecontrolcenter3 gnomedesktop3 \
 		gnomemenus3 gnomepanel3 gtk30 gtkhtml4 gtksourceview3 libgda5 \
-		libgda5-ui libwnck3 metacity nautilus3 pygobject3 vte3
+		libgda5-ui libwnck3 metacity nautilus3 py3gobject3 \
+		pygobject3 vte3
 
 # C++ bindings
 _USE_GNOME_ALL+=atkmm cairomm gconfmm gconfmm26 glibmm gtkmm20 gtkmm24 \
@@ -314,7 +315,7 @@ introspection_BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspectio
 introspection_LIB_DEPENDS=	libgirepository-1.0.so:${PORTSDIR}/devel/gobject-introspection
 introspection_RUN_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 introspection_USE_GNOME_IMPL=	glib20 gnomehier
-introspection_MAKE_ENV=		GI_SCANNER_DISABLE_CACHE=1
+introspection_MAKE_ENV=		GI_SCANNER_DISABLE_CACHE=1 XDG_CACHE_HOME=${WRKDIR}
 
 gconf2_LIB_DEPENDS=	libgconf-2.so:${PORTSDIR}/devel/gconf2
 gconf2_DETECT=		${LOCALBASE}/libdata/pkgconfig/gconf-2.0.pc
@@ -365,7 +366,7 @@ libgtkhtml_USE_GNOME_IMPL=libxslt gnomevfs2
 
 gnomedesktop3_LIB_DEPENDS=	libgnome-desktop-3.so:${PORTSDIR}/x11/gnome-desktop
 gnomedesktop3_DETECT=		${LOCALBASE}/libdata/pkgconfig/gnome-desktop-3.0.pc
-gnomedesktop3_USE_GNOME_IMPL=	gnomedocutils gtk30
+gnomedesktop3_USE_GNOME_IMPL=	gtk30
 
 gnomedesktopsharp20_DETECT=		${LOCALBASE}/libdata/pkgconfig/gnome-desktop-sharp-2.0.pc
 gnomedesktopsharp20_BUILD_DEPENDS=	${gnomedesktopsharp20_DETECT}:${PORTSDIR}/x11-toolkits/gnome-desktop-sharp20
@@ -422,7 +423,7 @@ gal2_USE_GNOME_IMPL=gnomeui libgnomeprintui
 gnomecontrolcenter3_DETECT=	${LOCALBASE}/libdata/pkgconfig/gnome-keybindings.pc
 gnomecontrolcenter3_BUILD_DEPENDS=	${gnomecontrolcenter3_DETECT}:${PORTSDIR}/sysutils/gnome-control-center
 gnomecontrolcenter3_RUN_DEPENDS=	${gnomecontrolcenter3_DETECT}:${PORTSDIR}/sysutils/gnome-control-center
-gnomecontrolcenter3_USE_GNOME_IMPL=gnomemenus3 libgnomekbd gnomedesktop3 gconf2
+gnomecontrolcenter3_USE_GNOME_IMPL=	gnomedesktop3
 gnomecontrolcenter3_GNOME_DESKTOP_VERSION=3
 
 libgda4_LIB_DEPENDS=	libgda-4.0.so:${PORTSDIR}/databases/libgda4
@@ -462,9 +463,14 @@ pygobject_BUILD_DEPENDS=	pygobject-codegen-2.0:${PORTSDIR}/devel/py-gobject
 pygobject_RUN_DEPENDS=		pygobject-codegen-2.0:${PORTSDIR}/devel/py-gobject
 pygobject_USE_GNOME_IMPL=	glib20
 
-pygobject3_DETECT=		${LOCALBASE}/libdata/pkgconfig/pygobject-3.0.pc
-pygobject3_BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/pygobject-3.0.pc:${PORTSDIR}/devel/py-gobject3
-pygobject3_RUN_DEPENDS=		${LOCALBASE}/libdata/pkgconfig/pygobject-3.0.pc:${PORTSDIR}/devel/py-gobject3
+py3gobject3_DETECT=		${LOCALBASE}/share/py3gobject3/.keep
+py3gobject3_BUILD_DEPENDS=	py3?-gobject3>=0:${PORTSDIR}/devel/py3-gobject3
+py3gobject3_RUN_DEPENDS=	py3?-gobject3>=0:${PORTSDIR}/devel/py3-gobject3
+py3gobject3_USE_GNOME_IMPL=	glib20
+
+pygobject3_DETECT=		${LOCALBASE}/share/pygobject3/.keep
+pygobject3_BUILD_DEPENDS=	py2?-gobject3>=0:${PORTSDIR}/devel/py-gobject3
+pygobject3_RUN_DEPENDS=		py2?-gobject3>=0:${PORTSDIR}/devel/py-gobject3
 pygobject3_USE_GNOME_IMPL=	glib20
 
 pygtk2_DETECT=		${LOCALBASE}/libdata/pkgconfig/pygtk-2.0.pc
@@ -499,9 +505,9 @@ gnomespeech_LIB_DEPENDS=libgnomespeech.so:${PORTSDIR}/accessibility/gnome-speech
 gnomespeech_DETECT=	${LOCALBASE}/libdata/pkgconfig/gnome-speech-1.0.pc
 gnomespeech_USE_GNOME_IMPL=libbonobo
 
-evolutiondataserver3_LIB_DEPENDS=	libedataserverui-3.0.so:${PORTSDIR}/databases/evolution-data-server
+evolutiondataserver3_LIB_DEPENDS=	libedataserver-1.2.so.18:${PORTSDIR}/databases/evolution-data-server
 evolutiondataserver3_DETECT=		${LOCALBASE}/libdata/pkgconfig/libedataserverui-3.0.pc
-evolutiondataserver3_USE_GNOME_IMPL=	gconf2 libxml2 gtk30
+evolutiondataserver3_USE_GNOME_IMPL=	libxml2 gtk30
 evolutiondataserver3_GNOME_DESKTOP_VERSION=3
 
 desktopfileutils_BUILD_DEPENDS=update-desktop-database:${PORTSDIR}/devel/desktop-file-utils

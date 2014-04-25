@@ -3,7 +3,7 @@
 #    $MCom$
 
 PORTNAME=	telepathy-farstream
-PORTVERSION=	0.6.0
+PORTVERSION=	0.6.1
 CATEGORIES=	net-im
 MASTER_SITES=	http://telepathy.freedesktop.org/releases/${PORTNAME}/
 

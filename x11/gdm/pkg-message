@@ -19,4 +19,4 @@ unlocked if:
 	....
 	session		optional	${LOCALBASE}/lib/pam_gnome_keyring.so auto_start
 
-It is recommended to put thouse directives at least after the system directives.
+It is recommended to put those directives after the system directives.

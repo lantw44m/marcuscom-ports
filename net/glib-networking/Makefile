@@ -3,7 +3,7 @@
 #   $MCom$
 
 PORTNAME=	glib-networking
-PORTVERSION=	2.38.2
+PORTVERSION=	2.40.1
 CATEGORIES=	net
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -20,10 +20,9 @@ LIB_DEPENDS=	libgnutls.so:${PORTSDIR}/security/gnutls \
 RUN_DEPENDS=	${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss \
 		gsettings-desktop-schemas>=0:${PORTSDIR}/devel/gsettings-desktop-schemas
 
-USE_XZ=		yes
-GNU_CONFIGURE=	yes
+USES=		gettext gmake pathfix pkgconfig tar:xz
 USE_GNOME=	glib20 intltool
-USES=		gettext gmake pathfix pkgconfig
+GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-ca-certificates=${LOCALBASE}/share/certs/ca-root-nss.crt
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib

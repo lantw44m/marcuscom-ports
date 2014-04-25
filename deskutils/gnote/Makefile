@@ -1,8 +1,9 @@
+# Created by: Gustau Perez i Querol <gustau.perez@gmail.com>
 # $FreeBSD$
-#   $MCom: ports/trunk/deskutils/gnote/Makefile 18610 2013-06-30 16:33:05Z marcus $
+#   $MCom: ports-experimental/trunk/deskutils/gnote/Makefile 19343 2014-03-26 06:57:08Z gusi $
 
 PORTNAME=	gnote
-PORTVERSION=	3.10.1
+PORTVERSION=	3.12.0
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
 
@@ -14,16 +15,16 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 BUILD_DEPENDS=	itstool:${PORTSDIR}/textproc/itstool
 LIB_DEPENDS=	libpcre.so:${PORTSDIR}/devel/pcre \
+		libgtkspell3-3.so:${PORTSDIR}/textproc/gtkspell3 \
 		libboost_filesystem.so:${PORTSDIR}/devel/boost-libs \
 		libsecret-1.so:${PORTSDIR}/security/libsecret \
 		libuuid.so:${PORTSDIR}/misc/e2fsprogs-libuuid
 
-USE_XZ=		yes
-USE_GNOME=	gnomeprefix gtk30 intltool libxml2 libxslt \
-		ltverhack gnomedocutils gtkmm30
-USES=		desktop-file-utils gettext gmake pathfix pkgconfig
+USE_GNOME=	gnomeprefix gtk30 gtkmm30 intltool \
+		libxml2 libxslt
+USES=		desktop-file-utils gettext gmake libtool \
+		pathfix pkgconfig tar:xz
 GLIB_SCHEMAS=	org.gnome.gnote.gschema.xml
-USE_AUTOTOOLS=	libtool
 INSTALLS_ICONS=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
@@ -42,7 +43,7 @@ post-install:
 	@${INSTALL_DATA} ${WRKSRC}/${i} ${STAGEDIR}${DOCSDIR}
 .endfor
 .endif
-	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libgnote-${PORTVERSION:R}.so.0
+	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libgnote-3.12.so.0.0.0
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/gnote/addins/${PORTVERSION}/*.so
 
 .include <bsd.port.mk>

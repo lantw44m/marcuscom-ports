@@ -2,12 +2,12 @@
 # $FreeBSD$
 #   $MCom$
 
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	devel gnome
 PKGNAMESUFFIX=	-gnome
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	GNOME wrapper for libsoup
+COMMENT=	A GNOME wrapper for libsoup
 
 MASTERDIR=	${.CURDIR}/../libsoup
 DESCR=		${.CURDIR}/pkg-descr

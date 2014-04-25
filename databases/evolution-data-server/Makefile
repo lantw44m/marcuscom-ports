@@ -3,32 +3,31 @@
 #   $MCom$
 
 PORTNAME=	evolution-data-server
-PORTVERSION=	3.6.4
-PORTREVISION=	1
+PORTVERSION=	3.12.1
 CATEGORIES=	databases gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	The data backends for the Evolution integrated mail/PIM suite
+COMMENT=	Data backends for the Evolution integrated mail/PIM suite
 
 LICENSE=	LGPL20
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-BUILD_DEPENDS=	gcr>=3.4.1:${PORTSDIR}/security/gcr
+BUILD_DEPENDS=	gcr>=3.11:${PORTSDIR}/security/gcr \
+		vapigen:${PORTSDIR}/lang/vala-vapigen
 LIB_DEPENDS=	libsoup-gnome-2.4.so:${PORTSDIR}/devel/libsoup-gnome \
 		liboauth.so:${PORTSDIR}/net/liboauth \
 		libgoa-1.0.so:${PORTSDIR}/net/gnome-online-accounts \
-		libgdata.so.13:${PORTSDIR}/devel/libgdata \
+		libgdata.so:${PORTSDIR}/devel/libgdata \
 		libical.so:${PORTSDIR}/devel/libical \
 		libnss3.so:${PORTSDIR}/security/nss \
 		libtasn1.so:${PORTSDIR}/security/libtasn1 \
 		libgnome-keyring.so:${PORTSDIR}/security/libgnome-keyring
 
-USE_XZ=		yes
-USES=		bison gettext gmake libtool pathfix pkgconfig
-USE_GNOME=	gnomeprefix intlhack gconf2 \
-		libxml2 gtk30 introspection:build
+USES=		bison gettext gmake libtool pathfix pkgconfig tar:xz
+USE_GNOME=	gnomeprefix gtk30 intlhack introspection:build \
+		libxml2
 USE_OPENLDAP=	yes
 USE_SQLITE=	yes
 GNU_CONFIGURE=	yes
@@ -36,6 +35,8 @@ USE_BDB=	5
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--enable-static \
 		--with-openldap=yes \
+		--disable-uoa \
+		--enable-vala-bindings \
 		--with-libdb=${LOCALBASE}
 CPPFLAGS+=	-I${LOCALBASE}/include -I${BDB_INCLUDE_DIR}
 LDFLAGS+=	-L${LOCALBASE}/lib

@@ -1,8 +1,9 @@
+# Created by: FreeBSD GNOME Team <gnome@freebsd.org>
 # $FreeBSD$
 #   $MCom$
 
 PORTNAME=	tali
-PORTVERSION=	3.8.0
+PORTVERSION=	3.12.1
 CATEGORIES=	games gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -12,10 +13,9 @@ COMMENT=	Gnome tali
 
 BUILD_DEPENDS=	itstool:${PORTSDIR}/textproc/itstool
 
-USE_XZ=		yes
-USES=		gettext gmake pathfix pkgconfig
-INSTALLS_ICONS=	yes
+USES=		gettext gmake pathfix pkgconfig tar:xz
 USE_GNOME=	gtk30 intlhack librsvg2 libxml2:build
+INSTALLS_ICONS=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--localstatedir=${PREFIX}/share
 CPPFLAGS+=	-I${LOCALBASE}/include

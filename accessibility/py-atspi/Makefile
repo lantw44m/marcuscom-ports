@@ -3,7 +3,8 @@
 #   $MCom$
 
 PORTNAME=	atspi
-PORTVERSION=	2.8.0
+PORTVERSION=	2.12.0
+PORTREVISION=	3
 CATEGORIES=	accessibility x11-toolkits python
 MASTER_SITES=	GNOME
 MASTER_SITE_SUBDIR=	sources/pyatspi/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -18,11 +19,10 @@ RUN_DEPENDS=	${LOCALBASE}/libexec/at-spi2-registryd:${PORTSDIR}/accessibility/at
 
 CONFLICTS=	at-spi-1.[0-9]*
 
-USE_XZ=		yes
-USES=		gettext gmake pathfix pkgconfig
+USES=		gettext gmake pathfix pkgconfig tar:xz
 USE_GNOME=	gnomehier intlhack pygobject3
 GNU_CONFIGURE=	yes
-USE_PYTHON=	yes
+USE_PYTHON=	2
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 

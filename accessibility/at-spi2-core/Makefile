@@ -3,7 +3,7 @@
 #   $MCom$
 
 PORTNAME=	at-spi2-core
-PORTVERSION=	2.8.0
+PORTVERSION=	2.12.0
 CATEGORIES=	accessibility x11-toolkits
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -17,9 +17,8 @@ LIB_DEPENDS=	libdbus-1.so:${PORTSDIR}/devel/dbus
 
 PORTSCOUT=	limitw:1,even
 
-USES=		gettext gmake pathfix pkgconfig
-USE_XZ=		yes
-USE_GNOME=	gnomehier glib20 intlhack introspection:build
+USES=		gettext gmake libtool pathfix pkgconfig tar:xz
+USE_GNOME=	glib20 gnomehier intlhack introspection:build
 USE_XORG=	x11 xi xtst xext
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes

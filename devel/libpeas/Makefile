@@ -3,7 +3,7 @@
 #   $MCom$
 
 PORTNAME=	libpeas
-PORTVERSION=	1.8.1
+PORTVERSION=	1.10.0
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -13,11 +13,10 @@ COMMENT=	Next evolution of the Gedit plugins engine
 
 BUILD_DEPENDS=	valac:${PORTSDIR}/lang/vala
 
-USE_XZ=		yes
-USE_PYTHON=	2
-USE_LDCONFIG=	yes
-USES=		gettext gmake libtool pathfix pkgconfig
+USES=		gettext gmake libtool pathfix pkgconfig tar:xz
 USE_GNOME=	gtk30 introspection:build
+USE_PYTHON=	3
+USE_LDCONFIG=	yes
 INSTALLS_ICONS=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
@@ -25,13 +24,9 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 INSTALL_TARGET=	install-strip
 CONFIGURE_ARGS+=--disable-glade-catalog
 
-OPTIONS_DEFINE=	PYTHON
-OPTIONS_DEFAULT=PYTHON GJS
-OPTIONS_MULTI=	JS
-OPTIONS_MULTI_JS=SEED GJS
-JS_DESC=JavaScript plugin support
+OPTIONS_DEFINE=	PYTHON SEED
+OPTIONS_DEFAULT=PYTHON SEED
 SEED_DESC=	JavaScript support based on webkit-gtk3
-GJS_DESC=	JavaScript support based on spidermonkey
 
 .include <bsd.port.options.mk>
 
@@ -45,22 +40,12 @@ PLIST_SUB+=	SEED="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MPYTHON}
-CONFIGURE_ARGS+=--enable-python2 --disable-python3
-USE_GNOME+=	pygobject3
+CONFIGURE_ARGS+=--disable-python2 --enable-python3
+USE_GNOME+=	py3gobject3
 PLIST_SUB+=	PYTHONS=""
 .else
 CONFIGURE_ARGS+=--disable-python2 --disable-python3
 PLIST_SUB+=	PYTHONS="@comment "
-.endif
-
-.if ${PORT_OPTIONS:MGJS}
-CONFIGURE_ARGS+=--enable-gjs
-BUILD_DEPENDS+=	gjs>=1.32.0:${PORTSDIR}/lang/gjs
-LIB_DEPENDS+=	libgjs.so:${PORTSDIR}/lang/gjs
-PLIST_SUB+=	GJS=""
-.else
-CONFIGURE_ARGS+=--enable-gjs=no
-PLIST_SUB+=	GJS="@comment "
 .endif
 
 .include <bsd.port.mk>

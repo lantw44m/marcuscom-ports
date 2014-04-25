@@ -3,7 +3,7 @@
 #   $MCom$
 
 PORTNAME=	gnome-keyring
-PORTVERSION=	3.6.2
+PORTVERSION=	3.12.0
 CATEGORIES=	security gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -21,9 +21,8 @@ LIB_DEPENDS=	libgnome-keyring.so:${PORTSDIR}/security/libgnome-keyring \
 		libgcrypt.so:${PORTSDIR}/security/libgcrypt
 RUN_DEPENDS=	${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss
 
-USE_XZ=		yes
-USE_GNOME=	gnomeprefix gtk30 ltverhack intlhack
-USES=		gettext gmake pathfix pkgconfig
+USE_GNOME=	gnomeprefix gtk30 intlhack libxslt:build
+USES=		gettext gmake libtool pathfix pkgconfig tar:xz
 INSTALLS_ICONS=	yes
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
@@ -37,7 +36,6 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|make --version|${GMAKE} --version|g' \
 		${WRKSRC}/configure
 	@${REINPLACE_CMD} -e 's|gnome-keyring-module|gnome-keyring.module|g' \
-		${WRKSRC}/pkcs11/rpc-layer/Makefile.in \
 		${WRKSRC}/configure
 
 post-install:

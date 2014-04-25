@@ -1,8 +1,9 @@
+# Created by: gnome@freebsd.org
 # $FreeBSD$
 #   $MCom$
 
 PORTNAME=	gnome-icon-theme-symbolic
-PORTVERSION=	3.6.2
+PORTVERSION=	3.12.0
 CATEGORIES=	x11-themes gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -12,9 +13,8 @@ COMMENT=	GNOME Symbolic Icons
 
 BUILD_DEPENDS=	icon-naming-utils>=0.8.7:${PORTSDIR}/x11-themes/icon-naming-utils
 
-USE_XZ=		yes
 INSTALLS_ICONS=	yes
-USES=		gmake pathfix pkgconfig
+USES=		gmake pathfix pkgconfig tar:xz
 USE_GNOME=	gnomeprefix
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	ac_cv_path_GIT="" \

@@ -3,7 +3,7 @@
 #   $MCom$
 
 PORTNAME=	file-roller
-PORTVERSION=	3.6.2
+PORTVERSION=	3.12.1
 PORTEPOCH=	1
 CATEGORIES=	archivers gnome
 MASTER_SITES=	GNOME
@@ -16,13 +16,12 @@ BUILD_DEPENDS=	itstool:${PORTSDIR}/textproc/itstool
 RUN_DEPENDS=	${LOCALBASE}/bin/gtar:${PORTSDIR}/archivers/gtar \
     		${LOCALBASE}/bin/unzip:${PORTSDIR}/archivers/unzip
 
-USE_LDCONFIG=	yes
-USE_XZ=		yes
-USES=		desktop-file-utils gettext gmake pathfix pkgconfig
-INSTALLS_ICONS=	yes
-USE_GNOME=	gconf2 gnomeprefix gtk30 intlhack \
-		introspection:build
+USES=		desktop-file-utils gettext gmake pathfix \
+		pkgconfig tar:xz
+USE_GNOME=	gnomeprefix gtk30 intlhack introspection:build
 USE_XORG=	sm
+INSTALLS_ICONS=	yes
+USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib

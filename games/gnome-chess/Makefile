@@ -1,8 +1,9 @@
+# Created by: FreeBSD GNOME Team <gnome@freebsd.org>
 # $FreeBSD$
 #   $MCom$
 
 PORTNAME=	gnome-chess
-PORTVERSION=	3.10.1.1
+PORTVERSION=	3.12.1
 CATEGORIES=	games gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -13,12 +14,12 @@ COMMENT=	Gnome chess
 BUILD_DEPENDS=	vala:${PORTSDIR}/lang/vala \
 		itstool:${PORTSDIR}/textproc/itstool
 
-USE_XZ=		yes
-USES=		desktop-file-utils gettext gmake pathfix pkgconfig
+USES=		desktop-file-utils gettext gmake pathfix \
+		pkgconfig tar:xz
+USE_GNOME=	gtk30 intlhack librsvg2 libxml2:build
 INSTALLS_ICONS=	yes
 USE_XORG=	x11
 USE_GL=		gl glu
-USE_GNOME=	gtk30 intlhack librsvg2 libxml2:build
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
@@ -34,5 +35,10 @@ GNUCHESS_DESC=	Use gnuchess engine for computer player
 .if ${PORT_OPTIONS:MGNUCHESS}
 RUN_DEPENDS=	gnuchess:${PORTSDIR}/games/gnuchess
 .endif
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|HAVE_LINUX_PRCTL_H 1|HAVE_LINUX_PRCTL_H 0|g' \
+                ${WRKSRC}/configure
+	${RM} ${WRKSRC}/src/chess-engine.c
 
 .include <bsd.port.mk>

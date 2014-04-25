@@ -3,7 +3,7 @@
 #   $MCom$
 
 PORTNAME=	libnotify
-PORTVERSION=	0.7.5
+PORTVERSION=	0.7.6
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 
@@ -13,9 +13,8 @@ COMMENT=	Library for desktop notifications
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USE_XZ=		yes
+USES=		gettext gmake libtool pathfix pkgconfig tar:xz
 USE_GNOME=	intlhack glib20 gdkpixbuf2 introspection
-USES=		gettext gmake libtool pathfix pkgconfig
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include

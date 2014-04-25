@@ -3,7 +3,7 @@
 #   $MCom$
 
 PORTNAME=	pango
-PORTVERSION=	1.36.1
+PORTVERSION=	1.36.2
 PORTREVISION?=	0
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	GNOME
@@ -31,7 +31,9 @@ USE_GNOME=	cairo glib20 introspection:build referencehack
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-PLIST_SUB=	VERSION="1.8.0"
+VERSION=	1.8.0
+LIBVERSION=     0.3600.2
+PLIST_SUB+=     VERSION=${VERSION} LIBVERSION=${LIBVERSION}
 
 FONTSCALE=	${LOCALBASE}/lib/X11/fonts/TTF/luximb.ttf
 FONTENCOD=	${LOCALBASE}/lib/X11/fonts/encodings/encodings.dir
