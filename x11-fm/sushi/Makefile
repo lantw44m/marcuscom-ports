@@ -20,15 +20,13 @@ LIB_DEPENDS=	libgcr-3.so:${PORTSDIR}/security/gcr \
 		libevdocument3.so:${PORTSDIR}/graphics/evince
 RUN_DEPENDS=	nautilus:${PORTSDIR}/x11-fm/nautilus
 
-USES=		gettext gmake pathfix pkgconfig tar:xz
+USES=		gettext gmake libtool pathfix pkgconfig tar:xz
 INSTALLS_ICONS=	yes
 USE_GNOME=	gnomeprefix gtksourceview3 intlhack introspection:build
 USE_LDCONFIG=	yes
-USE_AUTOTOOLS=	libtool
+GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
-
-post-install:
-	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/sushi/libsushi-1.0.so
+INSTALL_TARGET=	install-strip
 
 .include <bsd.port.mk>

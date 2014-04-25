@@ -38,12 +38,12 @@ RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/dbus-python.pc:${PORTSDIR}/devel/py-
 
 WRKSRC=		${WRKDIR}/Cinnamon-${PORTVERSION}
 
-USES=		gettext gmake pathfix pkgconfig shebangfix
+USES=		gettext gmake libtool pathfix pkgconfig shebangfix
 USE_GNOME=	evolutiondataserver3 gconf2 gnomedesktop3 \
 		gnomeprefix gtk30 intlhack introspection:build
 # this happens before moving the file to ${PREFIX} (which then will be copied to ${STAGEDIR}${PREFIX})
 SHEBANG_FILES=	files/usr/bin/cinnamon2d
-USE_AUTOTOOLS=	libtool autoconf automake
+USE_AUTOTOOLS=	libtoolize autoconf automake
 USE_XORG=	x11 xfixes sm
 USE_GSTREAMER=	theora vp8 ogg
 INSTALLS_ICONS=	yes
@@ -54,6 +54,7 @@ CONFIGURE_ARGS+=--enable-compile-warnings=no \
 		--with-ca-certificates=${LOCALBASE}/share/certs/ca-root-nss.crt
 CPPFLAGS+=	-I${LOCALASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
+INSTALL_TARGET=	install-strip
 
 GLIB_SCHEMAS=	org.cinnamon.gschema.xml
 
@@ -149,7 +150,5 @@ pre-configure:
 
 post-install:
 	@${PYTHON_CMD} ${WRKSRC}/files/generate_desktop_files
-
-	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/cinnamon/libcinnamon.so
 
 .include <bsd.port.mk>

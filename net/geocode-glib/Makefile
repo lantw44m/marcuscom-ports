@@ -13,7 +13,7 @@ COMMENT=	Convenience library for the geocoding and reverse geocoding
 LIB_DEPENDS=	libjson-glib-1.0.so:${PORTSDIR}/devel/json-glib \
 		libsoup-2.4.so:${PORTSDIR}/devel/libsoup
 
-USES=		gettext gmake libtool pathfix pkgconfig tar:xz
+USES=		gettext gmake libtool:keepla pathfix pkgconfig tar:xz
 USE_GNOME=	evolutiondataserver3 gnomehier intlhack
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes

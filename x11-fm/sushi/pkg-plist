@@ -1,7 +1,5 @@
 bin/sushi
 lib/sushi/girepository-1.0/Sushi-1.0.typelib
-lib/sushi/libsushi-1.0.a
-lib/sushi/libsushi-1.0.la
 lib/sushi/libsushi-1.0.so
 libexec/sushi-start
 share/dbus-1/services/org.gnome.Sushi.service

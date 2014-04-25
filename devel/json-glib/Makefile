@@ -13,7 +13,7 @@ COMMENT=	JSON (RFC 4627) interface for Glib
 BUILD_DEPENDS=	${LOCALBASE}/share/gir-1.0/GLib-2.0.gir:${PORTSDIR}/devel/gobject-introspection
 RUN_DEPENDS=	${LOCALBASE}/share/gir-1.0/GLib-2.0.gir:${PORTSDIR}/devel/gobject-introspection
 
-USES=		gmake libtool pathfix pkgconfig tar:xz
+USES=		gmake libtool:keepla pathfix pkgconfig tar:xz
 USE_GNOME=	glib20 gnomeprefix introspection
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes

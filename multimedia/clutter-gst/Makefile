@@ -12,9 +12,9 @@ COMMENT=	Clutter GStreamer integration
 
 LIB_DEPENDS=	libclutter-1.0.so:${PORTSDIR}/graphics/clutter
 
-USES=		gmake pathfix pkgconfig tar:xz
-USE_GNOME=	introspection gnomehier gnomeprefix ltverhack
-USE_AUTOTOOLS=	libtool
+USES=		gmake libtool:keepla pathfix pkgconfig tar:xz
+USE_GNOME=	introspection gnomehier gnomeprefix
+GNU_CONFIGURE=	yes
 USE_GL=		gl
 USE_GSTREAMER1=	yes
 USE_XORG=	xp x11
@@ -23,9 +23,6 @@ MAKE_ENV=	XDG_CACHE_HOME=${WRKDIR}
 
 CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
 LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
-
-post-install:
-		${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/gstreamer-1.0/libgstclutter.so
-		${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libclutter-gst-2.0.so.0
+INSTALL_TARGET=	install-strip
 
 .include <bsd.port.mk>

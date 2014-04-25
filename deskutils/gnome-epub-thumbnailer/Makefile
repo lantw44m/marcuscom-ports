@@ -13,7 +13,7 @@ COMMENT=	Thumbnailer for EPub and MOBI books
 
 BUILD_DEPENDS=	gnome-autogen.sh:${PORTSDIR}/devel/gnome-common
 
-USES=		gettext gmake libtool pathfix pkgconfig
+USES=		gettext gmake libtool:keepla pathfix pkgconfig
 USE_GNOME=	gdkpixbuf2 gnomedesktop3 gnomeprefix gtk30 \
 		intlhack libxml2
 USE_AUTOTOOLS=	libtoolize autoconf automake

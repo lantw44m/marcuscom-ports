@@ -26,7 +26,7 @@ RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-co
 		${LOCALBASE}/libdata/pkgconfig/xkeyboard-config.pc:${PORTSDIR}/x11/xkeyboard-config \
 		${LOCALBASE}/libdata/pkgconfig/xkbfile.pc:${PORTSDIR}/x11/libxkbfile
 
-USES+=		bison gettext gmake libtool pathfix pkgconfig
+USES+=		bison gettext gmake libtool:keepla pathfix pkgconfig
 USE_GNOME=	gnomeprefix gtk30 intlhack introspection:build \
 		referencehack
 USE_XORG=	x11 xrandr xext

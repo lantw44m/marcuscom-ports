@@ -11,7 +11,7 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Extensible I/O abstraction for dealing with structured file formats
 
-USES=		gettext gmake libtool pathfix pkgconfig tar:xz
+USES=		gettext gmake libtool:keepla pathfix pkgconfig tar:xz
 USE_GNOME=	gdkpixbuf2 glib20 gnomeprefix intlhack introspection:build \
 		libxml2
 GNU_CONFIGURE=	yes

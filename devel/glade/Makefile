@@ -15,7 +15,7 @@ BUILD_DEPENDS=	itstool:${PORTSDIR}/textproc/itstool
 
 CONFLICTS=	glade3-3.*
 
-USES=		desktop-file-utils gettext gmake libtool \
+USES=		desktop-file-utils gettext gmake libtool:keepla \
 		pathfix pkgconfig tar:xz
 USE_GNOME=	gtk30 gnomeprefix gnomedocutils introspection:build
 INSTALLS_ICONS=	yes

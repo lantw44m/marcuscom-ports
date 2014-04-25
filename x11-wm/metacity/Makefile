@@ -20,18 +20,15 @@ LIB_DEPENDS=	libstartup-notification-1.so:${PORTSDIR}/x11/startup-notification \
 RUN_DEPENDS=	zenity3>=3.0.0:${PORTSDIR}/x11/zenity3 \
 		gsettings-desktop-schemas>=3.3.0:${PORTSDIR}/devel/gsettings-desktop-schemas
 
-USE_XZ=		yes
 USE_XORG=	x11 xcomposite xdamage xrender xcursor xinerama xext xrandr
-USES=		gettext gmake pathfix pkgconfig
-USE_AUTOTOOLS=	libtool
-USE_GNOME=	gnomeprefix gtk20 intlhack ltverhack libxml2:build
+USES=		libtool:keepla gettext gmake pathfix pkgconfig tar:xz
+GNU_CONFIGURE=	yes
+USE_GNOME=	gnomeprefix gtk20 intlhack libxml2:build
 USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
+INSTALL_TARGET=	install-strip
 
 GLIB_SCHEMAS=	org.gnome.metacity.gschema.xml
-
-post-install:
-	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libmetacity-private.so.0
 
 .include <bsd.port.mk>

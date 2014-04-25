@@ -30,10 +30,10 @@ RUN_DEPENDS=	cinnamon-session:${PORTSDIR}/x11/cinnamon-session \
 
 USE_GNOME=	gnomehier gnomeprefix intlhack libgnomekbd \
 		libxslt:build
-USES=		gettext gmake pathfix pkgconfig tar:xz
+USES=		gettext libtool:keepla gmake pathfix pkgconfig tar:xz
 USE_XORG=	xxf86misc
 GNU_CONFIGURE=	yes
-USE_AUTOTOOLS=	libtool autoconf automake
+USE_AUTOTOOLS=	libtoolize autoconf automake
 PATHFIX_MAKEFILEIN=	Makefile.am
 INSTALLS_ICONS=	yes
 USE_LDCONFIG=	yes
@@ -43,6 +43,7 @@ CONFIGURE_ARGS=	--disable-gudev \
 		--with-gnome-distributor="FreeBSD GNOME Project"
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
+INSTALL_TARGET=	install-strip
 
 GLIB_SCHEMAS=	org.cinnamon.settings-daemon.enums.xml \
 		org.cinnamon.settings-daemon.peripherals.gschema.xml \
@@ -88,8 +89,5 @@ post-patch:
 
 pre-configure:
 	cd ${WRKSRC} && NOCONFIGURE=yes ${SH} ./autogen.sh
-
-post-install:
-	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/cinnamon-settings-daemon-3.0/lib*.so
 
 .include <bsd.port.mk>

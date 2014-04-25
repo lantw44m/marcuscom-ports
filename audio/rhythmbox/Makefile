@@ -26,7 +26,7 @@ LIB_DEPENDS=	libmusicbrainz5.so:${PORTSDIR}/audio/libmusicbrainz5 \
 		libsecret-1.so:${PORTSDIR}/security/libsecret \
 		libbrasero-media3.so:${PORTSDIR}/sysutils/brasero
 
-USES=		desktop-file-utils gettext gmake libtool pathfix \
+USES=		desktop-file-utils gettext gmake libtool:keepla pathfix \
 		pkgconfig tar:xz
 USE_GNOME=	intlhack gnomeprefix gtk30 introspection:build
 USE_XORG=	ice xproto

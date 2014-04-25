@@ -16,7 +16,8 @@ lib/girepository-1.0/Nemo-3.0.typelib
 lib/libnemo-extension.a
 lib/libnemo-extension.la
 lib/libnemo-extension.so
-lib/libnemo-extension.so.5
+lib/libnemo-extension.so.1
+lib/libnemo-extension.so.1.4.0
 libdata/pkgconfig/libnemo-extension.pc
 libexec/nemo-convert-metadata
 man/man1/nemo-connect-server.1.gz
@@ -85,6 +86,7 @@ share/polkit-1/actions/org.nemo.root.policy
 @dirrm %%DATADIR%%/icons
 @dirrm %%DATADIR%%/actions
 @dirrm %%DATADIR%%
+@dirrmtry share/mime/application
 @dirrmtry share/gtksourceview-3.0/language-specs
 @dirrmtry share/gtksourceview-3.0
 @dirrmtry share/gtksourceview-2.0/language-specs

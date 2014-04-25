@@ -22,16 +22,17 @@ LIB_DEPENDS=	libstartup-notification-1.so:${PORTSDIR}/x11/startup-notification \
 		libcinnamon-desktop.so:${PORTSDIR}/x11/cinnamon-desktop
 RUN_DEPENDS=	zenity3>=3.0.0:${PORTSDIR}/x11/zenity3
 
-USES=		gettext gmake pathfix pkgconfig
+USES=		gettext libtool:keepla gmake pathfix pkgconfig
 USE_GNOME=	gconf2 gnomedocutils gnomehier gnomeprefix gtk30 \
 		intlhack introspection:build
-USE_AUTOTOOLS=	libtool autoconf automake
+USE_AUTOTOOLS=	libtoolize autoconf automake
 USE_CSTD=	gnu89
 USE_XORG=	x11 xext xrandr xcomposite xcursor xinerama ice sm
 USE_PYTHON=	yes
 USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
+INSTALL_TARGET=	install-strip
 CONFIGURE_ENV=	LIBS="-lexecinfo"
 CONFIGURE_ARGS=	--enable-compile-warnings=maximum
 GLIB_SCHEMAS=	org.cinnamon.muffin.gschema.xml
@@ -42,9 +43,5 @@ pre-configure:
 post-patch:
 	@${REINPLACE_CMD} -e 's|REQUIRED_AUTOMAKE_VERSION=1.10|REQUIRED_AUTOMAKE_VERSION=1.14|g' \
 		${WRKSRC}/autogen.sh
-
-post-install:
-	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/muffin/plugins/default.so
-	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libmuffin.so.0
 
 .include <bsd.port.mk>

@@ -14,7 +14,7 @@ COMMENT=	Text widget that adds syntax highlighting to the GtkTextView widget
 
 .if !defined(REFERENCE_PORT)
 
-USES+=		gettext gmake libtool pathfix pkgconfig tar:xz
+USES+=		gettext gmake libtool:keepla pathfix pkgconfig tar:xz
 USE_GNOME=	gnomeprefix gtk30 intlhack introspection:build \
 		libxml2 ltverhack referencehack
 GNU_CONFIGURE=	yes

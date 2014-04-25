@@ -17,7 +17,7 @@ LIB_DEPENDS=	libsoup-2.4.so:${PORTSDIR}/devel/libsoup \
 		libical.so:${PORTSDIR}/devel/libical
 RUN_DEPENDS=	evolution>=3.0.0:${PORTSDIR}/mail/evolution
 
-USES=		gettext gmake libtool pathfix pkgconfig tar:xz
+USES=		gettext gmake libtool:keepla pathfix pkgconfig tar:xz
 GNU_CONFIGURE=	yes
 USE_SQLITE=	3
 USE_BDB=	5

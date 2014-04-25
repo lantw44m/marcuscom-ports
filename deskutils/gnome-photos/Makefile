@@ -23,7 +23,7 @@ LIB_DEPENDS=	libexempi.so:${PORTSDIR}/textproc/exempi \
 		libbabl-0.1.so:${PORTSDIR}/x11/babl
 RUN_DEPENDS=	geoclue>=0:${PORTSDIR}/net/geoclue
 
-USES=		desktop-file-utils gettext gmake libtool \
+USES=		desktop-file-utils gettext gmake libtool:keepla \
 		pathfix pkgconfig tar:xz
 USE_GNOME=	gnomedesktop3 gnomeprefix gtk30 intlhack
 USE_LDCONFIG=	yes

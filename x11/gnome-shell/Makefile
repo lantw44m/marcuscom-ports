@@ -32,7 +32,7 @@ RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/dbus-python.pc:${PORTSDIR}/devel/py-
 		gnome-control-center>=0:${PORTSDIR}/sysutils/gnome-control-center \
 		${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss
 
-USES=		gettext gmake libtool pathfix pkgconfig tar:xz \
+USES=		gettext gmake libtool:keepla pathfix pkgconfig tar:xz \
 		webplugin:native
 USE_GNOME=	evolutiondataserver3 gnomedesktop3 gnomeprefix \
 		gtk30 intlhack introspection

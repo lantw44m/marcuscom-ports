@@ -22,7 +22,7 @@ LIB_DEPENDS=	libnss3.so:${PORTSDIR}/security/nss \
 		libnotify.so:${PORTSDIR}/devel/libnotify
 RUN_DEPENDS=	highlight:${PORTSDIR}/textproc/highlight
 
-USES=		desktop-file-utils bison gettext gmake libtool \
+USES=		desktop-file-utils bison gettext gmake libtool:keepla \
 		pathfix pkgconfig shebangfix tar:xz
 USE_GNOME=	evolutiondataserver3 gnomedesktop3 gnomeprefix gtkhtml4 \
 		intlhack

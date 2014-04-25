@@ -18,19 +18,19 @@ LIB_DEPENDS=	libgee-0.8.so:${PORTSDIR}/devel/libgee \
 
 CONFLICTS=	folks-0.4.[0-9]*
 
-USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
-USES=		gettext gmake pathfix pkgconfig tar:xz
+USES=		gettext libtool:keepla gmake pathfix pkgconfig tar:xz
 USE_GNOME=	evolutiondataserver3 gnomehier intlhack \
-		introspection:build ltverhack
+		introspection:build
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-bluez-backend
 CPPFLAGS+=	-I${LOCALBASE}/include -Wno-error=deprecated-declarations
 LDFLAGS+=	-L${LOCALBASE}/lib
+INSTALL_TARGET=	install-strip
 
 GLIB_SCHEMAS=	org.freedesktop.folks.gschema.xml
 
-PLIST_SUB=	LIBVER=25 VERSION=41
+PLIST_SUB=	LIBVER=25 VERSION=41 LIBVERLONG=25.16.1
 
 OPTIONS_DEFINE=	SOCIALWEB TRACKER
 OPTIONS_DEFAULT=SOCIALWEB TRACKER
@@ -58,15 +58,9 @@ PLIST_SUB+=     TRACKER="@comment "
 .endif
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|^build_old_libs=yes|build_old_libs=no|g' \
-		${WRKDIR}/gnome-libtool
 	@${REINPLACE_CMD} -e 's|TRACKER_SPARQL_MAJOR=0.16|TRACKER_SPARQL_MAJOR=1.0|g' \
 		${WRKSRC}/configure
 	@${REINPLACE_CMD} -e 's|--fatal-warnings||g' \
 		${WRKSRC}/configure
-
-post-install:
-	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libfolks*.so.*
-	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/folks/*/backends/*/*.so
 
 .include <bsd.port.mk>

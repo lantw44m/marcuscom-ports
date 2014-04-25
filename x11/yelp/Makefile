@@ -19,7 +19,8 @@ BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/yelp-xsl.pc:${PORTSDIR}/textproc/y
 LIB_DEPENDS=	libwebkitgtk-3.0.so:${PORTSDIR}/www/webkit-gtk3
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/yelp-xsl.pc:${PORTSDIR}/textproc/yelp-xsl
 
-USES=		desktop-file-utils gettext gmake libtool pathfix pkgconfig tar:xz
+USES=		desktop-file-utils gettext gmake libtool:keepla pathfix \
+		pkgconfig tar:xz
 USE_XORG=	x11 ice
 USE_GNOME=	gnomeprefix gtk30 intlhack libxml2 libxslt
 GNU_CONFIGURE=	yes

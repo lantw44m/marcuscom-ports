@@ -19,7 +19,7 @@ LIB_DEPENDS=	libffi.so:${PORTSDIR}/devel/libffi \
 		libdbus-glib-1.so:${PORTSDIR}/devel/dbus-glib \
 		libmpfr.so:${PORTSDIR}/math/mpfr
 
-USES=		gettext gmake libtool pathfix pkgconfig tar:xz
+USES=		gettext gmake libtool:keepla pathfix pkgconfig tar:xz
 USE_GNOME=	gtk30 intltool libxml2 introspection
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes

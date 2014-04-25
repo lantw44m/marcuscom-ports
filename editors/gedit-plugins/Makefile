@@ -16,7 +16,7 @@ BUILD_DEPENDS=	gedit>=0:${PORTSDIR}/editors/gedit \
 LIB_DEPENDS=	libpeas-1.0.so:${PORTSDIR}/devel/libpeas
 RUN_DEPENDS=	gedit>=0:${PORTSDIR}/editors/gedit
 
-USES=		gettext gmake libtool pathfix pkgconfig \
+USES=		gettext gmake libtool:keepla pathfix pkgconfig \
 		tar:xz
 USE_GNOME=	gnomeprefix gtk30 gtksourceview3
 USE_LDCONFIG=	yes

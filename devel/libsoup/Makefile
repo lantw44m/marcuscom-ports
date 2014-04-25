@@ -19,7 +19,7 @@ USES=		tar:xz
 
 .if !defined(REFERENCE_PORT)
 
-USES+=		gettext gmake libtool pathfix pkgconfig tar:xz
+USES+=		gettext gmake libtool:keepla pathfix pkgconfig tar:xz
 USE_GNOME=	glib20 gnomehier intltool introspection:build \
 		libxml2 referencehack
 USE_SQLITE=	3

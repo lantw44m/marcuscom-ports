@@ -23,7 +23,7 @@ GH_TAGNAME=	${GH_COMMIT}
 GNU_CONFIGURE=	yes
 #CONFIGURE_ARGS=	--enable-introspection=yes
 USE_GITHUB=	yes
-USES=		gmake libtool pathfix pkgconfig
+USES=		gmake libtool:keepla pathfix pkgconfig
 USE_AUTOTOOLS=	libtool autoconf automake
 USE_GNOME=	gdkpixbuf2 glib20 gnomehier introspection:build
 USE_LDCONFIG=	yes

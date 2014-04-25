@@ -13,7 +13,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Graphic library for GTK+
 
 USE_XORG=	xt xi x11
-USES=		gmake libtool pathfix pkgconfig tar:xz
+USES=		gmake libtool:keepla pathfix pkgconfig tar:xz
 USE_GNOME+=	gnomehier glib20 introspection:build
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes

@@ -15,16 +15,13 @@ RUN_DEPENDS=	libnice-gst1>=0:${PORTSDIR}/net-im/libnice-gst1
 
 USE_LDCONFIG=	yes
 USE_PYTHON=	yes
-USES=		gettext gmake pathfix pkgconfig
-USE_GNOME=	glib20 ltverhack introspection:build
+USES=		gettext libtool:keepla gmake pathfix pkgconfig
+USE_GNOME=	glib20 introspection:build
 USE_GSTREAMER1=	good bad
-USE_AUTOTOOLS=	libtool
+GNU_CONFIGURE=	yes
+
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
-
-post-install:
-	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libfarstream-0.2.so.2
-	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/gstreamer-1.0/lib*.so
-	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/farstream-0.2/lib*.so
+INSTALL_TARGET=	install-strip
 
 .include <bsd.port.mk>

@@ -18,7 +18,7 @@ LIB_DEPENDS=	libgdata.so.13:${PORTSDIR}/devel/libgdata \
 RUN_DEPENDS=	eog:${PORTSDIR}/graphics/eog
 
 USE_GNOME=	gnomeprefix intlhack gtk30
-USES=		gettext gmake libtool pathfix pkgconfig tar:xz
+USES=		gettext gmake libtool:keepla pathfix pkgconfig tar:xz
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib

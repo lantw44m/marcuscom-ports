@@ -13,7 +13,7 @@ COMMENT=	C library aimed to provide a Gtk+ widget to display rasterized maps and
 LIB_DEPENDS=	libclutter-gtk-1.0.so:${PORTSDIR}/graphics/clutter-gtk3 \
 		libsoup-gnome-2.4.so:${PORTSDIR}/devel/libsoup-gnome
 
-USES=		gmake libtool pathfix pkgconfig tar:xz
+USES=		gmake libtool:keepla pathfix pkgconfig tar:xz
 USE_GNOME=	gtk30 gnomehier introspection:build
 USE_GL=		gl
 USE_SQLITE=	3

@@ -32,6 +32,7 @@ lib/cinnamon-control-center-1/panels/libuniversal-access.so
 lib/libcinnamon-control-center.la
 lib/libcinnamon-control-center.so
 lib/libcinnamon-control-center.so.1
+lib/libcinnamon-control-center.so.1.0.0
 libdata/pkgconfig/libcinnamon-control-center.pc
 share/applications/cinnamon-color-panel.desktop
 share/applications/cinnamon-control-center.desktop

@@ -23,7 +23,7 @@ LIB_DEPENDS=	libid3.so:${PORTSDIR}/audio/id3lib \
 
 CONFLICTS=	gnome-commander-[0-9]*
 
-USES=		gmake libtool pathfix tar:xz
+USES=		gmake libtool:keepla pathfix tar:xz
 USE_GNOME=	gnomedocutils gnomeprefix intlhack libgnomeui
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes

@@ -19,7 +19,7 @@ LIB_DEPENDS=	libexif.so:${PORTSDIR}/graphics/libexif \
 RUN_DEPENDS=	${LOCALBASE}/share/icons/gnome/index.theme:${PORTSDIR}/misc/gnome-icon-theme \
 		${LOCALBASE}/libdata/pkgconfig/gsettings-desktop-schemas.pc:${PORTSDIR}/devel/gsettings-desktop-schemas
 
-USES=		desktop-file-utils gettext gmake libtool pathfix \
+USES=		desktop-file-utils gettext gmake libtool:keepla pathfix \
 		pkgconfig shared-mime-info tar:xz
 USE_GNOME=	gnomeprefix intlhack gnomedesktop3 libxml2 \
 		gvfs introspection:build

@@ -17,7 +17,7 @@ LIB_DEPENDS=	libcanberra-gtk3.so:${PORTSDIR}/audio/libcanberra-gtk3 \
 		libgeocode-glib.so:${PORTSDIR}/net/geocode-glib
 RUN_DEPENDS=	geoclue>=0:${PORTSDIR}/net/geoclue
 
-USES=		gettext gmake libtool pathfix pkgconfig tar:xz
+USES=		gettext gmake libtool:keepla pathfix pkgconfig tar:xz
 USE_LDCONFIG=	yes
 USE_GNOME=	gnomedesktop3 gnomeprefix gtk30 intlhack
 GNU_CONFIGURE=	yes

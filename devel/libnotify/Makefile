@@ -13,7 +13,7 @@ COMMENT=	Library for desktop notifications
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USES=		gettext gmake libtool pathfix pkgconfig tar:xz
+USES=		gettext gmake libtool:keepla pathfix pkgconfig tar:xz
 USE_GNOME=	intlhack glib20 gdkpixbuf2 introspection
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes

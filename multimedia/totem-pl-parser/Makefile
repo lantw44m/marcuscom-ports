@@ -14,7 +14,7 @@ COMMENT=	GObject-based library to parse a host of playlist formats
 LIB_DEPENDS=	libgmime-2.6.so:${PORTSDIR}/mail/gmime26 \
 		libsoup-gnome-2.4.so:${PORTSDIR}/devel/libsoup-gnome
 
-USES=		gettext gmake libtool pathfix pkgconfig tar:xz
+USES=		gettext gmake libtool:keepla pathfix pkgconfig tar:xz
 USE_GNOME=	glib20 gnomehier gnomeprefix intlhack introspection:build \
 		libxml2
 USE_LDCONFIG=	yes

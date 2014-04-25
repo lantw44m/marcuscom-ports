@@ -13,8 +13,7 @@ COMMENT=	GTK+ Integration library for Clutter
 
 LIB_DEPENDS=	libclutter-1.0.so:${PORTSDIR}/graphics/clutter
 
-LATEST_LINK=	clutter-gtk3
-USES=		gettext gmake libtool pathfix pkgconfig tar:xz
+USES=		gettext gmake libtool:keepla pathfix pkgconfig tar:xz
 GNU_CONFIGURE=	yes
 USE_GNOME=	gnomeprefix gtk30 introspection
 USE_XORG=	xp x11

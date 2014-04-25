@@ -15,20 +15,19 @@ BUILD_DEPENDS=	gnome-autogen.sh:${PORTSDIR}/devel/gnome-common \
 		gtkdoc-check:${PORTSDIR}/textproc/gtk-doc
 LIB_DEPENDS=	libgit2.so:${PORTSDIR}/devel/libgit2
 
-USES=		gmake pathfix pkgconfig
+USES=		gmake libtool:keepla pathfix pkgconfig
 USE_GNOME=	glib20 gnomeprefix gtk30 intlhack introspection
-USE_AUTOTOOLS=	automake libtool
+USE_AUTOTOOLS=	automake libtoolize
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 PATHFIX_MAKEFILEIN=	Makefile.am
 INSTALLS_ICONS=	yes
+CONFIGURE_ARGS=	--disable-python
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
+INSTALL_TARGET=	install-strip
 
 pre-configure:
 	cd ${WRKSRC} && NOCONFIGURE=yes ${SH} ./autogen.sh
-
-post-install:
-	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libgit2-glib-1.0.so.0
 
 .include <bsd.port.mk>
