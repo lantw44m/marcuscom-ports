@@ -4,6 +4,7 @@
 
 PORTNAME=	muffin
 PORTVERSION=	2.2.1
+PORTREVISION=	1
 CATEGORIES=	x11-wm gnome
 MASTER_SITES=	http://github.com/linuxmint/${PORTNAME}/archive/${PORTVERSION}.tar.gz?dummy=/
 DIST_SUBDIR=	gnome3
