@@ -3,7 +3,7 @@
 #   $MCom$
 
 PORTNAME=	cinnamon-desktop
-PORTVERSION=	2.0.4
+PORTVERSION=	2.2.0
 CATEGORIES=	x11 gnome
 MASTER_SITES=	http://github.com/linuxmint/${PORTNAME}/archive/${PORTVERSION}.tar.gz?dummy=/
 DIST_SUBDIR=	gnome3
@@ -44,8 +44,7 @@ GLIB_SCHEMAS=	org.cinnamon.desktop.a11y.applications.gschema.xml \
 		org.cinnamon.desktop.sound.gschema.xml \
 		org.cinnamon.desktop.thumbnail-cache.gschema.xml \
 		org.cinnamon.desktop.thumbnailers.gschema.xml \
-		org.cinnamon.desktop.wm.preferences.gschema.xml \
-		org.cinnamon.system.locale.gschema.xml
+		org.cinnamon.desktop.wm.preferences.gschema.xml
 
 pre-configure:
 	cd ${WRKSRC} && NOCONFIGURE=yes ${SH} ./autogen.sh

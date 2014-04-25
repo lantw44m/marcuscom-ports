@@ -3,8 +3,7 @@
 #   $MCom$
 
 PORTNAME=	cinnamon-control-center
-PORTVERSION=	2.0.9
-PORTREVISION=	1
+PORTVERSION=	2.2.3
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	http://github.com/linuxmint/${PORTNAME}/archive/${PORTVERSION}.tar.gz?dummy=/
 DIST_SUBDIR=	gnome3
@@ -30,6 +29,7 @@ LIB_DEPENDS=	libstartup-notification-1.so:${PORTSDIR}/x11/startup-notification \
 		libdbus-glib-1.so:${PORTSDIR}/devel/dbus-glib \
 		libclutter-glx-1.0.so:${PORTSDIR}/graphics/clutter \
 		libclutter-gst-2.0.so:${PORTSDIR}/multimedia/clutter-gst \
+		libcinnamon-menu-3.so:${PORTSDIR}/x11/cinnamon-menus \
 		libgjs.so:${PORTSDIR}/lang/gjs
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/dbus-python.pc:${PORTSDIR}/devel/py-dbus \
 		cinnamon-settings-daemon>=0:${PORTSDIR}/sysutils/cinnamon-settings-daemon \
@@ -37,7 +37,7 @@ RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/dbus-python.pc:${PORTSDIR}/devel/py-
 		py*-lxml>=0:${PORTSDIR}/devel/py-lxml
 
 USES=		gettext gmake pathfix pkgconfig
-USE_GNOME=	evolutiondataserver3 gconf2 gnomemenus3 gnomeprefix \
+USE_GNOME=	evolutiondataserver3 gconf2 gnomeprefix \
 		gtk30 intlhack libgnomekbd
 USE_XORG=	x11 xfixes sm
 USE_PYTHON=	yes

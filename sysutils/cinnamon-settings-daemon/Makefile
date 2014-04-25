@@ -3,8 +3,7 @@
 #   $MCom$
 
 PORTNAME=	cinnamon-settings-daemon
-PORTVERSION=	2.0.8
-PORTREVISION=	1
+PORTVERSION=	2.2.1
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	http://github.com/linuxmint/${PORTNAME}/archive/${PORTVERSION}.tar.gz?dummy=/
 DIST_SUBDIR=	gnome3
@@ -84,6 +83,8 @@ PLIST_SUB+=	SMARTCARD="@comment "
 post-patch:
 	@${REINPLACE_CMD} -e 's|/etc/gnome|${PREFIX}/etc/gnome|g' \
 		${WRKSRC}/data/org.cinnamon.settings-daemon.plugins.xrandr.gschema.xml.in.in
+	@${REINPLACE_CMD} -e '/wacom/d' \
+		${WRKSRC}/data/Makefile.am
 
 pre-configure:
 	cd ${WRKSRC} && NOCONFIGURE=yes ${SH} ./autogen.sh

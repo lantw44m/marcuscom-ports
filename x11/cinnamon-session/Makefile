@@ -3,7 +3,7 @@
 #   $MCom$
 
 PORTNAME=	cinnamon-session
-PORTVERSION=	2.0.6
+PORTVERSION=	2.2.0
 CATEGORIES=	x11 gnome
 MASTER_SITES=	http://github.com/linuxmint/${PORTNAME}/archive/${PORTVERSION}.tar.gz?dummy=/
 DIST_SUBDIR=	gnome3
@@ -15,7 +15,8 @@ BUILD_DEPENDS=	gnome-autogen.sh:${PORTSDIR}/devel/gnome-common
 LIB_DEPENDS=	libdbus-glib-1.so:${PORTSDIR}/devel/dbus-glib \
 		libexecinfo.so:${PORTSDIR}/devel/libexecinfo \
 		libjson-glib-1.0.so:${PORTSDIR}/devel/json-glib \
-		libupower-glib.so:${PORTSDIR}/sysutils/upower
+		libupower-glib.so:${PORTSDIR}/sysutils/upower \
+		libcanberra.so:${PORTSDIR}/audio/libcanberra
 RUN_DEPENDS=	${LOCALBASE}/sbin/console-kit-daemon:${PORTSDIR}/sysutils/consolekit \
 		${LOCALBASE}/bin/xdpyinfo:${PORTSDIR}/x11/xdpyinfo
 

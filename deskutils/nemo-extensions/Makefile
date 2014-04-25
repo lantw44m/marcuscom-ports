@@ -3,7 +3,7 @@
 #    $MCom$
 
 PORTNAME=	nemo-extensions
-PORTVERSION=	2.0.1
+PORTVERSION=	2.2.0
 CATEGORIES=	x11-fm gnome
 DIST_SUBDIR=	gnome3
 
@@ -39,11 +39,11 @@ GH_PROJECT=	nemo-extensions
 GH_COMMIT=	54f4d94
 GH_TAGNAME=	${GH_COMMIT}
 
-INSTALLS_ICONS=	yes
-USES=		gettext gmake pathfix pkgconfig shebangfix
-SHEBANG_FILES=  nemo-dropbox/dropbox.in
 USE_GNOME=	gconf2 gnomeprefix gnomedocutils gtksourceview3 intlhack \
 		introspection:build libxml2 pygtk2
+USES=		gettext gmake pathfix pkgconfig shebangfix
+SHEBANG_FILES=  nemo-dropbox/dropbox.in
+INSTALLS_ICONS=	yes
 USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib

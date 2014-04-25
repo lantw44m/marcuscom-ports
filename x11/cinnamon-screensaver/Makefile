@@ -3,7 +3,7 @@
 #   $MCom$
 
 PORTNAME=	cinnamon-screensaver
-PORTVERSION=	2.0.3
+PORTVERSION=	2.2.0
 MASTER_SITES=	http://github.com/linuxmint/${PORTNAME}/archive/${PORTVERSION}.tar.gz?dummy=/
 CATEGORIES=	x11 gnome
 DIST_SUBDIR=	gnome3
@@ -20,8 +20,7 @@ RUN_DEPENDS=	pam_helper:${PORTSDIR}/security/pam_helper \
 		gsettings-desktop-schemas>=3.2.0:${PORTSDIR}/devel/gsettings-desktop-schemas \
 		${LOCALBASE}/lib/pam_gnome_keyring.so:${PORTSDIR}/security/gnome-keyring
 
-USE_XZ=		yes
-USES=		gettext gmake pathfix pkgconfig
+USES=		gettext gmake pathfix pkgconfig tar:xz
 USE_XORG=	x11 xext xxf86vm xxf86misc xscrnsaver
 USE_GNOME=	gnomedesktop3 gnomeprefix intlhack libgnomekbd libxml2
 GNU_CONFIGURE=	yes

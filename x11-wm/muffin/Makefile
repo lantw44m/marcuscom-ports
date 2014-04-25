@@ -3,8 +3,7 @@
 #    $MCom$
 
 PORTNAME=	muffin
-PORTVERSION=	2.0.5
-PORTREVISION=	2
+PORTVERSION=	2.2.1
 CATEGORIES=	x11-wm gnome
 MASTER_SITES=	http://github.com/linuxmint/${PORTNAME}/archive/${PORTVERSION}.tar.gz?dummy=/
 DIST_SUBDIR=	gnome3
@@ -23,12 +22,12 @@ LIB_DEPENDS=	libstartup-notification-1.so:${PORTSDIR}/x11/startup-notification \
 RUN_DEPENDS=	zenity3>=3.0.0:${PORTSDIR}/x11/zenity3
 
 USES=		gettext gmake pathfix pkgconfig
-USE_GNOME=	gnomedocutils gnomehier gnomeprefix gtk30 \
+USE_GNOME=	gconf2 gnomedocutils gnomehier gnomeprefix gtk30 \
 		intlhack introspection:build
+USE_AUTOTOOLS=	libtool autoconf automake
+USE_CSTD=	gnu89
 USE_XORG=	x11 xext xrandr xcomposite xcursor xinerama ice sm
 USE_PYTHON=	yes
-USE_CSTD=	gnu89
-USE_AUTOTOOLS=	libtool autoconf automake
 USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib

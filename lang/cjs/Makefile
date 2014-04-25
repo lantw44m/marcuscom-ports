@@ -3,7 +3,7 @@
 #    $MCom$
 
 PORTNAME=	cjs
-PORTVERSION=	2.0.0
+PORTVERSION=	2.2.0
 CATEGORIES=	lang gnome
 MASTER_SITES=	http://github.com/linuxmint/${PORTNAME}/archive/${PORTVERSION}.tar.gz?dummy=/
 DIST_SUBDIR=	gnome3
@@ -18,19 +18,17 @@ LIB_DEPENDS=	libdbus-glib-1.so:${PORTSDIR}/devel/dbus-glib \
 CONFLICTS_BUILD=spidermonkey17-1.7.*
 
 USES=		gettext gmake pathfix pkgconfig shebangfix
-USE_PYTHON_BUILD=yes
-USE_GNOME=      cairo glib20 gnomeprefix introspection:build \
+USE_GNOME=	cairo glib20 gnomeprefix introspection:build \
 		intlhack
+USE_PYTHON_BUILD=yes
 USE_LDCONFIG=	yes
 PATHFIX_MAKEFILEIN=	Makefile.am
 GNU_CONFIGURE=	yes
 USE_AUTOTOOLS=	libtool autoconf automake
-
-CONFIGURE_ARGS+=--enable-compile-warnings=no
-
 CFLAGS+=	-I${LOCALBASE}/include
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
+CONFIGURE_ARGS+=--enable-compile-warnings=no
 
 SHEBANG_FILES=	scripts/make-tests
 python_OLD_CMD=	/usr/bin/env python

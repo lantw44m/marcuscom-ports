@@ -3,8 +3,7 @@
 #    $MCom$
 
 PORTNAME=	cinnamon
-PORTVERSION=	2.0.14
-PORTREVISION=	2
+PORTVERSION=	2.2.3
 CATEGORIES=	x11 gnome
 MASTER_SITES=	http://github.com/linuxmint/${PORTNAME}/archive/${PORTVERSION}.tar.gz?dummy=/
 DIST_SUBDIR=	gnome3
@@ -25,6 +24,7 @@ LIB_DEPENDS=	libstartup-notification-1.so:${PORTSDIR}/x11/startup-notification \
 		libdbus-glib-1.so:${PORTSDIR}/devel/dbus-glib \
 		libclutter-glx-1.0.so:${PORTSDIR}/graphics/clutter \
 		libcjs.so:${PORTSDIR}/lang/cjs \
+		libcinnamon-menu-3.so:${PORTSDIR}/x11/cinnamon-menus \
 		libaccountsservice.so:${PORTSDIR}/sysutils/accountsservice
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/dbus-python.pc:${PORTSDIR}/devel/py-dbus \
 		${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss \
@@ -39,13 +39,14 @@ RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/dbus-python.pc:${PORTSDIR}/devel/py-
 WRKSRC=		${WRKDIR}/Cinnamon-${PORTVERSION}
 
 USES=		gettext gmake pathfix pkgconfig shebangfix
-USE_GNOME=	evolutiondataserver3 gconf2 gnomedesktop3 gnomemenus3 \
+USE_GNOME=	evolutiondataserver3 gconf2 gnomedesktop3 \
 		gnomeprefix gtk30 intlhack introspection:build
 # this happens before moving the file to ${PREFIX} (which then will be copied to ${STAGEDIR}${PREFIX})
 SHEBANG_FILES=	files/usr/bin/cinnamon2d
 USE_AUTOTOOLS=	libtool autoconf automake
 USE_XORG=	x11 xfixes sm
 USE_GSTREAMER=	theora vp8 ogg
+INSTALLS_ICONS=	yes
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 USE_PYTHON=	yes
@@ -121,6 +122,15 @@ post-patch:
 		${WRKSRC}/files${PREFIX}/lib/cinnamon-settings/modules/cs_screensaver.py \
 		${WRKSRC}/files${PREFIX}/bin/cinnamon-settings \
 		${WRKSRC}/files${PREFIX}/bin/cinnamon-launcher
+
+	@${REINPLACE_CMD} -e '/cs-tablet/d; /cs-bluetooth/d; /cs-network/d' \
+			${WRKSRC}/files${PREFIX}/lib/cinnamon-settings/cinnamon-settings.py
+
+	@${REINPLACE_CMD} -e '/increase-opacity/d; /decrease-opacity/d' \
+			${WRKSRC}/files${PREFIX}/lib/cinnamon-settings/modules/cs_keyboard.py
+
+	#@${REINPLACE_CMD} -e 's/SIZE\/$$$$CONTEXT/CONTEXT\/$$$$SIZE/g' \
+	#		${WRKSRC}/data/icons/Makefile.am
 
 	@${REINPLACE_CMD} -e 's|=/usr/bin/|=${PREFIX}/bin/|g' \
 		${WRKSRC}/files${PREFIX}/share/xsessions/cinnamon2d.desktop \
