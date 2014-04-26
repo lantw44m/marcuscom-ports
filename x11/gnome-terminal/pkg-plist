@@ -30,7 +30,6 @@ share/help/C/gnome-terminal/pref-profiles.page
 share/help/C/gnome-terminal/pref-scrolling.page
 share/help/C/gnome-terminal/pref-tab-window.page
 share/help/C/gnome-terminal/pref-theme.page
-share/help/C/gnome-terminal/pref-title.page
 share/help/C/gnome-terminal/pref.page
 share/help/C/gnome-terminal/prob-reset.page
 share/help/C/gnome-terminal/profile.page
@@ -63,7 +62,6 @@ share/help/cs/gnome-terminal/pref-profiles.page
 share/help/cs/gnome-terminal/pref-scrolling.page
 share/help/cs/gnome-terminal/pref-tab-window.page
 share/help/cs/gnome-terminal/pref-theme.page
-share/help/cs/gnome-terminal/pref-title.page
 share/help/cs/gnome-terminal/pref.page
 share/help/cs/gnome-terminal/prob-reset.page
 share/help/cs/gnome-terminal/profile.page
@@ -94,7 +92,6 @@ share/help/de/gnome-terminal/pref-profiles.page
 share/help/de/gnome-terminal/pref-scrolling.page
 share/help/de/gnome-terminal/pref-tab-window.page
 share/help/de/gnome-terminal/pref-theme.page
-share/help/de/gnome-terminal/pref-title.page
 share/help/de/gnome-terminal/pref.page
 share/help/de/gnome-terminal/prob-reset.page
 share/help/de/gnome-terminal/profile.page
@@ -125,7 +122,6 @@ share/help/el/gnome-terminal/pref-profiles.page
 share/help/el/gnome-terminal/pref-scrolling.page
 share/help/el/gnome-terminal/pref-tab-window.page
 share/help/el/gnome-terminal/pref-theme.page
-share/help/el/gnome-terminal/pref-title.page
 share/help/el/gnome-terminal/pref.page
 share/help/el/gnome-terminal/prob-reset.page
 share/help/el/gnome-terminal/profile.page
@@ -156,7 +152,6 @@ share/help/es/gnome-terminal/pref-profiles.page
 share/help/es/gnome-terminal/pref-scrolling.page
 share/help/es/gnome-terminal/pref-tab-window.page
 share/help/es/gnome-terminal/pref-theme.page
-share/help/es/gnome-terminal/pref-title.page
 share/help/es/gnome-terminal/pref.page
 share/help/es/gnome-terminal/prob-reset.page
 share/help/es/gnome-terminal/profile.page
@@ -187,7 +182,6 @@ share/help/fr/gnome-terminal/pref-profiles.page
 share/help/fr/gnome-terminal/pref-scrolling.page
 share/help/fr/gnome-terminal/pref-tab-window.page
 share/help/fr/gnome-terminal/pref-theme.page
-share/help/fr/gnome-terminal/pref-title.page
 share/help/fr/gnome-terminal/pref.page
 share/help/fr/gnome-terminal/prob-reset.page
 share/help/fr/gnome-terminal/profile.page
@@ -218,7 +212,6 @@ share/help/gl/gnome-terminal/pref-profiles.page
 share/help/gl/gnome-terminal/pref-scrolling.page
 share/help/gl/gnome-terminal/pref-tab-window.page
 share/help/gl/gnome-terminal/pref-theme.page
-share/help/gl/gnome-terminal/pref-title.page
 share/help/gl/gnome-terminal/pref.page
 share/help/gl/gnome-terminal/prob-reset.page
 share/help/gl/gnome-terminal/profile.page
@@ -233,6 +226,7 @@ share/help/hu/gnome-terminal/app-fonts.page
 share/help/hu/gnome-terminal/app-fullscreen.page
 share/help/hu/gnome-terminal/app-terminal-sizes.page
 share/help/hu/gnome-terminal/app-zoom.page
+share/help/hu/gnome-terminal/figures/gnome-terminal.png
 share/help/hu/gnome-terminal/gs-execute-commands.page
 share/help/hu/gnome-terminal/gs-tabs.page
 share/help/hu/gnome-terminal/index.page
@@ -249,7 +243,6 @@ share/help/hu/gnome-terminal/pref-profiles.page
 share/help/hu/gnome-terminal/pref-scrolling.page
 share/help/hu/gnome-terminal/pref-tab-window.page
 share/help/hu/gnome-terminal/pref-theme.page
-share/help/hu/gnome-terminal/pref-title.page
 share/help/hu/gnome-terminal/pref.page
 share/help/hu/gnome-terminal/prob-reset.page
 share/help/hu/gnome-terminal/profile.page
@@ -264,6 +257,7 @@ share/help/pt_BR/gnome-terminal/app-fonts.page
 share/help/pt_BR/gnome-terminal/app-fullscreen.page
 share/help/pt_BR/gnome-terminal/app-terminal-sizes.page
 share/help/pt_BR/gnome-terminal/app-zoom.page
+share/help/pt_BR/gnome-terminal/figures/gnome-terminal.png
 share/help/pt_BR/gnome-terminal/gs-execute-commands.page
 share/help/pt_BR/gnome-terminal/gs-tabs.page
 share/help/pt_BR/gnome-terminal/index.page
@@ -280,7 +274,6 @@ share/help/pt_BR/gnome-terminal/pref-profiles.page
 share/help/pt_BR/gnome-terminal/pref-scrolling.page
 share/help/pt_BR/gnome-terminal/pref-tab-window.page
 share/help/pt_BR/gnome-terminal/pref-theme.page
-share/help/pt_BR/gnome-terminal/pref-title.page
 share/help/pt_BR/gnome-terminal/pref.page
 share/help/pt_BR/gnome-terminal/prob-reset.page
 share/help/pt_BR/gnome-terminal/profile.page
@@ -311,7 +304,6 @@ share/help/ru/gnome-terminal/pref-profiles.page
 share/help/ru/gnome-terminal/pref-scrolling.page
 share/help/ru/gnome-terminal/pref-tab-window.page
 share/help/ru/gnome-terminal/pref-theme.page
-share/help/ru/gnome-terminal/pref-title.page
 share/help/ru/gnome-terminal/pref.page
 share/help/ru/gnome-terminal/prob-reset.page
 share/help/ru/gnome-terminal/profile.page
