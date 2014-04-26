@@ -4,7 +4,7 @@
 
 PORTNAME=	tracker
 PORTVERSION=	1.0.0
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	GNOME
 
@@ -41,6 +41,8 @@ CONFIGURE_ARGS=	--enable-video-extractor=gstreamer \
 		--enable-tracker-preferences \
 		--disable-libosinfo \
 		--enable-generic-media-extractor=gstreamer
+# disable evolution miner until tracker fixes the dep
+CONFIGURE_ARGS+=	--disable-miner-evolution
 GLIB_SCHEMAS=	org.freedesktop.Tracker.DB.gschema.xml \
 		org.freedesktop.Tracker.Extract.gschema.xml \
 		org.freedesktop.Tracker.FTS.gschema.xml \
@@ -60,8 +62,12 @@ GRAPHIC_MINERS_DESC=	Support for some graphic formats (gif, png, tiff)
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MWEB_MINERS}
-CONFIGURE_ARGS+=	--enable-miner-evolution --enable-miner-firefox \
+CONFIGURE_ARGS+=	--enable-miner-firefox \
 			--enable-miner-thunderbird
+BUILD_DEPENDS+=	firefox>=0:${PORTSDIR}/www/firefox \
+		thunderbird>=0:${PORTSDIR}/mail/thunderbird
+RUN_DEPENDS+=	firefox>=0:${PORTSDIR}/www/firefox \
+		thunderbird>=0:${PORTSDIR}/mail/thunderbird
 PLIST_SUB+=	WEB_MINERS=""
 .else
 CONFIGURE_ARGS+=	--disable-miner-evolution --disable-miner-firefox \

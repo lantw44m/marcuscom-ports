@@ -1,6 +1,38 @@
---- configure.orig	2014-03-23 12:15:46.322707111 +0000
-+++ configure	2014-03-23 12:19:39.849690806 +0000
-@@ -23983,14 +23983,14 @@
+--- configure.orig	2014-04-26 08:30:22.560186108 +0000
++++ configure	2014-04-26 08:31:33.733181153 +0000
+@@ -19223,7 +19223,6 @@
+ # First test for 3_3_5
+ TRACKER_MINER_EVOLUTION_3_3_5_REQUIRED="glib-2.0                  >= $GLIB_REQUIRED
+                                         evolution-shell-3.0       >= 3.1
+-                                        evolution-plugin-3.0
+                                         libemail-utils
+                                         libemail-engine
+                                         evolution-data-server-1.2 >= $EDS_REQUIRED
+@@ -19316,7 +19315,6 @@
+ # Second test for 3_2
+ TRACKER_MINER_EVOLUTION_3_2_REQUIRED="glib-2.0                  >= $GLIB_REQUIRED
+                                       evolution-shell-3.0       >= 3.1
+-                                      evolution-plugin-3.0
+                                       evolution-data-server-1.2 >= $EDS_REQUIRED
+                                       camel-1.2                 >= $CAMEL_REQUIRED"
+ 
+@@ -19404,7 +19402,6 @@
+ # Third test for 2_91
+ TRACKER_MINER_EVOLUTION_2_91_REQUIRED="glib-2.0                  >= $GLIB_REQUIRED
+                                        evolution-shell-3.0
+-                                       evolution-plugin-3.0
+                                        evolution-data-server-1.2 >= $EDS_REQUIRED
+                                        camel-1.2                 >= $CAMEL_REQUIRED"
+ 
+@@ -19488,7 +19485,6 @@
+ # Fourth test others (do we really want support for anything < 3.2)?
+ TRACKER_MINER_EVOLUTION_LAST_REQUIRED="glib-2.0                  >= $GLIB_REQUIRED
+                                        evolution-shell           >= $EVO_SHELL_REQUIRED
+-                                       evolution-plugin          >= $EVO_REQUIRED
+                                        evolution-data-server-1.2 >= $EDS_REQUIRED
+                                        camel-1.2                 >= $CAMEL_REQUIRED"
+ 
+@@ -23983,14 +23979,14 @@
   elif test -n "$PKG_CONFIG"; then
      if test -n "$PKG_CONFIG" && \
      { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"dbus-1      >= \$DBUS_REQUIRED
@@ -18,7 +50,7 @@
  else
    pkg_failed=yes
  fi
-@@ -24002,14 +24002,16 @@
+@@ -24002,14 +23998,16 @@
   elif test -n "$PKG_CONFIG"; then
      if test -n "$PKG_CONFIG" && \
      { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"dbus-1      >= \$DBUS_REQUIRED
@@ -38,7 +70,7 @@
  else
    pkg_failed=yes
  fi
-@@ -24030,10 +24032,12 @@
+@@ -24030,10 +24028,12 @@
  fi
          if test $_pkg_short_errors_supported = yes; then
  	        HAL_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors "dbus-1      >= $DBUS_REQUIRED
