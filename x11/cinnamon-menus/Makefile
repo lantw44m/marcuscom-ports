@@ -17,7 +17,7 @@ BUILD_DEPENDS=	gnome-autogen.sh:${PORTSDIR}/devel/gnome-common \
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/xkeyboard-config.pc:${PORTSDIR}/x11/xkeyboard-config \
 		${LOCALBASE}/libdata/pkgconfig/xkbfile.pc:${PORTSDIR}/x11/libxkbfile
 
-USES=		gettext gmake libtool pathfix pkgconfig tar:xz
+USES=		gettext gmake libtool:keepla pathfix pkgconfig tar:xz
 USE_GNOME=	gnomehier gnomeprefix gtk30 intlhack introspection:build
 USE_PYTHON=	yes
 USE_LDCONFIG=	yes
