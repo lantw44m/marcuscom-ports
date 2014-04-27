@@ -4,6 +4,7 @@
 
 PORTNAME=	baobab
 PORTVERSION=	3.12.1
+PORTREVISION=	1
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -30,5 +31,7 @@ GLIB_SCHEMAS=	org.gnome.baobab.gschema.xml
 post-patch:
 	@${REINPLACE_CMD} -e 's|-Wno-unused-but-set-variable||g' \
 		${WRKSRC}/src/Makefile.in
+	@${REINPLACE_CMD} -e 's|MimeType=inode/directory;|MimeType=|g' \
+		${WRKSRC}/data/org.gnome.baobab.desktop.in.in
 
 .include <bsd.port.mk>
