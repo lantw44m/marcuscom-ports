@@ -4,7 +4,7 @@
 
 PORTNAME=	grilo-plugins
 PORTVERSION=	0.2.12
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	GNOME
 
@@ -12,12 +12,18 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Plugins for net/grilo
 
 BUILD_DEPENDS=	itstool:${PORTSDIR}/textproc/itstool
-LIB_DEPENDS=	libgrilo-0.2.so:${PORTSDIR}/net/grilo
+LIB_DEPENDS=	libgrilo-0.2.so:${PORTSDIR}/net/grilo \
+		libgdata.so:${PORTSDIR}/devel/libgdata
 
 USES=		gettext gmake libtool:keepla pathfix pkgconfig tar:xz
 USE_LDCONFIG=	yes
 USE_GNOME=	glib20 gnomehier intlhack libxml2 
 GNU_CONFIGURE=	yes
+CONFIGURE_ARGS=	--enable-youtube \
+		--enable-vimeo \
+		--enable-freebox \
+		--enable-tmbd \
+		--disable-upnp
 CPPFLAGS+=	-I${LOCALBASE}/include -I${LOCALBASE}/include/grilo-0.2/
 LDFLAGS+=	-L${LOCALBASE}/lib
 
