@@ -48,7 +48,7 @@ GLIB_SCHEMAS=	org.gnome.Evolution.DefaultSources.gschema.xml \
 		org.gnome.evolution-data-server.calendar.gschema.xml \
 		org.gnome.evolution.shell.network-config.gschema.xml
 
-PLIST_SUB=	VERSION="3.6" EVO_VERSION="1.2"
+PLIST_SUB=	VERSION="3.12" EVO_VERSION="1.2"
 
 OPTIONS_DEFINE=	WEATHER KERBEROS
 OPTIONS_DEFAULT=WEATHER KERBEROS
