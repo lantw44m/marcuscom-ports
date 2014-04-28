@@ -1,6 +1,6 @@
 # Created by: Gustau Perez i Querol <gustau.perez@gmail.com>
 # $FreeBSD$
-#   $MCom: ports-experimental/trunk/net/grilo/Makefile 19276 2014-03-24 15:49:45Z gusi $
+#   $MCom$
 
 PORTNAME=	grilo
 PORTVERSION=	0.2.10
@@ -15,9 +15,9 @@ LIB_DEPENDS=	libsoup-2.4.so:${PORTSDIR}/devel/libsoup \
 		liboauth.so:${PORTSDIR}/net/liboauth \
 		libtotem-plparser.so:${PORTSDIR}/multimedia/totem-pl-parser
 
-USES=		gettext gmake pathfix pkgconfig tar:xz
+USES=		gettext gmake libtool:keepla pathfix pkgconfig tar:xz
 USE_LDCONFIG=	yes
-USE_GNOME=	glib20 gnomehier intlhack introspection:build libxml2 ltverhack
+USE_GNOME=	glib20 gnomehier intlhack introspection:build libxml2
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--enable-vala -disable-debug
 CPPFLAGS+=	-I${LOCALBASE}/include
@@ -32,10 +32,5 @@ OPTIONS_DEFINE=	UI
 UI_DESC=	Enable testing UI
 UI_CONFIGURE_ENABLE=test-ui
 UI_USE=		GNOME=gtk30
-
-post-install:
-	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libgrilo-0.2.so.1
-	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libgrlnet-0.2.so.0 
-	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libgrlpls-0.2.so.0 
 
 .include <bsd.port.mk>

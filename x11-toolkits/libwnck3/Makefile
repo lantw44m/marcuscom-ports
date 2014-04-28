@@ -18,18 +18,14 @@ USES=		tar:xz
 
 LIB_DEPENDS=	libstartup-notification-1.so:${PORTSDIR}/x11/startup-notification
 
-USES+=		bison gettext gmake pathfix pkgconfig
-USE_GNOME=	gtk30 intlhack introspection:build ltverhack \
-		referencehack
+USES+=		bison gettext gmake libtool:keepla pathfix pkgconfig
+USE_GNOME=	gtk30 intlhack introspection:build referencehack
 USE_XORG=	xres x11
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-tools
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
-
-post-install:
-	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libwnck-3.so.0
 
 .include <bsd.port.mk>
 

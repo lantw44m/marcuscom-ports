@@ -16,7 +16,7 @@ COMMENT=	Text widget that adds syntax highlighting to the GtkTextView widget
 
 USES+=		gettext gmake libtool:keepla pathfix pkgconfig tar:xz
 USE_GNOME=	gnomeprefix gtk30 intlhack introspection:build \
-		libxml2 ltverhack referencehack
+		libxml2 referencehack
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--enable-compile-warnings=no --enable-glade-catalog=no \
@@ -27,9 +27,6 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 post-patch:
 	@${REINPLACE_CMD} -e 's|--warn-all||g' \
 		${WRKSRC}/gtksourceview/Makefile.in
-
-post-install:
-	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libgtksourceview-3.0.so.1
 
 .include <bsd.port.mk>
 

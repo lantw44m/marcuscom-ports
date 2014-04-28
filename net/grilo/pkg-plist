@@ -34,14 +34,17 @@ lib/libgrilo-0.2.a
 lib/libgrilo-0.2.la
 lib/libgrilo-0.2.so
 lib/libgrilo-0.2.so.1
+lib/libgrilo-0.2.so.1.6.0
 lib/libgrlnet-0.2.a
 lib/libgrlnet-0.2.la
 lib/libgrlnet-0.2.so
 lib/libgrlnet-0.2.so.0
+lib/libgrlnet-0.2.so.0.1.7
 lib/libgrlpls-0.2.a
 lib/libgrlpls-0.2.la
 lib/libgrlpls-0.2.so
 lib/libgrlpls-0.2.so.0
+lib/libgrlpls-0.2.so.0.0.2
 libdata/pkgconfig/grilo-0.2.pc
 libdata/pkgconfig/grilo-net-0.2.pc
 libdata/pkgconfig/grilo-pls-0.2.pc
