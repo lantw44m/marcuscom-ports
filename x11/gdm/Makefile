@@ -1,6 +1,6 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports-experimental/trunk/x11/gdm/Makefile 19570 2014-04-25 15:47:33Z gusi $
+#   $MCom$
 
 PORTNAME=	gdm
 PORTVERSION=	3.12.1
