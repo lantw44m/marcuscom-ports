@@ -3,7 +3,7 @@
 #   $MCom$
 
 PORTNAME=	zenity
-PORTVERSION=	3.8.0
+PORTVERSION=	3.12.1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 PKGNAMESUFFIX=	3
@@ -27,14 +27,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 OPTIONS_DEFINE=	NOTIFY
 OPTIONS_DEFAULT=NOTIFY
-
-.include <bsd.port.options.mk>
-
-.if ${PORT_OPTIONS:MNOTIFY}
-LIB_DEPENDS+=		libnotify.so:${PORTSDIR}/devel/libnotify
-CONFIGURE_ARGS+=	--enable-libnotify
-.else
-CONFIGURE_ARGS+=	--disable-libnotify
-.endif
+NOTIFY_LIB_DEPENDS=	libnotify.so:${PORTSDIR}/devel/libnotify
+NOTIFY_CONFIGURE_ENABLE=libnotify
 
 .include <bsd.port.mk>
