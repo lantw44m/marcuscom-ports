@@ -29,12 +29,7 @@ GLIB_SCHEMAS=	org.gnome.gnome-chess.gschema.xml
 OPTIONS_DEFINE=	GNUCHESS
 OPTIONS_DEFAULT=GNUCHESS
 GNUCHESS_DESC=	Use gnuchess engine for computer player
-
-.include <bsd.port.options.mk>
-
-.if ${PORT_OPTIONS:MGNUCHESS}
-RUN_DEPENDS=	gnuchess:${PORTSDIR}/games/gnuchess
-.endif
+GNUCHESS_RUN_DEPENDS=	gnuchess:${PORTSDIR}/games/gnuchess
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|HAVE_LINUX_PRCTL_H 1|HAVE_LINUX_PRCTL_H 0|g' \
