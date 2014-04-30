@@ -3,7 +3,7 @@
 #   $MCom$
 
 PORTNAME=	libgtop
-PORTVERSION=	2.28.5
+PORTVERSION=	2.30.0
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -19,9 +19,9 @@ USE_GNOME=	gnomeprefix glib20 intlhack introspection:build
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include -DHAVE_NET_IF_VAR_H -D_WANT_IFADDR
-LDFLAGS+=	-L${LOCALBASE}/lib
+LDFLAGS+=	-L${LOCALBASE}/lib -lutil
 INSTALL_TARGET=	install-strip
-CONFIGURE_ARGS=	--disable-introspection
+CONFIGURE_ARGS=	--enable-introspection
 
 INFO=		libgtop2
 
