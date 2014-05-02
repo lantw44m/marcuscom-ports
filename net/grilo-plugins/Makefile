@@ -13,6 +13,7 @@ COMMENT=	Plugins for net/grilo
 
 BUILD_DEPENDS=	itstool:${PORTSDIR}/textproc/itstool
 LIB_DEPENDS=	libgrilo-0.2.so:${PORTSDIR}/net/grilo \
+		libavahi-gobject.so:${PORTSDIR}/net/avahi-app \
 		libgdata.so:${PORTSDIR}/devel/libgdata
 
 USES=		gmake libtool:keepla pathfix pkgconfig tar:xz
