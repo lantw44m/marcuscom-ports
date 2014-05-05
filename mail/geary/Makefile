@@ -4,6 +4,7 @@
 
 PORTNAME=	geary
 PORTVERSION=	0.6.0
+PORTREVISION=	1
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -33,7 +34,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 GLIB_SCHEMAS=	org.yorba.geary.gschema.xml
 
 post-patch:
-		${REINPLACE_CMD} -e 's|abort $$option||g' \
+		@${REINPLACE_CMD} -e 's|abort $$option||g' \
 			${WRKSRC}/configure
 
 .include <bsd.port.mk>
