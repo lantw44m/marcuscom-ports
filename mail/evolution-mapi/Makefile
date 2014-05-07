@@ -12,9 +12,9 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Evolution plugin to connect to Microsoft Exchange servers
 
 BUILD_DEPENDS=	itstool:${PORTSDIR}/textproc/itstool \
-		evolution>=${EVO_VER}:${PORTSDIR}/mail/evolution
+		evolution>=3.0.0:${PORTSDIR}/mail/evolution
 LIB_DEPENDS=	libmapi.so:${PORTSDIR}/mail/libmapi
-RUN_DEPENDS=	evolution>=${EVO_VER}:${PORTSDIR}/mail/evolution
+RUN_DEPENDS=	evolution>=3.0.0:${PORTSDIR}/mail/evolution
 
 USES=		gettext gmake libtool pkgconfig tar:xz
 USE_GNOME=	intltool
