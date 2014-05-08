@@ -31,7 +31,6 @@ lib/cinnamon-control-center-1/panels/libuniversal-access.la
 lib/cinnamon-control-center-1/panels/libuniversal-access.so
 lib/libcinnamon-control-center.la
 lib/libcinnamon-control-center.so
-lib/libcinnamon-control-center.so.1
 lib/libcinnamon-control-center.so.1.0.0
 libdata/pkgconfig/libcinnamon-control-center.pc
 share/applications/cinnamon-color-panel.desktop
@@ -288,8 +287,6 @@ share/locale/zh_TW/LC_MESSAGES/cinnamon-control-center-timezones.mo
 share/polkit-1/rules.d/cinnamon-control-center.rules
 @dirrmtry share/locale/ilo/LC_MESSAGES
 @dirrmtry share/locale/ilo
-@dirrm %%DATADIR%%/datetime
-@dirrm %%DATADIR%%
 @dirrm share/cinnamon-control-center/ui/datetime
 @dirrm share/cinnamon-control-center/ui
 @dirrm share/cinnamon-control-center/icons/hicolor/48x48/devices
@@ -307,6 +304,7 @@ share/polkit-1/rules.d/cinnamon-control-center.rules
 @dirrm share/cinnamon-control-center/icons/hicolor/16x16
 @dirrm share/cinnamon-control-center/icons/hicolor
 @dirrm share/cinnamon-control-center/icons
+@dirrm share/cinnamon-control-center/datetime
 @dirrm share/cinnamon-control-center
 @dirrm lib/cinnamon-control-center-1/panels
 @dirrm lib/cinnamon-control-center-1
