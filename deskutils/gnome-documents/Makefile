@@ -3,7 +3,7 @@
 #    $MCom$
 
 PORTNAME=	gnome-documents
-PORTVERSION=	3.12.0
+PORTVERSION=	3.12.1
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -29,7 +29,7 @@ RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/dbus-python.pc:${PORTSDIR}/devel/py-
 GLIB_SCHEMAS=	org.gnome.Documents.enums.xml \
 		org.gnome.documents.gschema.xml
 
-USES=		gettext gmake pathfix pkgconfig tar:xz
+USES=		gettext gmake libtool pathfix pkgconfig tar:xz
 USE_GNOME=	gnomedesktop3 gnomeprefix gtk30 intlhack \
 		introspection:build libxml2
 GNU_CONFIGURE=	yes
