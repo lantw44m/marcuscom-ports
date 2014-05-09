@@ -4,6 +4,7 @@
 
 PORTNAME=	gnome-documents
 PORTVERSION=	3.12.1
+PORTREVISION=	1
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -24,7 +25,8 @@ LIB_DEPENDS=	libdbus-glib-1.so:${PORTSDIR}/devel/dbus-glib \
 		libtracker-sparql-1.0.so:${PORTSDIR}/sysutils/tracker \
 		libzapojit-0.0.so:${PORTSDIR}/net/libzapojit
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/dbus-python.pc:${PORTSDIR}/devel/py-dbus \
-		${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss
+		${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss \
+		unoconv:${PORTSDIR}/textproc/unoconv
 
 GLIB_SCHEMAS=	org.gnome.Documents.enums.xml \
 		org.gnome.documents.gschema.xml
@@ -35,7 +37,7 @@ USE_GNOME=	gnomedesktop3 gnomeprefix gtk30 intlhack \
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 USE_LDCONFIG=	yes
-CPPFLAGS+=	-I${LOCALBASE}/include -Wno-format-nonliteral
+CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
 post-install:
