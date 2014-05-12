@@ -3,7 +3,7 @@
 #   $MCom$
 
 PORTNAME=	webkit
-PORTVERSION=	2.4.1
+PORTVERSION=	2.4.2
 CATEGORIES=	www
 MASTER_SITES=	http://webkitgtk.org/releases/
 PKGNAMESUFFIX=	-gtk3
@@ -39,6 +39,7 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	ac_cv_path_DOLT_BASH=""
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
+INSTALL_TARGET=	install-strip
 CONFIGURE_ARGS=	--with-gtk=3.0 \
 		--enable-svg-fonts \
 		--enable-geolocation \
@@ -75,30 +76,14 @@ WEBGL_DESC=	Enable Web GL support
 DEBUG_DESC=	Just enable debug symbols
 FULLDEBUG_DESC=	Enable asserts and other debug support
 
+WEBGL_CONFIGURE_ENABLE=	webgl
+WEBGL_USE=	GL=gl
+WEBAUDIO_CONFIGURE_ENABLE=	web-audio
+FULLDEBUG_CONFIGURE_ENABLE=	debug
+DEBUG_CONFIGURE_ON=	--enable-debug-symbols=yes
+DEBUG_CONFIGURE_OFF=	--disable-debug-symbols
+
 .include <bsd.port.options.mk>
-
-.if ${PORT_OPTIONS:MWEBGL}
-USE_GL=		gl
-CONFIGURE_ARGS+=--enable-webgl
-.else
-CONFIGURE_ARGS+=--disable-webgl
-.endif
-
-.if ${PORT_OPTIONS:MWEBAUDIO}
-CONFIGURE_ARGS+=--enable-web-audio
-.else
-CONFIGURE_ARGS+=--disable-web-audio
-.endif
-
-.if ${PORT_OPTIONS:MFULLDEBUG}
-CONFIGURE_ARGS+=--enable-debug
-.else
-CONFIGURE_ARGS+=--disable-debug
-.endif
-
-.if ${PORT_OPTIONS:MDEBUG}
-CONFIGURE_ARGS+=--enable-debug-symbols=yes
-.endif
 
 # gtest to use <tr1/tuple,> while libc++ only has <tuple>
 CPPFLAGS+=	-DGTEST_USE_OWN_TR1_TUPLE
@@ -166,7 +151,5 @@ post-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/Programs/MiniBrowser \
 		${STAGEDIR}${PREFIX}/bin/
 .endif
-	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/webkit2gtk-3.0/injected-bundle/libwebkit2gtkinjectedbundle.so
-	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/lib*.so.*
 
 .include <bsd.port.post.mk>
