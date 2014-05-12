@@ -8,34 +8,3 @@
  
  	if (!bin)
  		return;
-@@ -686,11 +687,10 @@
- 		PidTagNickname,
- 		PidTagRecipientDisplayName,
- 		PidTagDisplayName,
--		PidTag7BitDisplayName
-+		PidTagAddressBookDisplayNamePrintable
- 	};
- 
- 	const uint32_t email_proptags[] = {
--		PidTagPrimarySmtpAddress,
- 		PidTagSmtpAddress
- 	};
- 
-@@ -1352,7 +1352,6 @@
- 		set_value (PidTagEmailAddress, email);
- 
- 		set_value (PidTagSmtpAddress, email);
--		set_value (PidTagPrimarySmtpAddress, email);
- 
- 		ui32 = 0;
- 		set_value (PidTagSendInternetEncoding, &ui32);
-@@ -1433,9 +1432,7 @@
- 
- 		set_value (PidTagAddressType, "SMTP");
- 		set_value (PidTagEmailAddress, email);
--
- 		set_value (PidTagSmtpAddress, email);
--		set_value (PidTagPrimarySmtpAddress, email);
- 
- 		ui32 = 0;
- 		set_value (PidTagSendInternetEncoding, &ui32);
