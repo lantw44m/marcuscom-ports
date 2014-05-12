@@ -4,7 +4,7 @@
 
 PORTNAME=	nemo
 PORTVERSION=	2.2.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	x11-fm gnome
 MASTER_SITES=	http://github.com/linuxmint/${PORTNAME}/archive/${PORTVERSION}.tar.gz?dummy=/
 DIST_SUBDIR=	gnome3
@@ -24,7 +24,7 @@ LIB_DEPENDS=	libexif.so:${PORTSDIR}/graphics/libexif \
 RUN_DEPENDS=	${LOCALBASE}/share/icons/gnome/index.theme:${PORTSDIR}/misc/gnome-icon-theme \
 		${LOCALBASE}/libdata/pkgconfig/gsettings-desktop-schemas.pc:${PORTSDIR}/devel/gsettings-desktop-schemas
 
-USES=		desktop-file-utils gettext gmake libtool:keepla pathfix \
+USES=		desktop-file-utils gettext gmake pathfix \
 		pkgconfig shared-mime-info
 USE_GNOME=	gnomedesktop3 gnomeprefix intlhack introspection:build \
 		libxml2 pygobject3
