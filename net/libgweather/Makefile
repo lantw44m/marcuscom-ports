@@ -3,7 +3,7 @@
 #   $MCom$
 
 PORTNAME=	libgweather
-PORTVERSION=	3.12.1
+PORTVERSION=	3.12.2
 CATEGORIES=	net gnome
 MASTER_SITES=	GNOME
 
