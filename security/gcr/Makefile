@@ -3,7 +3,7 @@
 #    $MCom$
 
 PORTNAME=	gcr
-PORTVERSION=	3.12.0
+PORTVERSION=	3.12.2
 CATEGORIES=	security gnome
 MASTER_SITES=	GNOME
 
@@ -27,8 +27,5 @@ USE_LDCONFIG=	yes
 INSTALLS_ICONS=	yes
 
 GLIB_SCHEMAS=	org.gnome.crypto.pgp.gschema.xml
-
-post-install:
-	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/lib*.so*
 
 .include <bsd.port.mk>
