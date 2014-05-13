@@ -68,9 +68,8 @@ SHEBANG_FILES=	\
 BROWSER_PLUGINS_DIR?=	${LOCALBASE}/lib/browser_plugins/symlinks/webkit-gtk3
 #_BROWSER_PLUGINS_DIR=	${BROWSER_PLUGINS_DIR:S|^/|"|:S|/|", "|g}",
 
-OPTIONS_DEFINE=	WEBGL WEBAUDIO DEBUG FULLDEBUG WEBKIT2
-OPTIONS_DEFAULT=WEBGL WEBAUDIO WEBKIT2
-WEBKIT2_DESC=	Build WebKit2 API library
+OPTIONS_DEFINE=	WEBGL WEBAUDIO DEBUG FULLDEBUG
+OPTIONS_DEFAULT=WEBGL WEBAUDIO
 WEBAUDIO_DESC=	Web audio support
 WEBGL_DESC=	Enable Web GL support
 DEBUG_DESC=	Just enable debug symbols
@@ -90,15 +89,12 @@ CPPFLAGS+=	-DGTEST_USE_OWN_TR1_TUPLE
 # Shutup warning spam
 CXXFLAGS+=	-Wno-c++11-extensions -Qunused-arguments
 
-.if ${PORT_OPTIONS:MWEBKIT2}
 CONFIGURE_ARGS+=--enable-webkit2
-PLIST_SUB+=	WEBKIT2=""
-
 # We need clang + libc++ or gcc 4.7+. gcc has libstdc++ conflict between
 # gcc port and base. This originates from icu
 CXXFLAGS+=	-stdlib=libc++
 LDFLAGS+=	-stdlib=libc++
-. if ${OSVERSION}<1000019
+.if ${OSVERSION}<1000019
 BUILD_DEPENDS+=	clang33>=3.3_1:${PORTSDIR}/lang/clang33 \
 		libc++>=0:${PORTSDIR}/devel/libc++
 RUN_DEPENDS+=	libc++>=0:${PORTSDIR}/devel/libc++
@@ -106,17 +102,6 @@ CC=		clang33
 CXX=		clang++33
 CPP=		clang-cpp33
 CONFIGURE_ENV+=	CC=${CC} CXX=${CXX} CPP=${CPP}
-. endif
-.else
-# we need clang also for !Webkit2 builds
-. if ${OSVERSION}<1000019
-BUILD_DEPENDS+=	clang33>=3.3_1:${PORTSDIR}/lang/clang33
-CC=		clang33
-CXX=		clang++33
-CPP=		clang-cpp33
-CONFIGURE_ARGS+=--disable-webkit2
-. endif
-PLIST_SUB+=	WEBKIT2="@comment "
 .endif
 
 .if ${ARCH} == powerpc64
