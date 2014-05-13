@@ -3,7 +3,7 @@
 #   $MCom$
 
 PORTNAME=	gsettings-desktop-schemas
-PORTVERSION=	3.12.0
+PORTVERSION=	3.12.2
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
