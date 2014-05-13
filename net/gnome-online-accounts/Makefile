@@ -3,7 +3,7 @@
 #    $MCom$
 
 PORTNAME=	gnome-online-accounts
-PORTVERSION=	3.12.1
+PORTVERSION=	3.12.2
 CATEGORIES=	net
 MASTER_SITES=	GNOME
 
@@ -28,7 +28,7 @@ INSTALLS_ICONS=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-post-install:
-	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libgoa-*.so.*
+#post-install:
+#	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libgoa-*.so.*
 
 .include <bsd.port.mk>
