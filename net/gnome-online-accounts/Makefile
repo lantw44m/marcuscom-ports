@@ -28,7 +28,4 @@ INSTALLS_ICONS=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-#post-install:
-#	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libgoa-*.so.*
-
 .include <bsd.port.mk>
