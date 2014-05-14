@@ -3,7 +3,7 @@
 #   $MCom$
 
 PORTNAME=	mutter
-PORTVERSION=	3.12.1
+PORTVERSION=	3.12.2
 CATEGORIES=	x11-wm
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -38,9 +38,8 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|-Wcast-align||g' \
 		${WRKSRC}/configure
 
-post-install:
-	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libmutter.so.0
-	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/mutter/plugins/default.so
-
+#post-install:
+#	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libmutter.so.0
+#	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/mutter/plugins/default.so
 
 .include <bsd.port.mk>
