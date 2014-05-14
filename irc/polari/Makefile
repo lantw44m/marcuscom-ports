@@ -3,7 +3,7 @@
 #   $MCom$
 
 PORTNAME=	polari
-PORTVERSION=	3.12.1
+PORTVERSION=	3.12.2
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -23,7 +23,7 @@ INSTALLS_ICONS=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-post-install:
-	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/polari/libpolari-1.0.so
+#post-install:
+#	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/polari/libpolari-1.0.so
 
 .include <bsd.port.mk>
