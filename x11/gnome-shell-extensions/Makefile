@@ -3,7 +3,7 @@
 #    $MCom$
 
 PORTNAME=	gnome-shell-extensions
-PORTVERSION=	3.12.0
+PORTVERSION=	3.12.2
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -12,7 +12,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME desktop shell extensions
 
 LIB_DEPENDS=	libgtop-2.0.so:${PORTSDIR}/devel/libgtop
-RUN_DEPENDS=	gnome-shell>=3.6.2:${PORTSDIR}/x11/gnome-shell
+RUN_DEPENDS=	gnome-shell>=3.12.0:${PORTSDIR}/x11/gnome-shell
 
 USES=		gettext gmake pathfix pkgconfig tar:xz
 USE_GNOME=	glib20 gnomedesktop3 intltool
