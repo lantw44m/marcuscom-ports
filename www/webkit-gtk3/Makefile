@@ -132,9 +132,7 @@ post-patch:
 post-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/Programs/GtkLauncher \
 		${STAGEDIR}${PREFIX}/bin/GtkLauncher-3
-.if ${PORT_OPTIONS:MWEBKIT2}
 	${INSTALL_PROGRAM} ${WRKSRC}/Programs/MiniBrowser \
 		${STAGEDIR}${PREFIX}/bin/
-.endif
 
 .include <bsd.port.post.mk>
