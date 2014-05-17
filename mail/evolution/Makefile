@@ -4,6 +4,7 @@
 
 PORTNAME=	evolution
 PORTVERSION=	3.12.2
+PORTREVISION=	1
 CATEGORIES=	mail gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -23,7 +24,7 @@ LIB_DEPENDS=	libnss3.so:${PORTSDIR}/security/nss \
 RUN_DEPENDS=	highlight:${PORTSDIR}/textproc/highlight
 
 USES=		desktop-file-utils bison gettext gmake libtool:keepla \
-		pathfix pkgconfig shebangfix tar:xz
+		pathfix perl5 pkgconfig tar:xz
 USE_GNOME=	evolutiondataserver3 gnomedesktop3 gnomeprefix gtkhtml4 \
 		intlhack
 GNU_CONFIGURE=	yes
@@ -36,7 +37,6 @@ CONFIGURE_ARGS=	--enable-nss=yes \
 CONFIGURE_ARGS+=--disable-image-inline
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
-SHEBANG_FILES=	addressbook/tools/csv2vcard
 
 GLIB_SCHEMAS=	org.gnome.evolution.gschema.xml \
 		org.gnome.evolution.addressbook.gschema.xml \
