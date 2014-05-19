@@ -22,5 +22,6 @@ USE_PYTHON=	3
 INSTALLS_ICONS=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
+GLIB_SCHEMAS=	org.gnome.gnome-sound-recorder.gschema.xml
 
 .include <bsd.port.mk>
