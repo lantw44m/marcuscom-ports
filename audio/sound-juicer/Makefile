@@ -3,7 +3,7 @@
 #   $MCom$
 
 PORTNAME=	sound-juicer
-PORTVERSION=	3.11.90
+PORTVERSION=	3.12.0
 CATEGORIES=	audio gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -27,6 +27,7 @@ CONFIGURE_ARGS=	--enable-ignore-missing-cd
 INSTALLS_ICONS=	yes
 CFLAGS+=	-I${LOCALBASE}/include -Wno-error=format-nonliteral
 LDFLAGS+=	-L${LOCALBASE}/lib
+MAKE_ENV=	XDG_CACHE_HOME=${WRKDIR}
 
 GLIB_SCHEMAS=	org.gnome.sound-juicer.gschema.xml
 
