@@ -3,7 +3,7 @@
 #   $MCom$
 
 PORTNAME=	california
-PORTVERSION=	0.1.0
+PORTVERSION=	0.1.1
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -17,7 +17,8 @@ LIB_DEPENDS=	libwebkitgtk-3.0.so:${PORTSDIR}/www/webkit-gtk3 \
 		libgdata.so:${PORTSDIR}/devel/libgdata \
 		libgoa-1.0.so:${PORTSDIR}/net/gnome-online-accounts
 
-USES=		gettext gmake pathfix pkgconfig tar:xz
+USES=		desktop-file-utils gettext gmake pathfix \
+		pkgconfig tar:xz
 USE_GNOME=	evolutiondataserver3 glib20 gnomedocutils gnomeprefix \
 		gtk30 intlhack introspection
 USE_LDCONFIG=	yes
