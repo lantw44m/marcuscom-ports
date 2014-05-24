@@ -22,7 +22,7 @@ OPTIONS_DEFINE=	NSFW
 OPTIONS_SUB=	yes
 NSFW_DESC=	Enable adult website support
 
-USES=		pathfix tar:xz
+USES=		lua:run pathfix tar:xz
 GNU_CONFIGURE=	yes
 
 QUVI_VER=	0.9.20131130
