@@ -21,7 +21,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 SLAVE_PORT?=	no
 
-USES=		gmake pathfix pkgconfig tar:xz
+USES=		gmake libtool pathfix pkgconfig tar:xz
 GNU_CONFIGURE=	yes
 
 # this port doesn't work with py-gobject < 2.28.6_2, clungle below

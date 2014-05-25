@@ -18,7 +18,7 @@ BUILD_DEPENDS=	dbus-glib>=0:${PORTSDIR}/devel/dbus-glib
 
 SLAVE_PORT?=	no
 
-USES=		gettext gmake libtool:keepla pathfix pkgconfig
+USES=		gettext gmake libtool pathfix pkgconfig
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${PYTHON_INCLUDEDIR}
 CONFIGURE_ARGS=	--docdir=${DOCSDIR} \

@@ -4,9 +4,7 @@
 %%PYTHON_SITELIBDIR%%/gi/_constants.py
 %%PYTHON_SITELIBDIR%%/gi/_constants.pyc
 %%PYTHON_SITELIBDIR%%/gi/_constants.pyo
-%%PYTHON_SITELIBDIR%%/gi/_gi.la
 %%PYTHON_SITELIBDIR%%/gi/_gi.so
-%%PYTHON_SITELIBDIR%%/gi/_gi_cairo.la
 %%PYTHON_SITELIBDIR%%/gi/_gi_cairo.so
 %%PYTHON_SITELIBDIR%%/gi/_gobject/__init__.py
 %%PYTHON_SITELIBDIR%%/gi/_gobject/__init__.pyc
