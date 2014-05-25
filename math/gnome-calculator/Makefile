@@ -4,6 +4,7 @@
 
 PORTNAME=	gnome-calculator
 PORTVERSION=	3.12.1
+PORTREVISION=	1
 CATEGORIES=	math gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -14,7 +15,7 @@ COMMENT=	GNOME 3 calculator tool
 BUILD_DEPENDS=	itstool:${PORTSDIR}/textproc/itstool
 
 USES=		bison gettext gmake pathfix pkgconfig tar:xz
-USE_GNOME=	gconf2 gnomeprefix gtksourceview3 gtk30 intlhack libxml2
+USE_GNOME=	gnomeprefix gtksourceview3 gtk30 intlhack libxml2
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
