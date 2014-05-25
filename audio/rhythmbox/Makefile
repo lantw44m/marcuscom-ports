@@ -3,8 +3,7 @@
 #   $MCom$
 
 PORTNAME=	rhythmbox
-PORTVERSION=	3.0.2
-PORTREVISION=	4
+PORTVERSION=	3.0.3
 CATEGORIES=	audio gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -26,7 +25,7 @@ LIB_DEPENDS=	libmusicbrainz5.so:${PORTSDIR}/audio/libmusicbrainz5 \
 		libsecret-1.so:${PORTSDIR}/security/libsecret \
 		libbrasero-media3.so:${PORTSDIR}/sysutils/brasero
 
-USES=		desktop-file-utils gettext gmake libtool:keepla pathfix \
+USES=		desktop-file-utils gettext gmake libtool pathfix \
 		pkgconfig tar:xz
 USE_GNOME=	intlhack gnomeprefix gtk30 introspection:build
 USE_XORG=	ice xproto
