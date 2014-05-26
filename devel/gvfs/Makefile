@@ -11,6 +11,7 @@ DIST_SUBDIR=	gnome3
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME virtual file system
 
+BUILD_DEPENDS=	docbook-xsl>=0:${PORTSDIR}/textproc/docbook-xsl
 LIB_DEPENDS=	libdbus-1.so:${PORTSDIR}/devel/dbus \
 		libsoup-gnome-2.4.so:${PORTSDIR}/devel/libsoup-gnome \
 		libgcrypt.so:${PORTSDIR}/security/libgcrypt \
@@ -19,7 +20,7 @@ LIB_DEPENDS=	libdbus-1.so:${PORTSDIR}/devel/dbus \
 PORTSCOUT=	limitw:1,even
 
 USES=		gettext gmake libtool pathfix pkgconfig tar:xz
-USE_GNOME=	glib20 gnomeprefix intlhack intltool
+USE_GNOME=	glib20 gnomeprefix intlhack intltool libxslt:build
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
