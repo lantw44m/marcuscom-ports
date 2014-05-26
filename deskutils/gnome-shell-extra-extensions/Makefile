@@ -4,6 +4,7 @@
 
 PORTNAME=	gnome-shell-extra-extensions
 PORTVERSION=	3.12.2
+PORTREVISION=	1
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -22,7 +23,8 @@ RUN_DEPENDS=	gnome-shell-extension-weather>=0:${PORTSDIR}/deskutils/gnome-shell-
 		gnome-shell-extension-hidetopbar>=0:${PORTSDIR}/deskutils/gnome-shell-extension-hidetopbar \
 		gnome-shell-extension-lockkeys>=0:${PORTSDIR}/deskutils/gnome-shell-extension-lockkeys \
 		gnome-shell-extension-trash>=0:${PORTSDIR}/deskutils/gnome-shell-extension-trash \
-		gnome-shell-extension-dashtodock>=0:${PORTSDIR}/deskutils/gnome-shell-extension-dashtodock
+		gnome-shell-extension-dashtodock>=0:${PORTSDIR}/deskutils/gnome-shell-extension-dashtodock \
+		gnome-shell-extension-audio-output-switcher>=0:${PORTSDIR}/deskutils/gnome-shell-extension-audio-output-switcher
 
 NO_BUILD=	yes
 NO_INSTALL=	yes
