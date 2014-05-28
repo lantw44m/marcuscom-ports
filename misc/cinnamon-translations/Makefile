@@ -3,7 +3,7 @@
 #   $MCom$
 
 PORTNAME=	cinnamon-translations
-PORTVERSION=	2.2.0
+PORTVERSION=	2.2.3
 CATEGORIES=	misc x11 gnome
 MASTER_SITES=	http://github.com/linuxmint/${PORTNAME}/archive/${PORTVERSION}.tar.gz?dummy=/
 DIST_SUBDIR=	gnome3

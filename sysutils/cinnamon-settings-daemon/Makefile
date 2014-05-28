@@ -3,7 +3,7 @@
 #   $MCom$
 
 PORTNAME=	cinnamon-settings-daemon
-PORTVERSION=	2.2.1
+PORTVERSION=	2.2.3
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	http://github.com/linuxmint/${PORTNAME}/archive/${PORTVERSION}.tar.gz?dummy=/
 DIST_SUBDIR=	gnome3
@@ -28,9 +28,9 @@ LIB_DEPENDS=	libcanberra-gtk3.so:${PORTSDIR}/audio/libcanberra-gtk3 \
 RUN_DEPENDS=	cinnamon-session:${PORTSDIR}/x11/cinnamon-session \
 		${LOCALBASE}/libdata/pkgconfig/gsettings-desktop-schemas.pc:${PORTSDIR}/devel/gsettings-desktop-schemas
 
+USES=		gettext gmake libtool pathfix pkgconfig tar:xz
 USE_GNOME=	gnomehier gnomeprefix intlhack libgnomekbd \
 		libxslt:build
-USES=		gettext libtool:keepla gmake pathfix pkgconfig tar:xz
 USE_XORG=	xxf86misc
 GNU_CONFIGURE=	yes
 USE_AUTOTOOLS=	libtoolize autoconf automake
