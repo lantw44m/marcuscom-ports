@@ -4,7 +4,7 @@
 
 PORTNAME=	gnome3
 PORTVERSION=	3.12.0
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES?=	x11 gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -46,8 +46,8 @@ NO_BUILD=	yes
 NO_MTREE=	yes
 
 .if ${.CURDIR:T}!="gnome3-lite"
-#OPTIONS_DEFINE+=MAPI
-MAPI_DESC=	Depend on evolution-mapi (pulls in samba4)" off
+OPTIONS_DEFINE+=MAPI
+MAPI_DESC=	Depend on evolution-mapi (pulls in samba4)
 .endif
 
 .include <bsd.port.options.mk>
