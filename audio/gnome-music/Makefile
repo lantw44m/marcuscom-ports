@@ -4,6 +4,7 @@
 
 PORTNAME=	gnome-music
 PORTVERSION=	3.12.2.1
+PORTREVISION=	1
 CATEGORIES=	audio gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -25,10 +26,8 @@ INSTALLS_ICONS=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 MAKE_ENV=	XDG_CACHE_HOME=${WRKDIR}
+INSTALL_TARGET=	install-strip
 
 GLIB_SCHEMAS=	org.gnome.Music.gschema.xml
-
-post-install:
-	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/gnome-music/libgd.so
 
 .include <bsd.port.mk>
