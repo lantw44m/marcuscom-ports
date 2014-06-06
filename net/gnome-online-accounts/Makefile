@@ -3,7 +3,7 @@
 #    $MCom$
 
 PORTNAME=	gnome-online-accounts
-PORTVERSION=	3.12.2
+PORTVERSION=	3.12.3
 CATEGORIES=	net
 MASTER_SITES=	GNOME
 
@@ -27,5 +27,6 @@ USE_LDCONFIG=	yes
 INSTALLS_ICONS=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
+INSTALL_TARGET=	install-strip
 
 .include <bsd.port.mk>
