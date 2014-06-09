@@ -8,6 +8,7 @@ deskutils/gnome-utils -> deskutils/gnome-system-log
 devel/glade3 -> devel/glade
 devel/libgdata -> devel/libgdata06
 graphics/clutter -> graphics/cogl
+math/gcalctool -> math/gnome-calculator
 net-im/farsight2 -> net-im/farstream
 net-im/telepathy-farsight -> net-im/telepathy-farstream
 security/gnome-keyring -> security/gcr
