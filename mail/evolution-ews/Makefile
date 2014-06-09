@@ -3,7 +3,7 @@
 #   $MCom$
 
 PORTNAME=	evolution-ews
-PORTVERSION=	3.12.2
+PORTVERSION=	3.12.3
 CATEGORIES=	mail gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -25,14 +25,9 @@ USE_OPENLDAP=	yes
 USE_GNOME=	gnomeprefix intlhack
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
+INSTALL_TARGET=	install-strip
 
 VERSION=	3.12
 PLIST_SUB=	VERSION=${VERSION}
-
-post-install:
-	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/evolution-data-server/lib*.so*
-	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/evolution-data-server/*/lib*.so*
-	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/evolution/${VERSION}/modules/module-*.so
-	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/evolution-data-server/registry-modules/*.so
 
 .include <bsd.port.mk>
