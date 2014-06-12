@@ -3,7 +3,7 @@
 #   $MCom$
 
 PORTNAME=	empathy
-PORTVERSION=	3.12.2
+PORTVERSION=	3.12.3
 CATEGORIES=	net-im gnome
 MASTER_SITES=	GNOME
 
@@ -51,6 +51,7 @@ CONFIGURE_ARGS=	--disable-Werror \
 		--enable-goa \
 		--enable-gst-1.0=yes \
 		--enable-location=yes
+INSTALL_TARGET=	install-strip
 
 GLIB_SCHEMAS=	org.gnome.Empathy.gschema.xml \
 		org.gnome.telepathy-account-widgets.gschema.xml
