@@ -4,6 +4,7 @@
 
 PORTNAME=	bijiben
 PORTVERSION=	3.12.2
+PORTREVISION=	1
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -17,7 +18,8 @@ LIB_DEPENDS=	libtracker-control-1.0.so:${PORTSDIR}/sysutils/tracker \
 		libwebkitgtk-3.0.so:${PORTSDIR}/www/webkit-gtk3 \
 		libclutter-gtk-1.0.so:${PORTSDIR}/graphics/clutter-gtk3
 
-USES=		gettext gmake libtool:keepla pathfix pkgconfig tar:xz
+USES=		desktop-file-utils gettext gmake libtool \
+		pathfix pkgconfig shared-mime-info tar:xz
 USE_LDCONFIG=	yes
 USE_GNOME=	gnomedesktop3 gnomeprefix gtk30 intlhack \
 		introspection:build
