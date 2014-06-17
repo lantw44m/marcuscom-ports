@@ -23,7 +23,7 @@ LIB_DEPENDS=	libpcre.so:${PORTSDIR}/devel/pcre \
 
 USE_GNOME=	gnomeprefix gtk30 gtkmm30 intltool \
 		libxml2 libxslt
-USES=		desktop-file-utils gettext gmake libtool:keepla \
+USES=		desktop-file-utils gettext gmake libtool \
 		pathfix pkgconfig tar:xz
 GLIB_SCHEMAS=	org.gnome.gnote.gschema.xml
 INSTALLS_ICONS=	yes
