@@ -28,7 +28,7 @@ lib/girepository-1.0/FolksTelepathy-0.6.typelib
 %%TRACKER%%lib/girepository-1.0/FolksTracker-0.6.typelib
 lib/libfolks-dummy.la
 lib/libfolks-dummy.so
-lib/libfolks-dummy.so.25
+lib/libfolks-dummy.so.%%LIBVER%%
 lib/libfolks-dummy.so.%%LIBVERLONG%%
 lib/libfolks-eds.la
 lib/libfolks-eds.so
