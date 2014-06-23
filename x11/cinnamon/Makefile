@@ -4,6 +4,7 @@
 
 PORTNAME=	cinnamon
 PORTVERSION=	2.2.13
+PORTREVISION=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	http://github.com/linuxmint/${PORTNAME}/archive/${PORTVERSION}.tar.gz?dummy=/
 DIST_SUBDIR=	gnome3
