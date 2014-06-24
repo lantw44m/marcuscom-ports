@@ -16,8 +16,6 @@ USES=		tar:xz
 
 .if !defined(REFERENCE_PORT)
 
-LIB_DEPENDS=	libstartup-notification-1.so:${PORTSDIR}/x11/startup-notification
-
 USES+=		bison gettext gmake libtool:keepla pathfix pkgconfig
 USE_GNOME=	gtk30 intlhack introspection:build referencehack
 USE_XORG=	xres x11
@@ -26,6 +24,11 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-tools
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
+
+OPTIONS_DEFINE=	STARTUP
+OPTIONS_DEFAULT=STARTUP
+STARTUP_DESC=	Startup notification support
+STARTUP_LIB_DEPENDS=	libstartup-notification-1.so:${PORTSDIR}/x11/startup-notification
 
 .include <bsd.port.mk>
 
