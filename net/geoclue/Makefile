@@ -3,8 +3,7 @@
 #   $MCom$
 
 PORTNAME=	geoclue
-PORTVERSION=	2.1.8
-PORTREVISION=	2
+PORTVERSION=	2.1.9
 CATEGORIES=	net devel gnome
 MASTER_SITES=	http://www.freedesktop.org/software/geoclue/releases/2.1/
 
@@ -16,16 +15,16 @@ LIB_DEPENDS=	libjson-glib-1.0.so:${PORTSDIR}/devel/json-glib \
 	
 USES=		gettext gmake pathfix pkgconfig tar:xz
 USE_GNOME=	glib20 gnomehier intlhack 
-USE_AUTOTOOLS=	autoconf automake
+#USE_AUTOTOOLS=	autoconf automake
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
-PATHFIX_MAKEFILEIN=	Makefile.am
+#PATHFIX_MAKEFILEIN=	Makefile.am
 CONFIGURE_ARGS=	--disable-3g-source \
 		--disable-modem-gps-source
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-pre-configure:
-		cd ${WRKSRC} && aclocal && autoconf
+#pre-configure:
+#		cd ${WRKSRC} && aclocal && autoconf
 
 .include <bsd.port.mk>
