@@ -3,7 +3,7 @@
 #   $MCom$
 
 PORTNAME=	gnome-chess
-PORTVERSION=	3.12.2
+PORTVERSION=	3.12.3
 CATEGORIES=	games gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -30,10 +30,5 @@ OPTIONS_DEFINE=	GNUCHESS
 OPTIONS_DEFAULT=GNUCHESS
 GNUCHESS_DESC=	Use gnuchess engine for computer player
 GNUCHESS_RUN_DEPENDS=	gnuchess:${PORTSDIR}/games/gnuchess
-
-post-patch:
-	@${REINPLACE_CMD} -e 's|HAVE_LINUX_PRCTL_H 1|HAVE_LINUX_PRCTL_H 0|g' \
-                ${WRKSRC}/configure
-	${RM} ${WRKSRC}/src/chess-engine.c
 
 .include <bsd.port.mk>
