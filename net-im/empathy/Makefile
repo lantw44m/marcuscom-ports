@@ -4,6 +4,7 @@
 
 PORTNAME=	empathy
 PORTVERSION=	3.12.4
+PORTREVISION=	1
 CATEGORIES=	net-im gnome
 MASTER_SITES=	GNOME
 
@@ -37,7 +38,7 @@ RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-co
 		geoclue>=0:${PORTSDIR}/net/geoclue \
     		${LOCALBASE}/libexec/mission-control-5:${PORTSDIR}/net-im/telepathy-mission-control
 
-USES=		gettext gmake libtool:keepla pathfix pkgconfig tar:xz
+USES=		gettext gmake libtool pathfix pkgconfig tar:xz
 USE_GNOME=	evolutiondataserver3 gnomeprefix
 USE_PYTHON=	yes
 USE_GSTREAMER1=	yes
