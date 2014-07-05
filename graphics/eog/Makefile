@@ -21,7 +21,7 @@ RUN_DEPENDS=	gnome-icon-theme>=0:${PORTSDIR}/misc/gnome-icon-theme \
 
 USE_GNOME=	gnomeprefix intlhack librsvg2 gtk30 gnomedesktop3 \
 		introspection:build
-USES=		desktop-file-utils gettext gmake pathfix \
+USES=		desktop-file-utils gettext gmake libtool pathfix \
 		pkgconfig tar:xz
 INSTALLS_ICONS=	yes
 GNU_CONFIGURE=	yes
