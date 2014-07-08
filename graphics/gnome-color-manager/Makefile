@@ -3,7 +3,7 @@
 #   $MCom$
 
 PORTNAME=	gnome-color-manager
-PORTVERSION=	3.12.2
+PORTVERSION=	3.12.3
 CATEGORIES=	graphics gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
