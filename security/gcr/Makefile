@@ -4,6 +4,7 @@
 
 PORTNAME=	gcr
 PORTVERSION=	3.12.2
+PORTREVISION=	1
 CATEGORIES=	security gnome
 MASTER_SITES=	GNOME
 
@@ -20,11 +21,12 @@ LIB_DEPENDS=	libdbus-1.so:${PORTSDIR}/devel/dbus \
 CONFLICTS=	gnome-keyring-2.[0-9]*
 
 USE_GNOME=	gtk30 gnomehier intlhack introspection:build
-USES=		desktop-file-utils gettext gmake libtool:keepla pathfix \
+USES=		desktop-file-utils gettext gmake libtool pathfix \
 		pkgconfig shared-mime-info tar:xz
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 INSTALLS_ICONS=	yes
+INSTALL_TARGET=	install-strip
 
 GLIB_SCHEMAS=	org.gnome.crypto.pgp.gschema.xml
 
