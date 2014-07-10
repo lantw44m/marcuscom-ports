@@ -444,7 +444,6 @@ share/vala/vapi/tracker-sparql-%%TRACKER_VER%%.vapi
 @dirrm %%DATADIR%%/ontologies
 @dirrm %%DATADIR%%/miners
 @dirrm %%DATADIR%%/languages
-@dirrm %%DATADIR%%/icons
 @dirrm %%DATADIR%%/extract-rules
 @dirrm %%DATADIR%%-tests
 @dirrm %%DATADIR%%
