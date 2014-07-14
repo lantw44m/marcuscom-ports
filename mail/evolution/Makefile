@@ -3,7 +3,7 @@
 #   $MCom$
 
 PORTNAME=	evolution
-PORTVERSION=	3.12.3
+PORTVERSION=	3.12.4
 CATEGORIES=	mail gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -22,7 +22,7 @@ LIB_DEPENDS=	libnss3.so:${PORTSDIR}/security/nss \
 		libnotify.so:${PORTSDIR}/devel/libnotify
 RUN_DEPENDS=	highlight:${PORTSDIR}/textproc/highlight
 
-USES=		desktop-file-utils bison gettext gmake libtool:keepla \
+USES=		desktop-file-utils bison gettext gmake libtool \
 		pathfix perl5 pkgconfig tar:xz
 USE_GNOME=	evolutiondataserver3 gnomedesktop3 gnomeprefix gtkhtml4 \
 		intlhack
