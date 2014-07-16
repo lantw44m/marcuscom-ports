@@ -3,7 +3,7 @@
 #    $MCom$
 
 PORTNAME=	gnome-online-accounts
-PORTVERSION=	3.12.3
+PORTVERSION=	3.12.4
 CATEGORIES=	net
 MASTER_SITES=	GNOME
 
@@ -20,7 +20,7 @@ LIB_DEPENDS=	libwebkitgtk-3.0.so:${PORTSDIR}/www/webkit-gtk3 \
 		libsecret-1.so:${PORTSDIR}/security/libsecret \
 		librest-0.7.so:${PORTSDIR}/devel/librest
 
-USES=		gettext gmake pathfix pkgconfig tar:xz
+USES=		gettext gmake libtool:keepla pathfix pkgconfig tar:xz
 USE_GNOME=	gtk30 intlhack introspection:build libxslt:build
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
