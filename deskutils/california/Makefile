@@ -3,7 +3,7 @@
 #   $MCom$
 
 PORTNAME=	california
-PORTVERSION=	0.1.1
+PORTVERSION=	0.1.2
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -17,7 +17,7 @@ LIB_DEPENDS=	libwebkitgtk-3.0.so:${PORTSDIR}/www/webkit-gtk3 \
 		libgdata.so:${PORTSDIR}/devel/libgdata \
 		libgoa-1.0.so:${PORTSDIR}/net/gnome-online-accounts
 
-USES=		desktop-file-utils gettext gmake pathfix \
+USES=		desktop-file-utils gettext gmake libtool pathfix \
 		pkgconfig tar:xz
 USE_GNOME=	evolutiondataserver3 glib20 gnomedocutils gnomeprefix \
 		gtk30 intlhack introspection
@@ -27,6 +27,8 @@ INSTALLS_ICONS=	yes
 CONFIGURE_ARGS=	--disable-unity
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
+INSTALL_TARGET=	install-strip
+GLIB_SCHEMAS=	org.yorba.california.gschema.xml
 
 post-patch:
 		@${REINPLACE_CMD} -e 's|californiadocdir = $${prefix}|californiadocdir = $${prefix}/share|g' \
