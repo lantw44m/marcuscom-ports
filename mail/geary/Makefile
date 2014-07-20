@@ -3,7 +3,7 @@
 #   $MCom$
 
 PORTNAME=	geary
-PORTVERSION=	0.6.1
+PORTVERSION=	0.7.0
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -21,7 +21,7 @@ LIB_DEPENDS=	libgmime-2.6.so:${PORTSDIR}/mail/gmime26 \
 		libgee-0.8.so:${PORTSDIR}/devel/libgee
 
 USES=		cmake desktop-file-utils gettext gmake \
-		pathfix pkgconfig tar:xz
+		libtool pathfix pkgconfig tar:xz
 USE_GNOME=	gnomedocutils gnomeprefix gtk30 intlhack
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
