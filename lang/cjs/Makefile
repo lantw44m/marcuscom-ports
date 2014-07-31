@@ -4,6 +4,7 @@
 
 PORTNAME=	cjs
 PORTVERSION=	2.2.1
+PORTREVISION=	1
 CATEGORIES=	lang gnome
 MASTER_SITES=	http://github.com/linuxmint/${PORTNAME}/archive/${PORTVERSION}.tar.gz?dummy=/
 DIST_SUBDIR=	gnome3
@@ -17,7 +18,7 @@ LIB_DEPENDS=	libdbus-glib-1.so:${PORTSDIR}/devel/dbus-glib \
 
 CONFLICTS_BUILD=spidermonkey17-1.7.*
 
-USES=		gettext libtool:keepla gmake pathfix pkgconfig shebangfix
+USES=		gettext libtool gmake pathfix pkgconfig shebangfix
 USE_GNOME=	cairo glib20 gnomeprefix introspection:build \
 		intlhack
 USE_PYTHON_BUILD=yes
