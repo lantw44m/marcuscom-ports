@@ -1,6 +1,6 @@
 # Created by: Gustau Perez <gustau.perez@gmail.com>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/devel/appdata-tools/Makefile 19578 2014-04-25 21:50:30Z kwm $
 
 PORTNAME=	appdata-tools
 PORTVERSION=	0.1.7
@@ -24,7 +24,7 @@ GNU_CONFIGURE=	yes
 #CONFIGURE_ARGS=	--enable-introspection=yes
 USE_GITHUB=	yes
 USES=		gmake libtool:keepla pathfix pkgconfig
-USE_AUTOTOOLS=	libtool autoconf automake
+USE_AUTOTOOLS=	libtoolize autoconf automake
 USE_GNOME=	gdkpixbuf2 glib20 gnomehier introspection:build
 USE_LDCONFIG=	yes
 
