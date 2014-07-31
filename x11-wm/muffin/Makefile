@@ -3,13 +3,12 @@
 #    $MCom$
 
 PORTNAME=	muffin
-PORTVERSION=	2.2.1
-PORTREVISION=	1
+PORTVERSION=	2.2.6
 CATEGORIES=	x11-wm gnome
 MASTER_SITES=	http://github.com/linuxmint/${PORTNAME}/archive/${PORTVERSION}.tar.gz?dummy=/
 DIST_SUBDIR=	gnome3
 
-MAINTAINER=	gustau.perez@gmail.com
+MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Compositing window manager forked from Mutter for use with Cinnamon
 
 BUILD_DEPENDS=	zenity3>=3.0.0:${PORTSDIR}/x11/zenity3 \
@@ -24,18 +23,19 @@ RUN_DEPENDS=	zenity3>=3.0.0:${PORTSDIR}/x11/zenity3
 
 USES=		gettext libtool:keepla gmake pathfix pkgconfig
 USE_GNOME=	gconf2 gnomedocutils gnomehier gnomeprefix gtk30 \
-		intlhack introspection:build
+		introspection:build
 USE_AUTOTOOLS=	libtoolize autoconf automake
-USE_CSTD=	gnu89
 USE_XORG=	x11 xext xrandr xcomposite xcursor xinerama ice sm
 USE_PYTHON=	yes
 USE_LDCONFIG=	yes
+USE_CSTD=	gnu89
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
-INSTALL_TARGET=	install-strip
+PATHFIX_MAKEFILEIN=	Makefile.am
 CONFIGURE_ENV=	LIBS="-lexecinfo"
 CONFIGURE_ARGS=	--enable-compile-warnings=maximum
 GLIB_SCHEMAS=	org.cinnamon.muffin.gschema.xml
+INSTALL_TARGET=	install-strip
 
 pre-configure:
 		@cd ${WRKSRC} && ${SH} autogen.sh

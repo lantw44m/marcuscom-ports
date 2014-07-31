@@ -12,10 +12,10 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Additional UI API for cinnamon
 
 BUILD_DEPENDS=	gnome-autogen.sh:${PORTSDIR}/devel/gnome-common \
-		${LOCALBASE}/libdata/pkgconfig/xkeyboard-config.pc:${PORTSDIR}/x11/xkeyboard-config \
-		${LOCALBASE}/libdata/pkgconfig/xkbfile.pc:${PORTSDIR}/x11/libxkbfile
-RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/xkeyboard-config.pc:${PORTSDIR}/x11/xkeyboard-config \
-		${LOCALBASE}/libdata/pkgconfig/xkbfile.pc:${PORTSDIR}/x11/libxkbfile
+		xkeyboard-config>=0:${PORTSDIR}/x11/xkeyboard-config \
+		libxkbfile>=0:${PORTSDIR}/x11/libxkbfile
+RUN_DEPENDS=	xkeyboard-config>=0:${PORTSDIR}/x11/xkeyboard-config \
+		libxkbfile>=0:${PORTSDIR}/x11/libxkbfile
 
 USE_XORG=	x11 xrandr xext
 USES=		gettext gmake libtool pathfix pkgconfig tar:xz
