@@ -17,13 +17,12 @@ LIB_DEPENDS=	libcanberra-gtk.so:${PORTSDIR}/audio/libcanberra \
 		libdbus-glib-1.so:${PORTSDIR}/devel/dbus-glib \
 		libunique-1.0.so:${PORTSDIR}/x11-toolkits/unique \
 		libupower-glib.so:${PORTSDIR}/sysutils/upower \
-		libexecinfo.so:${PORTSDIR}/devel/libexecinfo \
 		libnotify.so:${PORTSDIR}/devel/libnotify
 RUN_DEPENDS=	pkexec:${PORTSDIR}/sysutils/polkit
 
 PORTSCOUT=	limitw:1,even
 
-USES=		gettext gmake pathfix pkgconfig tar:xz
+USES=		execinfo gettext gmake pathfix pkgconfig tar:xz
 USE_MATE=	autogen common:build docutils intlhack libmatekeyring \
 		panel
 USE_XORG=	x11 xext xproto xrandr xrender

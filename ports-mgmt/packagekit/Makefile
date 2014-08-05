@@ -11,13 +11,13 @@ DISTNAME=	PackageKit-${PORTVERSION}
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A DBUS packaging abstraction layer
 
-BUILD_DEPENDS=	${LOCALBASE}/bin/docbook2man:${PORTSDIR}/textproc/docbook-utils
-LIB_DEPENDS=	libexecinfo.so:${PORTSDIR}/devel/libexecinfo \
-		libpolkit-gobject-1.so:${PORTSDIR}/sysutils/polkit
+BUILD_DEPENDS=	docbook2man:${PORTSDIR}/textproc/docbook-utils
+LIB_DEPENDS=	libpolkit-gobject-1.so:${PORTSDIR}/sysutils/polkit
 RUN_DEPENDS=	lsof:${PORTSDIR}/sysutils/lsof
 
 USE_XZ=		yes
-USES=		gettext gmake iconv pathfix pkgconfig shared-mime-info
+USES=		execinfo gettext gmake iconv pathfix pkgconfig \
+		shared-mime-info
 USE_GNOME=	glib20 intltool introspection
 USE_LDCONFIG=	yes
 USE_SQLITE=	3
