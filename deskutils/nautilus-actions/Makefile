@@ -24,6 +24,7 @@ USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--with-nautilus-extdir=${LOCALBASE}/lib/nautilus/extensions-3.0 \
+		--with-default-io-provider=na-desktop \
 		--with-gtk=3 \
 		--disable-gconf
 INSTALL_TARGET=	install-strip
