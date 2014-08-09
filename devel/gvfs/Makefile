@@ -4,6 +4,7 @@
 
 PORTNAME=	gvfs
 PORTVERSION=	1.20.2
+PORTREVISION=	1
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -46,7 +47,7 @@ GLIB_SCHEMAS=	org.gnome.system.gvfs.enums.xml
 
 OPTIONS_SUB=	yes
 OPTIONS_DEFINE=	AVAHI SAMBA GPHOTO2 CDDA HAL FUSE
-OPTIONS_DEFAULT=AVAHI SAMBA GPHOTO2 CDDA HAL
+OPTIONS_DEFAULT=AVAHI SAMBA GPHOTO2 CDDA HAL FUSE
 CDDA_DESC=	CDDA (enables HAL)
 GPHOTO2_DESC=	Gphoto 2 camera support (enables HAL)
 SAMBA_DESC=	Samba support
@@ -57,7 +58,7 @@ FUSE_CONFIGURE_ENABLE=	fuse
 SAMBA_LIB_DEPENDS=	libsmbclient.so:${PORTSDIR}/net/samba-libsmbclient
 SAMBA_CONFIGURE_ENABLE=	samba
 
-CDDA_LIB_DEPENDS=	libcdio_paranoia.so:${PORTSDIR}/sysutils/libcdio
+CDDA_LIB_DEPENDS=	libcdio_paranoia.so:${PORTSDIR}/sysutils/libcdio-paranoia
 CDDA_CONFIGURE_ENABLE=	cdda
 
 GPHOTO2_LIB_DEPENDS=	libgphoto2.so:${PORTSDIR}/graphics/libgphoto2
