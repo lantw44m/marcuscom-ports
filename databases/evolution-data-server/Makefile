@@ -3,7 +3,7 @@
 #   $MCom$
 
 PORTNAME=	evolution-data-server
-PORTVERSION=	3.12.4
+PORTVERSION=	3.12.5
 CATEGORIES=	databases gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3

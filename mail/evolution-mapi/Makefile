@@ -3,7 +3,7 @@
 #   $MCom$
 
 PORTNAME=	evolution-mapi
-PORTVERSION=	3.12.2
+PORTVERSION=	3.12.5
 CATEGORIES=	mail gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -23,6 +23,7 @@ GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include -Wno-error=format-nonliteral
 CFLAGS+=	-I${LOCALBASE}/include -Wno-error=format-nonliteral
 LDFLAGS+=	-L${LOCALBASE}/lib
+INSTALL_TARGET=	install-strip
 
 VERSION=	3.12
 PLIST_SUB=	VERSION=${VERSION}
