@@ -3,7 +3,7 @@
 #   $MCom$
 
 PORTNAME=	libnice
-PORTVERSION=	0.1.5
+PORTVERSION=	0.1.7
 CATEGORIES=	net-im devel
 MASTER_SITES=	http://nice.freedesktop.org/releases/
 
@@ -16,19 +16,16 @@ USE_GNOME=	glib20
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include -DHAVE_GETIFADDRS
 LDFLAGS+=	-L${LOCALBASE}/lib
+INSTALL_TARGET=	install-strip
 
 .if !defined(LIBNICE_SLAVE)
 OPTIONS_DEFINE=	GUPNP
 GUPNP_DESC=	UPnP IGD port mapping support
+GUPNP_LIB_DEPENDS+=	libgupnp-igd-1.0.so:${PORTSDIR}/net/gupnp-igd
+GUPNP_CONFIGURE_ENABLE=	gupnp
 .endif
 
-.include <bsd.port.options.mk>
-
-.if ${PORT_OPTIONS:MGUPNP}
-LIB_DEPENDS+=	libgupnp-igd-1.0.so:${PORTSDIR}/net/gupnp-igd
-.else
-CONFIGURE_ARGS+=--disable-gupnp
-.endif
+#.include <bsd.port.options.mk>
 
 .if defined(LIBNICE_SLAVE)
 . if ${LIBNICE_SLAVE}==gstreamer010
@@ -46,15 +43,7 @@ CONFIGURE_ARGS=	--without-gstreamer --without-gstreamer-0.10
 post-patch:
 	@${FIND} ${WRKSRC} -name Makefile.in | ${XARGS} ${REINPLACE_CMD} -e \
 	    	's|-Wno-missing-field-initializers|#|g'
-	@${REINPLACE_CMD} -e 's|-Wno-missing-field-initializers|#|g' \
-	    	${WRKSRC}/common.mk
 	@${REINPLACE_CMD} -e 's|-Werror||g' ${WRKSRC}/configure
 
-post-install:
-.if !defined(LIBNICE_SLAVE)
-	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/lib*.so*
-.else
-	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/*/lib*.so
-.endif
-
 .include <bsd.port.mk>
+
