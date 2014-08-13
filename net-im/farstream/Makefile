@@ -14,8 +14,7 @@ LIB_DEPENDS=	libnice.so:${PORTSDIR}/net-im/libnice
 RUN_DEPENDS=	libnice-gst1>=0:${PORTSDIR}/net-im/libnice-gst1
 
 USE_LDCONFIG=	yes
-USE_PYTHON=	yes
-USES=		gettext libtool gmake pathfix pkgconfig
+USES=		gettext libtool gmake pathfix pkgconfig python
 USE_GNOME=	glib20 introspection:build
 USE_GSTREAMER1=	good bad
 GNU_CONFIGURE=	yes

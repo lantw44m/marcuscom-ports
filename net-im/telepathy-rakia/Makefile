@@ -14,11 +14,10 @@ LIB_DEPENDS=	libdbus-glib-1.so:${PORTSDIR}/devel/dbus-glib \
 		libsofia-sip-ua-glib.so:${PORTSDIR}/net/sofia-sip \
 		libtelepathy-glib.so:${PORTSDIR}/net-im/telepathy-glib
 
-USES=		gmake pathfix pkgconfig
+USES=		gmake pathfix pkgconfig python:build
 USE_GNOME=	glib20 libxslt:build
 GNU_CONFIGURE=	yes
 USE_OPENSSL=	yes
-USE_PYTHON_BUILD=yes
 INSTALL_TARGET=	install-strip
 
 CPPFLAGS+=	-I${LOCALBASE}/include

@@ -24,11 +24,10 @@ RUN_DEPENDS=	gnome-icon-theme>=0:${PORTSDIR}/misc/gnome-icon-theme \
 		gsettings-desktop-schemas>=0:${PORTSDIR}/devel/gsettings-desktop-schemas
 
 USES=		desktop-file-utils gettext gmake libtool pathfix \
-		pkgconfig shared-mime-info
+		pkgconfig python:2 shared-mime-info
 USE_GNOME=	gnomedesktop3 gnomeprefix intlhack introspection:build \
 		libxml2 pygobject3
 INSTALLS_ICONS=	yes
-USE_PYTHON=	2
 USE_AUTOTOOLS=	libtoolize autoconf automake
 USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include

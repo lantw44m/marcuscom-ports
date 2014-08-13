@@ -44,7 +44,7 @@ PLIST_SUB+=	CHAMPLAIN="@comment "
 PLIST_SUB+=	PYVER=${PYTHON_VER:S|.||}
 .if ${PORT_OPTIONS:MPYTHON}
 CONFIGURE_ARGS+=--enable-python
-USE_PYTHON=	3
+USES+=		python:3
 PLIST_SUB+=	PYTHON=""
 GLIB_SCHEMAS+=	org.gnome.eog.plugins.export-to-folder.gschema.xml \
 		org.gnome.eog.plugins.fullscreenbg.gschema.xml \

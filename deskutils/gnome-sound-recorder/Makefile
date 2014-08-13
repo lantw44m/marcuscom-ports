@@ -14,12 +14,11 @@ COMMENT=	GNOME sound recorder application
 
 LIB_DEPENDS=	libgjs.so:${PORTSDIR}/lang/gjs
 
-USES=		gettext gmake libtool pathfix pkgconfig tar:xz
+USES=		gettext gmake libtool pathfix pkgconfig python:3 tar:xz
 USE_GNOME=	gnomedesktop3 gnomeprefix gtk30 intlhack \
 		introspection:build
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
-USE_PYTHON=	3
 INSTALLS_ICONS=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib

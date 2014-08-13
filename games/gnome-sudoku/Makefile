@@ -13,9 +13,8 @@ COMMENT=	Sudoku game for gnome
 
 BUILD_DEPENDS=	itstool:${PORTSDIR}/textproc/itstool
 
-USES=		gettext gmake pathfix pkgconfig shebangfix tar:xz
+USES=		gettext gmake pathfix pkgconfig python:3 shebangfix tar:xz
 USE_GNOME=	gtk30 intlhack libxml2:build py3gobject3
-USE_PYTHON=	3
 INSTALLS_ICONS=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include

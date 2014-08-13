@@ -14,16 +14,14 @@ COMMENT=	GNOME Javascript binding
 LIB_DEPENDS=	libdbus-glib-1.so:${PORTSDIR}/devel/dbus-glib \
 		libmozjs-24.so:${PORTSDIR}/lang/spidermonkey24
 
-USES=		gettext gmake libtool:keepla pathfix pkgconfig tar:xz
+USES=		gettext gmake libtool:keepla pathfix pkgconfig \
+		python:build tar:xz
 USE_GNOME=	cairo glib20 gnomeprefix introspection:build \
 		intlhack
-USE_PYTHON_BUILD=yes
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
-
-post-install:
-	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libgjs.so.*
+INSTALL_TARGET=	install-strip
 
 .include <bsd.port.mk>

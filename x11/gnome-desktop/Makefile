@@ -26,11 +26,10 @@ RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-co
 		${LOCALBASE}/libdata/pkgconfig/xkeyboard-config.pc:${PORTSDIR}/x11/xkeyboard-config \
 		${LOCALBASE}/libdata/pkgconfig/xkbfile.pc:${PORTSDIR}/x11/libxkbfile
 
-USES+=		bison gettext gmake libtool:keepla pathfix pkgconfig
+USES+=		bison gettext gmake libtool:keepla pathfix pkgconfig python:3
 USE_GNOME=	gnomeprefix gtk30 intlhack introspection:build \
 		referencehack
 USE_XORG=	x11 xrandr xext
-USE_PYTHON=	3
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-gnome-distributor="FreeBSD GNOME Project"

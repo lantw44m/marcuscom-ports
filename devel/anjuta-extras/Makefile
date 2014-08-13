@@ -12,8 +12,7 @@ COMMENT=	Extra anjuta 3 plugins
 
 LIB_DEPENDS=	libanjuta-3.so:${PORTSDIR}/devel/anjuta
 		
-USE_XZ=		yes
-USES=		gettext gmake pkgconfig
+USES=		gettext gmake pkgconfig tar:xz
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 USE_GNOME=	gtk30 intltool libxml2

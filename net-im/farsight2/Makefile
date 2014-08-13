@@ -15,9 +15,8 @@ COMMENT=	Collection of GStreamer modules and libraries for videoconferencing
 LIB_DEPENDS=	libnice.so:${PORTSDIR}/net-im/libnice
 RUN_DEPENDS=	libnice-gst010>=0:${PORTSDIR}/net-im/libnice-gst010
 
-USES=		gettext libtool gmake pathfix pkgconfig
+USES=		gettext libtool gmake pathfix pkgconfig python
 USE_LDCONFIG=	yes
-USE_PYTHON=	yes
 USE_GNOME=	glib20
 USE_GSTREAMER=	core good bad python
 GNU_CONFIGURE=	yes

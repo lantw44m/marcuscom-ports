@@ -10,9 +10,8 @@ MASTER_SITES=	GNOME
 MAINTAINER=	kwm@FreeBSD.org
 COMMENT=	Collection of Gstreamer effects
 
-USE_XZ=		yes
 USE_GNOME=	intlhack
-USES=		gettext gmake pathfix
+USES=		gettext gmake pathfix tar:xz
 GNU_CONFIGURE=	yes
 
 .include <bsd.port.mk>

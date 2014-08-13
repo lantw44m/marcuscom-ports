@@ -18,8 +18,7 @@ RUN_DEPENDS=	rarian-sk-config:${PORTSDIR}/textproc/rarian
 CONFLICTS=	gtkada-1.2.* zenity3-*
 
 USE_GNOME=	gnomeprefix gtk20 gnomedocutils intlhack
-USE_BZIP2=	yes
-USES=		gettext gmake pathfix pkgconfig
+USES=		gettext gmake pathfix pkgconfig tar:bzip2
 GNU_CONFIGURE=	yes
 INSTALLS_OMF=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}

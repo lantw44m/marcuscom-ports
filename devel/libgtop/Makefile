@@ -11,10 +11,9 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME 2 top library
 
-USE_XZ=		yes
 USE_PERL5=	build
 USE_XORG=	xau
-USES=		gettext gmake libtool:keepla pathfix perl5 pkgconfig
+USES=		gettext gmake libtool:keepla pathfix perl5 pkgconfig tar:xz
 USE_GNOME=	gnomeprefix glib20 intlhack introspection:build
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes

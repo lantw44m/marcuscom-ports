@@ -36,11 +36,10 @@ RUN_DEPENDS=	py*-dbus>=0:${PORTSDIR}/devel/py-dbus \
 		ca_root_nss>=0:${PORTSDIR}/security/ca_root_nss \
 		py*-lxml>=0:${PORTSDIR}/devel/py-lxml
 
-USES=		gettext gmake libtool pathfix pkgconfig
+USES=		gettext gmake libtool pathfix python pkgconfig
 USE_GNOME=	evolutiondataserver3 gconf2 gnomeprefix \
 		gtk30 intlhack libgnomekbd
 USE_XORG=	x11 xfixes sm
-USE_PYTHON=	yes
 INSTALLS_ICONS=	yes
 USE_AUTOTOOLS=	libtoolize autoconf automake
 USE_LDCONFIG=	yes

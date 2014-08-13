@@ -26,7 +26,7 @@ CONFIGURE_ARGS=	--docdir=${DOCSDIR} \
 INSTALL_TARGET=	install-strip
 
 .if ${SLAVE_PORT} == no
-USE_PYTHON_BUILD=	2
+USES+=		python:build,2
 
 DOCSDIR=	${PREFIX}/share/doc/py-${PORTNAME}
 EXAMPLESDIR=	${PREFIX}/share/examples/py-${PORTNAME}
@@ -70,10 +70,10 @@ LIB_DEPENDS+=	libdbus-glib-1.so:${PORTSDIR}/devel/dbus-glib
 RUN_DEPENDS+=	pydbus-common>=0:${PORTSDIR}/devel/pydbus-common
 USE_LDCONFIG=	yes
 .if ${SLAVE_PORT} == python2
-USE_PYTHON=	2
+USES+=		python:2
 .endif
 .if ${SLAVE_PORT} == python3
-USE_PYTHON=	3
+USES+=		python:3
 .endif
 
 post-install:

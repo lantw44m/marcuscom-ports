@@ -27,9 +27,8 @@ USE_LDCONFIG=	yes
 # iconv:wchar_t - our iconv in base doesn't support utf-8 -> wchar_t (boooo)
 # (wchar_t is used by glibmm, rawtherapee triggered this)
 USES+=		gettext gmake iconv:wchar_t libtool:keepla pathfix perl5 \
-		pkgconfig shebangfix
-USE_PYTHON=	yes
-PYTHON_PY3K_PLIST_HACK=	yes
+		pkgconfig python shebangfix
+PYTHON_FEATURES=	py3kplist
 CONFIGURE_ARGS=	--disable-gtk-doc --with-html-dir=${PREFIX}/share/doc \
 		--disable-man --without-xml-catalog \
 		--enable-static=yes \

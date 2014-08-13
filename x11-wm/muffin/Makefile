@@ -21,12 +21,11 @@ LIB_DEPENDS=	libstartup-notification-1.so:${PORTSDIR}/x11/startup-notification \
 		libcinnamon-desktop.so:${PORTSDIR}/x11/cinnamon-desktop
 RUN_DEPENDS=	zenity3>=3.0.0:${PORTSDIR}/x11/zenity3
 
-USES=		execinfo gettext libtool gmake pathfix pkgconfig
+USES=		execinfo gettext libtool gmake pathfix pkgconfig python
 USE_GNOME=	gconf2 gnomedocutils gnomehier gnomeprefix gtk30 \
 		introspection:build
 USE_AUTOTOOLS=	libtoolize autoconf automake
 USE_XORG=	x11 xext xrandr xcomposite xcursor xinerama ice sm
-USE_PYTHON=	yes
 USE_LDCONFIG=	yes
 USE_CSTD=	gnu89
 CPPFLAGS+=	-I${LOCALBASE}/include

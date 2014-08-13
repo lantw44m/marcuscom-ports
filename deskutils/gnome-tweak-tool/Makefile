@@ -14,9 +14,8 @@ COMMENT=	Allows to tweak some hidden settings in GTK3 / GNOME3
 BUILD_DEPENDS=	gsettings-desktop-schemas>=0:${PORTSDIR}/devel/gsettings-desktop-schemas
 RUN_DEPENDS=	gsettings-desktop-schemas>=0:${PORTSDIR}/devel/gsettings-desktop-schemas
 
-USES=		gettext gmake pathfix pkgconfig tar:xz
+USES=		gettext gmake pathfix pkgconfig python:2 tar:xz
 USE_GNOME=	gnomeprefix gtk30 pygobject3
-USE_PYTHON=	2
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include

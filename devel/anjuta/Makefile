@@ -24,10 +24,9 @@ RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gnome-icon-theme.pc:${PORTSDIR}/misc
 		libtool>=2.4:${PORTSDIR}/devel/libtool \
 		gdb>=7.3:${PORTSDIR}/devel/gdb \
 		yelp>=3.0.0:${PORTSDIR}/x11/yelp
-USE_XZ=		yes
 USE_CSTD=	gnu89
 USES=		bison desktop-file-utils gettext gmake pathfix perl5 \
-		pkgconfig shared-mime-info shebangfix
+		pkgconfig python shared-mime-info shebangfix tar:xz
 SHEBANG_FILES=	plugins/project-wizard/templates/js_minimal/src/main.js \
 		plugins/tools/scripts/find-fixmes.pl \
 		plugins/tools/scripts/translation-status.pl \
@@ -36,7 +35,6 @@ SHEBANG_LANG+=	gjs
 gjs_OLD_CMD=	/usr/bin/gjs
 gjs_CMD=	${LOCALBASE}/bin/gjs
 INSTALLS_ICONS=	yes
-USE_PYTHON=	yes
 USE_LDCONFIG=	yes
 USE_GNOME=	gnomeprefix vte3 gtksourceview3 libgda5 libwnck3
 GNU_CONFIGURE=	yes

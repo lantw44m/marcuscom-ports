@@ -16,15 +16,16 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 LIB_DEPENDS=	libpolkit-gobject-1.so:${PORTSDIR}/sysutils/polkit \
 		libdbus-glib-1.so:${PORTSDIR}/devel/dbus-glib
 
-USES=		gettext gmake libtool:keepla pathfix pkgconfig tar:xz
+USES=		gettext gmake libtool:keepla pathfix pkgconfig \
+		python tar:xz
 USE_GNOME=	intlhack glib20 introspection:build
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
-USE_PYTHON=	yes
 CONFIGURE_ARGS=	--disable-gtk-doc \
 		--localstatedir=/var
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
+INSTALL_TARGET=	install-strip
 CONFIGURE_ENV=	GTKDOC="false"
 
 .if defined(NO_INSTALL_MANPAGES)
@@ -37,8 +38,5 @@ BUILD_DEPENDS+=	${LOCALBASE}/share/sgml/docbook/4.1:${PORTSDIR}/textproc/docbook
 USE_GNOME+=	libxslt:build
 PLIST_SUB+=	MAN=""
 .endif
-
-post-install:
-	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/lib*.so*
 
 .include <bsd.port.mk>

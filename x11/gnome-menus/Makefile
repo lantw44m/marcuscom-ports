@@ -11,11 +11,10 @@ DIST_SUBDIR=	gnome3
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Implementation of the FreeDesktop Desktop Menu Spec
 
-USES=		gettext gmake libtool:keepla pathfix pkgconfig tar:xz
+USES=		gettext gmake libtool:keepla pathfix pkgconfig python tar:xz
 USE_GNOME=	glib20 gnomehier gnomeprefix intlhack \
 		introspection:build
 GNU_CONFIGURE=	yes
-USE_PYTHON=	yes
 USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib

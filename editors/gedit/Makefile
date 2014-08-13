@@ -21,12 +21,11 @@ RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-co
 		${LOCALBASE}/libdata/pkgconfig/gsettings-desktop-schemas.pc:${PORTSDIR}/devel/gsettings-desktop-schemas
 
 USES=		desktop-file-utils gettext gmake libtool:keepla \
-		pathfix pkgconfig tar:xz
+		pathfix pkgconfig python:3 tar:xz
 USE_GNOME=	gnomeprefix gtksourceview3 intlhack introspection:build \
 		libxml2 py3gobject3
 USE_XORG=	sm
 GNU_CONFIGURE=	yes
-USE_PYTHON=	3
 CONFIGURE_ARGS=	--disable-updater
 CONFIGURE_ARGS+=--disable-zeitgeist \
 		--enable-python

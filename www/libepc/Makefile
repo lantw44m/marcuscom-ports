@@ -15,8 +15,7 @@ LIB_DEPENDS=	libuuid.so:${PORTSDIR}/misc/e2fsprogs-libuuid \
 		libgnutls.so:${PORTSDIR}/security/gnutls \
 		libavahi-ui-gtk3.so:${PORTSDIR}/net/avahi-gtk3
 
-USE_XZ=		yes
-USES=		gettext gmake pathfix pkgconfig
+USES=		gettext gmake pathfix pkgconfig tar:xz
 USE_GNOME=	gnomeprefix gtk30
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes

@@ -29,12 +29,11 @@ RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-co
 		grilo-plugins>=0:${PORTSDIR}/net/grilo-plugins
 
 USES=		desktop-file-utils gettext gmake pathfix pkgconfig \
-		shebangfix tar:xz
+		python:3 shebangfix tar:xz
 USE_GNOME=	gnomehier gnomeprefix gtk30 intlhack introspection:build \
 		libxml2 nautilus3 py3gobject3
 USE_XORG=	x11 xproto xtst ice sm
 USE_GSTREAMER1=	core good bad soup ugly
-USE_PYTHON=	3
 INSTALLS_ICONS=	yes
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes

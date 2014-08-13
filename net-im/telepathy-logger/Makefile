@@ -17,13 +17,12 @@ LIB_DEPENDS=	dbus-glib-1:${PORTSDIR}/devel/dbus-glib \
 
 LICENSE=	LGPL21
 
-USES=		gmake libtool pathfix pkgconfig tar:bzip2
+USES=		gmake libtool pathfix pkgconfig python:build tar:bzip2
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 USE_GNOME=	glib20 gnomedocutils intltool libxml2 \
 		libxslt:build
 USE_SQLITE=	yes
-USE_PYTHON_BUILD=	yes
 GLIB_SCHEMAS=	org.freedesktop.Telepathy.Logger.gschema.xml
 INSTALL_TARGET=	install-strip
 

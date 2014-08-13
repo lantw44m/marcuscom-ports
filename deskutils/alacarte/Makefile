@@ -14,10 +14,9 @@ COMMENT=	Freedesktop compliant menu editor for GNOME
 
 BUILD_DEPENDS=	docbook-xsl>=0:${PORTSDIR}/textproc/docbook-xsl
 
-USES=		gettext gmake pkgconfig tar:xz
+USES=		gettext gmake pkgconfig python:3 tar:xz
 USE_GNOME=	gnomemenus3 gnomeprefix intlhack libxslt:build \
 		py3gobject3
-USE_PYTHON=	3
 INSTALLS_ICONS=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include

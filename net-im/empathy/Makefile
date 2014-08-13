@@ -38,9 +38,8 @@ RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-co
 		geoclue>=0:${PORTSDIR}/net/geoclue \
     		${LOCALBASE}/libexec/mission-control-5:${PORTSDIR}/net-im/telepathy-mission-control
 
-USES=		gettext gmake libtool pathfix pkgconfig tar:xz
+USES=		gettext gmake libtool pathfix pkgconfig python tar:xz
 USE_GNOME=	evolutiondataserver3 gnomeprefix
-USE_PYTHON=	yes
 USE_GSTREAMER1=	yes
 USE_LDCONFIG=	yes
 INSTALLS_ICONS=	yes

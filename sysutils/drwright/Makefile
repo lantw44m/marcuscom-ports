@@ -13,10 +13,9 @@ COMMENT=	GNOME 3 RSI prevention tool
 LIB_DEPENDS=	libcanberra-gtk3.so:${PORTSDIR}/audio/libcanberra-gtk3 \
 		libnotify.so:${PORTSDIR}/devel/libnotify
 
-USE_XZ=		yes
 USE_GNOME=	intlhack gtk30 gnomecontrolcenter3
 USE_XORG=	x11 xscrnsaver
-USES=		gettext gmake pathfix pkgconfig
+USES=		gettext gmake pathfix pkgconfig tar:xz
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 

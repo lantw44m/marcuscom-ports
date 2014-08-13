@@ -21,11 +21,10 @@ LIB_DEPENDS=	libpeas-1.0.so:${PORTSDIR}/devel/libpeas \
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes \
 		${LOCALBASE}/libdata/pkgconfig/gsettings-desktop-schemas.pc:${PORTSDIR}/devel/gsettings-desktop-schemas
 
-USE_XZ=		yes
 USE_GNOME=	intlhack gnomeprefix gtk30 libgda5 gtksourceview3 libxml2 \
 		introspection:build
-USES=		desktop-file-utils gettext gmake pathfix pkgconfig
-USE_PYTHON=	yes
+USES=		desktop-file-utils gettext gmake pathfix pkgconfig \
+		python tar:xz
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 INSTALLS_ICONS=	yes
