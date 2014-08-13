@@ -4,7 +4,7 @@
 
 PORTNAME=	loudmouth
 PORTVERSION=	1.4.3
-PORTREVISION=	7
+PORTREVISION=	8
 CATEGORIES=	net-im gnome
 MASTER_SITES=	GNOME
 
@@ -13,7 +13,7 @@ COMMENT=	Lightweight Jabber client library
 
 LIB_DEPENDS=	libidn.so:${PORTSDIR}/dns/libidn
 
-USES=		gettext gmake libtool:keepla pathfix pkgconfig
+USES=		gettext gmake libtool pathfix pkgconfig
 USE_GNOME=	glib20
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
@@ -21,6 +21,7 @@ USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--disable-gtk-doc
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-Wl,-Bsymbolic -L${LOCALBASE}/lib
+INSTALL_TARGET=	install-strip
 
 OPTIONS_DEFAULT=GNUTLS
 OPTIONS_RADIO=	SSL
@@ -46,8 +47,5 @@ CONFIGURE_ARGS+=--without-ssl
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|' \
 	    	${WRKSRC}/loudmouth/lm-ssl-gnutls.c
-
-post-install:
-	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/lib*.so*
 
 .include <bsd.port.mk>

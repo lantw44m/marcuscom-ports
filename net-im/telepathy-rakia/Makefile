@@ -19,6 +19,7 @@ USE_GNOME=	glib20 libxslt:build
 GNU_CONFIGURE=	yes
 USE_OPENSSL=	yes
 USE_PYTHON_BUILD=yes
+INSTALL_TARGET=	install-strip
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib

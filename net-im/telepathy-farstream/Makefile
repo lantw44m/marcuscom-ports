@@ -4,6 +4,7 @@
 
 PORTNAME=	telepathy-farstream
 PORTVERSION=	0.6.1
+PORTREVISION=	1
 CATEGORIES=	net-im
 MASTER_SITES=	http://telepathy.freedesktop.org/releases/${PORTNAME}/
 
@@ -15,13 +16,14 @@ LIB_DEPENDS=	libdbus-glib-1.so:${PORTSDIR}/devel/dbus-glib \
 		libtelepathy-glib.so:${PORTSDIR}/net-im/telepathy-glib \
 		libfarstream-0.2.so:${PORTSDIR}/net-im/farstream
 
-USES=		gmake libtool:keepla pathfix pkgconfig
+USES=		gmake libtool pathfix pkgconfig
 USE_GNOME=	glib20 libxslt:build introspection:build
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 USE_PYTHON=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
+INSTALL_TARGET=	install-strip
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|\(^pkgconfigdir =\).*|\1 ${PREFIX}/libdata/pkgconfig|' \

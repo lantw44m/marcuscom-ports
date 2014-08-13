@@ -18,5 +18,6 @@ USES=		gmake pathfix pkgconfig
 USE_GNOME=	libxslt:build
 CPPFLAGS+=	-I${LOCALBASE}/include
 GNU_CONFIGURE=	yes
+INSTALL_TARGET=	install-strip
 
 .include <bsd.port.mk>
