@@ -3,7 +3,7 @@
 #   $MCom$
 
 PORTNAME=	libgit2-glib
-PORTVERSION=	0.0.12
+PORTVERSION=	0.0.20
 CATEGORIES=	devel gnome
 MASTER_SITES=	https://git.gnome.org/browse/libgit2-glib/snapshot/
 DIST_SUBDIR=	gnome3
@@ -15,7 +15,7 @@ BUILD_DEPENDS=	gnome-autogen.sh:${PORTSDIR}/devel/gnome-common \
 		gtkdoc-check:${PORTSDIR}/textproc/gtk-doc
 LIB_DEPENDS=	libgit2.so:${PORTSDIR}/devel/libgit2
 
-USES=		gmake libtool:keepla pathfix pkgconfig
+USES=		gmake libtool pathfix pkgconfig
 USE_GNOME=	glib20 gnomeprefix gtk30 intlhack introspection
 USE_AUTOTOOLS=	automake libtoolize
 USE_LDCONFIG=	yes
