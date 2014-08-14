@@ -1,6 +1,6 @@
 # Created by: Gustau Perez <gustau.perez@gmail.com>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/graphics/libgxps/Makefile 19809 2014-08-14 07:53:59Z gusi $
 
 PORTNAME=	libgxps
 PORTVERSION=	0.2.2
@@ -23,6 +23,7 @@ USE_GNOME=	cairo gnomeprefix glib20 intlhack
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib -larchive
+CONFIGURE_ARGS+=	--enable-introspection=no
 INSTALL_TARGET=	install-strip
 
 .include <bsd.port.mk>
