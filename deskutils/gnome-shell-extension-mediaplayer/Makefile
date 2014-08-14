@@ -17,7 +17,7 @@ RUN_DEPENDS=	gnome-shell>=0:${PORTSDIR}/x11/gnome-shell \
 
 WRKSRC=		${WRKDIR}/eonpatapon-gnome-shell-extensions-mediaplayer-bacb60e
 
-USES=		gettext gmake libtool:keepla pkgconfig tar:xz
+USES=		gettext gmake libtool pkgconfig tar:xz
 USE_GNOME=	glib20 intltool
 USE_GITHUB=	yes
 USE_AUTOTOOLS=	libtoolize autoconf automake

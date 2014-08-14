@@ -15,7 +15,7 @@ RUN_DEPENDS=	gnome-shell>=0:${PORTSDIR}/x11/gnome-shell
 
 WRKSRC=		${WRKDIR}/Neroth-gnome-shell-extension-weather-489aaa0
 
-USES=		gettext gmake libtool:keepla pkgconfig tar:xz
+USES=		gettext gmake libtool pkgconfig tar:xz
 USE_GNOME=	intltool
 USE_GITHUB=	yes
 USE_AUTOTOOLS=	libtoolize autoconf automake
