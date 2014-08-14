@@ -23,8 +23,6 @@ USE_GNOME=	cairo gnomeprefix glib20 intlhack
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib -larchive
-
-post-install:
-	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libgxps.so.2.1.1
+INSTALL_TARGET=	install-strip
 
 .include <bsd.port.mk>
