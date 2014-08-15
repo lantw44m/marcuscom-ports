@@ -23,7 +23,7 @@ USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--enable-gtk-doc-html=no
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
-INSTALL_STRIP=	install-strip
+INSTALL_TARGET=	install-strip
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|-Wclobbered||g' \
