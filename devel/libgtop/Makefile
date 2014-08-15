@@ -4,6 +4,7 @@
 
 PORTNAME=	libgtop
 PORTVERSION=	2.30.0
+PORTREVISION=	1
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -13,7 +14,7 @@ COMMENT=	GNOME 2 top library
 
 USE_PERL5=	build
 USE_XORG=	xau
-USES=		gettext gmake libtool:keepla pathfix perl5 pkgconfig tar:xz
+USES=		gettext gmake libtool pathfix perl5 pkgconfig tar:xz
 USE_GNOME=	gnomeprefix glib20 intlhack introspection:build
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes

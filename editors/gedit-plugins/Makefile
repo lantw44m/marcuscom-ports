@@ -1,9 +1,10 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports-experimental/trunk/editors/gedit-plugins/Makefile 19502 2014-04-14 20:48:21Z gusi $
+#   $MCom$
 
 PORTNAME=	gedit-plugins
 PORTVERSION=	3.12.1
+PORTREVISION=	1
 CATEGORIES=	editors gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -16,7 +17,7 @@ BUILD_DEPENDS=	gedit>=0:${PORTSDIR}/editors/gedit \
 LIB_DEPENDS=	libpeas-1.0.so:${PORTSDIR}/devel/libpeas
 RUN_DEPENDS=	gedit>=0:${PORTSDIR}/editors/gedit
 
-USES=		gettext gmake libtool:keepla pathfix pkgconfig \
+USES=		gettext gmake libtool pathfix pkgconfig \
 		tar:xz
 USE_GNOME=	gnomeprefix gtk30 gtksourceview3
 USE_LDCONFIG=	yes

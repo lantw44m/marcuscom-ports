@@ -4,6 +4,7 @@
 
 PORTNAME=	cairo
 PORTVERSION=	1.12.16
+PORTREVISION=	1
 PORTEPOCH?=	2
 CATEGORIES=	graphics
 MASTER_SITES=	http://cairographics.org/releases/
@@ -21,7 +22,7 @@ LIB_DEPENDS=	libfreetype.so:${PORTSDIR}/print/freetype2 \
 		libpng15.so:${PORTSDIR}/graphics/png \
 		libfontconfig.so:${PORTSDIR}/x11-fonts/fontconfig
 
-USES+=		libtool:keepla pathfix pkgconfig
+USES+=		libtool pathfix pkgconfig
 USE_XORG=	pixman xext
 USE_GNOME=	referencehack
 GNU_CONFIGURE=	yes

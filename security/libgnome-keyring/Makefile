@@ -4,6 +4,7 @@
 
 PORTNAME=	libgnome-keyring
 PORTVERSION=	3.12.0
+PORTREVISION=	1
 CATEGORIES=	security gnome
 MASTER_SITES=	GNOME
 
@@ -15,14 +16,12 @@ LIB_DEPENDS=	libdbus-1.so:${PORTSDIR}/devel/dbus \
 
 USE_GNOME=	glib20 gnomehier gnomeprefix intlhack \
 		introspection:build
-USES=		gettext gmake libtool:keepla pathfix pkgconfig tar:xz
+USES=		gettext gmake libtool pathfix pkgconfig tar:xz
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--disable-vala
-
-post-install:
-	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/lib*.so*
+INSTALL_TARGET=	install-strip
 
 .include <bsd.port.mk>

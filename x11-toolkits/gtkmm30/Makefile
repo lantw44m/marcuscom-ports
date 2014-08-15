@@ -4,7 +4,7 @@
 
 PORTNAME=	gtkmm
 PORTVERSION=	3.12.0
-PORTREVISION?=	1
+PORTREVISION?=	2
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	GNOME
 PKGNAMESUFFIX=	30
@@ -19,13 +19,14 @@ USES=		tar:xz
 
 BUILD_DEPENDS=	gm4:${PORTSDIR}/devel/m4
 
-USES+=		gettext gmake libtool:keepla pathfix pkgconfig
+USES+=		gettext gmake libtool pathfix pkgconfig
 USE_GNOME=	gtk30 glibmm cairomm atkmm pangomm
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--disable-documentation
+INSTALL_TARGET=	install-strip
 
 PLIST_SUB=	VERSION="3.0" API_VERSION="3.0"
 

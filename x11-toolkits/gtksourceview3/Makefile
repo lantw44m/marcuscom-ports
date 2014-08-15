@@ -4,6 +4,7 @@
 
 PORTNAME=	gtksourceview
 PORTVERSION=	3.12.2
+PORTREVISION=	1
 CATEGORIES=	x11-toolkits gnome
 MASTER_SITES=	GNOME
 PKGNAMESUFFIX=	3
@@ -14,7 +15,7 @@ COMMENT=	Text widget that adds syntax highlighting to the GtkTextView widget
 
 .if !defined(REFERENCE_PORT)
 
-USES+=		gettext gmake libtool:keepla pathfix pkgconfig tar:xz
+USES+=		gettext gmake libtool pathfix pkgconfig tar:xz
 USE_GNOME=	gnomeprefix gtk30 intlhack introspection:build \
 		libxml2 referencehack
 GNU_CONFIGURE=	yes
@@ -23,6 +24,7 @@ CONFIGURE_ARGS=	--enable-compile-warnings=no --enable-glade-catalog=no \
 		--enable-introspection
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
+INSTALL_TARGET=	install-strip
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|--warn-all||g' \

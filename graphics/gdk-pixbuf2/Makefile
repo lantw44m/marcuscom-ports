@@ -4,6 +4,7 @@
 
 PORTNAME=	gdk-pixbuf
 PORTVERSION=	2.30.8
+PORTREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	GNOME
 PKGNAMESUFFIX=	2
@@ -13,13 +14,14 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Graphic library for GTK+
 
 USE_XORG=	xt xi x11
-USES=		gmake libtool:keepla pathfix pkgconfig tar:xz
+USES=		gmake libtool pathfix pkgconfig tar:xz
 USE_GNOME+=	gnomehier glib20 introspection:build
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--enable-introspection=yes --with-x11
+INSTALL_TARGET=	install-strip
 
 OPTIONS_DEFINE=	JASPER JPEG PNG TIFF
 OPTIONS_DEFAULT=JASPER JPEG PNG TIFF
@@ -68,7 +70,5 @@ PLIST_SUB+=	TIFF="@comment "
 
 post-install:
 	@cd ${WRKSRC}/docs/reference/gdk-pixbuf && env DESTDIR=${STAGEDIR} ${GMAKE} install-man1
-	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libgdk_pixbuf*-2.0.so.0
-	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/gdk-pixbuf-2.0/${GTK2_VERSION}/loaders/lib*.so
 
 .include <bsd.port.mk>

@@ -4,6 +4,7 @@
 
 PORTNAME=	gedit
 PORTVERSION=	3.12.2
+PORTREVISION=	1
 CATEGORIES=	editors gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -11,16 +12,16 @@ DIST_SUBDIR=	gnome3
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Small but powerful text editor for GNOME 3 Desktop Environment
 
-BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes \
-		${LOCALBASE}/libdata/pkgconfig/gsettings-desktop-schemas.pc:${PORTSDIR}/devel/gsettings-desktop-schemas \
+BUILD_DEPENDS=	iso-codes>=0:${PORTSDIR}/misc/iso-codes \
+		gsettings-desktop-schemas>=0:${PORTSDIR}/devel/gsettings-desktop-schemas \
 		itstool:${PORTSDIR}/textproc/itstool
 LIB_DEPENDS=	libenchant.so:${PORTSDIR}/textproc/enchant \
 		libpeas-gtk-1.0.so:${PORTSDIR}/devel/libpeas \
 		libsoup-2.4.so:${PORTSDIR}/devel/libsoup
-RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes \
-		${LOCALBASE}/libdata/pkgconfig/gsettings-desktop-schemas.pc:${PORTSDIR}/devel/gsettings-desktop-schemas
+RUN_DEPENDS=	iso-codes>=0:${PORTSDIR}/misc/iso-codes \
+		gsettings-desktop-schemas>=0:${PORTSDIR}/devel/gsettings-desktop-schemas
 
-USES=		desktop-file-utils gettext gmake libtool:keepla \
+USES=		desktop-file-utils gettext gmake libtool \
 		pathfix pkgconfig python:3 tar:xz
 USE_GNOME=	gnomeprefix gtksourceview3 intlhack introspection:build \
 		libxml2 py3gobject3

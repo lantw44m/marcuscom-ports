@@ -23,7 +23,7 @@ RUN_DEPENDS=	gpg:${PORTSDIR}/security/gnupg
 
 USE_XORG=	sm
 USE_LDCONFIG=	yes
-USES=		gettext gmake libtool:keepla pathfix pkgconfig tar:xz
+USES=		gettext gmake libtool pathfix pkgconfig tar:xz
 USE_GNOME=	intlhack gnomeprefix gtk30
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes

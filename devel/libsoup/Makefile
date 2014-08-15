@@ -4,6 +4,7 @@
 
 PORTNAME=	libsoup
 PORTVERSION=	2.46.0
+PORTREVISION=	1
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -19,7 +20,7 @@ USES=		tar:xz
 
 .if !defined(REFERENCE_PORT)
 
-USES+=		gettext gmake libtool:keepla pathfix pkgconfig \
+USES+=		gettext gmake libtool pathfix pkgconfig \
 		python:3:build tar:xz
 USE_GNOME=	glib20 gnomehier intltool introspection:build \
 		libxml2 referencehack

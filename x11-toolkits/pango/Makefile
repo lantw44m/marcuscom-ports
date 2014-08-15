@@ -4,7 +4,7 @@
 
 PORTNAME=	pango
 PORTVERSION=	1.36.5
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -24,12 +24,13 @@ LIB_DEPENDS=	libfreetype.so:${PORTSDIR}/print/freetype2 \
 RUN_DEPENDS=	${FONTSCALE}:${PORTSDIR}/x11-fonts/xorg-fonts-truetype \
 		${FONTENCOD}:${PORTSDIR}/x11-fonts/encodings
 
-USES+=		gettext gmake libtool:keepla pathfix pkgconfig
+USES+=		gettext gmake libtool pathfix pkgconfig
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 USE_GNOME=	cairo glib20 introspection:build referencehack
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
+INSTALL_TARGET=	install-strip
 
 VERSION=	1.8.0
 LIBVERSION=     0.3600.5
@@ -60,8 +61,6 @@ pre-configure:
 
 post-install:
 	@${MKDIR} ${STAGEDIR}${PREFIX}/etc/pango/
-	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libpango*-1.0.so.0
-	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/pango/*/modules/pango-*.so
 
 .include <bsd.port.mk>
 

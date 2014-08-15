@@ -7,6 +7,7 @@
 
 PORTNAME=	pulseaudio
 PORTVERSION=	5.0
+PORTREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	http://freedesktop.org/software/pulseaudio/releases/
 
@@ -26,7 +27,7 @@ LIB_DEPENDS=	libsamplerate.so:${PORTSDIR}/audio/libsamplerate \
 USE_GNOME=	glib20 gnomehier intltool
 USE_XORG=	x11 sm xtst ice
 USE_LDCONFIG=	yes
-USES=		execinfo gettext gmake libtool:keepla pathfix \
+USES=		execinfo gettext gmake libtool pathfix \
 		pkgconfig tar:xz
 GNU_CONFIGURE=	yes
 USE_AUTOTOOLS=	libltdl

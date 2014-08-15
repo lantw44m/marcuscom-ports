@@ -4,7 +4,7 @@
 
 PORTNAME=	libgdata
 PORTVERSION=	0.6.6
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	GNOME
 PKGNAMESUFFIX=	06
@@ -18,7 +18,7 @@ CONFLICTS=	libgdata-0.10.*
 
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
-USES=		gettext gmake libtool:keepla pathfix pkgconfig tar:bzip2
+USES=		gettext gmake libtool pathfix pkgconfig tar:bzip2
 USE_GNOME=	intltool glib20 introspection:build
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib

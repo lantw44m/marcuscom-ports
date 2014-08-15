@@ -4,6 +4,7 @@
 
 PORTNAME=	libpeas
 PORTVERSION=	1.10.1
+PORTREVISION=	1
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -13,7 +14,7 @@ COMMENT=	Next evolution of the Gedit plugins engine
 
 BUILD_DEPENDS=	valac:${PORTSDIR}/lang/vala
 
-USES=		gettext gmake libtool:keepla pathfix pkgconfig \
+USES=		gettext gmake libtool pathfix pkgconfig \
 		python:3 tar:xz
 USE_GNOME=	gtk30 introspection:build
 USE_LDCONFIG=	yes

@@ -4,7 +4,7 @@
 
 PORTNAME=	gobject-introspection
 PORTVERSION=	1.40.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -16,7 +16,7 @@ COMMENT=	Generate interface introspection data for GObject libraries
 BUILD_DEPENDS=	cairo-trace:${PORTSDIR}/graphics/cairo
 LIB_DEPENDS=	libffi.so:${PORTSDIR}/devel/libffi
 
-USES=		bison gettext gmake libtool:keepla pathfix pkgconfig \
+USES=		bison gettext gmake libtool pathfix pkgconfig \
 		python:2 tar:xz
 GNU_CONFIGURE=	yes
 USE_GNOME=	gnomehier glib20

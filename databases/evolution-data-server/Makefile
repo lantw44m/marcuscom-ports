@@ -4,6 +4,7 @@
 
 PORTNAME=	evolution-data-server
 PORTVERSION=	3.12.5
+PORTREVISION=	1
 CATEGORIES=	databases gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -25,7 +26,7 @@ LIB_DEPENDS=	libsoup-gnome-2.4.so:${PORTSDIR}/devel/libsoup-gnome \
 		libtasn1.so:${PORTSDIR}/security/libtasn1 \
 		libgnome-keyring.so:${PORTSDIR}/security/libgnome-keyring
 
-USES=		bison gettext gmake libtool:keepla pathfix pkgconfig tar:xz
+USES=		bison gettext gmake libtool pathfix pkgconfig tar:xz
 USE_GNOME=	gnomeprefix gtk30 intlhack introspection:build \
 		libxml2
 USE_OPENLDAP=	yes
