@@ -26,6 +26,7 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--disable-libchamplain \
 		--enable-librsvg
+INSTALL_TARGET=	install-strip
 
 GLIB_SCHEMAS=	org.gnome.gthumb.change-date.gschema.xml \
 		org.gnome.gthumb.comments.gschema.xml \
@@ -83,8 +84,5 @@ WEBSERVICES_LIB_DEPENDS=	libsoup-gnome-2.4.so:${PORTSDIR}/devel/libsoup-gnome \
 				libwebkitgtk-3.0.so:${PORTSDIR}/www/webkit-gtk3
 WEBSERVICES_CONFIGURE_ON=	--enable-libsoup --enable-webkit2 --enable-libjson-glib	
 WEBSERVICES_CONFIGURE_OFF=	--disable-libsoup --disable-webkit2 --disable-libjson-glib
-
-post-install:
-	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/gthumb/extensions/lib*.so
 
 .include <bsd.port.mk>

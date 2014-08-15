@@ -30,6 +30,7 @@ GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 INSTALLS_OMF=	yes
+INSTALL_TARGET=	install-strip
 
 OPTIONS_DEFINE=		NLS
 OPTIONS_SUB=		yes
@@ -39,9 +40,5 @@ NLS_USES=		gettext
 post-patch:
 	@${REINPLACE_CMD} -e 's|unique-1|unique-3|g' \
 		${WRKSRC}/configure
-
-post-install:
-	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/gnome-commander/plugins/libfileroller.so
-	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/gnome-commander/libgcmd.so.0.0.0
 
 .include <bsd.port.mk>

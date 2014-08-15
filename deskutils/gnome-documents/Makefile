@@ -28,9 +28,6 @@ RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/dbus-python.pc:${PORTSDIR}/devel/py-
 		${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss \
 		unoconv:${PORTSDIR}/textproc/unoconv
 
-GLIB_SCHEMAS=	org.gnome.Documents.enums.xml \
-		org.gnome.documents.gschema.xml
-
 USES=		gettext gmake libtool pathfix pkgconfig tar:xz
 USE_GNOME=	gnomedesktop3 gnomeprefix gtk30 intlhack \
 		introspection:build libxml2
@@ -39,8 +36,9 @@ INSTALLS_ICONS=	yes
 USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
+INSTALL_TARGET=	install-strip
 
-post-install:
-	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/gnome-documents/*.so
+GLIB_SCHEMAS=	org.gnome.Documents.enums.xml \
+		org.gnome.documents.gschema.xml
 
 .include <bsd.port.mk>

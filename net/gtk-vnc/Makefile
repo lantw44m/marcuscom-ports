@@ -1,5 +1,6 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
+#   $MCom$
 
 PORTNAME=	gtk-vnc
 PORTVERSION=	0.4.4
@@ -27,8 +28,6 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--with-gtk=3.0 --enable-introspection \
 		--disable-plugin --without-python
 MAKE_JOBS_UNSAFE=	yes
-
-post-install:
-	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/lib*.so.0
+INSTALL_TARGET=	install-strip
 
 .include <bsd.port.mk>

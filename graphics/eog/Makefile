@@ -19,14 +19,15 @@ LIB_DEPENDS=	libpeas-gtk-1.0.so:${PORTSDIR}/devel/libpeas \
 RUN_DEPENDS=	gnome-icon-theme>=0:${PORTSDIR}/misc/gnome-icon-theme \
 		gsettings-desktop-schemas>=0:${PORTSDIR}/devel/gsettings-desktop-schemas
 
-USE_GNOME=	gnomeprefix intlhack librsvg2 gtk30 gnomedesktop3 \
-		introspection:build
 USES=		desktop-file-utils gettext gmake libtool pathfix \
 		pkgconfig tar:xz
+USE_GNOME=	gnomeprefix intlhack librsvg2 gtk30 gnomedesktop3 \
+		introspection:build
 INSTALLS_ICONS=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
+INSTALL_TARGET=	install-strip
 
 GLIB_SCHEMAS=	org.gnome.eog.enums.xml \
 		org.gnome.eog.gschema.xml
@@ -66,8 +67,5 @@ PLIST_SUB+=	EXIFEXEMPI=""
 .else
 PLIST_SUB+=	EXIFEXEMPI="@comment "
 .endif
-
-post-install:
-	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/eog/plugins/lib*.so
 
 .include <bsd.port.mk>

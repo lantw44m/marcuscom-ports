@@ -30,6 +30,7 @@ USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include -fno-omit-frame-pointer
 LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--enable-compile-warnings=maximum
+INSTALL_TARGET=	install-strip
 GLIB_SCHEMAS=	org.gnome.mutter.gschema.xml
 
 PLIST_SUB=	VERSION=${PORTVERSION:R}
@@ -37,9 +38,5 @@ PLIST_SUB=	VERSION=${PORTVERSION:R}
 post-patch:
 	@${REINPLACE_CMD} -e 's|-Wcast-align||g' \
 		${WRKSRC}/configure
-
-#post-install:
-#	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libmutter.so.0
-#	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/mutter/plugins/default.so
 
 .include <bsd.port.mk>

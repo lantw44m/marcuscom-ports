@@ -28,6 +28,7 @@ USE_GNOME=	glib20
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
+INSTALL_TARGET=	install-strip
 
 QUVI_VER=	0.9
 PLIST_SUB+=	VERSION=${QUVI_VER}
@@ -36,8 +37,5 @@ PROJECTHOST=	quvi
 
 post-patch:
 	@${REINPLACE_CMD} 's/lua-5.1/lua-${LUA_VER}/g' ${WRKSRC}/configure
-
-post-install:
-	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libquvi-*.so
 
 .include <bsd.port.mk>

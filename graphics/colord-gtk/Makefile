@@ -23,6 +23,7 @@ USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--enable-gtk-doc-html=no
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
+INSTALL_STRIP=	install-strip
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|-Wclobbered||g' \
@@ -31,8 +32,5 @@ post-patch:
 		-e 's|-Wtype-limits||g' \
 		-e 's|-Wmissing-parameter-type||g' \
 		${WRKSRC}/configure
-
-post-install:
-	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libcolord-gtk.so.1
 
 .include <bsd.port.mk>

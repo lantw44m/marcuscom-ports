@@ -21,10 +21,8 @@ USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--enable-compile-warnings=no
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
+INSTALL_TARGET=	install-strip
 
 GLIB_SCHEMAS=	org.gnome.GHex.gschema.xml
-
-post-install:
-	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libgtkhex-3.so.0
 
 .include <bsd.port.mk>

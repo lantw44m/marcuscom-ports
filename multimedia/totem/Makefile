@@ -1,6 +1,6 @@
 # Created by: Hendrik Scholz <hendrik@scholz.net>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/multimedia/totem/Makefile 19804 2014-08-13 14:55:11Z kwm $
 
 PORTNAME=	totem
 PORTVERSION=	3.12.1
@@ -46,6 +46,7 @@ CONFIGURE_ARGS=	--with-plugins="${TOTEM_PLUGINS}"
 SHEBANG_FILES=	data/totem-bugreport.py
 CONFIGURE_ENV+=	APPDATA_VALIDATE="${LOCALBASE}/bin/appdata-validate --nonet"
 MAKE_ENV=	XDG_CACHE_HOME=${WRKDIR}
+INSTALL_TARGET=	install-strip
 
 GLIB_SCHEMAS=	org.gnome.totem.enums.xml \
 		org.gnome.totem.gschema.xml \
@@ -111,11 +112,5 @@ pre-everything::
 
 post-patch:
 	@${CP} -f ${FILESDIR}/pkg-message.in ${PKGMESSAGE}
-
-post-install:
-	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/totem/plugins/*/lib*.so
-	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libtotem.so.0
-	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/nautilus/extensions-3.0/libtotem-properties-page.so
-	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/browser_plugins/totem/libtotem-*-plugin.so
 
 .include <bsd.port.mk>

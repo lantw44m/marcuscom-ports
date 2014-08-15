@@ -36,6 +36,7 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ENV=	USB_CFLAGS="-I/usr/include" \
 		USB_LIBS="-L/usr/lib -lusb"
+INSTALL_TARGET=	install-strip
 
 GLIB_SCHEMAS=	org.freedesktop.ColorHelper.gschema.xml
 
@@ -71,7 +72,5 @@ post-patch:
 
 post-install:
 	${MKDIR} ${STAGEDIR}/var/db/colord/icc
-	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/lib*.so*
-	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/colord-sensors/lib*.so
 
 .include <bsd.port.mk>

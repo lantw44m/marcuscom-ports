@@ -1,6 +1,6 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports-experimental/trunk/audio/libcanberra-gtk3/Makefile 19090 2014-03-11 16:57:43Z gusi $
+#   $MCom$
 
 CATEGORIES=	audio devel
 PKGNAMESUFFIX=	-gtk3
@@ -33,8 +33,5 @@ do-install:
 	cd ${WRKSRC}/src && env DESTDIR=${STAGEDIR} ${GMAKE} install-gtk3moduleLTLIBRARIES
 	${LN} -sf libcanberra-gtk3-module.so \
 		${STAGEDIR}${PREFIX}/lib/gtk-3.0/modules/libcanberra-gtk-module.so
-
-post-install:
-	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/gtk-3.0/modules/libcanberra-gtk3-module.so
 
 .include "${MASTERDIR}/Makefile"

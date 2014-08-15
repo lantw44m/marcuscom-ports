@@ -15,15 +15,13 @@ LIB_DEPENDS=	librest-0.7.so:${PORTSDIR}/devel/librest \
 		libgoa-1.0.so:${PORTSDIR}/net/gnome-online-accounts \
 		libjson-glib-1.0.so:${PORTSDIR}/devel/json-glib
 
-USE_GNOME=	glib20 intlhack introspection:build
 USES=		gettext gmake pathfix pkgconfig tar:xz
+USE_GNOME=	glib20 intlhack introspection:build
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 INSTALLS_ICONS=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
-
-post-install:
-	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libgfbgraph-0.2.so.0 
+INSTALL_TARGET=	install-strip
 
 .include <bsd.port.mk>

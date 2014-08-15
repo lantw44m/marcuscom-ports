@@ -1,6 +1,6 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/trunk/devel/gtranslator/Makefile 18610 2013-06-30 16:33:05Z marcus $
+#   $MCom$
 
 PORTNAME=	gtranslator
 PORTVERSION=	2.91.6
@@ -33,6 +33,8 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--disable-debug \
 		--with-gda=5.0 \
 		--enable-compile-warnings=no
+INSTALL_TARGET=	install-strip
+
 GLIB_SCHEMAS=	org.gnome.gtranslator.gschema.xml \
 		org.gnome.gtranslator.plugins.codeview.gschema.xml \
 		org.gnome.gtranslator.plugins.open-tran.gschema.xml \
@@ -55,9 +57,5 @@ PLIST_SUB+=	DICT=""
 CONFIGURE_ARGS+=--without-dictionary
 PLIST_SUB+=	DICT="@comment "
 .endif
-
-post-install:
-	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/gtranslator/libgtranslator-private.so
-	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/gtranslator/plugins/lib*.so
 
 .include <bsd.port.mk>

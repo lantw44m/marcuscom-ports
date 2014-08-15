@@ -44,6 +44,8 @@ CONFIGURE_ARGS=	--with-symbol-db-shm=/tmp \
 		--disable-packagekit \
 		--enable-introspection=yes
 DOCSDIR=	share/doc/libanjuta
+INSTALL_TARGET=	install-strip
+
 GLIB_SCHEMAS=	org.gnome.anjuta.cvs.gschema.xml \
 		org.gnome.anjuta.document-manager.gschema.xml \
 		org.gnome.anjuta.file-manager.gschema.xml \
@@ -129,10 +131,5 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|-fprofile-arcs||g' \
 		${WRKSRC}/libanjuta/tests/Makefile.in \
 		${WRKSRC}/libanjuta/tests/Makefile.am
-
-post-install:
-	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/anjuta/lib*.so
-	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/glade/modules/libgladeanjuta.so
-	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libanjuta-3.so.0
 
 .include <bsd.port.mk>

@@ -21,11 +21,8 @@ USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--disable-Bsymbolic
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
+INSTALL_TARGET=	install-strip
 
 GLIB_SCHEMAS=	org.gnome.Charmap.enums.xml org.gnome.Charmap.gschema.xml
 
-post-install:
-	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libgucharmap_2_90.so.7
-
 .include <bsd.port.mk>
-

@@ -36,6 +36,7 @@ CONFIGURE_ARGS=	--enable-nss=yes \
 CONFIGURE_ARGS+=--disable-image-inline
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
+INSTALL_TARGET=	install-strip
 
 GLIB_SCHEMAS=	org.gnome.evolution.gschema.xml \
 		org.gnome.evolution.addressbook.gschema.xml \
@@ -112,9 +113,5 @@ post-patch:
 		${WRKSRC}/modules/spamassassin/evolution-spamassassin.c \
 		${WRKSRC}/modules/bogofilter/evolution-bogofilter.c
 #	@${SH} ${FILESDIR}/fix-plugins.sh ${WRKSRC}
-
-post-install:
-	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/evolution/*/*/*.so
-	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/evolution/*/lib*.so
 
 .include <bsd.port.mk>

@@ -18,6 +18,7 @@ GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 USE_LDCONFIG=	yes
+INSTALL_TARGET=	install-strip
 
 VALA_VER=	${PORTVERSION:R}
 
@@ -68,7 +69,6 @@ post-install:
 post-install:
 	${LN} -fs ${PREFIX}/libdata/pkgconfig/libvala-${VALA_VER}.pc \
 		${STAGEDIR}${PREFIX}/libdata/pkgconfig/vala-1.0.pc
-	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/lib*.so.*
 .endif
 
 .include <bsd.port.mk>
