@@ -130,8 +130,6 @@ share/gtk-doc/html/pango/tools.html
 share/gtk-doc/html/pango/up-insensitive.png
 share/gtk-doc/html/pango/up.png
 @dirrm share/gtk-doc/html/pango
-@dirrmtry share/gtk-doc/html
-@dirrmtry share/gtk-doc
 @unexec /bin/rm %D/lib/pango/%%VERSION%%/modules.cache
 @dirrm lib/pango/%%VERSION%%/modules
 @dirrm lib/pango/%%VERSION%%
