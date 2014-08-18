@@ -1,9 +1,9 @@
 # Created by: Hendrik Scholz <hendrik@scholz.net>
 # $FreeBSD$
-#   $MCom: ports/trunk/multimedia/totem/Makefile 19804 2014-08-13 14:55:11Z kwm $
+#   $MCom$
 
 PORTNAME=	totem
-PORTVERSION=	3.12.1
+PORTVERSION=	3.12.2
 CATEGORIES=	multimedia gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -28,7 +28,7 @@ RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-co
 		gnome-icon-theme-symbolic>=2.91.0:${PORTSDIR}/x11-themes/gnome-icon-theme-symbolic \
 		grilo-plugins>=0:${PORTSDIR}/net/grilo-plugins
 
-USES=		desktop-file-utils gettext gmake pathfix pkgconfig \
+USES=		desktop-file-utils gettext gmake libtool pathfix pkgconfig \
 		python:3 shebangfix tar:xz
 USE_GNOME=	gnomehier gnomeprefix gtk30 intlhack introspection:build \
 		libxml2 nautilus3 py3gobject3
