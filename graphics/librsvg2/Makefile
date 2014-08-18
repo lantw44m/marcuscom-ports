@@ -3,8 +3,7 @@
 #   $MCom$
 
 PORTNAME=	librsvg
-PORTVERSION=	2.40.2
-PORTREVISION=	1
+PORTVERSION=	2.40.3
 CATEGORIES=	graphics gnome
 MASTER_SITES=	GNOME
 PKGNAMESUFFIX=	2
@@ -18,9 +17,9 @@ LIB_DEPENDS=	libfreetype.so:${PORTSDIR}/print/freetype2 \
 RUN_DEPENDS=	gtk-engines2>=2.7.5_1:${PORTSDIR}/x11-themes/gtk-engines2
 
 USES=		gettext gmake libtool pathfix pkgconfig tar:xz
+USE_GNOME=	gnomehier gnomeprefix libgsf gtk20 introspection:build
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
-USE_GNOME=	gnomehier gnomeprefix libgsf gtk20 introspection:build
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 INSTALL_TARGET=	install-strip
