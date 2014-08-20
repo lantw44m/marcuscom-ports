@@ -4,6 +4,7 @@
 
 PORTNAME=	gnome-dictionary
 PORTVERSION=	3.10.0
+PORTREVISION=	1
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -16,7 +17,7 @@ BUILD_DEPENDS=	gtkdoc-check:${PORTSDIR}/textproc/gtk-doc \
 
 CONFLICTS=	gnome-utils-2.[0-9]*
 
-USES=		gettext gmake pathfix pkgconfig tar:xz
+USES=		gettext gmake libtool pathfix pkgconfig tar:xz
 USE_GNOME=	gnomeprefix intlhack gtk30
 INSTALLS_ICONS=	yes
 USE_LDCONFIG=	yes

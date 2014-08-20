@@ -4,6 +4,7 @@
 
 PORTNAME=	libzapojit
 PORTVERSION=	0.0.3
+PORTREVISION=	1
 CATEGORIES=	net devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -16,7 +17,7 @@ LIB_DEPENDS=	libgoa-1.0.so:${PORTSDIR}/net/gnome-online-accounts \
 		libjson-glib-1.0.so:${PORTSDIR}/devel/json-glib \
 		librest-0.7.so:${PORTSDIR}/devel/librest
 
-USES=		gmake pathfix pkgconfig tar:xz
+USES=		gmake libtool pathfix pkgconfig tar:xz
 USE_GNOME=	gnomeprefix intlhack
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes

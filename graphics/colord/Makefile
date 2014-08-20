@@ -4,6 +4,7 @@
 
 PORTNAME=	colord
 PORTVERSION=	1.0.6
+PORTREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.freedesktop.org/software/colord/releases/
 
@@ -17,7 +18,7 @@ LIB_DEPENDS=	libpolkit-gobject-1.so:${PORTSDIR}/sysutils/polkit \
 USERS=		colord
 GROUPS=		colord
 
-USES=		gettext gmake pathfix pkgconfig tar:xz
+USES=		gettext gmake libtool pathfix pkgconfig tar:xz
 USE_GNOME=	gnomehier glib20 intlhack introspection:build
 USE_SQLITE=	3
 GNU_CONFIGURE=	yes

@@ -4,6 +4,7 @@
 
 PORTNAME=	vala
 PORTVERSION=	0.24.0
+PORTREVISION=	1
 CATEGORIES=	lang gnome
 MASTER_SITES=	GNOME
 
@@ -12,7 +13,7 @@ COMMENT=	Programming language and compiler that converts Vala code into C code
 
 LICENSE=	LGPL21
 
-USES=		bison gettext gmake pathfix pkgconfig tar:xz
+USES=		bison gettext gmake libtool pathfix pkgconfig tar:xz
 USE_GNOME=	glib20 gnomeprefix libxslt
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include

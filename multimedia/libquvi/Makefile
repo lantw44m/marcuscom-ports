@@ -4,6 +4,7 @@
 
 PORTNAME=	libquvi
 PORTVERSION=	0.9.4
+PORTREVISION=	1
 CATEGORIES=	multimedia devel
 MASTER_SITES=	SF/quvi/${PORTVERSION:R}/${PORTNAME}/ \
 		GOOGLE_CODE
@@ -23,7 +24,7 @@ OPTIONS_DEFINE=	DOCS
 
 PORTSCOUT=	limit:0.4.[0-9]*
 
-USES=		iconv lua pathfix pkgconfig tar:xz
+USES=		iconv libtool lua pathfix pkgconfig tar:xz
 USE_GNOME=	glib20
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes

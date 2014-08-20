@@ -4,6 +4,7 @@
 
 PORTNAME=	file-roller
 PORTVERSION=	3.12.2
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	archivers gnome
 MASTER_SITES=	GNOME
@@ -13,11 +14,11 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Archive manager for zip files, tar, etc
 
 BUILD_DEPENDS=	itstool:${PORTSDIR}/textproc/itstool
-RUN_DEPENDS=	${LOCALBASE}/bin/gtar:${PORTSDIR}/archivers/gtar \
-    		${LOCALBASE}/bin/unzip:${PORTSDIR}/archivers/unzip
+RUN_DEPENDS=	gtar:${PORTSDIR}/archivers/gtar \
+    		unzip:${PORTSDIR}/archivers/unzip
 
-USES=		desktop-file-utils gettext gmake pathfix \
-		pkgconfig tar:xz
+USES=		desktop-file-utils gettext gmake libtool \
+		pathfix pkgconfig tar:xz
 USE_GNOME=	gnomeprefix gtk30 intlhack introspection:build
 USE_XORG=	sm
 INSTALLS_ICONS=	yes

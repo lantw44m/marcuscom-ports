@@ -1,9 +1,10 @@
 # Created by: Charlie & <root@ws.ipfw.ru>
 # $FreeBSD$
-#     $MCom$
+#    $MCom$
 
 PORTNAME=	ekiga
 PORTVERSION=	4.0.1
+PORTREVISION=	1
 CATEGORIES=	net-im
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -19,13 +20,14 @@ LIB_DEPENDS=	libboost_signals.so:${PORTSDIR}/devel/boost-libs \
 RUN_DEPENDS=	gnome-icon-theme>=3.0.0:${PORTSDIR}/misc/gnome-icon-theme
 
 GNU_CONFIGURE=	yes
-USES=		gettext gmake pathfix perl5 pkgconfig tar:xz
+USES=		gettext gmake libtool pathfix perl5 pkgconfig \
+		tar:xz
 USE_XORG=	xv
 USE_GNOME=	gtk20 intltool libxml2
 INSTALLS_ICONS=	yes
-
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-I${LOCALBASE}/lib
+INSTALL_TARGET=	install-strip
 
 OPTIONS_DEFINE=	LDAP NOTIFY EVOLUTION GCONF DBUS AVAHI GNOMEHELP
 OPTIONS_DEFAULT=NOTIFY DBUS GCONF AVAHI

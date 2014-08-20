@@ -4,7 +4,7 @@
 
 PORTNAME=	caribou
 PORTVERSION=	0.4.13
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	accessibility gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -20,7 +20,8 @@ LIB_DEPENDS=	libclutter-glx-1.0.so:${PORTSDIR}/graphics/clutter \
 		libxklavier.so:${PORTSDIR}/x11/libxklavier
 RUN_DEPENDS=	py2?-atspi>=2.1.91:${PORTSDIR}/accessibility/py-atspi
 
-USES=		gettext gmake pathfix pkgconfig python:2 shebangfix tar:xz
+USES=		gettext gmake libtool pathfix pkgconfig python:2 \
+		shebangfix tar:xz
 USE_GNOME=	gnomehier gtk30 intlhack introspection:build libxml2 \
 		libxslt:build pygobject3
 SHEBANG_FILES=	tools/fix_gir.py tools/make_schema.py

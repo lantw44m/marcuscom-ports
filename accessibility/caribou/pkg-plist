@@ -5,12 +5,11 @@ include/libcaribou/caribou.h
 lib/girepository-1.0/Caribou-1.0.typelib
 lib/gnome-settings-daemon-3.0/gtk-modules/caribou-gtk-module.desktop
 lib/gtk-3.0/modules/libcaribou-gtk-module.a
-lib/gtk-3.0/modules/libcaribou-gtk-module.la
 lib/gtk-3.0/modules/libcaribou-gtk-module.so
 lib/libcaribou.a
-lib/libcaribou.la
 lib/libcaribou.so
 lib/libcaribou.so.0
+lib/libcaribou.so.0.0.0
 %%PYTHON_SITELIBDIR%%/caribou/__init__.py
 %%PYTHON_SITELIBDIR%%/caribou/__init__.pyc
 %%PYTHON_SITELIBDIR%%/caribou/__init__.pyo
@@ -129,8 +128,6 @@ share/vala/vapi/caribou-1.0.deps
 @dirrmtry share/locale/zh_HK
 @dirrmtry share/locale/ug/LC_MESSAGES
 @dirrmtry share/locale/ug
-@dirrmtry share/locale/tg/LC_MESSAGES
-@dirrmtry share/locale/tg
 @dirrmtry share/locale/te/LC_MESSAGES
 @dirrmtry share/locale/te
 @dirrmtry share/locale/sr@latin/LC_MESSAGES

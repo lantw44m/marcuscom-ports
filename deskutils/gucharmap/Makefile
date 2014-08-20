@@ -4,6 +4,7 @@
 
 PORTNAME=	gucharmap
 PORTVERSION=	3.12.1
+PORTREVISION=	1
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -13,7 +14,7 @@ COMMENT=	Unicode/ISO10646 character map and font viewer
 
 BUILD_DEPENDS=	itstool:${PORTSDIR}/textproc/itstool
 
-USES=		desktop-file-utils gettext gmake pathfix \
+USES=		desktop-file-utils gettext gmake libtool pathfix \
 		pkgconfig tar:xz
 USE_GNOME=	gnomeprefix gtk30 intlhack introspection:build
 GNU_CONFIGURE=	yes

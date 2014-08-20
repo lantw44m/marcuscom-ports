@@ -4,6 +4,7 @@
 
 PORTNAME=	gnome-online-miners
 PORTVERSION=	3.12.0
+PORTREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	GNOME
 
@@ -16,7 +17,7 @@ LIB_DEPENDS=	libgdata.so:${PORTSDIR}/devel/libgdata \
 		libzapojit-0.0.so:${PORTSDIR}/net/libzapojit \
 		libgrilo-0.2.so:${PORTSDIR}/net/grilo
 
-USES=		gettext gmake pathfix pkgconfig tar:xz
+USES=		gettext gmake libtool pathfix pkgconfig tar:xz
 USE_GNOME=	intlhack introspection:build
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes

@@ -4,6 +4,7 @@
 
 PORTNAME=	gthumb
 PORTVERSION=	3.2.8
+PORTREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -16,7 +17,7 @@ BUILD_DEPENDS=	itstool:${PORTSDIR}/textproc/itstool \
 LIB_DEPENDS=	libunique-1.0.so:${PORTSDIR}/x11-toolkits/unique
 RUN_DEPENDS=	gsettings-desktop-schemas>=0:${PORTSDIR}/devel/gsettings-desktop-schemas
 
-USES=		desktop-file-utils bison gettext gmake pathfix \
+USES=		desktop-file-utils bison gettext gmake libtool pathfix \
 		pkgconfig tar:xz
 USE_GNOME=	gnomeprefix gtk30 intlhack librsvg2
 USE_LDCONFIG=	yes
