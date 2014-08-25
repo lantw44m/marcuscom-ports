@@ -3,8 +3,7 @@
 #   $MCom$
 
 PORTNAME=	grilo
-PORTVERSION=	0.2.10
-PORTREVISION=	1
+PORTVERSION=	0.2.11
 CATEGORIES=	net
 MASTER_SITES=	GNOME
 
@@ -23,7 +22,7 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--enable-vala -disable-debug
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
-INSTALl_TARGET=	install-strip
+INSTALL_TARGET=	install-strip
 
 #  --enable-debug include debug symbols
 CONFIGURE_ARGS+=--enable-tests #          build unit tests
