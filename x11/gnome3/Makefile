@@ -55,7 +55,6 @@ MAPI_DESC=	Depend on evolution-mapi (pulls in samba4)
 .if ${.CURDIR:T}!="gnome3-lite"
 RUN_DEPENDS+=	empathy>=3.0.0:${PORTSDIR}/net-im/empathy \
 		epiphany>=3.0.0:${PORTSDIR}/www/epiphany \
-		gnome-screensaver>=3.0.0:${PORTSDIR}/x11/gnome-screensaver \
 		gucharmap>=3.0.0:${PORTSDIR}/deskutils/gucharmap \
 		eog>=3.0.0:${PORTSDIR}/graphics/eog \
 		eog-plugins>=3.0.0:${PORTSDIR}/graphics/eog-plugins \

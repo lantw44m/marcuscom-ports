@@ -68,3 +68,4 @@ x11/gnome-panel||2014-13-03|Development has ceased in favour of gnome-shell
 deskutils/gnome-music|audio/gnome-music|2014-02-04|Makes more sense to have in under audio/
 deskutils/gnome-search-tool||2014-04-25|removed
 mail/california|deskutils/california|2014-05-24|Does not belong under mail/
+x11/gnome-screensaver||2014-08-26|not used in gnome3.
