@@ -3,8 +3,7 @@
 #   $MCom$
 
 PORTNAME=	webkit
-PORTVERSION=	2.4.4
-PORTREVISION=	1
+PORTVERSION=	2.4.5
 CATEGORIES=	www
 MASTER_SITES=	http://webkitgtk.org/releases/
 PKGNAMESUFFIX=	-gtk3
@@ -126,12 +125,8 @@ CONFIGURE_ENV+=	FLEX_PATH="${LOCALBASE}/bin/flex"
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%BROWSER_PLUGINS_DIR%%|${BROWSER_PLUGINS_DIR}|' \
 		${WRKSRC}/Source/WebCore/plugins/PluginDatabase.cpp
-	@${FIND} ${WRKSRC} -name GNUmakefile.* | ${XARGS} ${REINPLACE_CMD} -e \
+	@${FIND} ${WRKSRC} -name GNUmakefile.in | ${XARGS} ${REINPLACE_CMD} -e \
 		's|[(]libdir[)]/pkgconfig|(prefix)/libdata/pkgconfig|g'
-	@${REINPLACE_CMD} -e 's|"gperf|"${LOCALBASE}/bin/gperf|g' \
-		${WRKSRC}/Source/WebCore/css/makevalues.pl \
-		${WRKSRC}/Source/WebCore/css/makeprop.pl \
-		${WRKSRC}/Source/WebCore/make-hash-tools.pl
 
 post-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/Programs/GtkLauncher \
