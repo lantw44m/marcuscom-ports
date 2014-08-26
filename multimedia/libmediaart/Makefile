@@ -3,7 +3,7 @@
 #   $MCom$
 
 PORTNAME=	libmediaart
-PORTVERSION=	0.5.0
+PORTVERSION=	0.6.0
 CATEGORIES=	multimedia devel
 MASTER_SITES=	GNOME
 
