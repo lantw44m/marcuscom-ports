@@ -3,7 +3,7 @@
 #   $MCom$
 
 PORTNAME=	geary
-PORTVERSION=	0.7.1
+PORTVERSION=	0.7.2
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -18,7 +18,8 @@ LIB_DEPENDS=	libgmime-2.6.so:${PORTSDIR}/mail/gmime26 \
 		libwebkitgtk-3.0.so:${PORTSDIR}/www/webkit-gtk3 \
 		libcanberra-gtk3.so:${PORTSDIR}/audio/libcanberra-gtk3 \
 		libnotify.so:${PORTSDIR}/devel/libnotify \
-		libgee-0.8.so:${PORTSDIR}/devel/libgee
+		libgee-0.8.so:${PORTSDIR}/devel/libgee \
+		libgcr-3.so:${PORTSDIR}/security/gcr
 
 USES=		cmake desktop-file-utils gettext gmake \
 		libtool pathfix pkgconfig tar:xz

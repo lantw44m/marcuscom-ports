@@ -52,6 +52,7 @@ share/applications/geary.desktop
 %%DATADIR%%/ui/account_list.glade
 %%DATADIR%%/ui/account_spinner.glade
 %%DATADIR%%/ui/app_menu.interface
+%%DATADIR%%/ui/certificate_warning_dialog.glade
 %%DATADIR%%/ui/composer.glade
 %%DATADIR%%/ui/composer_accelerators.ui
 %%DATADIR%%/ui/find_bar.glade
