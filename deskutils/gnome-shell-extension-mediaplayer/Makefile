@@ -3,7 +3,7 @@
 #   $MCom$
 
 PORTNAME=	gnome-shell-extension-mediaplayer
-PORTVERSION=	0.0.0.20140520
+PORTVERSION=	0.0.0.20140830
 CATEGORIES=	deskutils gnome
 DIST_SUBDIR=	gnome3
 
@@ -15,7 +15,7 @@ BUILD_DEPENDS=	gnome-autogen.sh:${PORTSDIR}/devel/gnome-common \
 RUN_DEPENDS=	gnome-shell>=0:${PORTSDIR}/x11/gnome-shell \
 		gsettings-desktop-schemas>=3.12.0:${PORTSDIR}/devel/gsettings-desktop-schemas
 
-WRKSRC=		${WRKDIR}/eonpatapon-gnome-shell-extensions-mediaplayer-bacb60e
+WRKSRC=		${WRKDIR}/eonpatapon-gnome-shell-extensions-mediaplayer-6e547ee
 
 USES=		gettext gmake libtool pkgconfig tar:xz
 USE_GNOME=	glib20 intltool
@@ -29,8 +29,8 @@ GLIB_SCHEMAS=	org.gnome.shell.extensions.mediaplayer.gschema.xml
 
 GH_ACCOUNT=	eonpatapon
 GH_PROJECT=	gnome-shell-extensions-mediaplayer
-GH_TAGNAME=	bacb60e73c
-GH_COMMIT=	bacb60e73c
+GH_TAGNAME=	6e547ee70d
+GH_COMMIT=	6e547ee70d
 
 PKGMESSAGE=	../gnome-shell-extra-extensions/pkg-message.slaves
 
