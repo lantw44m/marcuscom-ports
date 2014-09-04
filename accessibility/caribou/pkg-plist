@@ -1,4 +1,3 @@
-bin/caribou
 bin/caribou-preferences
 etc/xdg/autostart/caribou-autostart.desktop
 include/libcaribou/caribou.h
@@ -10,6 +9,7 @@ lib/libcaribou.a
 lib/libcaribou.so
 lib/libcaribou.so.0
 lib/libcaribou.so.0.0.0
+libexec/caribou
 %%PYTHON_SITELIBDIR%%/caribou/__init__.py
 %%PYTHON_SITELIBDIR%%/caribou/__init__.pyc
 %%PYTHON_SITELIBDIR%%/caribou/__init__.pyo
@@ -56,6 +56,7 @@ share/caribou/layouts/touch/ara.xml
 share/caribou/layouts/touch/il.xml
 share/caribou/layouts/touch/us.xml
 share/dbus-1/services/org.gnome.Caribou.Antler.service
+share/dbus-1/services/org.gnome.Caribou.Daemon.service
 share/gir-1.0/Caribou-1.0.gir
 share/locale/an/LC_MESSAGES/caribou.mo
 share/locale/ar/LC_MESSAGES/caribou.mo

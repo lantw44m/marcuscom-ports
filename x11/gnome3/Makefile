@@ -1,6 +1,6 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/x11/gnome3/Makefile 19831 2014-08-26 15:33:17Z kwm $
 
 PORTNAME=	gnome3
 PORTVERSION=	3.12.0
@@ -37,7 +37,7 @@ RUN_DEPENDS?=	dconf-editor:${PORTSDIR}/devel/dconf-editor \
 		metacity>=2.34.0:${PORTSDIR}/x11-wm/metacity \
 		gnome-control-center>=3.0.0:${PORTSDIR}/sysutils/gnome-control-center \
 		${LOCALBASE}/share/gnome-background-properties/gnome-backgrounds.xml:${PORTSDIR}/x11-themes/gnome-backgrounds \
-		caribou:${PORTSDIR}/accessibility/caribou \
+		caribou>=0:${PORTSDIR}/accessibility/caribou \
 		${LOCALBASE}/share/help/C/gnome-help/index.page:${PORTSDIR}/misc/gnome-user-docs \
 		${LOCALBASE}/share/sounds/freedesktop/index.theme:${PORTSDIR}/audio/freedesktop-sound-theme \
 		ekiga:${PORTSDIR}/net-im/ekiga
