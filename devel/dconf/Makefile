@@ -49,6 +49,8 @@ post-patch:
 		${WRKSRC}/bin/Makefile.in \
 		${WRKSRC}/client/Makefile.in \
 		${WRKSRC}/editor/Makefile.in
+	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|g' \
+		${WRKSRC}/docs/Makefile.in
 
 post-install:
 	@${MKDIR} ${STAGEDIR}${PREFIX}/etc/dconf/db
