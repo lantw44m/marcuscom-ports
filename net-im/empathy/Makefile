@@ -3,7 +3,7 @@
 #   $MCom$
 
 PORTNAME=	empathy
-PORTVERSION=	3.12.5
+PORTVERSION=	3.12.6
 CATEGORIES=	net-im gnome
 MASTER_SITES=	GNOME
 
