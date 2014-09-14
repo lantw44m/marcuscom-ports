@@ -19,4 +19,3 @@ x11-toolkits/gtksourceview2 -> x11-toolkits/gtksourceview3
 x11-toolkits/libgtksourceviewmm -> x11-toolkits/gtksourceviewmm3
 x11-toolkits/libwnck -> x11-toolkits/libwnck3
 x11-toolkits/vte -> x11-toolkits/vte3
-x11/zenity -> x11/zenity3

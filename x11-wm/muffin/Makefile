@@ -12,14 +12,14 @@ DIST_SUBDIR=	gnome3
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Compositing window manager forked from Mutter for use with Cinnamon
 
-BUILD_DEPENDS=	zenity3>=3.0.0:${PORTSDIR}/x11/zenity3 \
+BUILD_DEPENDS=	zenity>=3.0.0:${PORTSDIR}/x11/zenity \
 		gnome-autogen.sh:${PORTSDIR}/devel/gnome-common \
 		gsettings-desktop-schemas>=3.4.0:${PORTSDIR}/devel/gsettings-desktop-schemas
 LIB_DEPENDS=	libstartup-notification-1.so:${PORTSDIR}/x11/startup-notification \
 		libclutter-glx-1.0.so:${PORTSDIR}/graphics/clutter \
 		libcanberra-gtk3.so:${PORTSDIR}/audio/libcanberra-gtk3 \
 		libcinnamon-desktop.so:${PORTSDIR}/x11/cinnamon-desktop
-RUN_DEPENDS=	zenity3>=3.0.0:${PORTSDIR}/x11/zenity3
+RUN_DEPENDS=	zenity>=3.0.0:${PORTSDIR}/x11/zenity
 
 USES=		execinfo gettext libtool gmake pathfix pkgconfig python
 USE_GNOME=	gconf2 gnomedocutils gnomehier gnomeprefix gtk30 \

@@ -12,13 +12,13 @@ DIST_SUBDIR=	gnome3
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Window and compositing manager based on Clutter
 
-BUILD_DEPENDS=	zenity3>=3.0.0:${PORTSDIR}/x11/zenity3 \
+BUILD_DEPENDS=	zenity>=3.0.0:${PORTSDIR}/x11/zenity \
 		gsettings-desktop-schemas>=3.4.0:${PORTSDIR}/devel/gsettings-desktop-schemas
 LIB_DEPENDS=	libstartup-notification-1.so:${PORTSDIR}/x11/startup-notification \
 		libclutter-1.0.so:${PORTSDIR}/graphics/clutter \
 		libcanberra-gtk3.so:${PORTSDIR}/audio/libcanberra-gtk3 \
 		libupower-glib.so:${PORTSDIR}/sysutils/upower
-RUN_DEPENDS=	zenity3>=3.0.0:${PORTSDIR}/x11/zenity3 \
+RUN_DEPENDS=	zenity>=3.0.0:${PORTSDIR}/x11/zenity \
 		gsettings-desktop-schemas>=3.4.0:${PORTSDIR}/devel/gsettings-desktop-schemas
 
 USES=		gettext gmake libtool pathfix pkgconfig tar:xz
