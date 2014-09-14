@@ -9,7 +9,7 @@ MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	Common automake macros for GNOME 2 and GNOME 3
+COMMENT=	Common automake macros for GNOME 3
 
 USES=		gmake pkgconfig tar:xz
 GNU_CONFIGURE=	yes
