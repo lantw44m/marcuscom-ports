@@ -18,7 +18,6 @@ GH_TAGNAME=	${GH_COMMIT}
 
 WRKSRC=		${WRKDIR}/linuxmint-${PORTNAME}-41cf70d
 
-USES=		zip
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
