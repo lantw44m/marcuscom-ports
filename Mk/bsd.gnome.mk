@@ -296,7 +296,7 @@ libxml2_BUILD_DEPENDS=	xml2-config:${PORTSDIR}/textproc/libxml2
 libxml2_LIB_DEPENDS=	libxml2.so:${PORTSDIR}/textproc/libxml2
 libxml2_RUN_DEPENDS=	xml2-config:${PORTSDIR}/textproc/libxml2
 libxml2_DETECT=		${LOCALBASE}/libdata/pkgconfig/libxml-2.0.pc
- 
+
 libxslt_BUILD_DEPENDS=	xsltproc:${PORTSDIR}/textproc/libxslt
 libxslt_LIB_DEPENDS=	libxslt.so:${PORTSDIR}/textproc/libxslt
 libxslt_RUN_DEPENDS=	${libxslt_BUILD_DEPENDS}
@@ -482,7 +482,7 @@ intltool_BUILD_DEPENDS=	${intltool_DETECT}:${PORTSDIR}/textproc/intltool
 intlhack_PRE_PATCH=		${FIND} ${WRKSRC} -name "intltool-merge.in" | ${XARGS} ${REINPLACE_CMD} -e \
 				's|mkdir $$lang or|mkdir $$lang, 0777 or| ; \
 				 s|^push @INC, "/.*|push @INC, "${LOCALBASE}/share/intltool";| ; \
-				 s|/usr/bin/iconv|${LOCALBASE}/bin/iconv|g ; \
+				 s|/usr/bin/iconv|${ICONV_CMD|g ; \
 				 s|unpack *[(]'"'"'U\*'"'"'|unpack ('"'"'C*'"'"'|'
 intlhack_USE_GNOME_IMPL=intltool
 
@@ -802,7 +802,7 @@ GNOME_PRE_PATCH+=	; ${${component}_PRE_PATCH}
 . endfor
 .endif
 
-. if defined(GCONF_SCHEMAS) && ! defined(NO_STAGE)
+. if defined(GCONF_SCHEMAS)
 MAKE_ENV+=	GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL=1
 . endif
 .endif
@@ -892,16 +892,12 @@ gnome-post-install:
 .  if defined(INSTALLS_ICONS)
 	@${RM} -f ${TMPPLIST}.icons1
 	@for i in `${GREP} "^share/icons/.*/" ${TMPPLIST} | ${CUT} -d / -f 1-3 | ${SORT} -u`; do \
-		${ECHO_CMD} "@unexec /bin/rm %D/$${i}/icon-theme.cache 2>/dev/null || /usr/bin/true" \
+		${ECHO_CMD} "@rmtry %D/$${i}/icon-theme.cache 2>/dev/null || /usr/bin/true" \
 			>> ${TMPPLIST}.icons1; \
 		${ECHO_CMD} "@exec ${LOCALBASE}/bin/gtk-update-icon-cache -q -f %D/$${i} 2>/dev/null || /usr/bin/true" \
 			>> ${TMPPLIST}; \
 		${ECHO_CMD} "@unexec ${LOCALBASE}/bin/gtk-update-icon-cache -q -f %D/$${i} 2>/dev/null || /usr/bin/true" \
 			>> ${TMPPLIST}; \
-	done
-.if defined(NO_STAGE)
-	@for i in `${GREP} "^share/icons/.*/" ${TMPPLIST} | ${CUT} -d / -f 1-3 | ${SORT} -u`; do \
-		${LOCALBASE}/bin/gtk-update-icon-cache -q -f ${PREFIX}/$${i} 2>/dev/null || ${TRUE}; \
 	done
 .endif
 	@if test -f ${TMPPLIST}.icons1; then \
