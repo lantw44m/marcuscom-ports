@@ -51,7 +51,7 @@ GLIB_SCHEMAS=	org.gtk.Demo.gschema.xml \
 		org.gtk.Settings.FileChooser.gschema.xml \
 		org.gtk.exampleapp.gschema.xml
 
-OPTIONS_DEFINE=	CUPS COLORD DEBUG
+OPTIONS_DEFINE=	CUPS CLOUDPRINT COLORD DEBUG
 OPTIONS_DEFAULT=CUPS COLORD
 OPTIONS_SUB=	yes
 COLORD_DESC=	Color profile support
@@ -59,6 +59,10 @@ COLORD_LIB_DEPENDS=	libcolord.so:${PORTSDIR}/graphics/colord
 COLORD_CONFIGURE_ENABLE=colord
 CUPS_LIB_DEPENDS=	libcups.so:${PORTSDIR}/print/cups-client
 CUPS_CONFIGURE_ENABLE=	cups
+CLOUDPRINT_DESC=	Cloud printing support
+CLOUDPRINT_CONFIGURE_ENABLE=	cloudprint
+CLOUDPRINT_LIB_DEPENDS=	librest-0.7.so:${PORTSDIR}/www/librest \
+			libjson-glib-1.0.so:${PORTSDIR}/devel/json-glib
 DEBUG_CONFIGURE_ENABLE=debug
 
 # needed for the exists() check, booo
