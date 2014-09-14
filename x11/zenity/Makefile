@@ -30,4 +30,7 @@ OPTIONS_DEFAULT=NOTIFY
 NOTIFY_LIB_DEPENDS=	libnotify.so:${PORTSDIR}/devel/libnotify
 NOTIFY_CONFIGURE_ENABLE=libnotify
 
+post-patch:
+	@${RM} ${WRKSRC}/src/gdialog
+
 .include <bsd.port.mk>
