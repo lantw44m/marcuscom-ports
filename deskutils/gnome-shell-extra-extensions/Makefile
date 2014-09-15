@@ -25,7 +25,7 @@ RUN_DEPENDS=	gnome-shell-extension-weather>=0:${PORTSDIR}/deskutils/gnome-shell-
 		gnome-shell-extension-trash>=0:${PORTSDIR}/deskutils/gnome-shell-extension-trash \
 		gnome-shell-extension-dashtodock>=0:${PORTSDIR}/deskutils/gnome-shell-extension-dashtodock \
 		gnome-shell-extension-audio-output-switcher>=0:${PORTSDIR}/deskutils/gnome-shell-extension-audio-output-switcher \
-		gnome-shell-extension-recentitems>=0:${PORTSDIR}/deskutils/gnome-shell-extension-recentitems
+		gnome-shell-extension-recent-items>=0:${PORTSDIR}/deskutils/gnome-shell-extension-recent-items
 
 NO_BUILD=	yes
 NO_INSTALL=	yes
