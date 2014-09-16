@@ -3,7 +3,7 @@
 #   $MCom$
 
 PORTNAME=	gnome-shell-extension-openweather
-PORTVERSION=	0.0.0.20140520
+PORTVERSION=	0.0.0.20140916
 CATEGORIES=	deskutils gnome
 DIST_SUBDIR=	gnome3
 
@@ -15,7 +15,7 @@ BUILD_DEPENDS=	gnome-autogen.sh:${PORTSDIR}/devel/gnome-common \
 RUN_DEPENDS=	gnome-shell>=0:${PORTSDIR}/x11/gnome-shell \
 		gsettings-desktop-schemas>=3.12.0:${PORTSDIR}/devel/gsettings-desktop-schemas
 
-WRKSRC=		${WRKDIR}/jenslody-gnome-shell-extension-openweather-b20768a
+WRKSRC=		${WRKDIR}/jenslody-gnome-shell-extension-openweather-93ad24b
 
 USES=		gettext gmake libtool pkgconfig tar:xz
 USE_GNOME=	glib20 intltool
@@ -29,8 +29,8 @@ GLIB_SCHEMAS=	org.gnome.shell.extensions.openweather.gschema.xml
 
 GH_ACCOUNT=	jenslody
 GH_PROJECT=	gnome-shell-extension-openweather
-GH_TAGNAME=	b20768a010
-GH_COMMIT=	b20768a010
+GH_COMMIT=	93ad24b
+GH_TAGNAME=	93ad24b
 
 PKGMESSAGE=	../gnome-shell-extra-extensions/pkg-message.slaves
 
