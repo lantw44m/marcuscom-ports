@@ -34,7 +34,7 @@ CONFIGURE_ARGS+=--disable-man-pages
 PLIST_SUB+=	MAN="@comment "
 .else
 BUILD_DEPENDS+=	docbook-sgml>=0:${PORTSDIR}/textproc/docbook-sgml \
-		docboox-xml>=0:${PORTSDIR}/textproc/docbook-xml \
+		docbook-xml>=0:${PORTSDIR}/textproc/docbook-xml \
 		docbook-xsl>=0:${PORTSDIR}/textproc/docbook-xsl
 USE_GNOME+=	libxslt:build
 PLIST_SUB+=	MAN=""
