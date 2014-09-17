@@ -68,7 +68,8 @@ MTP_CONFIGURE_WITH=	mtp
 MTP_LIB_DEPENDS=	libmtp.so:${PORTSDIR}/multimedia/libmtp \
 			libhal.so:${PORTSDIR}/sysutils/hal
 PYTHON_CONFIGURE_ENABLE=	python
-PYTHON_USE=		PYTHON=3 PYTVER=${PYTHON_VER:S/.//}
+PYTHON_USES=		python:3
+PYTHON_USE=		PYTVER=${PYTHON_VER:S/.//}
 WEBKIT_DESC=	HTML view support
 WEBKIT_CONFIGURE_WITH=	webkit
 WEBKIT_LIB_DEPENDS=	libwebkitgtk-3.0.so:${PORTSDIR}/www/webkit-gtk3
