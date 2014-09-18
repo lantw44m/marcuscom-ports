@@ -3,7 +3,7 @@
 #   $MCom$
 
 PORTNAME=	libchamplain
-PORTVERSION=	0.12.8
+PORTVERSION=	0.12.9
 CATEGORIES=	graphics
 MASTER_SITES=	GNOME
 

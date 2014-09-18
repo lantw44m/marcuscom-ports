@@ -45,11 +45,11 @@ lib/girepository-1.0/GtkChamplain-%%VERSION%%.typelib
 lib/libchamplain-%%VERSION%%.a
 lib/libchamplain-%%VERSION%%.so
 lib/libchamplain-%%VERSION%%.so.0
-lib/libchamplain-%%VERSION%%.so.0.4.3
+lib/libchamplain-%%VERSION%%.so.0.4.4
 lib/libchamplain-gtk-%%VERSION%%.a
 lib/libchamplain-gtk-%%VERSION%%.so
 lib/libchamplain-gtk-%%VERSION%%.so.0
-lib/libchamplain-gtk-%%VERSION%%.so.0.4.3
+lib/libchamplain-gtk-%%VERSION%%.so.0.4.4
 libdata/pkgconfig/champlain-%%VERSION%%.pc
 libdata/pkgconfig/champlain-gtk-%%VERSION%%.pc
 share/gir-1.0/Champlain-%%VERSION%%.gir
@@ -103,6 +103,7 @@ share/gtk-doc/html/libchamplain-gtk3-%%VERSION%%/ix07.html
 share/gtk-doc/html/libchamplain-gtk3-%%VERSION%%/ix08.html
 share/gtk-doc/html/libchamplain-gtk3-%%VERSION%%/ix09.html
 share/gtk-doc/html/libchamplain-gtk3-%%VERSION%%/left.png
+share/gtk-doc/html/libchamplain-gtk3-%%VERSION%%/left-insensitive.png
 share/gtk-doc/html/libchamplain-gtk3-%%VERSION%%/libchamplain-ChamplainVersion.html
 share/gtk-doc/html/libchamplain-gtk3-%%VERSION%%/libchamplain.devhelp2
 share/gtk-doc/html/libchamplain-gtk3-%%VERSION%%/pt01.html
@@ -112,6 +113,7 @@ share/gtk-doc/html/libchamplain-gtk3-%%VERSION%%/pt04.html
 share/gtk-doc/html/libchamplain-gtk3-%%VERSION%%/pt05.html
 share/gtk-doc/html/libchamplain-gtk3-%%VERSION%%/pt06.html
 share/gtk-doc/html/libchamplain-gtk3-%%VERSION%%/pt07.html
+share/gtk-doc/html/libchamplain-gtk3-%%VERSION%%/right-insensitive.png
 share/gtk-doc/html/libchamplain-gtk3-%%VERSION%%/right.png
 share/gtk-doc/html/libchamplain-gtk3-%%VERSION%%/style.css
 share/gtk-doc/html/libchamplain-gtk3-%%VERSION%%/up.png
@@ -120,11 +122,15 @@ share/gtk-doc/html/libchamplain-gtk3-gtk-%%VERSION%%/annotation-glossary.html
 share/gtk-doc/html/libchamplain-gtk3-gtk-%%VERSION%%/home.png
 share/gtk-doc/html/libchamplain-gtk3-gtk-%%VERSION%%/index.html
 share/gtk-doc/html/libchamplain-gtk3-gtk-%%VERSION%%/index.sgml
+share/gtk-doc/html/libchamplain-gtk3-gtk-%%VERSION%%/left-insensitive.png
 share/gtk-doc/html/libchamplain-gtk3-gtk-%%VERSION%%/left.png
 share/gtk-doc/html/libchamplain-gtk3-gtk-%%VERSION%%/libchamplain-gtk.devhelp2
 share/gtk-doc/html/libchamplain-gtk3-gtk-%%VERSION%%/pt01.html
+share/gtk-doc/html/libchamplain-gtk3-gtk-%%VERSION%%/right-insensitive.png
 share/gtk-doc/html/libchamplain-gtk3-gtk-%%VERSION%%/right.png
 share/gtk-doc/html/libchamplain-gtk3-gtk-%%VERSION%%/style.css
+share/gtk-doc/html/libchamplain-gtk3-%%VERSION%%/up-insensitive.png
+share/gtk-doc/html/libchamplain-gtk3-gtk-%%VERSION%%/up-insensitive.png
 share/gtk-doc/html/libchamplain-gtk3-gtk-%%VERSION%%/up.png
 share/vala/vapi/champlain-%%VERSION%%.vapi
 share/vala/vapi/champlain-gtk-%%VERSION%%.vapi
