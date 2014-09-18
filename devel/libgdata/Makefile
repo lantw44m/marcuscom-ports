@@ -3,8 +3,7 @@
 #    $MCom$
 
 PORTNAME=	libgdata
-PORTVERSION=	0.14.3
-PORTREVISION=	1
+PORTVERSION=	0.16.0
 CATEGORIES=	devel
 MASTER_SITES=	GNOME
 
@@ -15,6 +14,7 @@ BUILD_DEPENDS=	ca_root_nss>=0:${PORTSDIR}/security/ca_root_nss \
 		vapigen:${PORTSDIR}/lang/vala-vapigen
 LIB_DEPENDS=	libsoup-gnome-2.4.so:${PORTSDIR}/devel/libsoup-gnome \
 		libgoa-1.0.so:${PORTSDIR}/net/gnome-online-accounts \
+		libuhttpmock-0.0.so:${PORTSDIR}/net/uhttpmock \
 		libgcr-3.so:${PORTSDIR}/security/gcr \
 		liboauth.so:${PORTSDIR}/net/liboauth
 RUN_DEPENDS=	ca_root_nss>=0:${PORTSDIR}/security/ca_root_nss
