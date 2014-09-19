@@ -16,7 +16,7 @@ BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-
 		appdata-tools>=0:${PORTSDIR}/devel/appdata-tools \
 		itstool:${PORTSDIR}/textproc/itstool \
 		grilo-plugins>=0:${PORTSDIR}/net/grilo-plugins
-LIB_DEPENDS=	libgdata.so.13:${PORTSDIR}/devel/libgdata \
+LIB_DEPENDS=	libgdata.so:${PORTSDIR}/devel/libgdata \
 		libdbus-glib-1.so:${PORTSDIR}/devel/dbus-glib \
 		libclutter-gst-2.0.so:${PORTSDIR}/multimedia/clutter-gst \
 		libclutter-gtk-1.0.so:${PORTSDIR}/graphics/clutter-gtk3 \
