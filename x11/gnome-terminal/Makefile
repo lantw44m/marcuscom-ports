@@ -20,7 +20,7 @@ LIB_DEPENDS=	libstartup-notification-1.so:${PORTSDIR}/x11/startup-notification \
 RUN_DEPENDS=	gsettings-desktop-schemas>=0:${PORTSDIR}/devel/gsettings-desktop-schemas
 
 USES=		gettext gmake libtool pathfix pkgconfig tar:xz
-USE_GNOME=	gnomeprefix gtk30 intlhack nautilus3 vte3
+USE_GNOME=	dconf gnomeprefix gtk30 intlhack nautilus3 vte3
 USE_XORG=	sm ice
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-search-provider
