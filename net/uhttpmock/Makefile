@@ -4,21 +4,24 @@
 
 PORTNAME=	uhttpmock
 PORTVERSION=	0.4.0.180914
+PORTREVISION=	1
 CATEGORIES=	net gnome
-MASTER_SITES=	https://gitorious.org/${GO_ACCOUNT}/${GO_PROJECT}/archive/${GO_TAGNAME}.tar.gz?dummy= \
+MASTER_SITES=	LOCAL/kwm
+#https://gitorious.org/${GO_ACCOUNT}/${GO_PROJECT}/archive/${GO_TAGNAME}.tar.gz?dummy= \
 DIST_SUBDIR=	gnome3
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	HTTP web service mocking library for GNOME
 
 BUILD_DEPENDS=	gnome-autogen.sh:${PORTSDIR}/devel/gnome-common \
+		vapigen:${PORTSDIR}/lang/vala-vapigen \
 		gtkdoc-rebase:${PORTSDIR}/textproc/gtk-doc
 LIB_DEPENDS=	libsoup-2.4.so:${PORTSDIR}/devel/libsoup
 
 WRKSRC=		${WRKDIR}/uhttpmock-uhttpmock
 
 USES=		gettext gmake libtool pathfix pkgconfig
-USE_GNOME=	gnomeprefix gtk20 introspection:build
+USE_GNOME=	gnomehier gnomeprefix gtk20 introspection:build
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 USE_AUTOTOOLS=	libtoolize autoconf automake
