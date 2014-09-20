@@ -26,9 +26,4 @@ INSTALL_TARGET=	install-strip
 
 PLIST_SUB=	VERSION=0.12
 
-post-patch:
-	@${REINPLACE_CMD} -e 's|DOC_MODULE = libchamplain|DOC_MODULE = libchamplain-gtk3|g' \
-		${WRKSRC}/docs/reference/Makefile.in \
-		${WRKSRC}/docs/reference-gtk/Makefile.in
-
 .include <bsd.port.mk>
