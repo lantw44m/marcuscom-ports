@@ -3,7 +3,7 @@
 #   $MCom$
 
 PORTNAME=	gnome-video-effects
-PORTVERSION=	0.4.0
+PORTVERSION=	0.4.1
 CATEGORIES=	graphics
 MASTER_SITES=	GNOME
 
