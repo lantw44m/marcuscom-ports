@@ -19,8 +19,6 @@ LIB_DEPENDS=	libsoup-gnome-2.4.so:${PORTSDIR}/devel/libsoup-gnome \
 		liboauth.so:${PORTSDIR}/net/liboauth
 RUN_DEPENDS=	ca_root_nss>=0:${PORTSDIR}/security/ca_root_nss
 
-CONFLICTS=	libgdata-0.6.*
-
 USES=		gettext gmake libtool pathfix pkgconfig tar:xz
 USE_GNOME=	glib20 gnomehier gnomeprefix intltool \
 			introspection:build
