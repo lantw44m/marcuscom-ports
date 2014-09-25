@@ -13,7 +13,7 @@ COMMENT=	Telepathy component to apps to abstract details of connection managers
 LIB_DEPENDS=	libtelepathy.so:${PORTSDIR}/net-im/libtelepathy \
 		libdbus-glib-1.so:${PORTSDIR}/devel/dbus-glib
 
-USES=		gmake pathfix libtool pathfix pkgconfig
+USES=		gmake libtool pathfix pkgconfig
 USE_GNOME=	libxslt
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
