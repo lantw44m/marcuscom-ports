@@ -13,11 +13,11 @@ COMMENT=	GNOME 3 calculator tool
 
 BUILD_DEPENDS=	itstool:${PORTSDIR}/textproc/itstool
 
-USES=		gettext gmake pathfix pkgconfig tar:xz
+USES=		gettext gmake pkgconfig tar:xz
 USE_GNOME=	gnomeprefix gtksourceview3 gtk30 intlhack libxml2
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib
+LIBS+=		-L${LOCALBASE}/lib
 GLIB_SCHEMAS=	org.gnome.calculator.gschema.xml
 
 .include <bsd.port.mk>

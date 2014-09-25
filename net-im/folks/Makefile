@@ -25,7 +25,7 @@ USE_GNOME=	evolutiondataserver3 gnomehier intlhack \
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-bluez-backend
 CPPFLAGS+=	-I${LOCALBASE}/include -Wno-error=deprecated-declarations
-LDFLAGS+=	-L${LOCALBASE}/lib
+LIBS+=		-L${LOCALBASE}/lib
 INSTALL_TARGET=	install-strip
 
 GLIB_SCHEMAS=	org.freedesktop.folks.gschema.xml

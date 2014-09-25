@@ -16,12 +16,12 @@ BUILD_DEPENDS=	valac:${PORTSDIR}/lang/vala
 
 USES=		gettext gmake libtool pathfix pkgconfig \
 		python:3 tar:xz
-USE_GNOME=	gtk30 introspection:build
+USE_GNOME=	gtk30 intlhack introspection:build
 USE_LDCONFIG=	yes
 INSTALLS_ICONS=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib
+LIBS+=		-L${LOCALBASE}/lib
 INSTALL_TARGET=	install-strip
 CONFIGURE_ARGS+=--disable-glade-catalog \
 		--disable-python2

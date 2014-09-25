@@ -14,15 +14,14 @@ COMMENT=	Gnome chess
 BUILD_DEPENDS=	vala:${PORTSDIR}/lang/vala \
 		itstool:${PORTSDIR}/textproc/itstool
 
-USES=		desktop-file-utils gettext gmake pathfix \
-		pkgconfig tar:xz
+USES=		desktop-file-utils gettext gmake pkgconfig tar:xz
 USE_GNOME=	gtk30 intlhack librsvg2 libxml2:build
 INSTALLS_ICONS=	yes
 USE_XORG=	x11
 USE_GL=		gl glu
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib
+LIBS+=		-L${LOCALBASE}/lib
 
 GLIB_SCHEMAS=	org.gnome.gnome-chess.gschema.xml
 
