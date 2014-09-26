@@ -11,13 +11,13 @@ MASTER_SITES=	GNOME
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	VNC viewer widget for GTK+
 
+LICENSE=	LGPL21
+LICENSE_FILE=	${WRKSRC}/COPYING.LIB
+
 BUILD_DEPENDS=	vapigen:${PORTSDIR}/lang/vala-vapigen
 LIB_DEPENDS=	libgnutls.so:${PORTSDIR}/security/gnutls \
 		libgcrypt.so:${PORTSDIR}/security/libgcrypt \
 		libsasl2.so:${PORTSDIR}/security/cyrus-sasl2
-
-LICENSE=	LGPL21
-LICENSE_FILE=	${WRKSRC}/COPYING.LIB
 
 USE_GNOME=	gnomehier gtk30 introspection:build
 USES=		gettext gmake libtool pathfix pkgconfig tar:xz
