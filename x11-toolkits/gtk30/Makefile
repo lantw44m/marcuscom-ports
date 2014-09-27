@@ -61,7 +61,7 @@ CUPS_LIB_DEPENDS=	libcups.so:${PORTSDIR}/print/cups-client
 CUPS_CONFIGURE_ENABLE=	cups
 CLOUDPRINT_DESC=	Cloud printing support
 CLOUDPRINT_CONFIGURE_ENABLE=	cloudprint
-CLOUDPRINT_LIB_DEPENDS=	librest-0.7.so:${PORTSDIR}/www/librest \
+CLOUDPRINT_LIB_DEPENDS=	librest-0.7.so:${PORTSDIR}/devel/librest \
 			libjson-glib-1.0.so:${PORTSDIR}/devel/json-glib
 DEBUG_CONFIGURE_ENABLE=debug
 
