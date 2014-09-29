@@ -34,7 +34,7 @@ QUVI_DESC=	Flash media stream URL support
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MQUVI}
-LIB_DEPENDS+=	libquvi-0.9.so:${PORTSDIR}/multimedia/libquvi
+LIB_DEPENDS+=	libquvi-0.9.so:${PORTSDIR}/multimedia/libquvi09
 CONFIGURE_ARGS+=--enable-quvi
 .else
 CONFIGURE_ARGS+=--enable-quvi=no
