@@ -34,7 +34,7 @@ USES=		bison gettext gmake libtool perl5 pkgconfig \
 USE_RUBY=	yes
 RUBY_NO_RUN_DEPENDS=yes
 USE_GNOME=	cairo gnomehier gtk20 gtk30 introspection:build \
-		libxslt:build
+		libxslt
 USE_SQLITE=	3
 USE_PERL5=	build
 USE_LDCONFIG=	yes
