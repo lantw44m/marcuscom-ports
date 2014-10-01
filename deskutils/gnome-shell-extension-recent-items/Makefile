@@ -5,8 +5,9 @@
 PORTNAME=	gnome-shell-extension-recent-items
 PORTVERSION=	0.0.0.20140903
 CATEGORIES=	deskutils gnome
-MASTER_SITES=	http://www.bananenfisch.net/code/
-DISTFILES=	RecentItems-9.tar.gz
+MASTER_SITES=	http://www.bananenfisch.net/code/ \
+		LOCAL/kwm
+DISTNAME=	RecentItems-9
 DIST_SUBDIR=	gnome3
 
 MAINTAINER=	gnome@FreeBSD.org
@@ -14,7 +15,6 @@ COMMENT=	Recent items extensions for the GNOME3 shell
 
 WRKSRC=		${WRKDIR}/RecentItems@bananenfisch.net
 
-USES=		tar:xz
 USE_GNOME=	glib20
 USE_LDCONFIG=	yes
 
