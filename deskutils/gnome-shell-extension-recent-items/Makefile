@@ -3,11 +3,10 @@
 #   $MCom$
 
 PORTNAME=	gnome-shell-extension-recent-items
-PORTVERSION=	0.0.0.20140903
+PORTVERSION=	0.0.0.20141001
 CATEGORIES=	deskutils gnome
-MASTER_SITES=	http://www.bananenfisch.net/code/ \
-		LOCAL/kwm
-DISTNAME=	RecentItems-9
+MASTER_SITES=	http://www.bananenfisch.net/code/
+DISTNAME=	RecentItems-11
 DIST_SUBDIR=	gnome3
 
 MAINTAINER=	gnome@FreeBSD.org
