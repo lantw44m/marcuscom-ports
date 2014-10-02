@@ -87,7 +87,6 @@ OPTIONS_DEFINE=	IPV6 KEYRING
 OPTIONS_DEFAULT=KEYRING
 KEYRING_DESC=	Gnomekeyring/PAM integration
 KEYRING_LIB_DEPENDS=	libgnome-keyring.so:${PORTSDIR}/security/libgnome-keyring
-DEBUG_CONFIGURE_ENABLE=	debug	
 IPV6_CONFIGURE_ENABLE=	ipv6
 
 .include <bsd.port.options.mk>
