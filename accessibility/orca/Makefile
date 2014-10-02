@@ -3,7 +3,7 @@
 #   $MCom$
 
 PORTNAME=	orca
-PORTVERSION=	3.12.2
+PORTVERSION=	3.12.3
 CATEGORIES=	accessibility gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
