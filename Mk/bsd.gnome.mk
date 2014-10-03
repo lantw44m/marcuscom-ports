@@ -78,7 +78,7 @@ _USE_GNOME_ALL+= gdkpixbuf glib12 gtk12 imlib
 # GNOME 2 components
 _USE_GNOME_ALL+= atk atspi cairo desktopfileutils eel2 gal2 \
 		gdkpixbuf2 gconf2 glib20 \
-		gnomedesktopsharp20 gnomedocutils gnomesharp20 \
+		gnomedocutils gnomesharp20 \
 		gnomespeech gnomevfs2 gtk-update-icon-cache gtk20 gtkhtml3 gtksharp10 \
 		gtksharp20 gtksourceview gtksourceview2 gvfs libartlgpl2 libbonobo \
 		libbonoboui libgda4 libglade2 libgnome \
@@ -206,13 +206,13 @@ esound_MAKE_ENV=	ESD_CONFIG="${ESD_CONFIG}"
 esound_DETECT=		${ESD_CONFIG}
 
 GLIB_CONFIG?=		${LOCALBASE}/bin/glib12-config
-glib12_LIB_DEPENDS=	libglib-12.so:${PORTSDIR}/devel/glib12
+glib12_LIB_DEPENDS=	libglib-1.2.so:${PORTSDIR}/devel/glib12
 glib12_CONFIGURE_ENV=	GLIB_CONFIG="${GLIB_CONFIG}"
 glib12_MAKE_ENV=	GLIB_CONFIG="${GLIB_CONFIG}"
 glib12_DETECT=		${GLIB_CONFIG}
 
 GTK_CONFIG?=		${LOCALBASE}/bin/gtk12-config
-gtk12_LIB_DEPENDS=	libgtk-12.so:${PORTSDIR}/x11-toolkits/gtk12
+gtk12_LIB_DEPENDS=	libgtk-1.2.so:${PORTSDIR}/x11-toolkits/gtk12
 gtk12_CONFIGURE_ENV=	GTK_CONFIG="${GTK_CONFIG}"
 gtk12_MAKE_ENV=		GTK_CONFIG="${GTK_CONFIG}"
 gtk12_DETECT=		${GTK_CONFIG}
@@ -360,12 +360,6 @@ libgtkhtml_USE_GNOME_IMPL=libxslt gnomevfs2
 gnomedesktop3_LIB_DEPENDS=	libgnome-desktop-3.so:${PORTSDIR}/x11/gnome-desktop
 gnomedesktop3_DETECT=		${LOCALBASE}/libdata/pkgconfig/gnome-desktop-3.0.pc
 gnomedesktop3_USE_GNOME_IMPL=	gtk30
-
-gnomedesktopsharp20_DETECT=		${LOCALBASE}/libdata/pkgconfig/gnome-desktop-sharp-2.0.pc
-gnomedesktopsharp20_BUILD_DEPENDS=	${gnomedesktopsharp20_DETECT}:${PORTSDIR}/x11-toolkits/gnome-desktop-sharp20
-gnomedesktopsharp20_RUN_DEPENDS=	${gnomedesktopsharp20_DETECT}:${PORTSDIR}/x11-toolkits/gnome-desktop-sharp20
-gnomedesktopsharp20_USE_GNOME_IMPL=	gnomesharp20 gnomepanel3 gtkhtml3 librsvg2 vte libgnomeprintui gtksourceview2 libwnck
-gnomedesktopsharp20_GNOME_DESKTOP_VERSION=2
 
 libwnck_LIB_DEPENDS=	libwnck-1.so:${PORTSDIR}/x11-toolkits/libwnck
 libwnck_DETECT=		${LOCALBASE}/libdata/pkgconfig/libwnck-1.0.pc
@@ -545,7 +539,7 @@ gtksharp20_USE_GNOME_IMPL=	gtk20
 gnomesharp20_DETECT=		${LOCALBASE}/libdata/pkgconfig/gnome-sharp-2.0.pc
 gnomesharp20_BUILD_DEPENDS=	${gnomesharp20_DETECT}:${PORTSDIR}/x11-toolkits/gnome-sharp20
 gnomesharp20_RUN_DEPENDS=	${gnomesharp20_DETECT}:${PORTSDIR}/x11-toolkits/gnome-sharp20
-gnomesharp20_USE_GNOME_IMPL=	gnomepanel3 gtkhtml3 gtksharp20 librsvg2 vte
+gnomesharp20_USE_GNOME_IMPL=	gnomevfs2 gtkhtml3 gtksharp20 librsvg2 vte
 
 libgnomekbd_DETECT=		${LOCALBASE}/libdata/pkgconfig/libgnomekbd.pc
 libgnomekbd_LIB_DEPENDS=	libgnomekbd.so:${PORTSDIR}/x11/libgnomekbd
