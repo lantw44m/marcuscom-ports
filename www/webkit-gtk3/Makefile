@@ -3,7 +3,7 @@
 #   $MCom$
 
 PORTNAME=	webkit
-PORTVERSION=	2.4.5
+PORTVERSION=	2.4.6
 CATEGORIES=	www
 MASTER_SITES=	http://webkitgtk.org/releases/
 PKGNAMESUFFIX=	-gtk3
@@ -132,6 +132,6 @@ post-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/Programs/GtkLauncher \
 		${STAGEDIR}${PREFIX}/bin/GtkLauncher-3
 	${INSTALL_PROGRAM} ${WRKSRC}/Programs/MiniBrowser \
-		${STAGEDIR}${PREFIX}/bin/
+		${STAGEDIR}${PREFIX}/bin/MiniBrowser-3
 
 .include <bsd.port.post.mk>
