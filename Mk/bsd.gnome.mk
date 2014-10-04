@@ -206,13 +206,13 @@ esound_MAKE_ENV=	ESD_CONFIG="${ESD_CONFIG}"
 esound_DETECT=		${ESD_CONFIG}
 
 GLIB_CONFIG?=		${LOCALBASE}/bin/glib12-config
-glib12_LIB_DEPENDS=	libglib-1.2.so:${PORTSDIR}/devel/glib12
+glib12_LIB_DEPENDS=	libglib.so:${PORTSDIR}/devel/glib12
 glib12_CONFIGURE_ENV=	GLIB_CONFIG="${GLIB_CONFIG}"
 glib12_MAKE_ENV=	GLIB_CONFIG="${GLIB_CONFIG}"
 glib12_DETECT=		${GLIB_CONFIG}
 
 GTK_CONFIG?=		${LOCALBASE}/bin/gtk12-config
-gtk12_LIB_DEPENDS=	libgtk-1.2.so:${PORTSDIR}/x11-toolkits/gtk12
+gtk12_LIB_DEPENDS=	libgtk.so:${PORTSDIR}/x11-toolkits/gtk12
 gtk12_CONFIGURE_ENV=	GTK_CONFIG="${GTK_CONFIG}"
 gtk12_MAKE_ENV=		GTK_CONFIG="${GTK_CONFIG}"
 gtk12_DETECT=		${GTK_CONFIG}
