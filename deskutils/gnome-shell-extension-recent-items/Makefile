@@ -3,10 +3,10 @@
 #   $MCom$
 
 PORTNAME=	gnome-shell-extension-recent-items
-PORTVERSION=	0.0.0.20140903
+PORTVERSION=	0.0.0.20141001
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	http://www.bananenfisch.net/code/
-DISTFILES=	RecentItems-9.tar.gz
+DISTNAME=	RecentItems-11
 DIST_SUBDIR=	gnome3
 
 MAINTAINER=	gnome@FreeBSD.org
@@ -14,7 +14,6 @@ COMMENT=	Recent items extensions for the GNOME3 shell
 
 WRKSRC=		${WRKDIR}/RecentItems@bananenfisch.net
 
-USES=		tar:xz
 USE_GNOME=	glib20
 USE_LDCONFIG=	yes
 

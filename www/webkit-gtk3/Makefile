@@ -3,7 +3,7 @@
 #   $MCom$
 
 PORTNAME=	webkit
-PORTVERSION=	2.4.5
+PORTVERSION=	2.4.6
 CATEGORIES=	www
 MASTER_SITES=	http://webkitgtk.org/releases/
 PKGNAMESUFFIX=	-gtk3
@@ -34,7 +34,7 @@ USES=		bison gettext gmake libtool perl5 pkgconfig \
 USE_RUBY=	yes
 RUBY_NO_RUN_DEPENDS=yes
 USE_GNOME=	cairo gnomehier gtk20 gtk30 introspection:build \
-		libxslt:build
+		libxslt
 USE_SQLITE=	3
 USE_PERL5=	build
 USE_LDCONFIG=	yes
@@ -132,6 +132,6 @@ post-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/Programs/GtkLauncher \
 		${STAGEDIR}${PREFIX}/bin/GtkLauncher-3
 	${INSTALL_PROGRAM} ${WRKSRC}/Programs/MiniBrowser \
-		${STAGEDIR}${PREFIX}/bin/
+		${STAGEDIR}${PREFIX}/bin/MiniBrowser-3
 
 .include <bsd.port.post.mk>
