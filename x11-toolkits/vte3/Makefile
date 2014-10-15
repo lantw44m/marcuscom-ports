@@ -3,8 +3,7 @@
 #   $MCom$
 
 PORTNAME?=	vte
-PORTVERSION=	0.36.3
-PORTREVISION=	1
+PORTVERSION=	0.38.0
 CATEGORIES=	x11-toolkits gnome
 MASTER_SITES=	GNOME
 MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/gnome-pty-helper/vte/}/${PORTVERSION:R}
@@ -21,6 +20,8 @@ USES=		tar:xz
 VTE3_SLAVE?=	no
 
 .if ${VTE3_SLAVE}!="yes"
+BUILD_DEPENDS+= vapigen:${PORTSDIR}/lang/vala \
+		bash:${PORTSDIR}/shells/bash
 RUN_DEPENDS+=	${LOCALBASE}/libexec/gnome-pty-helper:${PORTSDIR}/x11-toolkits/gnome-pty-helper
 .endif
 
@@ -29,7 +30,7 @@ USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 USE_GNOME?=	gnomeprefix gtk30 referencehack introspection:build
 CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib
+LIBS+=		-L${LOCALBASE}/lib
 CONFIGURE_ARGS?=--disable-python \
 		--with-gtk=3.0 \
 		--enable-introspection \
@@ -44,7 +45,7 @@ OPTIONS_DEFINE=	GLX
 GLX_DESC=	Support for DRI/GLX rendering
 .endif
 
-PLIST_SUB=	VERSION=2.90
+PLIST_SUB=	VERSION=2.91
 
 .include <bsd.port.options.mk>
 
