@@ -3,8 +3,8 @@
 #   $MCom$
 
 PORTNAME=	atk
-PORTVERSION=	2.12.0
-PORTREVISION?=	1
+PORTVERSION=	2.14.0
+PORTREVISION?=	0
 CATEGORIES=	accessibility devel
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -22,7 +22,7 @@ USES+=		gettext gmake libtool pathfix pkgconfig
 USE_GNOME=	glib20 gnomehier introspection:build referencehack
 CONFIGURE_ARGS=	--with-html-dir=${PREFIX}/share/doc
 CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib
+LIBS+=		-L${LOCALBASE}/lib
 CONFIGURE_ENV=	AUTOCONF=${TRUE} AUTOMAKE=${TRUE}
 INSTALL_TARGET=	install-strip
 

@@ -3,8 +3,7 @@
 #   $MCom$
 
 PORTNAME=	gjs
-PORTVERSION=	1.40.1
-PORTREVISION=	1
+PORTVERSION=	1.42.0
 CATEGORIES=	lang gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -22,7 +21,7 @@ USE_GNOME=	cairo glib20 gnomeprefix introspection:build \
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib
+LIBS+=		-L${LOCALBASE}/lib
 INSTALL_TARGET=	install-strip
 
 .include <bsd.port.mk>

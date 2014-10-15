@@ -11,6 +11,7 @@ MAINTAINER=	kwm@FreeBSD.org
 COMMENT=	GLib based implimentation of the GData protocol
 
 BUILD_DEPENDS=	ca_root_nss>=0:${PORTSDIR}/security/ca_root_nss \
+		gtkdoc-check:${PORTSDIR}/textproc/gtk-doc \
 		vapigen:${PORTSDIR}/lang/vala-vapigen
 LIB_DEPENDS=	libsoup-gnome-2.4.so:${PORTSDIR}/devel/libsoup-gnome \
 		libgoa-1.0.so:${PORTSDIR}/net/gnome-online-accounts \

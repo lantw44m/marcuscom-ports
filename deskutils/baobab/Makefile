@@ -3,8 +3,7 @@
 #   $MCom$
 
 PORTNAME=	baobab
-PORTVERSION=	3.12.1
-PORTREVISION=	1
+PORTVERSION=	3.14.0
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -13,7 +12,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME 3 graphical directory tree analyzer
 
 BUILD_DEPENDS=	itstool:${PORTSDIR}/textproc/itstool \
-		vapigen:${PORTSDIR}/lang/vala-vapigen
+		vapigen:${PORTSDIR}/lang/vala
 LIB_DEPENDS=	libgtop-2.0.so:${PORTSDIR}/devel/libgtop
 
 CONFLICTS=	gnome-utils-2.[0-9]*

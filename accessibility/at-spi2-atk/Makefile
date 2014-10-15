@@ -3,8 +3,7 @@
 #   $MCom$
 
 PORTNAME=	at-spi2-atk
-PORTVERSION=	2.12.1
-PORTREVISION=	1
+PORTVERSION=	2.14.1
 CATEGORIES=	accessibility x11-toolkits
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -25,7 +24,7 @@ USE_GNOME=	atk glib20 gnomehier intlhack
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib
+LIBS+=		-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--enable-p2p
 INSTALL_TARGET=	install-strip
 

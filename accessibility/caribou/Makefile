@@ -3,7 +3,7 @@
 #    $MCom$
 
 PORTNAME=	caribou
-PORTVERSION=	0.4.14
+PORTVERSION=	0.4.15
 CATEGORIES=	accessibility gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
