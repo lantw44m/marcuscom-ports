@@ -3,8 +3,7 @@
 #    $MCom$
 
 PORTNAME=	telepathy-logger
-PORTVERSION=	0.8.0
-PORTREVISION=	1
+PORTVERSION=	0.8.1
 CATEGORIES=	net-im
 MASTER_SITES=	http://telepathy.freedesktop.org/releases/${PORTNAME}/
 
