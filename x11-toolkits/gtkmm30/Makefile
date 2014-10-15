@@ -3,8 +3,8 @@
 #   $MCom$
 
 PORTNAME=	gtkmm
-PORTVERSION=	3.12.0
-PORTREVISION?=	2
+PORTVERSION=	3.14.0
+PORTREVISION?=	0
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	GNOME
 PKGNAMESUFFIX=	30
@@ -24,7 +24,7 @@ USE_GNOME=	gtk30 glibmm cairomm atkmm pangomm
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib
+LIBS+=		-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--disable-documentation
 INSTALL_TARGET=	install-strip
 

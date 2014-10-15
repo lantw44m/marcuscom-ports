@@ -3,7 +3,7 @@
 #   $MCom$
 
 PORTNAME=	gtksourceview
-PORTVERSION=	3.12.3
+PORTVERSION=	3.14.1
 CATEGORIES=	x11-toolkits gnome
 MASTER_SITES=	GNOME
 PKGNAMESUFFIX=	3
@@ -24,7 +24,7 @@ USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--enable-compile-warnings=no --enable-glade-catalog=no \
 		--enable-introspection
 CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib
+LIBS+=		-L${LOCALBASE}/lib
 INSTALL_TARGET=	install-strip
 
 post-patch:
