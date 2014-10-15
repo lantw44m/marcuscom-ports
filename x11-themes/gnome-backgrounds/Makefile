@@ -3,7 +3,7 @@
 #   $MCom$
 
 PORTNAME=	gnome-backgrounds
-PORTVERSION=	3.12.2
+PORTVERSION=	3.14.1
 CATEGORIES=	x11-themes graphics gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3

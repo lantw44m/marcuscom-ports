@@ -3,8 +3,7 @@
 #   $MCom$
 
 PORTNAME=	gobject-introspection
-PORTVERSION=	1.40.0
-PORTREVISION=	2
+PORTVERSION=	1.42.0
 CATEGORIES=	devel
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -22,7 +21,7 @@ GNU_CONFIGURE=	yes
 USE_GNOME=	gnomehier glib20
 USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib
+LIBS+=		-L${LOCALBASE}/lib
 INSTALL_TARGET=	install-strip
 
 # Force it to put the .cache in ${WRKSRC} instead of ~/.cache. ports/143260

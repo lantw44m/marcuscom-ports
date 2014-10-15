@@ -13,6 +13,12 @@ share/backgrounds/gnome/Stones.jpg
 share/backgrounds/gnome/Terraform-green.jpg
 share/backgrounds/gnome/Waves.jpg
 share/backgrounds/gnome/Whispy_Tails.jpg
+share/backgrounds/gnome/adwaita-day.jpg
+share/backgrounds/gnome/adwaita-lock.jpg
+share/backgrounds/gnome/adwaita-morning.jpg
+share/backgrounds/gnome/adwaita-night.jpg
+share/backgrounds/gnome/adwaita-timed.xml
+share/gnome-background-properties/adwaita.xml
 share/gnome-background-properties/gnome-backgrounds.xml
 share/locale/af/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/an/LC_MESSAGES/gnome-backgrounds.mo
