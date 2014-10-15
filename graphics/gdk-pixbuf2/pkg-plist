@@ -19,7 +19,7 @@ lib/gdk-pixbuf-2.0/%%GTK2_VERSION%%/loaders/libpixbufloader-bmp.so
 lib/gdk-pixbuf-2.0/%%GTK2_VERSION%%/loaders/libpixbufloader-gif.so
 lib/gdk-pixbuf-2.0/%%GTK2_VERSION%%/loaders/libpixbufloader-icns.so
 lib/gdk-pixbuf-2.0/%%GTK2_VERSION%%/loaders/libpixbufloader-ico.so
-%%JP2%%lib/gdk-pixbuf-2.0/%%GTK2_VERSION%%/loaders/libpixbufloader-jasper.so
+%%JASPER%%lib/gdk-pixbuf-2.0/%%GTK2_VERSION%%/loaders/libpixbufloader-jasper.so
 %%JPEG%%lib/gdk-pixbuf-2.0/%%GTK2_VERSION%%/loaders/libpixbufloader-jpeg.so
 lib/gdk-pixbuf-2.0/%%GTK2_VERSION%%/loaders/libpixbufloader-pcx.so
 %%PNG%%lib/gdk-pixbuf-2.0/%%GTK2_VERSION%%/loaders/libpixbufloader-png.so
@@ -34,10 +34,10 @@ lib/gdk-pixbuf-2.0/%%GTK2_VERSION%%/loaders/libpixbufloader-xpm.so
 lib/girepository-1.0/GdkPixbuf-2.0.typelib
 lib/libgdk_pixbuf-2.0.so
 lib/libgdk_pixbuf-2.0.so.0
-lib/libgdk_pixbuf-2.0.so.0.3000.8
+lib/libgdk_pixbuf-2.0.so.0.3100.1
 lib/libgdk_pixbuf_xlib-2.0.so
 lib/libgdk_pixbuf_xlib-2.0.so.0
-lib/libgdk_pixbuf_xlib-2.0.so.0.3000.8
+lib/libgdk_pixbuf_xlib-2.0.so.0.3100.1
 libdata/pkgconfig/gdk-pixbuf-2.0.pc
 libdata/pkgconfig/gdk-pixbuf-xlib-2.0.pc
 man/man1/gdk-pixbuf-csource.1.gz
@@ -215,9 +215,3 @@ share/gir-1.0/GdkPixbuf-2.0.gir
 %%NLS%%@dirrmtry share/locale/as
 %%NLS%%@dirrmtry share/locale/ang/LC_MESSAGES
 %%NLS%%@dirrmtry share/locale/ang
-@dirrm lib/gdk-pixbuf-2.0/%%GTK2_VERSION%%/loaders
-@dirrm lib/gdk-pixbuf-2.0/%%GTK2_VERSION%%
-@dirrm lib/gdk-pixbuf-2.0
-@dirrm include/gdk-pixbuf-2.0/gdk-pixbuf-xlib
-@dirrm include/gdk-pixbuf-2.0/gdk-pixbuf
-@dirrm include/gdk-pixbuf-2.0
