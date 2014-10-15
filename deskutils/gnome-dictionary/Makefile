@@ -3,8 +3,7 @@
 #   $MCom$
 
 PORTNAME=	gnome-dictionary
-PORTVERSION=	3.10.0
-PORTREVISION=	1
+PORTVERSION=	3.14.0
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3

@@ -31,12 +31,15 @@ share/doc/gnome-desktop3/index.html
 share/doc/gnome-desktop3/index.sgml
 share/doc/gnome-desktop3/intro.html
 share/doc/gnome-desktop3/languages.html
+share/doc/gnome-desktop3/left-insensitive.png
 share/doc/gnome-desktop3/left.png
 share/doc/gnome-desktop3/randr.html
+share/doc/gnome-desktop3/right-insensitive.png
 share/doc/gnome-desktop3/right.png
 share/doc/gnome-desktop3/gnome-desktop3-gnome-rr.html
 share/doc/gnome-desktop3/style.css
 share/doc/gnome-desktop3/thumbnail.html
+share/doc/gnome-desktop3/up-insensitive.png
 share/doc/gnome-desktop3/up.png
 share/doc/gnome-desktop3/wall-clock.html
 share/doc/gnome-desktop3/xkb-info.html

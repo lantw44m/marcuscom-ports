@@ -3,7 +3,7 @@
 #    $MCom$
 
 PORTNAME=	tracker
-PORTVERSION=	1.1.4
+PORTVERSION=	1.2.2
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	GNOME
 

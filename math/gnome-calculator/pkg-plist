@@ -1,9 +1,12 @@
 bin/gcalccmd
 bin/gnome-calculator
+libexec/gnome-calculator-search-provider
 man/man1/gcalccmd.1.gz
 man/man1/gnome-calculator.1.gz
 share/appdata/gnome-calculator.appdata.xml
 share/applications/gnome-calculator.desktop
+share/dbus-1/services/org.gnome.Calculator.SearchProvider.service
+share/gnome-shell/search-providers/gnome-calculator-search-provider.ini
 share/help/C/gnome-calculator/absolute.page
 share/help/C/gnome-calculator/base.page
 share/help/C/gnome-calculator/boolean.page

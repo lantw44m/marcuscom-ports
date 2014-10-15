@@ -3,7 +3,7 @@
 #    $MCom$
 
 PORTNAME=	gnome-calculator
-PORTVERSION=	3.12.3
+PORTVERSION=	3.14.0
 CATEGORIES=	math gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
