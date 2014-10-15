@@ -3,8 +3,7 @@
 #    $MCom$
 
 PORTNAME=	gcr
-PORTVERSION=	3.12.2
-PORTREVISION=	1
+PORTVERSION=	3.14.0
 CATEGORIES=	security gnome
 MASTER_SITES=	GNOME
 
@@ -12,7 +11,7 @@ MAINTAINER=	kwm@FreeBSD.org
 COMMENT=	Library for bits of crypto UI and parsing
 
 BUILD_DEPENDS=	gtk-doc>0:${PORTSDIR}/textproc/gtk-doc \
-		vapigen:${PORTSDIR}/lang/vala-vapigen
+		vapigen:${PORTSDIR}/lang/vala
 LIB_DEPENDS=	libdbus-1.so:${PORTSDIR}/devel/dbus \
 		libtasn1.so:${PORTSDIR}/security/libtasn1 \
 		libp11-kit.so:${PORTSDIR}/security/p11-kit \

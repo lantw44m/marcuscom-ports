@@ -3,8 +3,7 @@
 #   $MCom$
 
 PORTNAME=	libgweather
-PORTVERSION=	3.12.2
-PORTREVISION=	1
+PORTVERSION=	3.14.0
 CATEGORIES=	net gnome
 MASTER_SITES=	GNOME
 
@@ -22,7 +21,7 @@ INSTALLS_ICONS=	yes
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib
+LIBS+=		-L${LOCALBASE}/lib
 INSTALL_TARGET=	install-strip
 GLIB_SCHEMAS=	org.gnome.GWeather.enums.xml \
 		org.gnome.GWeather.gschema.xml
