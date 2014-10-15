@@ -11,7 +11,8 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Library to accessing online weather informations
 
 BUILD_DEPENDS=	gnome-icon-theme>=0:${PORTSDIR}/misc/gnome-icon-theme
-LIB_DEPENDS=	libsoup-2.4.so:${PORTSDIR}/devel/libsoup
+LIB_DEPENDS=	libsoup-2.4.so:${PORTSDIR}/devel/libsoup \
+		libgeocode-glib.so:${PORTSDIR}/net/geocode-glib
 RUN_DEPENDS=	gnome-icon-theme>=0:${PORTSDIR}/misc/gnome-icon-theme
 
 USES=		gettext gmake libtool pathfix pkgconfig tar:xz
