@@ -19,7 +19,7 @@ RUN_DEPENDS=	gedit>=0:${PORTSDIR}/editors/gedit
 
 USES=		gettext gmake libtool pathfix pkgconfig \
 		tar:xz
-USE_GNOME=	gnomeprefix gtk30 gtksourceview3
+USE_GNOME=	gnomeprefix gtk30 gtksourceview3 intlhack
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
