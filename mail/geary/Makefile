@@ -11,8 +11,7 @@ DIST_SUBDIR=	gnome3
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Mail client for GNOME 3
 
-BUILD_DEPENDS=	vala>=0.18.0:${PORTSDIR}/lang/vala \
-		vala-vapigen>=0.18.0:${PORTSDIR}/lang/vala-vapigen \
+BUILD_DEPENDS=	vapigen:${PORTSDIR}/lang/vala \
 		bash:${PORTSDIR}/shells/bash
 LIB_DEPENDS=	libgmime-2.6.so:${PORTSDIR}/mail/gmime26 \
 		libwebkitgtk-3.0.so:${PORTSDIR}/www/webkit-gtk3 \

@@ -11,7 +11,7 @@ MASTER_SITES=	GNOME
 MAINTAINER=	kwm@FreeBSD.org
 COMMENT=	Personal social data server.
 
-BUILD_DEPENDS=	vapigen:${PORTSDIR}/lang/vala-vapigen
+BUILD_DEPENDS=	vapigen:${PORTSDIR}/lang/vala
 LIB_DEPENDS=	librest-0.7.so:${PORTSDIR}/devel/librest \
 		libjson-glib-1.0.so:${PORTSDIR}/devel/json-glib
 
