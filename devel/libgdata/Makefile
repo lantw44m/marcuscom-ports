@@ -22,7 +22,7 @@ RUN_DEPENDS=	ca_root_nss>=0:${PORTSDIR}/security/ca_root_nss
 CONFLICTS=	libgdata-0.6.*
 
 USES=		gettext gmake libtool pathfix pkgconfig tar:xz
-USE_GNOME=	glib20 gnomehier gnomeprefix intltool \
+USE_GNOME=	glib20 gnomehier gnomeprefix intlhack \
 			introspection:build
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes

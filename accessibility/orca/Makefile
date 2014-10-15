@@ -25,7 +25,7 @@ RUN_DEPENDS=	${PYTHON_SITELIBDIR}/_dbus_bindings.so:${PORTSDIR}/devel/py3-dbus \
 CONFLICTS=	py*-json-py-[0-9]*
 
 USES=		gettext gmake pathfix pkgconfig python:3 tar:xz
-USE_GNOME=	gnomeprefix gtk30 py3gobject3
+USE_GNOME=	gnomeprefix gtk30 py3gobject3 intlhack
 INSTALLS_ICONS=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include

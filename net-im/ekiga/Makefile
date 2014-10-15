@@ -23,7 +23,7 @@ GNU_CONFIGURE=	yes
 USES=		gettext gmake libtool pathfix perl5 pkgconfig \
 		tar:xz
 USE_XORG=	xv
-USE_GNOME=	gtk20 intltool libxml2
+USE_GNOME=	gtk20 intlhack libxml2
 INSTALLS_ICONS=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LIBS+=		-I${LOCALBASE}/lib
