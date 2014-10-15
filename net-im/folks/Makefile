@@ -10,7 +10,7 @@ MASTER_SITES=	GNOME
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	library to aggregates people from multiple sources
 
-BUILD_DEPENDS=	vapigen:${PORTSDIR}/lang/vala-vapigen
+BUILD_DEPENDS=	vapigen:${PORTSDIR}/lang/vala
 LIB_DEPENDS=	libgee-0.8.so:${PORTSDIR}/devel/libgee \
 		libgcr-3.so:${PORTSDIR}/security/gcr \
 		libzeitgeist-1.0.so:${PORTSDIR}/sysutils/libzeitgeist \
