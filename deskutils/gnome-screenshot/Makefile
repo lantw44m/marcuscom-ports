@@ -3,7 +3,7 @@
 #   $MCom$
 
 PORTNAME=	gnome-screenshot
-PORTVERSION=	3.12.0
+PORTVERSION=	3.14.0
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -19,7 +19,7 @@ USES=		gettext gmake pathfix pkgconfig tar:xz
 USE_GNOME=	gnomeprefix gtk30 intlhack
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib
+LIBS+=		-L${LOCALBASE}/lib
 
 GLIB_SCHEMAS=	org.gnome.gnome-screenshot.gschema.xml
 

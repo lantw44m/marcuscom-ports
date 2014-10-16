@@ -3,8 +3,7 @@
 #   $MCom$
 
 PORTNAME=	gnome-keyring
-PORTVERSION=	3.12.2
-PORTREVISION=	1
+PORTVERSION=	3.14.0
 CATEGORIES=	security gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -30,7 +29,7 @@ GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--with-pam-dir="${PREFIX}/lib"
 CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib
+LIBS+=		-L${LOCALBASE}/lib
 INSTALL_TARGET=	install-strip
 GLIB_SCHEMAS=	org.gnome.crypto.cache.gschema.xml
 

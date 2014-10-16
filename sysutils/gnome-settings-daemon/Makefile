@@ -3,8 +3,7 @@
 #   $MCom$
 
 PORTNAME=	gnome-settings-daemon
-PORTVERSION=	3.12.2
-PORTREVISION=	1
+PORTVERSION=	3.14.1
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -32,13 +31,14 @@ RUN_DEPENDS=	gnome-session>=0:${PORTSDIR}/x11/gnome-session \
 		gsettings-desktop-schemas>=0:${PORTSDIR}/devel/gsettings-desktop-schemas
 
 USE_XORG=	xxf86misc
-USE_GNOME=	gnomehier gnomedesktop3 gnomeprefix intlhack
+USE_GNOME=	gnomehier gnomedesktop3 gnomeprefix intlhack libxslt
 USES=		gettext gmake libtool pathfix pkgconfig tar:xz
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 CONFIGURE_ARGS=	--disable-gudev \
 		--disable-systemd \
 		--disable-rfkill \
+		--disable-network-manager \
 		--disable-packagekit
 #		--disable-ibus \
 #--with-pnpids=${LOCALBASE}/share/libgnome-desktop-3.0/pnp.ids
@@ -46,9 +46,14 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 INSTALL_TARGET=	install-strip
 
+OPTIONS_SUB=	yes
 OPTIONS_DEFINE=	CUPS SMARTCARD
 OPTIONS_DEFAULT=CUPS SMARTCARD
 SMARTCARD_DESC=	Smartcard support
+CUPS_CONFIGURE_ENABLE=	cups
+CUPS_LIB_DEPENDS=	libcups.so:${PORTSDIR}/print/cups-client
+SMARTCARD_CONFIGURE_ENABLE=	smartcard-support
+SMARTCARD_LIB_DEPENDS=	libnss3.so:${PORTSDIR}/security/nss
 
 GLIB_SCHEMAS=	org.gnome.settings-daemon.enums.xml \
 		org.gnome.settings-daemon.peripherals.gschema.xml \
@@ -60,29 +65,11 @@ GLIB_SCHEMAS=	org.gnome.settings-daemon.enums.xml \
 		org.gnome.settings-daemon.plugins.media-keys.gschema.xml \
 		org.gnome.settings-daemon.plugins.power.gschema.xml \
 		org.gnome.settings-daemon.plugins.print-notifications.gschema.xml \
+		org.gnome.settings-daemon.plugins.sharing.gschema.xml \
 		org.gnome.settings-daemon.plugins.xrandr.gschema.xml \
 		org.gnome.settings-daemon.plugins.xsettings.gschema.xml
 # work around missing cursor with xorg-server 1.12.
 GLIB_SCHEMAS+=	cursor-plugin.gschema.override
-
-.include <bsd.port.options.mk>
-
-.if ${PORT_OPTIONS:MCUPS}
-LIB_DEPENDS+=	libcups.so:${PORTSDIR}/print/cups-client
-PLIST_SUB+=	CUPS=""
-.else
-PLIST_SUB+=	CUPS="@comment "
-CONFIGURE_ARGS+=--disable-cups
-.endif
-
-.if ${PORT_OPTIONS:MSMARTCARD}
-LIB_DEPENDS+=	libnss3.so:${PORTSDIR}/security/nss
-CONFIGURE_ARGS+=--enable-smartcard-support
-PLIST_SUB+=	SMARTCARD=""
-.else
-CONFIGURE_ARGS+=--disable-smartcard-support
-PLIST_SUB+=	SMARTCARD="@comment "
-.endif
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|/etc/gnome|${PREFIX}/etc/gnome|g' \

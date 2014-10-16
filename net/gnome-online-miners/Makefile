@@ -3,8 +3,7 @@
 #   $MCom$
 
 PORTNAME=	gnome-online-miners
-PORTVERSION=	3.12.0
-PORTREVISION=	1
+PORTVERSION=	3.14.0
 CATEGORIES=	net
 MASTER_SITES=	GNOME
 
@@ -23,7 +22,7 @@ GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 INSTALLS_ICONS=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib
+LIBS+=		-L${LOCALBASE}/lib
 INSTALL_TARGET=	install-strip
 
 .include <bsd.port.mk>
