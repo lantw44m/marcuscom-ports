@@ -373,8 +373,8 @@ vte_LIB_DEPENDS=	libvte.so:${PORTSDIR}/x11-toolkits/vte
 vte_DETECT=		${LOCALBASE}/libdata/pkgconfig/vte.pc
 vte_USE_GNOME_IMPL=	gtk20
 
-vte3_LIB_DEPENDS=	libvte2_90.so:${PORTSDIR}/x11-toolkits/vte3
-vte3_DETECT=		${LOCALBASE}/libdata/pkgconfig/vte-2.90.pc
+vte3_LIB_DEPENDS=	libvte-2.91.so.0:${PORTSDIR}/x11-toolkits/vte3
+vte3_DETECT=		${LOCALBASE}/libdata/pkgconfig/vte-2.91.pc
 vte3_USE_GNOME_IMPL=	gtk30
 
 libzvt_LIB_DEPENDS=	libzvt-2.0.so:${PORTSDIR}/x11-toolkits/libzvt
