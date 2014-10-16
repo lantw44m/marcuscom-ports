@@ -3,7 +3,7 @@
 #   $MCom$
 
 PORTNAME=	eog
-PORTVERSION=	3.12.2
+PORTVERSION=	3.14.1
 CATEGORIES=	graphics gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -26,7 +26,7 @@ USE_GNOME=	gnomeprefix intlhack librsvg2 gtk30 gnomedesktop3 \
 INSTALLS_ICONS=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib
+LIBS+=		-L${LOCALBASE}/lib
 INSTALL_TARGET=	install-strip
 
 GLIB_SCHEMAS=	org.gnome.eog.enums.xml \
