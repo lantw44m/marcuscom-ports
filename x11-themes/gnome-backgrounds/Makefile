@@ -15,6 +15,6 @@ USES=		gettext gmake pathfix tar:xz
 USE_GNOME=	gnomeprefix intlhack
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib
+LIBS+=		-L${LOCALBASE}/lib
 
 .include <bsd.port.mk>
