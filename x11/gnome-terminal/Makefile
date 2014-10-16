@@ -3,8 +3,7 @@
 #   $MCom$
 
 PORTNAME=	gnome-terminal
-PORTVERSION=	3.12.3
-PORTREVISION=	2
+PORTVERSION=	3.14.1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -14,7 +13,8 @@ COMMENT=	Terminal component for the GNOME 3 Desktop
 
 BUILD_DEPENDS=	gsettings-desktop-schemas>=0:${PORTSDIR}/devel/gsettings-desktop-schemas \
 		itstool:${PORTSDIR}/textproc/itstool \
-		appdata-tools>=0:${PORTSDIR}/devel/appdata-tools 
+		appdata-tools>=0:${PORTSDIR}/devel/appdata-tools \
+		vala:${PORTSDIR}/lang/vala
 LIB_DEPENDS=	libstartup-notification-1.so:${PORTSDIR}/x11/startup-notification \
 		libuuid.so:${PORTSDIR}/misc/e2fsprogs-libuuid
 RUN_DEPENDS=	gsettings-desktop-schemas>=0:${PORTSDIR}/devel/gsettings-desktop-schemas
