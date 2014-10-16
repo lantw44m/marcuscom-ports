@@ -3,7 +3,7 @@
 #   $MCom$
 
 PORTNAME=	gsettings-desktop-schemas
-PORTVERSION=	3.12.2
+PORTVERSION=	3.14.0
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -47,6 +47,7 @@ GLIB_SCHEMAS=	org.gnome.desktop.a11y.applications.gschema.xml \
 		org.gnome.desktop.wm.keybindings.gschema.xml \
 		org.gnome.desktop.wm.preferences.gschema.xml \
 		org.gnome.system.locale.gschema.xml \
+		org.gnome.system.location.gschema.xml \
 		org.gnome.system.proxy.gschema.xml
 
 .include <bsd.port.mk>
