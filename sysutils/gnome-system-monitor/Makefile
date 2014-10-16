@@ -3,7 +3,7 @@
 #   $MCom$
 
 PORTNAME=	gnome-system-monitor
-PORTVERSION=	3.12.2
+PORTVERSION=	3.14.1
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -20,7 +20,8 @@ USES=		gettext gmake pathfix pkgconfig tar:xz
 USE_GNOME=	gnomeprefix gtkmm30 intlhack librsvg2 libwnck3
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib
+LIBS+=		-L${LOCALBASE}/lib
+INSTALL_TARGET=	install-strip
 
 GLIB_SCHEMAS=	org.gnome.gnome-system-monitor.enums.xml \
 		org.gnome.gnome-system-monitor.gschema.xml
