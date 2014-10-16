@@ -55,14 +55,24 @@ GLIB_SCHEMAS=	org.freedesktop.Tracker.DB.gschema.xml \
 		org.freedesktop.Tracker.enums.xml \
 		org.freedesktop.Tracker.gschema.xml
 
-OPTIONS_DEFINE=		AUDIO_MINERS DOCUMENT_MINERS GRAPHIC_MINERS WEB_MINERS
-OPTIONS_DEFAULT=	AUDIO_MINERS DOCUMENT_MINERS GRAPHIC_MINER
+OPTIONS_DEFINE=		AUDIO_MINERS DOCUMENT_MINERS GRAPHIC_MINERS WEB_MINERS NAUTILUS
+OPTIONS_DEFAULT=	AUDIO_MINERS DOCUMENT_MINERS GRAPHIC_MINERS
 WEB_MINERS_DESC=	Support for Firefox, Thunderbird and Evolution
 AUDIO_MINERS_DESC=	Support for audio files
 DOCUMENT_MINERS_DESC=	Support for some sort of documents (pdf, ps, xps, office)
 GRAPHIC_MINERS_DESC=	Support for some graphic formats (gif, png, tiff)
+NAUTILUS_DESC=		Tagging in nautilus with tracker
 
 .include <bsd.port.pre.mk>
+
+.if ${PORT_OPTIONS:MNAUTILUS}
+CONFIGURE_ARGS+=	--enable-nautilus-extension
+USE_GNOME+=		nautilus3
+PLIST_SUB+=		NAUTILUS=""
+.else
+CONFIGURE_ARGS+=	--disable-nautilus-extension
+PLIST_SUB+=		NAUTILUS="@comment"
+.endif
 
 .if ${PORT_OPTIONS:MWEB_MINERS}
 CONFIGURE_ARGS+=	--enable-miner-firefox \
