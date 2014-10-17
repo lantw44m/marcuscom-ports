@@ -3,8 +3,7 @@
 #   $MCom$
 
 PORTNAME=	gnome-maps
-PORTVERSION=	3.12.2
-PORTREVISION=	1
+PORTVERSION=	3.14.1.2
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -25,6 +24,7 @@ USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib
+LIBS+=		-L${LOCALBASE}/lib
+GLIB_SCHEMAS=	org.gnome.maps.gschema.xml
 
 .include <bsd.port.mk>

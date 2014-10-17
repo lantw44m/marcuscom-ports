@@ -169,35 +169,3 @@ share/locale/zh_HK/LC_MESSAGES/bijiben.mo
 share/locale/zh_TW/LC_MESSAGES/bijiben.mo
 share/mime/application/x-note.xml
 share/mime/packages/bijiben.xml
-@dirrmtry share/mime/application
-@dirrmtry share/icons/HighContrast/scalable/apps
-@dirrmtry share/icons/HighContrast/scalable
-@dirrmtry share/icons/HighContrast
-@dirrm share/help/C/bijiben/figures
-@dirrm share/help/C/bijiben
-@dirrmtry share/gnome-shell/search-providers
-@dirrmtry share/gnome-shell
-@dirrmtry share/appdata
-@dirrm %%DATADIR%%/icons/hicolor/scalable/actions
-@dirrm %%DATADIR%%/icons/hicolor/scalable
-@dirrm %%DATADIR%%/icons/hicolor/48x48/actions
-@dirrm %%DATADIR%%/icons/hicolor/48x48
-@dirrm %%DATADIR%%/icons/hicolor/24x24/actions
-@dirrm %%DATADIR%%/icons/hicolor/24x24
-@dirrm %%DATADIR%%/icons/hicolor/16x16/actions
-@dirrm %%DATADIR%%/icons/hicolor/16x16
-@dirrm %%DATADIR%%/icons/hicolor
-@dirrm %%DATADIR%%/icons
-@dirrm share/help/pt_BR/bijiben/figures
-@dirrm share/help/pt_BR/bijiben
-@dirrm share/help/hu/bijiben/figures
-@dirrm share/help/hu/bijiben
-@dirrm share/help/fr/bijiben/figures
-@dirrm share/help/fr/bijiben
-@dirrm share/help/es/bijiben/figures
-@dirrm share/help/es/bijiben
-@dirrm share/help/el/bijiben/figures
-@dirrm share/help/el/bijiben
-@dirrm share/help/cs/bijiben/figures
-@dirrm share/help/cs/bijiben
-@dirrm %%DATADIR%%

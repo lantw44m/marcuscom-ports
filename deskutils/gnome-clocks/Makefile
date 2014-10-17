@@ -3,8 +3,7 @@
 #   $MCom$
 
 PORTNAME=	gnome-clocks
-PORTVERSION=	3.12.0
-PORTREVISION=	1
+PORTVERSION=	3.14.1
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -15,7 +14,8 @@ COMMENT=	Clocks for GNOME 3
 BUILD_DEPENDS=	geoclue>=0:${PORTSDIR}/net/geoclue \
 		itstool:${PORTSDIR}/textproc/itstool
 LIB_DEPENDS=	libcanberra-gtk3.so:${PORTSDIR}/audio/libcanberra-gtk3 \
-		libgeocode-glib.so:${PORTSDIR}/net/geocode-glib
+		libgeocode-glib.so:${PORTSDIR}/net/geocode-glib \
+		libgweather-3.so:${PORTSDIR}/net/libgweather
 RUN_DEPENDS=	geoclue>=0:${PORTSDIR}/net/geoclue
 
 USES=		gettext gmake libtool pathfix pkgconfig tar:xz
@@ -24,6 +24,6 @@ USE_GNOME=	gnomedesktop3 gnomeprefix gtk30 intlhack
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib
+LIBS+=		-L${LOCALBASE}/lib
 
 .include <bsd.port.mk>
