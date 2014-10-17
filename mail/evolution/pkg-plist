@@ -548,6 +548,7 @@ libexec/evolution/%%VERSION%%/evolution-backup
 libexec/evolution/%%VERSION%%/killev
 share/GConf/gsettings/evolution.convert
 %%BOGOFILTER%%share/appdata/evolution-bogofilter.metainfo.xml
+%%SPAMASSASSIN%%share/appdata/evolution-spamassassin.metainfo.xml
 share/appdata/evolution.appdata.xml
 share/applications/evolution.desktop
 %%PORTDOCS%%%%DOCSDIR%%-mail-composer/EComposerActivity.html
