@@ -25,7 +25,7 @@ LIB_DEPENDS=	libenchant.so:${PORTSDIR}/textproc/enchant \
 
 USE_GSTREAMER=	yes
 USE_XORG=	xt
-USES=		bison gettext gmake libtool perl5 pkgconfig tar:xz
+USES=		bison gettext gmake gperf libtool perl5 pkgconfig tar:xz
 USE_GNOME=	gtk20 libxslt introspection:build
 USE_SQLITE=	yes
 USE_LDCONFIG=	yes
