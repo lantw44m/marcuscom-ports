@@ -3,7 +3,7 @@
 #   $MCom$
 
 PORTNAME=	four-in-a-row
-PORTVERSION=	3.12.3
+PORTVERSION=	3.14.1
 CATEGORIES=	games gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3

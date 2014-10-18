@@ -3,7 +3,7 @@
 #   $MCom$
 
 PORTNAME=	gnome-klotski
-PORTVERSION=	3.12.2
+PORTVERSION=	3.14.1
 CATEGORIES=	games gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3

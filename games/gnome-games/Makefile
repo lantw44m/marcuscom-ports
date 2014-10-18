@@ -3,8 +3,7 @@
 #   $MCom$
 
 PORTNAME=	gnome-games
-PORTVERSION=	3.12.2
-PORTREVISION=	1
+PORTVERSION=	3.14.0
 CATEGORIES=	games gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty

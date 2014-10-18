@@ -3,7 +3,7 @@
 #   $MCom$
 
 PORTNAME=	gnome-mahjongg
-PORTVERSION=	3.12.2
+PORTVERSION=	3.14.1
 CATEGORIES=	games gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -21,6 +21,6 @@ GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-GLIB_SCHEMAS=	org.gnome.gnome-mahjongg.gschema.xml
+GLIB_SCHEMAS=	org.gnome.mahjongg.gschema.xml
 
 .include <bsd.port.mk>

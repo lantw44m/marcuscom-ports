@@ -3,7 +3,7 @@
 #   $MCom$
 
 PORTNAME=	aisleriot
-PORTVERSION=	3.12.1
+PORTVERSION=	3.14.1
 CATEGORIES=	games gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -12,6 +12,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Collection of patience games written in guile scheme
 
 BUILD_DEPENDS=	itstool:${PORTSDIR}/textproc/itstool \
+		appdata-tools>=0:${PORTSDIR}/devel/appdata-tools \
 		bash:${PORTSDIR}/shells/bash
 LIB_DEPENDS=	libguile-2.0.so:${PORTSDIR}/lang/guile2 \
 		libcanberra-gtk3.so:${PORTSDIR}/audio/libcanberra-gtk3
