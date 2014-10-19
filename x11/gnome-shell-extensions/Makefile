@@ -15,7 +15,7 @@ LIB_DEPENDS=	libgtop-2.0.so:${PORTSDIR}/devel/libgtop
 RUN_DEPENDS=	gnome-shell>=3.12.0:${PORTSDIR}/x11/gnome-shell
 
 USES=		gettext gmake pathfix pkgconfig tar:xz
-USE_GNOME=	glib20 gnomedesktop3 intltool
+USE_GNOME=	glib20 gnomedesktop3 intlhack
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-extensions=all
