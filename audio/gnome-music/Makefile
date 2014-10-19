@@ -3,8 +3,7 @@
 #   $MCom$
 
 PORTNAME=	gnome-music
-PORTVERSION=	3.12.2.1
-PORTREVISION=	3
+PORTVERSION=	3.14.0
 CATEGORIES=	audio gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -13,7 +12,8 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME music playing application
 
 BUILD_DEPENDS=	itstool:${PORTSDIR}/textproc/itstool
-LIB_DEPENDS=	libgrilo-0.2.so:${PORTSDIR}/net/grilo
+LIB_DEPENDS=	libgrilo-0.2.so:${PORTSDIR}/net/grilo \
+		libmediaart-1.0.so:${PORTSDIR}/multimedia/libmediaart
 
 USES=		gettext gmake libtool pathfix pkgconfig \
 		python:3 tar:xz
