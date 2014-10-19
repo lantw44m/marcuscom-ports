@@ -3,7 +3,7 @@
 #    $MCom$
 
 PORTNAME=	colord
-PORTVERSION=	1.1.7
+PORTVERSION=	1.2.4
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.freedesktop.org/software/colord/releases/
 
