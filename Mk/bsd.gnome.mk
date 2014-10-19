@@ -550,7 +550,7 @@ pygtksourceview_BUILD_DEPENDS=	${pygtksourceview_DETECT}:${PORTSDIR}/x11-toolkit
 pygtksourceview_RUN_DEPENDS=	${pygtksourceview_DETECT}:${PORTSDIR}/x11-toolkits/py-gtksourceview
 pygtksourceview_USE_GNOME_IMPL=	gtksourceview2 pygtk2
 
-gvfs_DETECT=		${LOCALBASE}/lib/libgvfscommon.so
+gvfs_DETECT=		${LOCALBASE}/lib/gvfs/libgvfscommon.so
 gvfs_BUILD_DEPENDS=	gvfs>=0:${PORTSDIR}/devel/gvfs
 gvfs_RUN_DEPENDS=	gvfs>=0:${PORTSDIR}/devel/gvfs
 gvfs_USE_GNOME_IMPL=	glib20
