@@ -3,8 +3,7 @@
 #   $MCom$
 
 PORTNAME=	gnome-contacts
-PORTVERSION=	3.12.0
-PORTREVISION=	1
+PORTVERSION=	3.14.1
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
 
