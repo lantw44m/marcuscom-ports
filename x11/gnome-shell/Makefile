@@ -1,10 +1,9 @@
 # Created by: Pawel Worach <pawel.worach@gmail.com>
 # $FreeBSD$
-#   $MCom$
+#   $MCom·
 
 PORTNAME=	gnome-shell
-PORTVERSION=	3.12.2
-PORTREVISION=	2
+PORTVERSION=	3.14.1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3

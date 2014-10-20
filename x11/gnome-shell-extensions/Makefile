@@ -3,7 +3,7 @@
 #    $MCom$
 
 PORTNAME=	gnome-shell-extensions
-PORTVERSION=	3.12.2
+PORTVERSION=	3.14.1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -24,6 +24,7 @@ GLIB_SCHEMAS=	org.gnome.shell.extensions.auto-move-windows.gschema.xml \
 		org.gnome.shell.extensions.classic-overrides.gschema.xml \
 		org.gnome.shell.extensions.example.gschema.xml \
 		org.gnome.shell.extensions.native-window-placement.gschema.xml \
+		org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml \
 		org.gnome.shell.extensions.user-theme.gschema.xml \
 		org.gnome.shell.extensions.window-list.gschema.xml
 
