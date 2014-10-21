@@ -1,6 +1,3 @@
-# Created by: Gustau Perez <gustau.perez@gmail.com>
-# $FreeBSD$
-#   $MCom$
 
 PORTNAME=	qqwing
 PORTVERSION=	1.3.3
@@ -31,7 +28,7 @@ post-patch:
 	       	${WRKSRC}/build/cpp_install.sh
 
 do-build:
-	@(cd ${WRKSRC} && ${SH} build/cpp_configure.sh && ${SH} build/cpp_compile.sh && ${SH} build/cpp_dist.sh
+	@(cd ${WRKSRC} && ${SH} build/cpp_configure.sh && ${SH} build/cpp_compile.sh && ${SH} build/cpp_dist.sh)
 
 do-install:
 	@(cd ${WRKSRC}/target/automake/.libs && ${CP} libqqwing.so.2 ${STAGEDIR}${PREFIX}/lib)
