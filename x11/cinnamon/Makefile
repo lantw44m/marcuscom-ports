@@ -38,12 +38,11 @@ RUN_DEPENDS=	py*-dbus>=0:${PORTSDIR}/devel/py-dbus \
 
 WRKSRC=		${WRKDIR}/Cinnamon-${PORTVERSION}
 
-USES=		gettext gmake libtool pathfix pkgconfig python shebangfix
+USES=		autoreconf:build gettext gmake libtool pathfix pkgconfig python shebangfix
 USE_GNOME=	evolutiondataserver3 gconf2 gnomedesktop3 \
 		gnomeprefix gtk30 intlhack introspection:build
 # this happens before moving the file to ${PREFIX} (which then will be copied to ${STAGEDIR}${PREFIX})
 SHEBANG_FILES=	files/usr/bin/cinnamon2d
-USE_AUTOTOOLS=	libtoolize autoconf automake
 USE_XORG=	x11 xfixes sm
 USE_GSTREAMER=	theora vp8 ogg
 INSTALLS_ICONS=	yes

@@ -21,23 +21,26 @@ LIB_DEPENDS=	libstartup-notification-1.so:${PORTSDIR}/x11/startup-notification \
 		libcinnamon-desktop.so:${PORTSDIR}/x11/cinnamon-desktop
 RUN_DEPENDS=	zenity>=3.0.0:${PORTSDIR}/x11/zenity
 
-USES=		execinfo gettext libtool gmake pathfix pkgconfig python
+USES=		autoreconf:build execinfo gettext libtool gmake \
+		pathfix pkgconfig python:2
 USE_GNOME=	gconf2 gnomedocutils gnomehier gnomeprefix gtk30 \
-		introspection:build
-USE_AUTOTOOLS=	libtoolize autoconf automake
+		intlhack introspection:build
 USE_XORG=	x11 xext xrandr xcomposite xcursor xinerama ice sm
 USE_LDCONFIG=	yes
 USE_CSTD=	gnu89
-CPPFLAGS+=	-I${LOCALBASE}/include
+GNU_CONFIGURE=	yes
+CPPFLAGS+=	-I${LOCALBASE}/include -Wno-error=unused-function
+CFLAGS+=	-I${LOCALBASE}/include -Wno-error=unused-function
 LDFLAGS+=	-L${LOCALBASE}/lib
 PATHFIX_MAKEFILEIN=	Makefile.am
 CONFIGURE_ENV=	LIBS="-lexecinfo"
 CONFIGURE_ARGS=	--enable-compile-warnings=maximum
+MAKE_ARGS=	V=1
 GLIB_SCHEMAS=	org.cinnamon.muffin.gschema.xml
 INSTALL_TARGET=	install-strip
 
 pre-configure:
-		@cd ${WRKSRC} && ${SH} autogen.sh
+		@cd ${WRKSRC} && ${SETENV} NOCONFIGURE=yes ${SH} autogen.sh
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|REQUIRED_AUTOMAKE_VERSION=1.10|REQUIRED_AUTOMAKE_VERSION=1.14|g' \

@@ -23,12 +23,12 @@ LIB_DEPENDS=	libexif.so:${PORTSDIR}/graphics/libexif \
 RUN_DEPENDS=	gnome-icon-theme>=0:${PORTSDIR}/misc/gnome-icon-theme \
 		gsettings-desktop-schemas>=0:${PORTSDIR}/devel/gsettings-desktop-schemas
 
-USES=		desktop-file-utils gettext gmake libtool pathfix \
+USES=		autoreconf:build desktop-file-utils gettext gmake libtool pathfix \
 		pkgconfig python:2 shared-mime-info
 USE_GNOME=	gnomedesktop3 gnomeprefix intlhack introspection:build \
 		libxml2 pygobject3
+GNU_CONFIGURE=	yes	
 INSTALLS_ICONS=	yes
-USE_AUTOTOOLS=	libtoolize autoconf automake
 USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
@@ -86,6 +86,6 @@ post-patch:
 		${WRKSRC}/data/merge_action_strings
 
 pre-configure:
-	cd ${WRKSRC} && NOCONFIGURE=yes ${SH} ./autogen.sh
+	cd ${WRKSRC} && ${SETENV} NOCONFIGURE=yes ${SH} ./autogen.sh
 
 .include <bsd.port.mk>

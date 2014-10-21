@@ -19,13 +19,13 @@ LIB_DEPENDS=	libdbus-glib-1.so:${PORTSDIR}/devel/dbus-glib \
 RUN_DEPENDS=	console-kit-daemon:${PORTSDIR}/sysutils/consolekit \
 		xdpyinfo:${PORTSDIR}/x11/xdpyinfo
 
-USES=		execinfo gettext gmake libtool pathfix pkgconfig tar:xz
+USES=		autoreconf:build execinfo gettext gmake libtool \
+		pathfix pkgconfig tar:xz
+USE_GNOME=	gnomeprefix gtk30 intlhack
 USE_XORG=	ice sm xau xext xtst xrender xtrans xcomposite
 USE_GL=		gl
-USE_GNOME=	gnomeprefix gtk30 intltool
 INSTALLS_ICONS=	yes
 GNU_CONFIGURE=	yes
-USE_AUTOTOOLS=	libtoolize autoconf automake
 PATHFIX_MAKEFILEIN=	Makefile.am
 CONFIGURE_ARGS=	--disable-docbook-docs
 CPPFLAGS+=	-I${LOCALBASE}/include -Wno-error=format-nonliteral -Wno-error=implicit-function-declaration
@@ -36,6 +36,6 @@ INSTALL_TARGET=	install-strip
 GLIB_SCHEMAS=	org.cinnamon.SessionManager.gschema.xml
 
 pre-configure:
-	cd ${WRKSRC} && NOCONFIGURE=yes ${SH} ./autogen.sh
+	cd ${WRKSRC} && ${SETENV} NOCONFIGURE=yes ${SH} ./autogen.sh
 
 .include <bsd.port.mk>

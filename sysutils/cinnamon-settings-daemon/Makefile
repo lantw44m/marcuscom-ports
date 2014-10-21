@@ -28,12 +28,12 @@ LIB_DEPENDS=	libcanberra-gtk3.so:${PORTSDIR}/audio/libcanberra-gtk3 \
 RUN_DEPENDS=	cinnamon-session:${PORTSDIR}/x11/cinnamon-session \
 		gsettings-desktop-schemas>=0:${PORTSDIR}/devel/gsettings-desktop-schemas
 
-USES=		gettext gmake libtool pathfix pkgconfig tar:xz
+USES=		autoreconf:build gettext gmake libtool pathfix \
+		pkgconfig tar:xz
 USE_GNOME=	gnomehier gnomeprefix intlhack libgnomekbd \
 		libxslt:build
 USE_XORG=	xxf86misc
 GNU_CONFIGURE=	yes
-USE_AUTOTOOLS=	libtoolize autoconf automake
 PATHFIX_MAKEFILEIN=	Makefile.am
 INSTALLS_ICONS=	yes
 USE_LDCONFIG=	yes

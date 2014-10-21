@@ -18,11 +18,10 @@ RUN_DEPENDS=	xkeyboard-config>=0:${PORTSDIR}/x11/xkeyboard-config \
 		libxkbfile>=0:${PORTSDIR}/x11/libxkbfile
 
 USE_XORG=	x11 xrandr xext
-USES=		gettext gmake libtool pathfix pkgconfig tar:xz
-USE_GNOME=	gnomeprefix gtk30 introspection:build
+USES=		autoreconf:build gettext gmake libtool pathfix pkgconfig tar:xz
+USE_GNOME=	gnomeprefix gtk30 intlhack introspection:build
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
-USE_AUTOTOOLS=	libtoolize autoconf automake
 PATHFIX_MAKEFILEIN=	Makefile.am
 CONFIGURE_ARGS=	--with-gnome-distributor="FreeBSD GNOME Project"
 CPPFLAGS+=	-I${LOCALBASE}/include
