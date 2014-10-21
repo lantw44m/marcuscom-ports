@@ -20,16 +20,17 @@ GH_PROJECT=	appstream-glib
 GH_COMMIT=      f4f3230
 GH_TAGNAME=	${GH_COMMIT}
 
-GNU_CONFIGURE=	yes
-USE_GITHUB=	yes
 USES=		autoreconf:build gmake libtool pathfix pkgconfig
 USE_GNOME=	gdkpixbuf2 glib20 gnomehier gtk30 intlhack
 USE_LDCONFIG=	yes
+GNU_CONFIGURE=	yes
+USE_GITHUB=	yes
 PATHFIX_MAKEFILEIN=	Makefile.am
-LDFLAGS+=	-larchive
+CONFIGURE_ENV=	LIBARCHIVE_CFLAGS=" " \
+		LIBARCHIVE_LIBS="-larchive"
 INSTALL_TARGET=	install-strip
 
 pre-configure:
-	cd ${WRKSRC} && intltoolize -f -c && ${SETENV} NOCONFIGURE=yes ${SH} ./autogen.sh
+	cd ${WRKSRC} && ${SETENV} NOCONFIGURE=yes ${SH} ./autogen.sh
 
 .include <bsd.port.mk>
