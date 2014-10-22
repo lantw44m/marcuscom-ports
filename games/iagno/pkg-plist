@@ -424,8 +424,8 @@ share/iagno/iagno.ui
 share/iagno/sounds/flip-piece.ogg
 share/iagno/sounds/gameover.ogg
 share/iagno/themes/black_and_white.svg
-share/iagno/themes/sun_and_star.svr
-hare/icons/HighContrast/16x16/apps/iagno.png
+share/iagno/themes/sun_and_star.svg
+share/icons/HighContrast/16x16/apps/iagno.png
 share/icons/HighContrast/22x22/apps/iagno.png
 share/icons/HighContrast/24x24/apps/iagno.png
 share/icons/HighContrast/256x256/apps/iagno.png
