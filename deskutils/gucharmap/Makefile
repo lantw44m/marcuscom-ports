@@ -14,7 +14,8 @@ COMMENT=	Unicode/ISO10646 character map and font viewer
 BUILD_DEPENDS=	itstool:${PORTSDIR}/textproc/itstool \
 		appdata-tools>=0:${PORTSDIR}/devel/appdata-tools
 
-USES=		gettext gmake libtool pathfix pkgconfig tar:xz
+USES=		desktop-file-utils gettext gmake libtool pathfix \
+		pkgconfig tar:xz
 USE_GNOME=	gnomeprefix gtk30 intlhack introspection:build
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
