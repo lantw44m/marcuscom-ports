@@ -3,7 +3,7 @@
 #    $MCom$
 
 PORTNAME=	nautilus-sendto
-PORTVERSION=	3.8.0
+PORTVERSION=	3.8.2
 CATEGORIES=	net
 MASTER_SITES=	GNOME
 
@@ -16,6 +16,6 @@ GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 INSTALLS_ICONS=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include -Wno-error=format-nonliteral
-LDFLAGS+=	-L${LOCALBASE}/lib
+LIBS+=		-L${LOCALBASE}/lib
 
 .include <bsd.port.mk>
