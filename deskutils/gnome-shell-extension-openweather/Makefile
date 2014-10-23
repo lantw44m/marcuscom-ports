@@ -17,10 +17,9 @@ RUN_DEPENDS=	gnome-shell>=0:${PORTSDIR}/x11/gnome-shell \
 
 WRKSRC=		${WRKDIR}/jenslody-gnome-shell-extension-openweather-93ad24b
 
-USES=		gettext gmake libtool pkgconfig tar:xz
+USES=		autoreconf:build gettext gmake libtool pkgconfig tar:xz
 USE_GNOME=	glib20 intltool
 USE_GITHUB=	yes
-USE_AUTOTOOLS=	libtoolize autoconf automake
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include

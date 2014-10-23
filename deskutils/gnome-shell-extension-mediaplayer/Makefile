@@ -17,10 +17,9 @@ RUN_DEPENDS=	gnome-shell>=0:${PORTSDIR}/x11/gnome-shell \
 
 WRKSRC=		${WRKDIR}/eonpatapon-gnome-shell-extensions-mediaplayer-623a9b3
 
-USES=		gettext gmake libtool pkgconfig tar:xz
+USES=		autoreconf:build gettext gmake libtool pkgconfig tar:xz
 USE_GNOME=	glib20 intltool
 USE_GITHUB=	yes
-USE_AUTOTOOLS=	libtoolize autoconf automake
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
@@ -35,6 +34,6 @@ GH_COMMIT=	623a9b3
 PKGMESSAGE=	../gnome-shell-extra-extensions/pkg-message.slaves
 
 pre-configure:
-		cd ${WRKSRC} && NOCONFIGURE=yes ${SH} ./autogen.sh
+		cd ${WRKSRC} && ${SETENV} NOCONFIGURE=yes ${SH} ./autogen.sh
 
 .include <bsd.port.mk>
