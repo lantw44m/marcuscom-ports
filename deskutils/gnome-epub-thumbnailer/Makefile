@@ -14,10 +14,9 @@ COMMENT=	Thumbnailer for EPub and MOBI books
 
 BUILD_DEPENDS=	gnome-autogen.sh:${PORTSDIR}/devel/gnome-common
 
-USES=		gettext gmake libtool pathfix pkgconfig
+USES=		autoreconf:build gettext gmake libtool pathfix pkgconfig
 USE_GNOME=	gdkpixbuf2 gnomedesktop3 gnomeprefix gtk30 \
 		intlhack libxml2
-USE_AUTOTOOLS=	libtoolize autoconf automake
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
@@ -29,6 +28,6 @@ post-patch:
 		${WRKSRC}/configure.ac
 
 pre-configure:
-	cd ${WRKSRC} && NOCONFIGURE=yes ${SH} ./autogen.sh
+	cd ${WRKSRC} && ${SETENV} NOCONFIGURE=yes ${SH} ./autogen.sh
 
 .include <bsd.port.mk>
