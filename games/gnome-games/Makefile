@@ -4,6 +4,7 @@
 
 PORTNAME=	gnome-games
 PORTVERSION=	3.14.0
+PORTREVISION=	1
 CATEGORIES=	games gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -12,22 +13,23 @@ EXTRACT_ONLY=	# empty
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Gnome games meta port
 
-RUN_DEPENDS=	gnome-chess:${PORTSDIR}/games/gnome-chess \
-		sol:${PORTSDIR}/games/aisleriot \
-		five-or-more:${PORTSDIR}/games/five-or-more \
+RUN_DEPENDS=	five-or-more:${PORTSDIR}/games/five-or-more \
 		four-in-a-row:${PORTSDIR}/games/four-in-a-row \
+		gnome-chess:${PORTSDIR}/games/gnome-chess \
+		gnome-klotski:${PORTSDIR}/games/gnome-klotski \
+		gnome-mahjongg:${PORTSDIR}/games/gnome-mahjongg \
+		gnome-mines:${PORTSDIR}/games/gnome-mines \
 		gnome-nibbles:${PORTSDIR}/games/gnome-nibbles \
 		gnome-robots:${PORTSDIR}/games/gnome-robots \
 		gnome-sudoku:${PORTSDIR}/games/gnome-sudoku \
-		gnome-mines:${PORTSDIR}/games/gnome-mines \
 		gnome-tetravex:${PORTSDIR}/games/gnome-tetravex \
-		gnome-klotski:${PORTSDIR}/games/gnome-klotski \
-		tali:${PORTSDIR}/games/tali \
+		hitori:${PORTSDIR}/games/hitori \
 		iagno:${PORTSDIR}/games/iagno \
 		lightsoff:${PORTSDIR}/games/lightsoff \
-		gnome-mahjongg:${PORTSDIR}/games/gnome-mahjongg \
 		quadrapassel:${PORTSDIR}/games/quadrapassel \
-		swell-foop:${PORTSDIR}/games/swell-foop
+		sol:${PORTSDIR}/games/aisleriot \
+		swell-foop:${PORTSDIR}/games/swell-foop \
+		tali:${PORTSDIR}/games/tali
 
 NO_BUILD=	yes
 NO_INSTALL=	yes
