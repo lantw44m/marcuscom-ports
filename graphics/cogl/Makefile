@@ -1,9 +1,10 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
 # $FreeBSD$
-#  $MCom: ports-experimental/trunk/graphics/cogl/Makefile 19235 2014-03-23 07:26:21Z kwm $
+#  $MCom$
 
 PORTNAME=	cogl
 PORTVERSION=	1.18.2
+PORTREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	GNOME
 
