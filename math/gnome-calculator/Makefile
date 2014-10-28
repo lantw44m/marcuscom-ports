@@ -1,9 +1,9 @@
 # Created by: Gustau Perez i Querol <gustau.perez@gmail.com>
 # $FreeBSD$
-#    $MCom$
+#   $MCom$
 
 PORTNAME=	gnome-calculator
-PORTVERSION=	3.14.0
+PORTVERSION=	3.14.1
 CATEGORIES=	math gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
