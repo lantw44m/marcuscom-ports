@@ -3,7 +3,7 @@
 #   $MCom$
 
 PORTNAME=	california
-PORTVERSION=	0.1.4
+PORTVERSION=	0.2.0
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -11,6 +11,7 @@ DIST_SUBDIR=	gnome3
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Calendar client for GNOME 3
 
+BUILD_DEPENDS=	itstool:${PORTSDIR}/textproc/itstool
 LIB_DEPENDS=	libwebkitgtk-3.0.so:${PORTSDIR}/www/webkit-gtk3 \
 		libsoup-2.4.so:${PORTSDIR}/devel/libsoup \
 		libgee-0.8.so:${PORTSDIR}/devel/libgee \
