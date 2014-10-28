@@ -15,6 +15,7 @@ LICENSE=	LGPL20
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 BUILD_DEPENDS=	gcr>=3.11:${PORTSDIR}/security/gcr \
+		gperf>=0:${PORTSDIR}/devel/gperf \
 		vapigen:${PORTSDIR}/lang/vala
 LIB_DEPENDS=	libsoup-gnome-2.4.so:${PORTSDIR}/devel/libsoup-gnome \
 		liboauth.so:${PORTSDIR}/net/liboauth \
