@@ -12,11 +12,7 @@ PKGNAMESUFFIX=	-gtk2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	An opensource browser engine
 
-# Use the port>=0 form or the system versions of flex and gperf 
-# will be detected instead, breaking the build.
-
 BUILD_DEPENDS=	flex>=0:${PORTSDIR}/textproc/flex \
-		gperf>=0:${PORTSDIR}/devel/gperf \
 		gtkdoc-check:${PORTSDIR}/textproc/gtk-doc
 LIB_DEPENDS=	libenchant.so:${PORTSDIR}/textproc/enchant \
 		libicutu.so:${PORTSDIR}/devel/icu \
