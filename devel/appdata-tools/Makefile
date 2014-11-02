@@ -25,7 +25,7 @@ PATHFIX_MAKEFILEIN=	Makefile.am
 #CONFIGURE_ARGS=	--enable-introspection=yes
 USE_GITHUB=	yes
 USES=		autoreconf:build gmake libtool pathfix pkgconfig
-USE_GNOME=	gdkpixbuf2 glib20 gnomehier intlhack introspection:build
+USE_GNOME=	gdkpixbuf2 glib20 intlhack introspection:build
 USE_LDCONFIG=	yes
 
 pre-configure:

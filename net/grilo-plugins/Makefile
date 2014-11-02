@@ -17,7 +17,7 @@ LIB_DEPENDS=	libgrilo-0.2.so:${PORTSDIR}/net/grilo \
 
 USES=		gmake libtool pathfix pkgconfig tar:xz
 USE_LDCONFIG=	yes
-USE_GNOME=	glib20 gnomehier intlhack libxml2
+USE_GNOME=	glib20 intlhack libxml2
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-youtube \
 		--enable-vimeo \

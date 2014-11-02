@@ -132,7 +132,6 @@ gnomeprefix_CONFIGURE_ARGS=--localstatedir=${GNOME_LOCALSTATEDIR} \
 			   --with-html-dir=${GNOME_HTML_DIR} \
 			   --disable-gtk-doc \
 			   --with-gconf-source=${GCONF_CONFIG_SOURCE}
-gnomeprefix_USE_GNOME_IMPL=gnomehier
 
 atkmm_DETECT=		${LOCALBASE}/libdata/pkgconfig/atkmm-1.6.pc
 atkmm_LIB_DEPENDS=	libatkmm-1.6.so:${PORTSDIR}/accessibility/atkmm
@@ -235,7 +234,6 @@ imlib_USE_GNOME_IMPL=	gtk12
 gnomemimedata_DETECT=	${LOCALBASE}/libdata/pkgconfig/gnome-mime-data-2.0.pc
 gnomemimedata_BUILD_DEPENDS=${gnomemimedata_DETECT}:${PORTSDIR}/misc/gnome-mime-data
 gnomemimedata_RUN_DEPENDS=${gnomemimedata_DETECT}:${PORTSDIR}/misc/gnome-mime-data
-gnomemimedata_USE_GNOME_IMPL=gnomehier
 
 glib20_LIB_DEPENDS=	libglib-2.0.so:${PORTSDIR}/devel/glib20 \
 			libpcre.so:${PORTSDIR}/devel/pcre
@@ -311,7 +309,7 @@ introspection_DETECT=		${LOCALBASE}/libdata/pkgconfig/gobject-introspection-1.0.
 introspection_BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 introspection_LIB_DEPENDS=	libgirepository-1.0.so:${PORTSDIR}/devel/gobject-introspection
 introspection_RUN_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
-introspection_USE_GNOME_IMPL=	glib20 gnomehier
+introspection_USE_GNOME_IMPL=	glib20
 introspection_MAKE_ENV=		GI_SCANNER_DISABLE_CACHE=1 XDG_CACHE_HOME=${WRKDIR}
 
 gconf2_LIB_DEPENDS=	libgconf-2.so:${PORTSDIR}/devel/gconf2

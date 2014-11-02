@@ -18,7 +18,7 @@ USERS=		colord
 GROUPS=		colord
 
 USES=		gettext gmake libtool pathfix pkgconfig tar:xz
-USE_GNOME=	gnomehier glib20 intlhack introspection:build
+USE_GNOME=	glib20 intlhack introspection:build
 USE_SQLITE=	3
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes

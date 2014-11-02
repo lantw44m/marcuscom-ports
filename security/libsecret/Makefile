@@ -15,7 +15,7 @@ BUILD_DEPENDS=	docbook-xsl>=0:${PORTSDIR}/textproc/docbook-xsl
 LIB_DEPENDS=	libgcrypt.so:${PORTSDIR}/security/libgcrypt
 
 USES=		gettext gmake libtool pathfix pkgconfig tar:xz
-USE_GNOME=	gnomehier glib20 libxslt:build intltool \
+USE_GNOME=	glib20 libxslt:build intltool \
 		introspection:build
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes

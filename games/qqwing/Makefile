@@ -13,7 +13,7 @@ BUILD_DEPENDS=	automake>=0:${PORTSDIR}/devel/automake \
 		libtool:${PORTSDIR}/devel/libtool
 
 USES=		gmake libtool pathfix pkgconfig
-USE_GNOME=	glib20 gnomehier introspection:build
+USE_GNOME=	glib20 introspection:build
 USE_LDCONFIG=	yes
 CONFIGURE_ENV+=	CC=cc CXX=c++ CPP=cpp
 

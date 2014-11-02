@@ -16,7 +16,7 @@ LIB_DEPENDS=	libsoup-2.4.so:${PORTSDIR}/devel/libsoup \
 RUN_DEPENDS=	gnome-icon-theme>=0:${PORTSDIR}/misc/gnome-icon-theme
 
 USES=		gettext gmake libtool pathfix pkgconfig tar:xz
-USE_GNOME=	gnomehier gnomeprefix gtk30 intlhack \
+USE_GNOME=	gnomeprefix gtk30 intlhack \
 		introspection:build
 INSTALLS_ICONS=	yes
 USE_LDCONFIG=	yes

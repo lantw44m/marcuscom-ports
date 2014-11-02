@@ -21,7 +21,7 @@ GH_COMMIT=      f4f3230
 GH_TAGNAME=	${GH_COMMIT}
 
 USES=		autoreconf:build gmake libtool pathfix pkgconfig
-USE_GNOME=	gdkpixbuf2 glib20 gnomehier gtk30 intlhack
+USE_GNOME=	gdkpixbuf2 glib20 gtk30 intlhack
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 USE_GITHUB=	yes

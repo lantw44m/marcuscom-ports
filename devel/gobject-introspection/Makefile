@@ -18,7 +18,7 @@ LIB_DEPENDS=	libffi.so:${PORTSDIR}/devel/libffi
 USES=		bison gettext gmake libtool pathfix pkgconfig \
 		python:2 tar:xz
 GNU_CONFIGURE=	yes
-USE_GNOME=	gnomehier glib20
+USE_GNOME=	glib20
 USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LIBS+=		-L${LOCALBASE}/lib

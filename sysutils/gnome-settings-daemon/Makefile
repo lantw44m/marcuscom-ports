@@ -31,7 +31,7 @@ RUN_DEPENDS=	gnome-session>=0:${PORTSDIR}/x11/gnome-session \
 		gsettings-desktop-schemas>=0:${PORTSDIR}/devel/gsettings-desktop-schemas
 
 USE_XORG=	xxf86misc
-USE_GNOME=	gnomehier gnomedesktop3 gnomeprefix intlhack libxslt
+USE_GNOME=	gnomedesktop3 gnomeprefix intlhack libxslt
 USES=		gettext gmake libtool pathfix pkgconfig tar:xz
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes

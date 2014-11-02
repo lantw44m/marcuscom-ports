@@ -39,7 +39,7 @@ USERS=		gdm
 GROUPS=		gdm
 
 USES=		execinfo gettext gmake libtool pathfix pkgconfig tar:xz
-USE_GNOME=	dconf gnomehier gnomeprefix intlhack introspection librsvg2
+USE_GNOME=	dconf gnomeprefix intlhack introspection librsvg2
 USE_LDCONFIG=	yes
 USE_XORG=	dmx dmxproto
 INSTALLS_ICONS=	yes

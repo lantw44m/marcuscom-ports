@@ -14,7 +14,7 @@ COMMENT=	D-Bus interface for user account query and manipulation
 LIB_DEPENDS=	libdbus-glib-1.so:${PORTSDIR}/devel/dbus-glib \
 		libpolkit-gobject-1.so:${PORTSDIR}/sysutils/polkit
 
-USE_GNOME=	glib20 gnomehier intlhack introspection:build libxslt
+USE_GNOME=	glib20 intlhack introspection:build libxslt
 USES=		gettext gmake libtool pathfix pkgconfig tar:xz
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes

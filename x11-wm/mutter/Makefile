@@ -22,7 +22,7 @@ RUN_DEPENDS=	zenity>=3.0.0:${PORTSDIR}/x11/zenity \
 		gsettings-desktop-schemas>=3.4.0:${PORTSDIR}/devel/gsettings-desktop-schemas
 
 USES=		gettext gmake libtool pathfix pkgconfig tar:xz
-USE_GNOME=	gnomedesktop3 gnomehier gnomeprefix gtk30 intlhack \
+USE_GNOME=	gnomedesktop3 gnomeprefix gtk30 intlhack \
 		introspection:build
 USE_XORG=	x11 xext xrandr xcomposite xcursor xinerama ice sm xfixes \
 		xrender xdamage

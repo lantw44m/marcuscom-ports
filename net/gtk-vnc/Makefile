@@ -19,7 +19,7 @@ LIB_DEPENDS=	libgnutls.so:${PORTSDIR}/security/gnutls \
 		libgcrypt.so:${PORTSDIR}/security/libgcrypt \
 		libsasl2.so:${PORTSDIR}/security/cyrus-sasl2
 
-USE_GNOME=	gnomehier gtk30 introspection:build
+USE_GNOME=	gtk30 introspection:build
 USES=		gettext gmake libtool pathfix pkgconfig tar:xz
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes

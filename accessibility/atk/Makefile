@@ -19,7 +19,7 @@ USES=		tar:xz
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 USES+=		gettext gmake libtool pathfix pkgconfig
-USE_GNOME=	glib20 gnomehier introspection:build referencehack
+USE_GNOME=	glib20 introspection:build referencehack
 CONFIGURE_ARGS=	--with-html-dir=${PREFIX}/share/doc
 CPPFLAGS+=	-I${LOCALBASE}/include
 LIBS+=		-L${LOCALBASE}/lib

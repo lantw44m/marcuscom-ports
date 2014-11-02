@@ -18,7 +18,7 @@ BUILD_DEPENDS=	gnome-autogen.sh:${PORTSDIR}/devel/gnome-common \
 LIB_DEPENDS=	libsoup-2.4.so:${PORTSDIR}/devel/libsoup
 
 USES=		gettext gmake libtool pathfix pkgconfig
-USE_GNOME=	gnomehier gnomeprefix gtk20 introspection:build
+USE_GNOME=	gnomeprefix gtk20 introspection:build
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 INSTALL_TARGET=	install-strip

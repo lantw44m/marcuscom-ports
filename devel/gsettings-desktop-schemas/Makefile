@@ -17,7 +17,7 @@ RUN_DEPENDS=	${LOCALBASE}/etc/fonts/conf.avail/31-cantarell.conf:${PORTSDIR}/x11
 
 USES=		gettext gmake pathfix perl5 pkgconfig tar:xz
 USE_PERL5=	build
-USE_GNOME=	intltool glib20 gnomehier introspection:build
+USE_GNOME=	intltool glib20 introspection:build
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LIBS+=		-L${LOCALBASE}/lib

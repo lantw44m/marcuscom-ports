@@ -25,7 +25,7 @@ LIB_DEPENDS=	libsamplerate.so:${PORTSDIR}/audio/libsamplerate \
 		libltdl.so:${PORTSDIR}/devel/libltdl \
 		libck-connector.so:${PORTSDIR}/sysutils/consolekit
 
-USE_GNOME=	glib20 gnomehier intltool
+USE_GNOME=	glib20 intltool
 USE_XORG=	x11 sm xtst ice
 USE_LDCONFIG=	yes
 USES=		execinfo gettext gmake libtool pathfix \

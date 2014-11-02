@@ -14,7 +14,7 @@ COMMENT=	Program that keeps passwords and other secrets
 LIB_DEPENDS=	libdbus-1.so:${PORTSDIR}/devel/dbus \
 		libgcrypt.so:${PORTSDIR}/security/libgcrypt
 
-USE_GNOME=	glib20 gnomehier gnomeprefix intlhack \
+USE_GNOME=	glib20 gnomeprefix intlhack \
 		introspection:build
 USES=		gettext gmake libtool pathfix pkgconfig tar:xz
 GNU_CONFIGURE=	yes

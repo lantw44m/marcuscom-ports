@@ -17,7 +17,7 @@ BUILD_DEPENDS=	vala>=0.18.1:${PORTSDIR}/lang/vala \
 LIB_DEPENDS=	libdbus-1.so:${PORTSDIR}/devel/dbus
 
 USES=		gettext gmake pathfix pkgconfig tar:xz
-USE_GNOME=	glib20 gnomehier intltool
+USE_GNOME=	glib20 intltool
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include

@@ -19,7 +19,7 @@ RUN_DEPENDS=	xkeyboard-config>=0:${PORTSDIR}/x11/xkeyboard-config \
 
 USES=		autoreconf:build gettext gmake libtool pathfix pkgconfig \
 		python:2 tar:xz
-USE_GNOME=	gnomehier gnomemenus3 gnomeprefix gtk30 intlhack \
+USE_GNOME=	gnomemenus3 gnomeprefix gtk30 intlhack \
 		introspection:build
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes

@@ -21,7 +21,7 @@ RUN_DEPENDS=	py2?-atspi>=2.1.91:${PORTSDIR}/accessibility/py-atspi
 
 USES=		gettext gmake libtool pathfix pkgconfig python:2 \
 		shebangfix tar:xz
-USE_GNOME=	gnomehier gtk30 intlhack introspection:build libxml2 \
+USE_GNOME=	gtk30 intlhack introspection:build libxml2 \
 		libxslt:build pygobject3
 SHEBANG_FILES=	tools/fix_gir.py tools/make_schema.py
 USE_XORG=	x11 xtst

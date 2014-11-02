@@ -16,7 +16,7 @@ LIB_DEPENDS=	librest-0.7.so:${PORTSDIR}/devel/librest \
 		libjson-glib-1.0.so:${PORTSDIR}/devel/json-glib
 
 USES=		gettext gmake libtool pathfix pkgconfig tar:xz
-USE_GNOME=	gconf2 glib20 gnomehier intlhack introspection:build \
+USE_GNOME=	gconf2 glib20 intlhack introspection:build \
 		libxslt:build
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes

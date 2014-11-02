@@ -23,7 +23,7 @@ RUN_DEPENDS=	zenity>=3.0.0:${PORTSDIR}/x11/zenity
 
 USES=		autoreconf:build execinfo gettext libtool gmake \
 		pathfix pkgconfig python:2
-USE_GNOME=	gconf2 gnomedocutils gnomehier gnomeprefix gtk30 \
+USE_GNOME=	gconf2 gnomedocutils gnomeprefix gtk30 \
 		intlhack introspection:build
 USE_XORG=	x11 xext xrandr xcomposite xcursor xinerama ice sm
 USE_LDCONFIG=	yes

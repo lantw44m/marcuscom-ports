@@ -29,8 +29,7 @@ USES=		bison gettext gmake gperf libtool perl5 pkgconfig \
 		shebangfix tar:xz
 USE_RUBY=	yes
 RUBY_NO_RUN_DEPENDS=yes
-USE_GNOME=	cairo gnomehier gtk20 gtk30 introspection:build \
-		libxslt
+USE_GNOME=	cairo gtk20 gtk30 introspection:build libxslt
 USE_SQLITE=	3
 USE_PERL5=	build
 USE_LDCONFIG=	yes

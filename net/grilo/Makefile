@@ -17,7 +17,7 @@ LIB_DEPENDS=	libsoup-2.4.so:${PORTSDIR}/devel/libsoup \
 
 USES=		gettext gmake libtool pathfix pkgconfig tar:xz
 USE_LDCONFIG=	yes
-USE_GNOME=	glib20 gnomehier intlhack introspection:build libxml2
+USE_GNOME=	glib20 intlhack introspection:build libxml2
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--enable-vala -disable-debug
 CPPFLAGS+=	-I${LOCALBASE}/include

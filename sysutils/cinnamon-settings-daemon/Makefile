@@ -30,7 +30,7 @@ RUN_DEPENDS=	cinnamon-session:${PORTSDIR}/x11/cinnamon-session \
 
 USES=		autoreconf:build gettext gmake libtool pathfix \
 		pkgconfig tar:xz
-USE_GNOME=	gnomehier gnomeprefix intlhack libgnomekbd \
+USE_GNOME=	gnomeprefix intlhack libgnomekbd \
 		libxslt:build
 USE_XORG=	xxf86misc
 GNU_CONFIGURE=	yes

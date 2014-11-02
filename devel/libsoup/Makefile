@@ -21,7 +21,7 @@ USES=		tar:xz
 
 USES+=		gettext gmake libtool pathfix pkgconfig \
 		python:3:build tar:xz
-USE_GNOME=	glib20 gnomehier intltool introspection:build \
+USE_GNOME=	glib20 intltool introspection:build \
 		libxml2 referencehack
 USE_SQLITE=	3
 USE_LDCONFIG=	yes

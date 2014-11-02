@@ -15,7 +15,6 @@ BUILD_DEPENDS=	itstool:${PORTSDIR}/textproc/itstool
 #RUN_DEPENDS=	gnome-doc-prepare:${PORTSDIR}/textproc/gnome-doc-utils
 
 USES=		gmake pkgconfig tar:xz
-USE_GNOME=	gnomehier
 GNU_CONFIGURE=	yes
 
 .include <bsd.port.mk>

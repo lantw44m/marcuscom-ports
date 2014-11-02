@@ -20,7 +20,7 @@ CONFLICTS=	folks-0.4.[0-9]*
 
 USE_LDCONFIG=	yes
 USES=		gettext libtool gmake pathfix pkgconfig tar:xz
-USE_GNOME=	evolutiondataserver3 gnomehier intlhack \
+USE_GNOME=	evolutiondataserver3 intlhack \
 		introspection:build
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-bluez-backend
