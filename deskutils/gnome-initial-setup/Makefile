@@ -20,11 +20,10 @@ LIB_DEPENDS=	libgoa-1.0.so:${PORTSDIR}/net/gnome-online-accounts \
 		libgweather-3.so:${PORTSDIR}/net/libgweather
 RUN_DEPENDS=	gdm>=3.0.0:${PORTSDIR}/x11/gdm
 
-USES=		gettext gmake libtool pathfix pkgconfig tar:xz
+USES=		autoreconf:build gettext gmake libtool pathfix pkgconfig tar:xz
 USE_GNOME=	gnomedesktop3 gnomeprefix gtk30 intlhack
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
-USE_AUTOTOOLS=	libtoolize autoconf automake
 INSTALLS_ICONS=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
