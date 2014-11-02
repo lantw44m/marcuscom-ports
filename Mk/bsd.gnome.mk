@@ -90,7 +90,7 @@ _USE_GNOME_ALL+= atk atspi cairo desktopfileutils eel2 gal2 \
 
 # GNOME 3 components
 _USE_GNOME_ALL+=dconf evolutiondataserver3 gnomecontrolcenter3 gnomedesktop3 \
-		gnomemenus3 gnomepanel3 gtk30 gtkhtml4 gtksourceview3 libgda5 \
+		gnomemenus3 gtk30 gtkhtml4 gtksourceview3 libgda5 \
 		libgda5-ui libwnck3 metacity nautilus3 py3gobject3 \
 		pygobject3 vte3
 
@@ -386,11 +386,6 @@ librsvg2_USE_GNOME_IMPL=libgsf gtk20
 eel2_LIB_DEPENDS=	libeel-2.so:${PORTSDIR}/x11-toolkits/eel
 eel2_DETECT=		${LOCALBASE}/libdata/pkgconfig/eel-2.0.pc
 eel2_USE_GNOME_IMPL=	gnomedesktop
-
-gnomepanel3_LIB_DEPENDS=libpanel-applet-4.so:${PORTSDIR}/x11/gnome-panel
-gnomepanel3_DETECT=	${LOCALBASE}/libdata/pkgconfig/libpanelapplet-4.0.pc
-gnomepanel3_USE_GNOME_IMPL=gnomedesktop3 libwnck3 gnomemenus3 gnomedocutils librsvg2
-gnomepanel3_GNOME_DESKTOP_VERSION=3
 
 nautilus3_LIB_DEPENDS=	libnautilus-extension.so:${PORTSDIR}/x11-fm/nautilus
 nautilus3_DETECT=	${LOCALBASE}/share/gir-1.0/Nautilus-3.0.gir
