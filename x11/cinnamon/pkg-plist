@@ -633,7 +633,6 @@ share/desktop-directories/cinnamon-utility.directory
 share/polkit-1/actions/org.cinnamon.settings-users.policy
 share/xsessions/cinnamon.desktop
 share/xsessions/cinnamon2d.desktop
-@dirrm share/xsessions
 share/icons/hicolor/16x16/categories/cs-backgrounds.svg
 share/icons/hicolor/16x16/categories/cs-desklets.svg
 share/icons/hicolor/scalable/categories/cs-applets.svg

@@ -264,25 +264,3 @@ share/vala/vapi/libpulse-mainloop-glib.deps
 share/vala/vapi/libpulse-mainloop-glib.vapi
 share/vala/vapi/libpulse.deps
 share/vala/vapi/libpulse.vapi
-%%ALSA%%@dirrm share/pulseaudio/alsa-mixer/profile-sets
-%%ALSA%%@dirrm share/pulseaudio/alsa-mixer/paths
-%%ALSA%%@dirrm share/pulseaudio/alsa-mixer
-%%ALSA%%@dirrm share/pulseaudio
-%%GCONF%%@dirrm libexec/pulse
-@dirrm lib/pulse-%%PULSE_VERSION%%/modules
-@dirrm lib/pulse-%%PULSE_VERSION%%
-@dirrm lib/pulseaudio
-@dirrmtry lib/cmake/PulseAudio
-@dirrmtry lib/cmake
-@dirrm include/pulse
-@dirrm etc/pulse
-@dirrmtry share/locale/sr@latin/LC_MESSAGES
-@dirrmtry share/locale/sr@latin
-@dirrmtry share/locale/mr/LC_MESSAGES
-@dirrmtry share/locale/mr
-@dirrmtry share/locale/de_CH/LC_MESSAGES
-@dirrmtry share/locale/de_CH
-@dirrmtry share/locale/bn_IN/LC_MESSAGES
-@dirrmtry share/locale/bn_IN
-@dirrmtry share/locale/as/LC_MESSAGES
-@dirrmtry share/locale/as

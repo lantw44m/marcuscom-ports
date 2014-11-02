@@ -113,10 +113,3 @@ share/locale/vi/LC_MESSAGES/json-glib-1.0.mo
 share/locale/zh_CN/LC_MESSAGES/json-glib-1.0.mo
 share/locale/zh_HK/LC_MESSAGES/json-glib-1.0.mo
 share/locale/zh_TW/LC_MESSAGES/json-glib-1.0.mo
-@dirrmtry share/locale/ky/LC_MESSAGES
-@dirrmtry share/locale/ky
-@dirrmtry share/locale/fur/LC_MESSAGES
-@dirrmtry share/locale/fur
-@dirrm %%DOCSDIR%%
-@dirrm include/json-glib-1.0/json-glib
-@dirrm include/json-glib-1.0

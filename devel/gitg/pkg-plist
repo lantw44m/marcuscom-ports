@@ -62,17 +62,3 @@ share/locale/uk/LC_MESSAGES/gitg.mo
 share/locale/zh_CN/LC_MESSAGES/gitg.mo
 share/vala/vapi/libgitg-1.0.vapi
 share/vala/vapi/libgitg-ext-1.0.vapi
-@dirrmtry share/icons/hicolor/512x512/apps
-@dirrmtry share/icons/hicolor/512x512
-@dirrmtry share/appdata
-@dirrm lib/gitg/plugins
-@dirrm lib/gitg
-@dirrm include/libgitg-ext-1.0/libgitg-ext
-@dirrm include/libgitg-ext-1.0
-@dirrm include/libgitg-1.0/libgitg
-@dirrm include/libgitg-1.0
-@dirrmtry %%DATADIR%%/icons/hicolor/scalable/actions
-@dirrmtry %%DATADIR%%/icons/hicolor/scalable
-@dirrmtry %%DATADIR%%/icons/hicolor
-@dirrmtry %%DATADIR%%/icons
-@dirrmtry %%DATADIR%%

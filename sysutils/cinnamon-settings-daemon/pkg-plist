@@ -181,5 +181,3 @@ share/locale/zh_TW/LC_MESSAGES/cinnamon-settings-daemon.mo
 share/locale/zu/LC_MESSAGES/cinnamon-settings-daemon.mo
 share/polkit-1/actions/org.cinnamon.settings-daemon.plugins.power.policy
 share/polkit-1/actions/org.cinnamon.settingsdaemon.datetimemechanism.policy
-@comment this is done in libcanberra
-@comment @dirrm lib/cinnamon-settings-daemon-3.0

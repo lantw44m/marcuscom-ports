@@ -10,6 +10,3 @@ lib/libpackagekit-qt2.so.6
 libdata/pkgconfig/packagekit-qt2.pc
 lib/cmake/packagekit-qt2/packagekit-qt2-config-version.cmake
 lib/cmake/packagekit-qt2/packagekit-qt2-config.cmake
-@dirrmtry lib/cmake/packagekit-qt2
-@dirrmtry lib/cmake
-@dirrm include/PackageKit/packagekit-qt2

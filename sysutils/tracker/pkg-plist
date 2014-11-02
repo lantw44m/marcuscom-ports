@@ -444,27 +444,3 @@ share/vala/vapi/tracker-sparql-%%TRACKER_VER%%.vapi
 %%WEB_MINERS%%share/xul-ext/trackerfox/chrome/locale/pl-PL/overlay.properties
 %%WEB_MINERS%%share/xul-ext/trackerfox/chrome/skin/overlay.css
 %%WEB_MINERS%%share/xul-ext/trackerfox/defaults/preferences/prefs.js
-%%WEB_MINERS%%@dirrm share/xul-ext/trackerfox/defaults/preferences
-%%WEB_MINERS%%@dirrm share/xul-ext/trackerfox/defaults
-%%WEB_MINERS%%@dirrm share/xul-ext/trackerfox/chrome/skin
-%%WEB_MINERS%%@dirrm share/xul-ext/trackerfox/chrome/locale/pl-PL
-%%WEB_MINERS%%@dirrm share/xul-ext/trackerfox/chrome/locale/fr-FR
-%%WEB_MINERS%%@dirrm share/xul-ext/trackerfox/chrome/locale/es-ES
-%%WEB_MINERS%%@dirrm share/xul-ext/trackerfox/chrome/locale/en-US
-%%WEB_MINERS%%@dirrm share/xul-ext/trackerfox/chrome/locale
-%%WEB_MINERS%%@dirrm share/xul-ext/trackerfox/chrome/content
-%%WEB_MINERS%%@dirrm share/xul-ext/trackerfox/chrome
-%%WEB_MINERS%%@dirrm share/xul-ext/trackerfox
-%%WEB_MINERS%%@dirrm share/xul-ext/trackerbird/defaults/preferences
-%%WEB_MINERS%%@dirrm share/xul-ext/trackerbird/defaults
-%%WEB_MINERS%%@dirrm share/xul-ext/trackerbird/chrome/skin
-%%WEB_MINERS%%@dirrm share/xul-ext/trackerbird/chrome/locale/pl-PL
-%%WEB_MINERS%%@dirrm share/xul-ext/trackerbird/chrome/locale/fr-FR
-%%WEB_MINERS%%@dirrm share/xul-ext/trackerbird/chrome/locale/es-ES
-%%WEB_MINERS%%@dirrm share/xul-ext/trackerbird/chrome/locale/en-US
-%%WEB_MINERS%%@dirrm share/xul-ext/trackerbird/chrome/locale/de-DE
-%%WEB_MINERS%%@dirrm share/xul-ext/trackerbird/chrome/locale
-%%WEB_MINERS%%@dirrm share/xul-ext/trackerbird/chrome/content
-%%WEB_MINERS%%@dirrm share/xul-ext/trackerbird/chrome
-%%WEB_MINERS%%@dirrm share/xul-ext/trackerbird
-%%WEB_MINERS%%@dirrm share/xul-ext

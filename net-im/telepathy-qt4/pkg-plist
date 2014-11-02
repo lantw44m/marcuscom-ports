@@ -394,10 +394,3 @@ lib/libtelepathy-qt4-farstream.so.2
 lib/libtelepathy-qt4-farstream.so.2.%%PORTVERSION%%
 libdata/pkgconfig/TelepathyQt4Farstream.pc
 libdata/pkgconfig/TelepathyQt4.pc
-@dirrm lib/cmake/TelepathyQt4Farstream
-@dirrm lib/cmake/TelepathyQt4
-@dirrmtry lib/cmake
-@dirrm include/telepathy-qt4/TelepathyQt/_gen
-@dirrm include/telepathy-qt4/TelepathyQt/Farstream
-@dirrm include/telepathy-qt4/TelepathyQt
-@dirrm include/telepathy-qt4

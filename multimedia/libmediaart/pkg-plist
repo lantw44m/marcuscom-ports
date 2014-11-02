@@ -28,9 +28,3 @@ share/gtk-doc/html/libmediaart/style.css
 share/gtk-doc/html/libmediaart/up-insensitive.png
 share/gtk-doc/html/libmediaart/up.png
 share/vala/vapi/libmediaart-1.0.vapi
-@dirrm share/gtk-doc/html/libmediaart
-@dirrmtry share/gtk-doc/html
-@dirrmtry share/gtk-doc
-@dirrm include/libmediaart-1.0/libmediaart
-@dirrm include/libmediaart-1.0
-
