@@ -3,12 +3,11 @@
 #    $MCom$
 
 PORTNAME=	gnome-online-accounts
-PORTVERSION=	3.14.0
-PORTREVISION=	1
+PORTVERSION=	3.14.1
 CATEGORIES=	net
 MASTER_SITES=	GNOME
 
-MAINTAINER=	kwm@FreeBSD.org
+MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Interface provider to access the user's online accounts
 
 BUILD_DEPENDS=	docbook-xsl>=0:${PORTSDIR}/textproc/docbook-xsl
