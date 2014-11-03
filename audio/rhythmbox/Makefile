@@ -48,7 +48,7 @@ GLIB_SCHEMAS=	org.gnome.rhythmbox.gschema.xml
 
 OPTIONS_SUB=	yes
 OPTIONS_DEFINE=	DAAP GRILO IPOD NOTIFY PYTHON LIRC MTP WEBKIT
-OPTIONS_DEFAULT=NOTIFY PYTHON
+OPTIONS_DEFAULT=NOTIFY PYTHON WEBKIT
 DAAP_DESC=	DAAP support
 DAAP_CONFIGURE_ENABLE=	daap
 DAAP_LIB_DEPENDS=	libdmapsharing-3.0.so:${PORTSDIR}/net/libdmapsharing
@@ -76,6 +76,5 @@ WEBKIT_LIB_DEPENDS=	libwebkitgtk-3.0.so:${PORTSDIR}/www/webkit-gtk3
 post-patch:
 	@${REINPLACE_CMD} -e 's|{MOZILLA_PLUGINDIR|{MOZILLA_PLUGINDIR}|g' \
 		${WRKSRC}/configure
-	@${REINPLACE_CMD} -e '/plugins\/context\/Makefile"/d' ${WRKSRC}/configure
 
 .include <bsd.port.mk>
