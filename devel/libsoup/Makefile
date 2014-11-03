@@ -51,7 +51,9 @@ post-patch:
 
 .if defined(SOUP_SLAVE)
 do-install:
+	@${MKDIR} ${STAGEDIR}${PREFIX}/share/gir-1.0/
 	${INSTALL_DATA} ${WRKSRC}/libsoup/SoupGNOME-2.4.gir ${STAGEDIR}${PREFIX}/share/gir-1.0/
+	@${MKDIR} ${STAGEDIR}${PREFIX}/lib/girepository-1.0/
 	${INSTALL_DATA} ${WRKSRC}/libsoup/SoupGNOME-2.4.typelib ${STAGEDIR}${PREFIX}/lib/girepository-1.0/
 	${INSTALL_PROGRAM} ${WRKSRC}/libsoup/.libs/libsoup-gnome-2.4.so ${STAGEDIR}${PREFIX}/lib/
 	${INSTALL_PROGRAM} ${WRKSRC}/libsoup/.libs/libsoup-gnome-2.4.so.1 ${STAGEDIR}${PREFIX}/lib/
