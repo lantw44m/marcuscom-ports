@@ -38,8 +38,31 @@ GLIB_SCHEMAS=	org.gnome.mutter.gschema.xml \
 
 PLIST_SUB=	VERSION=${PORTVERSION:R}
 
+.include <bsd.port.options.mk>
+
+# borrowed from graphics/libGL to see where Mesa 10.3 is available.
+# hw context support in the i915kms driver
+.if ${OPSYS} == FreeBSD && \
+ (${OSVERSION} >= 1100000 && ${OSVERSION} < 1100035 || \
+  ${OSVERSION} < 1000717)
+_OLD_MESA=1
+.endif
+
+.if ${OPSYS} == DragonFly && ${DFLYVERSION} >= 300901
+_OLD_MESA=1
+.endif
+
+.if defined(_OLD_MESA)
+EXTRA_PATCHES+=	${FILESDIR}/extra-488dd0b
+.endif
+
+# remove the gbm sed line if gbm 10.3 is more widespread.
 post-patch:
 	@${REINPLACE_CMD} -e 's|-Wcast-align||g' \
 		${WRKSRC}/configure
+.if defined(_OLD_MESA)
+	@${REINPLACE_CMD} -e 's|gbm >= 10.3|gbm|g' \
+		${WRKSRC}/configure
+.endif
 
 .include <bsd.port.mk>
