@@ -14,7 +14,7 @@ COMMENT=	GNOME Symbolic Icons
 
 INSTALLS_ICONS=	yes
 USES=		gmake pathfix pkgconfig tar:xz
-USE_GNOME=	gnomeprefix gtk30 intltool
+USE_GNOME=	gnomeprefix gtk30 librsvg2:build intltool
 GNU_CONFIGURE=	yes
 
 .include <bsd.port.mk>

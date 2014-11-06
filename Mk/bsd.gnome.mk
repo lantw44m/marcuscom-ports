@@ -379,7 +379,9 @@ libzvt_LIB_DEPENDS=	libzvt-2.0.so:${PORTSDIR}/x11-toolkits/libzvt
 libzvt_DETECT=	${LOCALBASE}/libdata/pkgconfig/libzvt-2.0.pc
 libzvt_USE_GNOME_IMPL=	gtk20
 
+librsvg2_BUILD_DEPENDS=	rsvg-convert:${PORTSDIR}/graphics/librsvg2
 librsvg2_LIB_DEPENDS=	librsvg-2.so:${PORTSDIR}/graphics/librsvg2
+librsvg2_RUN_DEPENDS=	rsvg-convert:${PORTSDIR}/graphics/librsvg2
 librsvg2_DETECT=	${LOCALBASE}/libdata/pkgconfig/librsvg-2.0.pc
 librsvg2_USE_GNOME_IMPL=libgsf gtk20
 
