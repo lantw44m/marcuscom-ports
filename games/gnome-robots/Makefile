@@ -3,7 +3,7 @@
 #   $MCom$
 
 PORTNAME=	gnome-robots
-PORTVERSION=	3.14.1
+PORTVERSION=	3.14.2
 CATEGORIES=	games gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
