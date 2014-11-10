@@ -3,7 +3,7 @@
 #    $MCom$
 
 PORTNAME=	tracker
-PORTVERSION=	1.2.3
+PORTVERSION=	1.2.4
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	GNOME
 
@@ -58,7 +58,7 @@ GLIB_SCHEMAS=	org.freedesktop.Tracker.DB.gschema.xml \
 OPTIONS_DEFINE=		AUDIO_MINERS DOCUMENT_MINERS GRAPHIC_MINERS WEB_MINERS
 OPTIONS_DEFAULT=	AUDIO_MINERS DOCUMENT_MINERS GRAPHIC_MINERS
 WEB_MINERS_DESC=	Support for Firefox, Thunderbird and Evolution
-AUDIO_MINERS_DESC=	Support for audio files
+AUDIO_MINERS_DESC=	Support for audio formats
 DOCUMENT_MINERS_DESC=	Support for some sort of documents (pdf, ps, xps, office)
 GRAPHIC_MINERS_DESC=	Support for some graphic formats (gif, png, tiff)
 
