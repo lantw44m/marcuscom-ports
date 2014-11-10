@@ -3,7 +3,7 @@
 #   $MCom$
 
 PORTNAME=	gnome-maps
-PORTVERSION=	3.14.1.2
+PORTVERSION=	3.14.2
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
