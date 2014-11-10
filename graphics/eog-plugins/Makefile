@@ -3,8 +3,7 @@
 #   $MCom$
 
 PORTNAME=	eog-plugins
-PORTVERSION=	3.12.1
-PORTREVISION=	1
+PORTVERSION=	3.14.1
 CATEGORIES=	graphics gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -13,7 +12,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Plug-ins for the Eye of GNOME image viewer application
 
 BUILD_DEPENDS=	eog:${PORTSDIR}/graphics/eog
-LIB_DEPENDS=	libgdata.so.13:${PORTSDIR}/devel/libgdata \
+LIB_DEPENDS=	libgdata.so:${PORTSDIR}/devel/libgdata \
 		libexif.so:${PORTSDIR}/graphics/libexif \
 		libpeas-1.0.so:${PORTSDIR}/devel/libpeas
 RUN_DEPENDS=	eog:${PORTSDIR}/graphics/eog
