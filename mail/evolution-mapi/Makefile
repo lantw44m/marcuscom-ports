@@ -3,7 +3,7 @@
 #   $MCom$
 
 PORTNAME=	evolution-mapi
-PORTVERSION=	3.12.7
+PORTVERSION=	3.12.8
 CATEGORIES=	mail gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
