@@ -3,7 +3,7 @@
 #   $MCom$
 
 PORTNAME?=	vte
-PORTVERSION=	0.38.0
+PORTVERSION=	0.38.2
 CATEGORIES=	x11-toolkits gnome
 MASTER_SITES=	GNOME
 MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/gnome-pty-helper/vte/}/${PORTVERSION:R}
