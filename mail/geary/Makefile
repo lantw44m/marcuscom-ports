@@ -3,7 +3,7 @@
 #   $MCom$
 
 PORTNAME=	geary
-PORTVERSION=	0.8.0
+PORTVERSION=	0.8.2
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
