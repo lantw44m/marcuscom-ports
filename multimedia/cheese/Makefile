@@ -3,7 +3,7 @@
 #   $MCom$
 
 PORTNAME=	cheese
-PORTVERSION=	3.14.1
+PORTVERSION=	3.14.2
 CATEGORIES=	multimedia gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
