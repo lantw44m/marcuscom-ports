@@ -3,7 +3,7 @@
 #   $MCom$
 
 PORTNAME=	gnome-themes-standard
-PORTVERSION=	3.14.0
+PORTVERSION=	3.14.2
 CATEGORIES=	x11-themes gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
