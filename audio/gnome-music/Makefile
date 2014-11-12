@@ -3,7 +3,7 @@
 #   $MCom$
 
 PORTNAME=	gnome-music
-PORTVERSION=	3.14.0
+PORTVERSION=	3.14.2
 CATEGORIES=	audio gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
