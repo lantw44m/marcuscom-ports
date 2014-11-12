@@ -1,9 +1,9 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/trunk/net/gnome-online-accounts/Makefile 20037 2014-11-03 08:29:49Z kwm $
 
 PORTNAME=	gnome-online-accounts
-PORTVERSION=	3.14.1
+PORTVERSION=	3.14.2
 CATEGORIES=	net
 MASTER_SITES=	GNOME
 
