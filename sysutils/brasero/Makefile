@@ -3,7 +3,7 @@
 #    $MCom$
 
 PORTNAME=	brasero
-PORTVERSION=	3.11.4
+PORTVERSION=	3.12.0
 CATEGORIES=	sysutils audio multimedia gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
