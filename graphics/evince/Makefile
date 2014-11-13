@@ -3,7 +3,7 @@
 #    $MCom$
 
 PORTNAME=	evince
-PORTVERSION=	3.14.0
+PORTVERSION=	3.14.1
 CATEGORIES=	graphics print gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
